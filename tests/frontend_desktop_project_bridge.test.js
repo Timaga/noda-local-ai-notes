@@ -24,7 +24,7 @@ function section(source, begin, end) {
 }
 
 async function fixture(run, { owned = false, corrupt = false } = {}) {
-  const root = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), "noda-project-bridge-")));
+  const root = fs.realpathSync.native(fs.mkdtempSync(path.join(os.tmpdir(), "noda-project-bridge-")));
   const a = path.join(root, "A"), b = path.join(root, "B"), userData = path.join(root, "profile");
   fs.mkdirSync(a); fs.mkdirSync(b); fs.mkdirSync(userData);
   fs.writeFileSync(path.join(a, "CRM.md"), "A source"); fs.writeFileSync(path.join(b, "CRM.md"), "B source");

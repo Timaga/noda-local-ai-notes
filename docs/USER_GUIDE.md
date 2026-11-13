@@ -8,6 +8,8 @@ In **Notes**, use **+** beside Projects to create a project or connect an existi
 
 Select a project from the left panel or the arrow beside the library name. Project folders must not overlap or contain one another. Noda keeps note search, queues, chat history and drafts in the current project's context. Model installations, theme and interface language are shared app settings.
 
+Use full Windows folder paths; abbreviated 8.3 paths, junctions and symbolic links are not supported for projects or backup destinations.
+
 This is separation between local projects in one Windows account, not a system of access permissions between Windows users.
 
 ## Capture and edit

@@ -20,7 +20,7 @@ function section(begin, end) {
 }
 
 async function fixture(run) {
-  const directory = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), "noda-activation-integration-")));
+  const directory = fs.realpathSync.native(fs.mkdtempSync(path.join(os.tmpdir(), "noda-activation-integration-")));
   const a = path.join(directory, "A"), profile = path.join(directory, "profile");
   fs.mkdirSync(a); fs.mkdirSync(profile);
   fs.writeFileSync(path.join(a, "Source.md"), "Synthetic immutable A source");

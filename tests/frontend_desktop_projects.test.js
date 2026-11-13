@@ -6,7 +6,7 @@ const test = require("node:test");
 const { MAX_PROJECTS, MAX_STORE_BYTES, createDesktopProjects, validateProjectState } = require("../frontend/desktop_projects");
 
 function workspace(run) {
-  const root = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), "noda-project-registry-")));
+  const root = fs.realpathSync.native(fs.mkdtempSync(path.join(os.tmpdir(), "noda-project-registry-")));
   let serial = 0;
   const idFactory = () => (++serial).toString(16).padStart(32, "0");
   const file = path.join(root, "profile", "projects.json");

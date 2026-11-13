@@ -1,5 +1,7 @@
 # Changelog
 
+The beta.16 candidate also verifies Windows directory aliases before project or backup activation; use full folder paths.
+
 ## 1.0.2-beta.16 — unreleased
 
 ### Repository and licensing preparation

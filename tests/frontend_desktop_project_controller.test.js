@@ -16,7 +16,7 @@ function deferred() {
 }
 
 async function fixture(run, { empty = false } = {}) {
-  const root = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), "noda-project-controller-")));
+  const root = fs.realpathSync.native(fs.mkdtempSync(path.join(os.tmpdir(), "noda-project-controller-")));
   const a = path.join(root, "A"), b = path.join(root, "B");
   fs.mkdirSync(a); fs.mkdirSync(b);
   fs.writeFileSync(path.join(a, "CRM.md"), "Source from project A");

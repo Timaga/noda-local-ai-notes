@@ -103,6 +103,9 @@ function parseStore(raw) {
 
 function createDesktopProjects(filePath, options = {}) {
   const io = options.fs || fs;
+  // Native resolution expands Windows short names consistently with the backend and backups.
+  const realpath = value => typeof io.realpathSync.native === "function"
+    ? io.realpathSync.native(value) : io.realpathSync(value);
   const makeId = options.idFactory || (() => crypto.randomBytes(16).toString("hex"));
   const storePath = absolutePath(filePath);
   const parent = path.dirname(storePath);
@@ -113,12 +116,12 @@ function createDesktopProjects(filePath, options = {}) {
     while (true) {
       const stat = io.lstatSync(cursor);
       if (!stat.isDirectory() || stat.isSymbolicLink()) fail("UNSAFE_DIRECTORY");
-      if (pathKey(io.realpathSync(cursor)) !== pathKey(cursor)) fail("DIRECTORY_ALIAS");
+      if (pathKey(realpath(cursor)) !== pathKey(cursor)) fail("DIRECTORY_ALIAS");
       const ancestor = path.dirname(cursor);
       if (ancestor === cursor) break;
       cursor = ancestor;
     }
-    return io.realpathSync(directory);
+    return realpath(directory);
   }
 
   function checkStoreParent(create) {
