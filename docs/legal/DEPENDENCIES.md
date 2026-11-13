@@ -5,7 +5,7 @@ Inventory prepared on 2026-11-13 from the repository lockfiles and version-match
 ## Scope and reproducibility
 
 - Windows Python runtime: `scripts/windows-portable/requirements-win-x64.lock`, 109 pinned package versions and wheel SHA-256 values. All 109 installed runtime package versions matched the lock during collection. Package code was not imported.
-- Frontend and build: `frontend/package-lock.json`, 284 non-root package entries. All entries declare license metadata. The lock includes development tools, optional dependencies and platform variants; these are not all included in an app release.
+- Frontend and build: `frontend/package-lock.json`, 282 non-root package entries. All entries declare license metadata. The lock includes development tools, optional dependencies and platform variants; these are not all included in an app release.
 - Marked is the declared production npm dependency. Electron is marked as a development dependency for installation/build purposes but its runtime is shipped in an Electron application. Electron-builder and its toolchain are build dependencies.
 - Full inventory, upstream text paths and hashes: [dependencies.json](dependencies.json). Text files are under [LICENSES](../../LICENSES/).
 - Development/test tooling has a separate [21-direct-pin inventory](DEVELOPMENT-TOOLS.md) and [publisher metadata](development-tools.json). Development transitive versions are not fully locked or inventoried; they are not part of the 109-package runtime completeness claim.
@@ -33,18 +33,18 @@ For a fresh environment, resolve and review the actual target lock and retain li
 | colorama | 0.4.6 | yes | BSD License |
 | coloredlogs | 15.0.1 | transitive | MIT |
 | colorlog | 6.10.1 | yes | MIT License |
-| datasets | 2.19.0 | yes | Apache 2.0 |
+| datasets | 5.0.1 | yes | Apache 2.0 |
 | dill | 0.3.8 | transitive | BSD-3-Clause |
 | diskcache | 5.6.3 | transitive | Apache 2.0 |
 | distro | 1.9.0 | yes | Apache License, Version 2.0 |
 | docstring_parser | 0.18.0 | transitive | MIT |
-| fastapi | 0.121.1 | yes | MIT |
-| filelock | 3.20.0 | yes | Unlicense |
+| fastapi | 0.135.0 | yes | MIT |
+| filelock | 4.2.1 | yes | MIT |
 | Flask | 3.1.3 | yes | BSD-3-Clause |
 | flask-cors | 6.0.1 | yes | MIT |
 | flatbuffers | 25.12.19 | transitive | Apache 2.0 |
 | frozenlist | 1.8.0 | transitive | Apache-2.0 |
-| fsspec | 2024.3.1 | yes | BSD |
+| fsspec | 2026.6.0 | yes | BSD-3-Clause |
 | grpcio | 1.85.1 | transitive | Apache-2.0 |
 | grpcio-tools | 1.80.1 | transitive | Apache-2.0 |
 | h11 | 0.16.0 | yes | MIT |
@@ -75,12 +75,12 @@ For a fresh environment, resolve and review the actual target lock and retain li
 | pandas | 3.1.1 | transitive | BSD-3-Clause |
 | peft | 0.11.1 | yes | Apache |
 | pillow | 13.0.0 | yes | MIT-CMU |
+| pip | 26.3 | transitive | MIT |
 | portalocker | 2.10.1 | transitive | BSD-3-Clause |
 | propcache | 0.5.4 | transitive | Apache-2.0 |
 | protobuf | 6.33.5 | yes | 3-Clause BSD License |
 | psutil | 7.2.2 | yes | BSD-3-Clause |
 | pyarrow | 26.0.1 | transitive | Apache-2.0 |
-| pyarrow-hotfix | 0.7 | transitive | Apache License, Version 2.0 |
 | pyasn1 | 0.6.5 | yes | BSD-2-Clause |
 | pyasn1_modules | 0.4.2 | yes | BSD |
 | pydantic | 2.12.4 | yes | MIT |
@@ -101,15 +101,15 @@ For a fresh environment, resolve and review the actual target lock and retain li
 | scipy | 1.16.3 | yes | BSD License |
 | sentence-transformers | 5.6.0 | yes | Apache-2.0 |
 | sentencepiece | 0.2.1 | transitive | Apache-2.0 |
-| setuptools | 80.9.0 | yes | MIT |
+| setuptools | 84.1.0 | yes | MIT |
 | shellingham | 1.5.4 | transitive | ISC License |
 | sniffio | 1.3.1 | yes | MIT OR Apache-2.0 |
-| starlette | 0.49.3 | yes | BSD-3-Clause |
+| starlette | 1.3.1 | yes | BSD-3-Clause |
 | sympy | 1.14.0 | yes | BSD |
 | tenacity | 9.1.2 | yes | Apache 2.0 |
 | threadpoolctl | 3.6.0 | yes | BSD-3-Clause |
 | tokenizers | 0.22.2 | yes | Apache Software License |
-| torch | 2.10.0+cpu | yes | BSD-3-Clause |
+| torch | 2.13.0+cpu | yes | Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT |
 | tqdm | 4.67.1 | yes | MPL-2.0 AND MIT |
 | transformers | 5.10.2 | yes | Apache 2.0 License |
 | trl | 0.9.4 | yes | Apache 2.0 |
@@ -129,11 +129,17 @@ For a fresh environment, resolve and review the actual target lock and retain li
 
 ## Notice and source obligations
 
-The collected Python/npm set contains 151 unmodified legal-text files, including the full MPL-2.0 text. The machine-readable inventory records their individual SHA-256 values and origin. Separate runtime/model texts have their own provenance in this directory.
+The collected Python/npm set contains 303 unmodified legal-text files, including the full MPL-2.0 text. The machine-readable inventory records their individual SHA-256 values and origin. Separate runtime/model texts have their own provenance in this directory.
 
 `certifi` includes MPL-covered Mozilla certificate data. `tqdm` records MPL-2.0 and MIT notices for different contributions. Their exact version source archives are listed in [mpl-sources.json](mpl-sources.json); those covered sources remain available under their upstream terms. Preserve notices and provide the covered source, including any modifications, when the MPL requires it. Independent Noda files are not relicensed by using these packages. See [Mozilla MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/) and its [official distribution FAQ](https://www.mozilla.org/en-US/MPL/2.0/FAQ/).
 
+The locked pip distribution also contains a vendored certifi copy. Its exact version and complete pip source archive, including vendoring modifications, are recorded separately in [mpl-sources.json](mpl-sources.json). Its original MPL notice is retained under the versioned pip notices.
+
+Setuptools also embeds `autocommand` 2.2.2 under LGPLv3 and copied/generated `validate-pyproject` files under MPL-2.0. Their original notices and the complete [GPLv3 text incorporated by LGPLv3](../../LICENSES/common/GPL-3.0.txt) are retained. The [exact setuptools source archive](vendored-sources.json) includes these vendored files and was checked against the installed notices. The MIT headline label does not replace those component terms. The source repository and current Setup do not bundle Python libraries; a distributor who adds them must preserve their corresponding-source, modification and replacement rights as applicable.
+
 NumPy, SciPy, PyTorch, ONNX Runtime and other native wheels include multiple embedded libraries. Their LICENSE/NOTICE/ThirdPartyNotices files are included without flattening those components into the package's headline license. For example, NumPy's wheel notice explicitly identifies GCC runtime code as `GPL-3.0-or-later WITH GCC-exception-3.1`; the exception must be retained and assessed with the actual component. This is not a finding that Noda itself is GPL-licensed. The [official GCC exception](https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html) explains its scope.
+
+The PyTorch wheel's legal bundle also includes a GPLv3 notice for an upstream `cpr/test` directory. The notice alone does not establish that those test programs are linked into the Windows CPU runtime. It is retained unchanged; this inventory does not certify every compiled component's compatibility.
 
 ## npm lock metadata
 
@@ -147,9 +153,9 @@ The full npm inventory is in [dependencies.json](dependencies.json), with packag
 | Apache-2.0 | 6 |
 | BSD-2-Clause | 6 |
 | BSD-3-Clause | 9 |
-| BlueOak-1.0.0 | 8 |
-| ISC | 36 |
-| MIT | 213 |
+| BlueOak-1.0.0 | 9 |
+| ISC | 35 |
+| MIT | 211 |
 | Python-2.0 | 1 |
 | WTFPL | 1 |
 | WTFPL OR ISC | 1 |

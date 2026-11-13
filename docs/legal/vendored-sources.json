@@ -1,0 +1,42 @@
+{
+  "schema": "noda-vendored-source-provenance-v1",
+  "distribution": "setuptools",
+  "distribution_version": "84.1.0",
+  "source_files": [
+    {
+      "filename": "setuptools-84.1.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/73/eb/7e5f628ee2eb168fecbf8026de7856b2543d6d609cc85f086b9a91ac93d6/setuptools-84.1.0.tar.gz",
+      "sha256": "23657205b63d4d31395ab917815247f694aafad28cd21316bf5fd45a51048ea0",
+      "bytes": 1171783
+    }
+  ],
+  "verified_notices": [
+    {
+      "path": "setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+      "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d",
+      "bytes": 7634
+    },
+    {
+      "path": "setuptools/config/_validate_pyproject/NOTICE",
+      "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7",
+      "bytes": 18737
+    }
+  ],
+  "components": [
+    {
+      "package": "autocommand",
+      "version": "2.2.2",
+      "license": "LGPL-3.0-only",
+      "package_path": "setuptools/_vendor/autocommand",
+      "license_evidence": "Exact vendored METADATA says LGPLv3; its LICENSE contains LGPL version 3. No broader grant is inferred."
+    },
+    {
+      "package": "validate-pyproject",
+      "version": null,
+      "license": "MPL-2.0",
+      "package_path": "setuptools/config/_validate_pyproject",
+      "license_evidence": "Exact bundled NOTICE identifies MPL-covered files; a separate upstream version is not declared there."
+    }
+  ],
+  "scope": "Exact setuptools source includes the copied or generated vendored files. This is source provenance, not a legal compatibility certification."
+}

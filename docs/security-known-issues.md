@@ -1,35 +1,54 @@
-# Known dependency security issues
+# Dependency security status
 
-Audit date: **2026-11-13**. Scope: the `1.0.2-beta.16` source snapshot, its 284 npm lockfile dependency entries, 109 pinned Windows Python runtime distributions and a subsequent GitHub Dependabot check of repository manifests, including development tools. This document records unresolved findings. Repository preparation and a successful build are **not security approval for a public release**.
+Reviewed on **2026-11-13** for the **1.0.2-beta.17** source candidate: 109 hash-pinned Windows runtime distributions and 282 npm dependency entries. Dependency updates do not constitute security approval for a public release.
 
-## Audit result
+## Remediation of the previous 19 repository alerts
 
-- `npm audit --omit=dev`: **0 reported vulnerabilities**. The full npm audit reports **6 moderate findings** from one underlying build-tool advisory.
-- Official PyPI version advisory metadata identifies **8 affected Python packages**. Reviewed GitHub advisories include high-severity findings for `fsspec` and `starlette`; they remain in the pinned dependency set.
-- The subsequent GitHub Dependabot check reports **19 open alerts: 5 high, 11 moderate and 3 low**. The two additional high findings affect the development formatter Black. These counts cover different scopes: Dependabot includes development manifests, while the 109-package PyPI check covers the pinned Windows runtime; neither result replaces the other.
-- A local Gitleaks directory scan found no secrets in the preparation snapshot. This is a text-pattern check, not a guarantee that every asset or future change is safe.
+All declared versions affected by the original 19 GitHub alerts have been replaced with versions outside their published vulnerable ranges. These are package updates, not alert dismissals or scanner exclusions. GitHub's default-branch alert state is checked separately after the source update reaches that branch.
 
-## Affected packages and source review
+| Component | Previous version | Updated version | Original alerts addressed |
+| --- | --- | --- | --- |
+| minimatch | 9.0.9 / 10.2.6 | 11.0.8 for the affected packaging consumers | 1 |
+| filelock | 3.20.0 | 4.2.1 | 4 |
+| setuptools | 80.9.0 | 84.1.0 | 2 |
+| fsspec | 2024.3.1 | 2026.6.0 | 1 |
+| datasets | 2.19.0 | 5.0.1 | 1 |
+| torch | 2.10.0+cpu | 2.13.0+cpu | 1 |
+| Starlette | 0.49.3 | 1.3.1 | 5 |
+| Black (development) | 25.1.0 | 26.10.1 | 2 |
+| pytest (development) | 8.3.4 | 9.0.3 | 1 |
+| Pylint (development) | 3.3.5 | 4.0.9 | 1 |
 
-| Pinned component | Finding and current exposure assessment | Upstream fix information |
-| --- | --- | --- |
-| `minimatch` 9.0.9 and 10.2.6 | [Glob preprocessing denial of service](https://github.com/advisories/GHSA-g3hv-75wg-m249), propagated through Electron packaging tools. Both entries are development dependencies. Current direct consumers use the default optimization level 1; the advisory requires level 2 or higher and an attacker-controlled pattern. | 11.0.1; no same-major fix is listed. A major override or the audit tool's suggested packager downgrade has not been validated. |
-| `accelerate` 1.11.0 | [Sharded-checkpoint path traversal and denial of service](https://github.com/advisories/GHSA-4j2p-28q2-5m79). Transformers can invoke Accelerate through automatic device mapping, so transitive exposure needs further review. | No patched version listed in the reviewed advisory. |
-| `datasets` 2.19.0 | [Folder-builder metadata path traversal](https://github.com/advisories/GHSA-379c-qx7v-6h59). Noda's training code uses `Dataset.from_list` and mapping; no folder-based builder was found. | 5.0.1; this is a major upgrade requiring training tests. |
-| `diskcache` 5.6.3 | [Unsafe pickle deserialization](https://github.com/advisories/GHSA-w8v5-vhqr-4h9v). No application cache construction was found; the installed transitive package remains affected. | No patched version listed. Avoid trusting attacker-writable cache contents. |
-| `filelock` 3.20.0 | Local file races, symlink/hard-link handling and [Windows inherited ACL behavior](https://github.com/advisories/GHSA-8mx5-7m5m-r77g). Noda uses file locks for model and download operations, so local filesystem assumptions matter. | 3.20.1/3.20.3 address earlier race issues; 4.2.1 addresses the later Windows/Unix findings. The coordinated target requires compatibility testing. |
-| `fsspec` 2024.3.1 | High-severity [template injection in `ReferenceFileSystem`](https://github.com/advisories/GHSA-27vj-qcqg-25rc). No use of this API was found in Noda. | 2026.6.0 conflicts with the current `datasets` constraint (`fsspec<=2024.3.1`). Upgrade the pair together. |
-| `setuptools` 80.9.0 | Source-distribution exclusion and legacy Windows wheel-installation path issues. The affected operations concern packaging/installing untrusted inputs; normal note editing does not invoke them. | 83.0.0 and 84.1.0 respectively. [Windows advisory](https://github.com/advisories/GHSA-xmj3-9gf7-h52w). |
-| `starlette` 0.49.3 | High-severity [Windows static-file UNC handling](https://github.com/advisories/GHSA-wqp7-x3pw-xc5r) and [URL-encoded form denial of service](https://github.com/advisories/GHSA-82w8-qh3p-5jfq), plus request URL/dispatch issues. Noda serves its application through Flask; no Starlette/FastAPI application, `StaticFiles` mount or `request.form()` route was found. | The reviewed fixes range from 1.0.1 to 1.3.1. Starlette 1.3.1 conflicts with pinned FastAPI 0.121.1 (`starlette<0.50.0`); update them together or remove the unused stack after dependency review. |
-| `torch` 2.10.0+cpu | [TorchScript memory corruption](https://github.com/advisories/GHSA-rrmf-rvhw-rf47) and [PT2 archive deserialization](https://github.com/advisories/GHSA-33x2-ppm4-v46v) require review. No direct TorchScript compilation or PT2 loader was found; the CPU build's native components were not audited. Advisory severity differs between feeds for the PT2 issue. | The reviewed TorchScript fix is 2.13.0; no PT2 fix is stated. A full native runtime update requires compatible wheels, model tests and refreshed notices. |
-| `black` 25.1.0 (development) | High-severity [GitHub Action version injection](https://github.com/advisories/GHSA-cg8m-r9f2-5wm2) and [cache-path arbitrary writes](https://github.com/advisories/GHSA-3936-cmfr-pm3m). The current workflow installs test requirements but does not invoke Black or its Action, so neither vulnerable formatter path was demonstrated there. Local formatting still requires trusted configuration and private caches. | 26.10.1 addresses both findings; formatter compatibility has not been tested. |
-| `pytest` 8.3.4 (development) | [Temporary-directory handling](https://github.com/advisories/GHSA-6w46-j5rx-g56g). Tests do run in CI; the described Unix shared-temporary-directory exploit does not match the current Windows runner. Other platforms and local test environments need separate review. | 9.0.3; conflicts with pinned `pytest-asyncio` 0.25.2 (`pytest<9`). Upgrade the test stack together. |
-| `pylint` 3.3.5 (development) | [Statistics-cache pickle deserialization](https://github.com/advisories/GHSA-22qq-2fwx-7p67). The current workflow does not run Pylint. Local linting must not read attacker-writable shared caches. | 4.0.9; lint configuration compatibility has not been tested. |
+FastAPI is updated to 0.135.0 alongside Starlette; pytest-asyncio is updated to 1.3.0 alongside pytest. The datasets/fsspec pair is resolved together. Other runtime pins are retained where compatible. Updated datasets no longer requires pyarrow-hotfix.
 
-No reachable high/critical exploit was demonstrated by this source review. **That does not establish unreachability**: dependencies can invoke other dependencies, optional training/model-import paths differ from normal note use, and native parsers were not fuzzed. Model loading is a trust boundary; legacy/training loaders do not universally require `safetensors`, and training permits remote model code.
+The runtime lock also pins **pip 26.3** to address [GHSA-qwm4-qh6w-59xr](https://github.com/advisories/GHSA-qwm4-qh6w-59xr) in the installer supplied by ensurepip. The existing hashed installation uses the explicit official PyPI index and replaces pip before installing development requirements. That command does not use a private index or user pip configuration.
 
-## Required follow-up before release approval
+The complete npm audit, including build tools, reports **0 vulnerabilities**; production-only audit also reports **0**. This does not establish that every native component, model or Python dependency is safe.
 
-The maintainer must coordinate dependency updates or removal of unused components, resolve the incompatible `datasets`/`fsspec`, FastAPI/Starlette and pytest/plugin constraints, and decide how to handle advisories without published fixes. Include development-tool fixes and test/format compatibility checks. Rebuild from the updated locks, run note generation/search/import and training regression checks, refresh third-party notices, and repeat vulnerability and secret scans. Do not treat an automatic `audit fix` as a tested remediation. Keep pull-request test jobs isolated from secrets, privileged tokens and shared tool caches.
+## Scoped packaging overrides
 
-This check used public package names and versions; repository source, private notes and credentials were not sent to external analyzers. It does not certify regulatory compliance, audit downloaded model weights, or replace separate review of Electron/Chromium, CPython, Qdrant, llama.cpp and other native runtime components. Report newly discovered vulnerabilities using [SECURITY.md](../SECURITY.md).
+electron-builder 26.18.1 and @electron/universal 2.0.3 still request affected minimatch versions. Two overrides select 11.0.8 only for minimatch ranges `>=7 <11.0.1` below those parents. Legacy minimatch 3/5 consumers retain their callable APIs. A global override would break those consumers and is not used.
+
+Regression checks cover the actual FileMatcher, include/exclude/re-include rules, dotfiles, Windows separators, directory comparison and ASAR creation/extraction. A real Windows Setup build is also required before distribution. macOS universal packaging is outside Noda's supported Windows release target.
+
+**Maintenance:** Tim Buglaev should review the overrides on the next electron-builder or universal upgrade. Remove them once upstream accepts patched minimatch and the audit, regression tests and Windows packaging pass without overrides. Existing upstream deprecation warnings are separate from vulnerability findings and are not suppressed.
+
+## Remaining dependency risks outside those 19 alerts
+
+The fresh official PyPI package-level scan queried all 109 locked distributions successfully and still identifies two affected packages: Accelerate and DiskCache. The separate PT2 source-review concern below remains even though that advisory is absent from the newer Torch version's package metadata.
+
+- **Accelerate 1.11.0:** [GHSA-4j2p-28q2-5m79](https://github.com/advisories/GHSA-4j2p-28q2-5m79) concerns paths in sharded checkpoint metadata. The newer 1.15.0 package's clean metadata is not accepted as proof of a fix: source review still found the unsafe checkpoint-path handling and the proposed upstream fixes were not merged. The existing pin is retained instead of hiding the finding through a cosmetic upgrade. Transformers can use Accelerate through device mapping; untrusted checkpoints remain a trust boundary.
+- **DiskCache 5.6.3:** [GHSA-w8v5-vhqr-4h9v](https://github.com/advisories/GHSA-w8v5-vhqr-4h9v) has no published patched version. llama-cpp-python requires it. No application cache construction was found, but its presence remains a dependency risk; do not load attacker-writable cache contents.
+- **PyTorch PT2 loading:** version 2.13.0 addresses the separate TorchScript advisory. It does not establish a fix for [GHSA-33x2-ppm4-v46v](https://github.com/advisories/GHSA-33x2-ppm4-v46v), whose reviewed range/fix information is incomplete. Source review still found PT2 pickle-loading behavior. Noda has no direct PT2 loader call, but no global claim of safe untrusted model loading is made.
+
+A zero GitHub alert count would not resolve these separate findings. No exceptions are accepted on the owner's behalf. Legacy training permits remote model code and is not a safe loader for arbitrary checkpoints. Package-level scans also do not individually audit every vendored/native component; pip's vendored libraries have separate provenance in the legal inventory.
+
+## Verification and release boundaries
+
+Validation uses a fresh external Windows/Python 3.13 environment installed from the exact wheel lock, pip consistency checks, the repository's Python/Node suites, and synthetic real-library compatibility cases. License records are regenerated from matching artifacts. Record actual CI results and the installer checksum in release notes before calling an artifact verified.
+
+The beta.16 tag and installer retain their original dependencies. Updating source does not retroactively patch a downloaded installation; use a separately versioned, verified Setup to update the application.
+
+Separate open findings include Electron IPC/document validation, experimental training/export, optional diagnostic previews and developer-model rights; see [COMPLIANCE.md](COMPLIANCE.md). Clean-machine installation, real-model inference, recovery, native fuzzing and independent legal/regulatory review remain separate checks. Report vulnerabilities using [SECURITY.md](../SECURITY.md).
+
+Scans transmit public package coordinates only. Source code, private notes and credentials are not sent to external analyzers.

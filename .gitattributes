@@ -16,8 +16,8 @@ scripts/windows-portable/llama-cpu-assets.json -text
 backend/ru_pipeline/assets/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 LICENSE -text
 NOTICE -text
-THIRD_PARTY_NOTICES.md -text
-LICENSES/** -text
+THIRD_PARTY_NOTICES.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+LICENSES/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 frontend/assets/** -text
 docs/assets/** -text
 

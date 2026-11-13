@@ -32,5 +32,49 @@
       ],
       "project_url": "https://pypi.org/project/tqdm/"
     }
+  ],
+  "vendored_covered_packages": [
+    {
+      "package": "certifi",
+      "version": "2026.10.23",
+      "distribution": "pip",
+      "distribution_version": "26.3",
+      "package_path": "pip/_vendor/certifi",
+      "license": "MPL-2.0",
+      "source_files": [
+        {
+          "filename": "pip-26.3.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/53/c7/f8d9e2e0e7c1ed8a22a10eeb3b5bf7860bc07d8446c7a978a882c5c8214b/pip-26.3.tar.gz",
+          "sha256": "6c36ae7da8695be67e3cd9f7d87919667ced53f57ce2ede75d89b5912ed2bc4c",
+          "bytes": 1934348
+        }
+      ],
+      "upstream_source_files": [
+        {
+          "filename": "certifi-2026.10.23.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/fd/11/b524cbd9bbdaca58608e4cf4053fd463417549e1959fa8d3aa18319f9555/certifi-2026.10.23.tar.gz",
+          "sha256": "a9895e6e2758b371e0545e321a3a8fd1fcfd9829ada8824a936dfb16aaaf36cd",
+          "bytes": 136225
+        }
+      ],
+      "provenance": "Version read from pip/_vendor/vendor.txt; the complete pip source archive includes its vendoring modifications. Archive hashes and the vendored license were verified."
+    },
+    {
+      "package": "validate-pyproject embedded files",
+      "version": null,
+      "distribution": "setuptools",
+      "distribution_version": "84.1.0",
+      "package_path": "setuptools/config/_validate_pyproject",
+      "license": "MPL-2.0",
+      "source_files": [
+        {
+          "filename": "setuptools-84.1.0.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/73/eb/7e5f628ee2eb168fecbf8026de7856b2543d6d609cc85f086b9a91ac93d6/setuptools-84.1.0.tar.gz",
+          "sha256": "23657205b63d4d31395ab917815247f694aafad28cd21316bf5fd45a51048ea0",
+          "bytes": 1171783
+        }
+      ],
+      "provenance": "Exact bundled NOTICE identifies the covered files. Separate upstream version is not declared; the verified setuptools source archive includes the copied/generated files."
+    }
   ]
 }
