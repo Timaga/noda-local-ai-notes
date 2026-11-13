@@ -10,7 +10,7 @@
 
 <p align="center">Windows x64 · beta · local inference · noncommercial source license</p>
 
-<p align="center"><a href="#build-for-windows">Build for Windows</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="CONTRIBUTING.md">Contribute</a></p>
+<p align="center"><strong><a href="https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.16/Noda-Setup-1.0.2-beta.16-x64.exe">Download Windows Setup (x64)</a></strong> · <a href="https://github.com/Timaga/noda-local-ai-notes/releases">All versions</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="#build-from-source">Build from source</a></p>
 
 ![Noda library with projects, a note list and an editable Markdown note](docs/assets/screenshots/library.png)
 
@@ -41,29 +41,25 @@ Chat retrieves note fragments from the current project and includes source links
 
 Screenshots use synthetic demo notes in an isolated application profile. The displayed chat answer is demonstration data, not a model evaluation.
 
-## Build for Windows
+## Install on Windows
 
-The prepared source version is **1.0.2-beta.16**. The [source repository](https://github.com/Timaga/noda-local-ai-notes) is currently private for testing. This repository provides source code and a [release draft](docs/releases/1.0.2-beta.16.md). No public, signed installer has been released for this candidate.
+**[Download Noda 1.0.2-beta.16 Setup for Windows x64](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.16/Noda-Setup-1.0.2-beta.16-x64.exe)** · [Release notes and checksums](https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.16)
 
-You need Windows x64, Git, Node.js 22.12 or newer within the 22.x line, and npm. Clone the repository using an account with access, then build in PowerShell:
+1. Download `Noda-Setup-1.0.2-beta.16-x64.exe` and run it.
+2. Follow the installation steps, then open **Noda** from the Start menu.
+3. Let Noda prepare its local runtime and the models you choose. Initial downloads require internet access.
 
-```powershell
-git clone https://github.com/Timaga/noda-local-ai-notes.git
-cd noda-local-ai-notes
-npm --prefix frontend ci
-npm --prefix frontend run build
-```
+The repository and release are private for testing. Sign in to a GitHub account with repository access to download them. The Windows build is unsigned. Known dependency advisories are listed in [SECURITY.md](SECURITY.md).
 
-The build script prints the generated installer path. It uses a dedicated output directory and does not publish the build.
+### Update to a newer version
 
-For development checks, see [DEVELOPMENT.md](docs/DEVELOPMENT.md).
+Back up your projects and app profile, fully exit Noda through its tray menu, then run the new version's **Setup**. Project folders and profile data are kept separately from the installed program. After installation, launch Noda from the Start menu. See [all versions](https://github.com/Timaga/noda-local-ai-notes/releases) to choose a release. Automatic application updates are not included in this beta.
 
 ### First run
 
-1. Start the installer you built and choose the installation folder.
-2. Start in English and create a project or connect a Markdown folder. Other interface languages remain available in Settings.
-3. Let Noda prepare its local runtime. Choose the processing models you want, or disable optional AI stages.
-4. Create a quick note, watch its queue entry, then open the result in the library.
+1. Start in English and create a project or connect a Markdown folder. Other interface languages remain available in Settings.
+2. Choose the processing models you want, or disable optional AI stages.
+3. Create a quick note, watch its queue entry, then open the result in the library.
 
 The base runtime requires Windows 10 or 11 x64 and an AVX2-capable processor. **16 GB RAM is a useful starting point for the recommended local model profile.** Larger models need more resources. Download sizes are shown before model installation; leave additional disk space for the runtime, model weights and temporary downloads.
 
@@ -90,6 +86,19 @@ The supplied note-processing profiles support **Russian and English**. Changing 
 Noda is a Windows beta. The current focus is reliable capture, useful metadata and a clear local workflow. Broader model evaluation, clean-machine release validation and performance work remain part of beta testing.
 
 Useful contributions include reproducible bugs, accessibility improvements, translations and small tests for real workflows. Please use synthetic notes or remove private information before sharing a report.
+
+## Build from source
+
+Developers need Windows x64, Git, Node.js 22.12 or newer within the 22.x line, and npm. Clone using an account with repository access, then build in PowerShell:
+
+```powershell
+git clone https://github.com/Timaga/noda-local-ai-notes.git
+cd noda-local-ai-notes
+npm --prefix frontend ci
+npm --prefix frontend run build
+```
+
+The script prints the generated Setup path and does not publish it. See [DEVELOPMENT.md](docs/DEVELOPMENT.md) for tests and [RELEASING.md](docs/RELEASING.md) for preparing another version.
 
 ## License and credits
 

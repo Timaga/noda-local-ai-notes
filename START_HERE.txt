@@ -1,22 +1,23 @@
 Getting started with Noda
 
-This is the prepared source repository for Noda 1.0.2-beta.16.
-It contains no personal note library, installed runtime cache or model weights.
-No public installer download is implied by this folder.
+Install Noda 1.0.2-beta.16 on Windows x64:
 
-On Windows x64 with Node.js 22.12+ within the 22.x line and npm:
+  https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.16
 
-  npm --prefix frontend ci
-  npm --prefix frontend run build
+Download Noda-Setup-1.0.2-beta.16-x64.exe from that release and run it.
+Open Noda from the Start menu after installation. No developer tools are needed.
+The repository and release are private; sign in with an account that has access.
 
-The build script prints the installer path and does not publish it.
-Start the installer you built. The initial interface starts in English.
-Create a project or connect a Markdown folder, then choose optional local models.
-First-run runtime preparation and model downloads require internet access.
+To update, back up projects and the app profile, fully exit Noda through its tray
+menu, then run the new version's Setup. Open the installed Noda to use the app.
+All versions: https://github.com/Timaga/noda-local-ai-notes/releases
+
+Fresh profiles start in English. Initial runtime and model downloads need internet.
+This is an unsigned beta with known dependency advisories. See SECURITY.md.
 
 Read README.md for requirements, features and the source-license conditions.
 Read docs/USER_GUIDE.md for capture, data locations and backups.
-Read docs/DEVELOPMENT.md for local checks.
-Read docs/releases/1.0.2-beta.16.md before preparing a public prerelease.
+Developers: docs/DEVELOPMENT.md covers source builds and local checks.
+Maintainers: docs/RELEASING.md covers versioned installer releases.
 
 Support: tim@buglai.com

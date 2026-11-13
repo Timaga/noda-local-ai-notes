@@ -1,6 +1,6 @@
 # GitHub repository setup
 
-The repository is [Timaga/noda-local-ai-notes](https://github.com/Timaga/noda-local-ai-notes), created privately for owner testing. These are owner settings and publication checks; this document does not apply them automatically. Public visibility, announcements and release publication remain separate owner actions.
+The repository is [Timaga/noda-local-ai-notes](https://github.com/Timaga/noda-local-ai-notes), private for owner testing. Its testing prerelease provides a versioned Windows Setup. Public repository visibility, announcements and a stable public launch remain separate owner decisions.
 
 ## Name and About
 
@@ -46,13 +46,16 @@ These are 16 lowercase topics with hyphens. GitHub allows up to 20 topics, each 
 - Use the prepared Social preview PNG at `docs/assets/social-preview.png`: 1280 × 640 pixels, less than 1 MB, with a solid background and readable product name. Verify the final file before manually adding it in Settings → Social preview.
 - Do not show fabricated stars, reviews, user counts, passing CI or unverified speed claims.
 
-## Prepared prerelease
+## Windows installer release
 
 - Tag: **`v1.0.2-beta.16`**.
-- Title: **`Noda 1.0.2-beta.16 — local AI notes for Windows`**.
-- Type: **prerelease**, initially **draft**.
-- Body: [release draft](../docs/releases/1.0.2-beta.16.md).
-- Assets: the verified installer and its actual SHA256 checksums, after the release acceptance list is complete.
+- Title: **`Noda 1.0.2-beta.16`**.
+- Type: **published prerelease inside the private repository**.
+- Download: [Windows x64 Setup](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.16/Noda-Setup-1.0.2-beta.16-x64.exe).
+- Notes: installation/update steps, changes and honest beta limitations.
+- Assets: the verified Setup, checksums and additional source/validation files.
+
+See [RELEASING.md](../docs/RELEASING.md) for future versions. GitHub Packages is not used for this `.exe`; users install through Releases. `/releases/latest` excludes beta prereleases, so README uses the exact version's download link.
 
 Do not label the old 1.0.0 installer as beta.16 or claim that an unsigned build is signed.
 

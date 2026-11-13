@@ -60,4 +60,4 @@ Keep dependencies, caches, virtual environments, runtime profiles, private notes
 
 ## Before a release
 
-Use the release draft's acceptance list. Build from a recorded source revision, retain checksums and verify the exact installer intended for distribution on a clean Windows profile. Review the licenses and notices for each component included in that artifact.
+Follow [RELEASING.md](RELEASING.md) and the remaining release acceptance checks. Build from a recorded source revision, retain checksums and verify the exact installer intended for distribution on a clean Windows profile. Review the licenses and notices for each component included in that artifact.
