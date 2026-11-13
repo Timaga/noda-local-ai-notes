@@ -21,8 +21,6 @@ jobs:
       run:
         shell: pwsh
     env:
-      CI_VENV: ${{ runner.temp }}\noda-ci-venv
-      RESULTS_DIR: ${{ runner.temp }}\noda-check-results
       PYTHONDONTWRITEBYTECODE: "1"
       HF_HUB_OFFLINE: "1"
       HF_DATASETS_OFFLINE: "1"
@@ -32,6 +30,11 @@ jobs:
       PIP_DISABLE_PIP_VERSION_CHECK: "1"
       PIP_NO_INPUT: "1"
     steps:
+      - name: Set isolated paths on the allocated runner
+        run: |
+          "CI_VENV=$(Join-Path $env:RUNNER_TEMP 'noda-ci-venv')" >> $env:GITHUB_ENV
+          "RESULTS_DIR=$(Join-Path $env:RUNNER_TEMP 'noda-check-results')" >> $env:GITHUB_ENV
+
       - name: Check out source without persisted credentials
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
@@ -83,8 +86,8 @@ jobs:
         with:
           name: windows-test-results
           path: |
-            ${{ env.RESULTS_DIR }}/*.log
-            ${{ env.RESULTS_DIR }}/*.json
-            ${{ env.RESULTS_DIR }}/*.xml
+            ${{ runner.temp }}/noda-check-results/*.log
+            ${{ runner.temp }}/noda-check-results/*.json
+            ${{ runner.temp }}/noda-check-results/*.xml
           if-no-files-found: warn
           retention-days: 7
