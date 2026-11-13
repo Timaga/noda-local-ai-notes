@@ -3,12 +3,24 @@ param(
     [ValidateNotNullOrEmpty()][string]$OutputDirectory,
     [switch]$StageOnly,
     [switch]$SourceOnly,
-    [switch]$Installer
+    [switch]$Installer,
+    [switch]$Sign,
+    [string]$CertificateThumbprint,
+    [string]$TimestampServer = 'http://timestamp.digicert.com'
 )
 
 $ErrorActionPreference = 'Stop'
 $root = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../..'))
 if ($Installer -and $SourceOnly) { throw 'Choose either -Installer or -SourceOnly.' }
+if ($Sign -and $SourceOnly) { throw 'Source exports cannot be code-signed.' }
+if ($CertificateThumbprint -and -not $Sign) { throw 'Use -Sign when selecting a signing certificate.' }
+$signingOptions = $null
+if ($Sign) {
+    . (Join-Path $PSScriptRoot 'signing.ps1')
+    $signingOptions = Get-NodaSigningOptions $CertificateThumbprint $TimestampServer
+    # StageOnly previews configuration; an actual build requires the installed identity.
+    if (-not $StageOnly) { Assert-NodaSigningIdentity $CertificateThumbprint }
+}
 if (-not $OutputDirectory) {
     $kind = if ($Installer) { 'setup' } elseif ($SourceOnly) { 'source' } else { 'portable' }
     $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
@@ -141,7 +153,8 @@ if ($SourceOnly) {
         }
     }
     foreach ($file in @(
-        'frontend/package-lock.json', 'scripts/windows-portable/build.ps1', 'scripts/windows-portable/installer.nsh', '.gitignore',
+        'frontend/package-lock.json', 'scripts/windows-portable/build.ps1', 'scripts/windows-portable/signing.ps1',
+        'scripts/windows-portable/installer.nsh', '.gitignore',
         'docs/note-library-storage.md', 'tests/test_windows_portable_packaging.py',
         'tests/frontend_desktop_settings.test.js', 'tests/frontend_ui_languages.test.js',
         'tests/frontend/portable_runtime.test.cjs', 'tests/frontend/notes_note_actions.test.cjs',
@@ -169,6 +182,11 @@ $config = [ordered]@{
     win = @{ target = 'dir'; icon = 'assets/noda-icon.ico'; signExecutable = $false }
 }
 $configName = 'electron-builder.portable.json'
+if ($Sign) {
+    $config.forceCodeSigning = $true
+    $config.win.signExecutable = $true
+    $config.win.signtoolOptions = $signingOptions
+}
 if ($Installer) {
     $configName = 'electron-builder.installer.json'
     $config.win.target = 'nsis'
@@ -205,12 +223,17 @@ if ($Installer) {
     $version = (Get-Content -LiteralPath (Join-Path $frontend 'package.json') -Raw | ConvertFrom-Json).version
     $setup = Join-Path $output ('dist/Noda-Setup-{0}-x64.exe' -f $version)
     if (-not (Test-Path -LiteralPath $setup -PathType Leaf)) { throw 'The Windows installer was not produced.' }
+    if ($Sign) {
+        Assert-NodaSignedArtifact (Join-Path $output 'dist/win-unpacked/Noda.exe') $CertificateThumbprint
+        Assert-NodaSignedArtifact $setup $CertificateThumbprint
+    }
     Write-Output $setup
     return
 }
 
 $app = Join-Path $output 'dist/win-unpacked/Noda.exe'
 if (-not (Test-Path -LiteralPath $app -PathType Leaf)) { throw 'The portable executable was not produced.' }
+if ($Sign) { Assert-NodaSignedArtifact $app $CertificateThumbprint }
 foreach ($notice in $notices) {
     $staged = Join-Path $source $notice
     if (Test-Path -LiteralPath $staged -PathType Leaf) {

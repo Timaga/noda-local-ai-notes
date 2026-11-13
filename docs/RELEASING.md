@@ -21,6 +21,10 @@ Public availability is a separate owner decision. Before a public binary launch,
 
 ## Installing and updating
 
+For a future signed release, follow [Windows code signing](WINDOWS_SIGNING.md).
+Use the explicit `-Sign` build mode after obtaining a validated identity, then
+verify the final signatures before generating checksums or publishing.
+
 Users download **Setup**, run it, then launch the installed Noda from the Start menu. For another version, they back up their projects/profile, fully exit Noda through its tray menu and run that version's Setup. This beta does not provide an automatic updater.
 
 Initial runtime/model downloads still need internet access. Do not describe the small application installer as a complete offline model bundle. Private repository tokens must never be embedded in the application to enable downloads or updates.

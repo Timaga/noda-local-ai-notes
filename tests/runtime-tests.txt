@@ -33,6 +33,7 @@ tests/test_source_note_recovery.py
 tests/test_source_recovery_guards.py
 tests/test_source_recovery_publication.py
 tests/test_source_retry_api.py
+tests/test_windows_code_signing.py
 tests/test_windows_portable_packaging.py
 tests/test_license_manifest.py
 tests/test_dependency_runtime_smoke.py

@@ -74,7 +74,8 @@ def test_source_export_contains_standalone_checks_and_storage_docs(tmp_path):
     assert result.returncode == 0, result.stderr
     source = output / "Noda-source"
     files = (
-        "scripts/windows-portable/build.ps1", "scripts/windows-portable/installer.nsh", "docs/note-library-storage.md",
+        "scripts/windows-portable/build.ps1", "scripts/windows-portable/signing.ps1",
+        "scripts/windows-portable/installer.nsh", "docs/note-library-storage.md",
         "tests/test_windows_portable_packaging.py", "tests/frontend/portable_runtime.test.cjs",
         "tests/frontend/portable_runtime_cache.test.cjs", "tests/frontend/portable_setup_progress.test.cjs",
         "tests/frontend/notes_note_actions.test.cjs", "tests/frontend/quick_capture_project.test.cjs",

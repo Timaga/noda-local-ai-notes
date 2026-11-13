@@ -15,6 +15,11 @@ __pycache__/
 venv/
 ENV/
 
+# Signing private-key containers
+*.pfx
+*.p12
+*.key
+
 # Build & distribution artifacts
 build/
 dist/
