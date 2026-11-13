@@ -2,6 +2,7 @@
 
 import json
 import subprocess
+import time
 from pathlib import Path
 from types import SimpleNamespace
 from urllib.error import URLError
@@ -115,7 +116,11 @@ def isolated(tmp_path, monkeypatch):
     monkeypatch.setattr(server.socket, "socket", Probe)
     monkeypatch.setattr(server.subprocess, "Popen", popen)
     monkeypatch.setattr(server.subprocess, "run", helper)
-    monkeypatch.setattr(server.time, "sleep", lambda value: None)
+    monkeypatch.setattr(
+        server,
+        "time",
+        SimpleNamespace(monotonic=time.monotonic, sleep=lambda value: None),
+    )
     return context
 
 
@@ -211,11 +216,15 @@ def test_transient_health_retries_without_second_process(isolated, monkeypatch):
 
 
 def test_timeout_retires_child(isolated, monkeypatch):
+    ambient_monotonic = time.monotonic
     values = iter((0, 1000))
     monkeypatch.setattr(server.time, "monotonic", lambda: next(values))
+    # Unrelated callers must not consume the server's fake clock.
+    time.monotonic()
     owner = server.OwnedServer("qwen35_4b", isolated.config)
     with pytest.raises(TimeoutError):
         owner.__enter__()
+    assert time.monotonic is ambient_monotonic
     assert server.normal(owner.cleanup)
 
 
