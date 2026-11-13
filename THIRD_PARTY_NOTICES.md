@@ -6,7 +6,7 @@ Earlier copies supplied under MIT keep the permissions granted with those copies
 
 ## Inventory and complete texts
 
-- [Dependency inventory](docs/legal/DEPENDENCIES.md): all 109 entries in the Windows Python lock and all 284 non-root entries in the npm lock, including build and optional platform entries.
+- [Dependency inventory](docs/legal/DEPENDENCIES.md): all 109 entries in the Windows Python lock and all 282 non-root entries in the npm lock, including build and optional platform entries.
 - [Machine-readable inventory and text hashes](docs/legal/dependencies.json).
 - [Models](docs/legal/MODELS.md), [runtime downloads](docs/legal/RUNTIMES.md), and [project artwork](docs/legal/ASSETS.md).
 - [LICENSES](LICENSES/) contains unmodified collected upstream license and notice texts. Package-level labels are summaries; embedded-component notices and exceptions remain controlling.
@@ -17,7 +17,7 @@ Earlier copies supplied under MIT keep the permissions granted with those copies
 | --- | --- | --- |
 | Electron | MIT for Electron; Chromium, Node.js and embedded components have separate licenses | [Electron notice](LICENSES/npm/electron/LICENSE); retain the distributed `LICENSE.electron.txt` and `LICENSES.chromium.html` with an Electron binary |
 | Marked | MIT | [Marked notice](LICENSES/npm/marked/LICENSE.md) |
-| Python packages | Multiple licenses, including MIT, Apache-2.0, BSD variants, PSF-2.0, MPL-2.0 and bundled native-component terms | [Versioned package notices](LICENSES/python/); [complete inventory](docs/legal/dependencies.json) |
+| Python packages | Multiple licenses, including MIT, Apache-2.0, BSD variants, PSF-2.0, MPL-2.0, LGPLv3 for vendored autocommand, and bundled native-component terms | [Versioned package notices](LICENSES/python/); [complete inventory](docs/legal/dependencies.json) |
 | certifi | MPL-2.0 for covered certificate data | Preserve its original notices; [MPL text](LICENSES/common/MPL-2.0.txt) and [exact source locations](docs/legal/mpl-sources.json) |
 | tqdm | MPL-2.0 and MIT, according to file/author notices | Preserve its original notices; [MPL text](LICENSES/common/MPL-2.0.txt) and [exact source locations](docs/legal/mpl-sources.json) |
 | CPython and Python Build Standalone | Python's own licenses and embedded-library terms; the build system has a separate license | [Runtime terms](docs/legal/RUNTIMES.md) |

@@ -2,7 +2,7 @@
 
 Noda's Windows application is distributed through **GitHub Releases**. Each version has a Git tag, short release notes and a versioned `Noda-Setup-<version>-x64.exe`. GitHub Packages is for package registries and is not used for this desktop installer.
 
-The current testing release is [v1.0.2-beta.16](https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.16). The repository remains private. Publishing a prerelease inside it keeps downloads limited to accounts with repository access.
+The current testing release is [v1.0.2-beta.17](https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.17). The repository remains private. Publishing a prerelease inside it keeps downloads limited to accounts with repository access.
 
 ## Prepare another version
 
@@ -17,7 +17,7 @@ The current testing release is [v1.0.2-beta.16](https://github.com/Timaga/noda-l
 
 The current beta uses a pinned version download link. `/releases/latest` does not select prereleases, so use the specific beta tag or [all versions](https://github.com/Timaga/noda-local-ai-notes/releases).
 
-Public availability is a separate owner decision. Before a public binary launch, resolve the applicable security and installation gates in [the release notes](releases/1.0.2-beta.16.md) and [known dependency issues](security-known-issues.md). No workflow automatically publishes a release on every source push.
+Public availability is a separate owner decision. Before a public binary launch, resolve the applicable security and installation gates in [the release notes](releases/1.0.2-beta.17.md) and [known dependency issues](security-known-issues.md). No workflow automatically publishes a release on every source push.
 
 ## Installing and updating
 

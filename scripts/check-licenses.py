@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check source or staged-runtime license integrity offline, using only stdlib."""
+
 import argparse
 import hashlib
 import json
@@ -11,7 +12,7 @@ from pathlib import Path, PurePosixPath
 
 LICENSE_ID = "PolyForm-Noncommercial-1.0.0"
 LICENSE_SHA256 = "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"
-VERSION = "1.0.2-beta.16"
+VERSION = "1.0.2-beta.17"
 SCHEMA = "noda-license-manifest-v1"
 REQUIRED = {"LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"}
 KINDS = {"project-license", "required-notice", "third-party-license", "provenance"}

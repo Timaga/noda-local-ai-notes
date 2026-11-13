@@ -52,16 +52,16 @@ These are 20 factual lowercase topics. GitHub allows up to 20 topics, each no lo
 
 ## Windows installer release
 
-- Tag: **`v1.0.2-beta.16`**.
-- Title: **`Noda 1.0.2-beta.16`**.
+- Tag: **`v1.0.2-beta.17`**.
+- Title: **`Noda 1.0.2-beta.17`**.
 - Type: **published prerelease inside the private repository**.
-- Download: [Windows x64 Setup](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.16/Noda-Setup-1.0.2-beta.16-x64.exe).
+- Download: [Windows x64 Setup](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.17/Noda-Setup-1.0.2-beta.17-x64.exe).
 - Notes: installation/update steps, changes and honest beta limitations.
 - Assets: the verified Setup, checksums and additional source/validation files.
 
 See [RELEASING.md](../docs/RELEASING.md) for future versions. GitHub Packages is not used for this `.exe`; users install through Releases. `/releases/latest` excludes beta prereleases, so README uses the exact version's download link.
 
-Do not label the old 1.0.0 installer as beta.16 or claim that an unsigned build is signed.
+Do not label an older installer as a newer version or claim that an unsigned build is signed.
 
 ## Discoverability
 

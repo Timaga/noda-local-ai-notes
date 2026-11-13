@@ -1,7 +1,7 @@
 {
   "name": "noda",
   "productName": "Noda",
-  "version": "1.0.2-beta.16",
+  "version": "1.0.2-beta.17",
   "description": "Noda local AI notes desktop app by buglAI",
   "main": "main.js",
   "author": "buglAI",
@@ -16,6 +16,14 @@
   "devDependencies": {
     "electron": "42.11.18",
     "electron-builder": "26.18.1"
+  },
+  "overrides": {
+    "app-builder-lib@26.18.1": {
+      "minimatch@>=7 <11.0.1": "11.0.8"
+    },
+    "@electron/universal@2.0.3": {
+      "minimatch@>=7 <11.0.1": "11.0.8"
+    }
   },
   "build": {
     "appId": "ai.buglai.noda",

@@ -30,6 +30,6 @@ Security fixes target the latest maintained beta source. Older binaries and expe
 
 Dependency advisory triage is a release gate. Review both source dependencies and the runtime components included in the final artifact. For each known advisory, record the affected version, reachable behavior, mitigation and remaining risk. Resolve relevant high or critical findings before public binary distribution; private testing and passing application tests do not replace this review.
 
-The [release checklist](docs/releases/1.0.2-beta.16.md) also requires clean-install, update and recovery checks. A source upload does not certify the distributable.
+The [release checklist](docs/releases/1.0.2-beta.17.md) also requires clean-install, update and recovery checks. A source upload does not certify the distributable.
 
 For ordinary bugs, use the repository's bug-report form after removing private information.

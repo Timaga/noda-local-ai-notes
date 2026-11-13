@@ -46,7 +46,7 @@
       "name": "annotated-types",
       "version": "0.7.0",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: MIT License",
+      "declared_license": "MIT License",
       "wheel_sha256": "1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -70,7 +70,7 @@
       "name": "blinker",
       "version": "1.9.0",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: MIT License",
+      "declared_license": "MIT License",
       "wheel_sha256": "ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -110,7 +110,7 @@
       "name": "colorama",
       "version": "0.4.6",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: BSD License",
+      "declared_license": "BSD License",
       "wheel_sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -132,10 +132,10 @@
     },
     {
       "name": "datasets",
-      "version": "2.19.0",
+      "version": "5.0.1",
       "direct": true,
       "declared_license": "Apache 2.0",
-      "wheel_sha256": "f57c5316e123d4721b970c68c1cb856505f289cda58f5557ffe745b49c011a8e",
+      "wheel_sha256": "9fbf73688f8c18f7529b4fe592abd04015f81d1e58001e4bac73ffb2b39d7cc4",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
@@ -172,18 +172,18 @@
     },
     {
       "name": "fastapi",
-      "version": "0.121.1",
+      "version": "0.135.0",
       "direct": true,
       "declared_license": "MIT",
-      "wheel_sha256": "2c5c7028bc3a58d8f5f09aecd3fd88a000ccc0c5ad627693264181a3c33aa1fc",
+      "wheel_sha256": "31e2ddc78d6406c6f7d5d7b9996a057985e2600fbe7e9ba6ace8205d48dff688",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
       "name": "filelock",
-      "version": "3.20.0",
+      "version": "4.2.1",
       "direct": true,
-      "declared_license": "Unlicense",
-      "wheel_sha256": "339b4732ffda5cd79b13f4e2711a31b0365ce445d95d243bb996273d072546a2",
+      "declared_license": "MIT",
+      "wheel_sha256": "7be2662e9e826b9bba28afc0f843a123280d799a2ea44bb5d35ccec67905ae44",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
@@ -220,10 +220,10 @@
     },
     {
       "name": "fsspec",
-      "version": "2024.3.1",
+      "version": "2026.6.0",
       "direct": true,
-      "declared_license": "BSD",
-      "wheel_sha256": "918d18d41bf73f0e2b261824baeb1b124bcf771767e3a26425cd7dec3332f512",
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "02e0b71817df9b2169dc30a16832045764def1191b43dcff5bb85bdee212d2a1",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
@@ -310,7 +310,7 @@
       "name": "hyperframe",
       "version": "6.1.0",
       "direct": false,
-      "declared_license": "License :: OSI Approved :: MIT License",
+      "declared_license": "MIT License",
       "wheel_sha256": "b03380493a519fce58ea5af42e4a42317bf9bd425596f7a0835ffce80f1a42e5",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -326,7 +326,7 @@
       "name": "itsdangerous",
       "version": "2.2.0",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: BSD License",
+      "declared_license": "BSD License",
       "wheel_sha256": "c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -334,7 +334,7 @@
       "name": "Jinja2",
       "version": "3.1.6",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: BSD License",
+      "declared_license": "BSD License",
       "wheel_sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -342,7 +342,7 @@
       "name": "jiter",
       "version": "0.12.0",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: MIT License",
+      "declared_license": "MIT License",
       "wheel_sha256": "e25012eb0c456fcc13354255d0338cd5397cce26c77b2832b3c4e2e255ea5d9a",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -366,7 +366,7 @@
       "name": "markdown-it-py",
       "version": "4.0.0",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: MIT License",
+      "declared_license": "MIT License",
       "wheel_sha256": "87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -382,7 +382,7 @@
       "name": "mdurl",
       "version": "0.1.2",
       "direct": false,
-      "declared_license": "License :: OSI Approved :: MIT License",
+      "declared_license": "MIT License",
       "wheel_sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -414,7 +414,7 @@
       "name": "networkx",
       "version": "3.5",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: BSD License",
+      "declared_license": "BSD License",
       "wheel_sha256": "0030d386a9a06dee3565298b4a734b68589749a544acbb6c412dc9e2489ec6ec",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -422,7 +422,7 @@
       "name": "numpy",
       "version": "2.3.4",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: BSD License",
+      "declared_license": "BSD License",
       "wheel_sha256": "56209416e81a7893036eea03abcb91c130643eb14233b2515c90dcac963fe99d",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -438,7 +438,7 @@
       "name": "packaging",
       "version": "25.0",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: Apache Software License; License :: OSI Approved :: BSD License",
+      "declared_license": "Apache Software License; BSD License",
       "wheel_sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -464,6 +464,14 @@
       "direct": true,
       "declared_license": "MIT-CMU",
       "wheel_sha256": "9dda0788a9932776a75d8bcc020076edc308ce2508b51f6739a45e3158b3fc42",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pip",
+      "version": "26.3",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "f3b60b20ffaadd4415ed7957212a38ac63fa4c5fa375bd0f4a797777940fad13",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
@@ -504,14 +512,6 @@
       "direct": false,
       "declared_license": "Apache-2.0",
       "wheel_sha256": "8196f36a2f4cb8d2d6ef3651941b80e5ccf125d7653657d99af5bb298e7a7026",
-      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
-    },
-    {
-      "name": "pyarrow-hotfix",
-      "version": "0.7",
-      "direct": false,
-      "declared_license": "Apache License, Version 2.0",
-      "wheel_sha256": "3236f3b5f1260f0e2ac070a55c1a7b339c4bb7267839bd2015e283234e758100",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
@@ -638,7 +638,7 @@
       "name": "safetensors",
       "version": "0.6.2",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: Apache Software License",
+      "declared_license": "Apache Software License",
       "wheel_sha256": "c7b214870df923cbc1593c3faee16bec59ea462758699bd3fee399d00aac072c",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -654,7 +654,7 @@
       "name": "scipy",
       "version": "1.16.3",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: BSD License",
+      "declared_license": "BSD License",
       "wheel_sha256": "062246acacbe9f8210de8e751b16fc37458213f124bef161a5a02c7a39284304",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
@@ -676,11 +676,11 @@
     },
     {
       "name": "setuptools",
-      "version": "80.9.0",
+      "version": "84.1.0",
       "direct": true,
       "declared_license": "MIT",
-      "wheel_sha256": "062d34222ad13e0cc312a4c02d73f059e86a4acbfbdea8f8f76b28c99f306922",
-      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+      "wheel_sha256": "5231689c6ac8156cd155cfb98c3fd6fb252c3e7e9bd3d78b64d3c55f132624c9",
+      "additional_notices": "The MIT package also vendors autocommand 2.2.2 (LGPLv3) and MPL-2.0 validate-pyproject files. Full notices and exact source provenance are retained; see docs/legal/vendored-sources.json."
     },
     {
       "name": "shellingham",
@@ -700,10 +700,10 @@
     },
     {
       "name": "starlette",
-      "version": "0.49.3",
+      "version": "1.3.1",
       "direct": true,
       "declared_license": "BSD-3-Clause",
-      "wheel_sha256": "b579b99715fdc2980cf88c8ec96d3bf1ce16f5a8051a7c2b84ef9b1cdecaea2f",
+      "wheel_sha256": "c7372aae11c3c3f26a42df7bd626cec2f47d03483d261d369516a615a53714c6",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
@@ -734,16 +734,16 @@
       "name": "tokenizers",
       "version": "0.22.2",
       "direct": true,
-      "declared_license": "License :: OSI Approved :: Apache Software License",
+      "declared_license": "Apache Software License",
       "wheel_sha256": "c9ea31edff2968b44a88f97d784c2f16dc0729b8b143ed004699ebca91f05c48",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
       "name": "torch",
-      "version": "2.10.0+cpu",
+      "version": "2.13.0+cpu",
       "direct": true,
-      "declared_license": "BSD-3-Clause",
-      "wheel_sha256": "b719da5af01b59126ac13eefd6ba3dd12d002dc0e8e79b8b365e55267a8189d3",
+      "declared_license": "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT",
+      "wheel_sha256": "a17ff48608634db245e17e8bb00a9558554a49aeb1e4f5fe6cd039af2a10515b",
       "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
     },
     {
@@ -1003,24 +1003,6 @@
       "integrity": "sha512-Wn9sPYIVFRFl5HmwMJkARCCf7rqK/EurkfQ/rJZ14mHP3iYTjZSIOSVonEAnhWeAXwtw7zOekGRlc6yTtZ0t+g=="
     },
     {
-      "path": "node_modules/@electron/universal/node_modules/balanced-match",
-      "version": "1.0.2",
-      "license": "MIT",
-      "dev": true,
-      "optional": false,
-      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
-      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
-    },
-    {
-      "path": "node_modules/@electron/universal/node_modules/brace-expansion",
-      "version": "2.1.7",
-      "license": "MIT",
-      "dev": true,
-      "optional": false,
-      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.1.7.tgz",
-      "integrity": "sha512-uZbew1NqdmPDTMJ8ah1y+b+9QEJrfkXFk3RcTQw3X0jW/xRUvFKsg1CfQdSYGdTbXZWExtU3J3ccxtnfw1Fi0g=="
-    },
-    {
       "path": "node_modules/@electron/universal/node_modules/fs-extra",
       "version": "11.4.1",
       "license": "MIT",
@@ -1028,15 +1010,6 @@
       "optional": false,
       "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-11.4.1.tgz",
       "integrity": "sha512-KYAb4c9BJQI6QqGKthV68OHe0badztdXJWKo0WtBA9IuCFPTKvE5ZdUBglP833aMjhaSPNO4A5j/EkzZtGlKjA=="
-    },
-    {
-      "path": "node_modules/@electron/universal/node_modules/minimatch",
-      "version": "9.0.9",
-      "license": "ISC",
-      "dev": true,
-      "optional": false,
-      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-9.0.9.tgz",
-      "integrity": "sha512-OBwBN9AL4dqmETlpS2zasx+vTeWclWzkblfZk7KTA5j3jeOONz/tRCnZomUyvNg83wL5Zv9Ss6HMJXAgL8R2Yg=="
     },
     {
       "path": "node_modules/@electron/windows-sign",
@@ -1064,6 +1037,15 @@
       "optional": false,
       "resolved": "https://registry.npmjs.org/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz",
       "integrity": "sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w=="
+    },
+    {
+      "path": "node_modules/@isaacs/nonrecursive-glob-match",
+      "version": "1.1.0",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@isaacs/nonrecursive-glob-match/-/nonrecursive-glob-match-1.1.0.tgz",
+      "integrity": "sha512-GPm/Dbvk5RLmhRnxXIa7nTpK0xtl4E0wj0MslsuNiJ1FIROU+2+9lgUC/dgF7Ey4QCWhfEsgxilMRMCdHPfDfw=="
     },
     {
       "path": "node_modules/@malept/cross-spawn-promise",
@@ -1778,12 +1760,12 @@
     },
     {
       "path": "node_modules/dir-compare/node_modules/brace-expansion",
-      "version": "1.1.21",
+      "version": "1.1.22",
       "license": "MIT",
       "dev": true,
       "optional": false,
-      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.21.tgz",
-      "integrity": "sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw=="
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.22.tgz",
+      "integrity": "sha512-CKLDTuSsN0+r1ThM0WkzzBI7dnPI6xEGfa/JnVYIK9JNBA1N1NyPwXVHor//NKD/y3sDxp764sZdLhFK7pH8XQ=="
     },
     {
       "path": "node_modules/dir-compare/node_modules/minimatch",
@@ -2183,12 +2165,12 @@
     },
     {
       "path": "node_modules/glob/node_modules/brace-expansion",
-      "version": "1.1.21",
+      "version": "1.1.22",
       "license": "MIT",
       "dev": true,
       "optional": false,
-      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.21.tgz",
-      "integrity": "sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw=="
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.22.tgz",
+      "integrity": "sha512-CKLDTuSsN0+r1ThM0WkzzBI7dnPI6xEGfa/JnVYIK9JNBA1N1NyPwXVHor//NKD/y3sDxp764sZdLhFK7pH8XQ=="
     },
     {
       "path": "node_modules/glob/node_modules/minimatch",
@@ -2570,12 +2552,12 @@
     },
     {
       "path": "node_modules/minimatch",
-      "version": "10.2.6",
+      "version": "11.0.8",
       "license": "BlueOak-1.0.0",
       "dev": true,
       "optional": false,
-      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-10.2.6.tgz",
-      "integrity": "sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A=="
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-11.0.8.tgz",
+      "integrity": "sha512-nFQuYSTVrGvysVBps5Ih+0BdnYFN/Cj3C816r6+p7yK+FHrVLGE4O4N9AFwykrlNlvM2HYt+Rad1Uiro6h88Ig=="
     },
     {
       "path": "node_modules/minimist",
@@ -3435,346 +3417,436 @@
   ],
   "legal_files": [
     {
-      "path": "LICENSES/python/accelerate-1.11.0/licenses/LICENSE",
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
-      "bytes": 11357,
-      "origin": "Unmodified license/notice from pinned installed wheel: accelerate-1.11.0.dist-info/licenses/LICENSE"
+      "path": "LICENSES/common/GPL-3.0.txt",
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+      "bytes": 34674,
+      "origin": "https://raw.githubusercontent.com/spdx/license-list-data/v3.27.0/text/GPL-3.0-only.txt"
     },
     {
-      "path": "LICENSES/python/aiohappyeyeballs-2.7.1/licenses/LICENSE",
-      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
-      "bytes": 13936,
-      "origin": "Unmodified license/notice from pinned installed wheel: aiohappyeyeballs-2.7.1.dist-info/licenses/LICENSE"
+      "path": "LICENSES/common/MPL-2.0.txt",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "bytes": 16726,
+      "origin": "https://www.mozilla.org/media/MPL/2.0/index.txt"
     },
     {
-      "path": "LICENSES/python/aiohttp-3.14.5/licenses/LICENSE.txt",
-      "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23",
-      "bytes": 11313,
-      "origin": "Unmodified license/notice from pinned installed wheel: aiohttp-3.14.5.dist-info/licenses/LICENSE.txt"
+      "path": "LICENSES/npm/electron/LICENSE",
+      "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+      "bytes": 1096,
+      "origin": "Unmodified license from installed npm electron; retained for unchanged exact package version 42.11.18"
     },
     {
-      "path": "LICENSES/python/aiohttp-3.14.5/licenses/vendor/llhttp/LICENSE",
-      "sha256": "628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d",
-      "bytes": 1069,
-      "origin": "Unmodified license/notice from pinned installed wheel: aiohttp-3.14.5.dist-info/licenses/vendor/llhttp/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/aiosignal-1.4.0/licenses/LICENSE",
-      "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6",
-      "bytes": 11332,
-      "origin": "Unmodified license/notice from pinned installed wheel: aiosignal-1.4.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/annotated-doc-0.0.3/licenses/LICENSE",
-      "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
-      "bytes": 1086,
-      "origin": "Unmodified license/notice from pinned installed wheel: annotated_doc-0.0.3.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/annotated-types-0.7.0/licenses/LICENSE",
-      "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
-      "bytes": 1083,
-      "origin": "Unmodified license/notice from pinned installed wheel: annotated_types-0.7.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/anyio-4.14.2/licenses/LICENSE",
-      "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
-      "bytes": 1081,
-      "origin": "Unmodified license/notice from pinned installed wheel: anyio-4.14.2.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/attrs-26.1.0/licenses/LICENSE",
-      "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f",
-      "bytes": 1109,
-      "origin": "Unmodified license/notice from pinned installed wheel: attrs-26.1.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/blinker-1.9.0/LICENSE.txt",
-      "sha256": "9eb73a1f38597a4aa17025d2ae1be3839624c795e985d4f0e9769ce29faca467",
-      "bytes": 1054,
-      "origin": "Unmodified license/notice from pinned installed wheel: blinker-1.9.0.dist-info/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/cachetools-6.2.2/licenses/LICENSE",
-      "sha256": "23c4eff7a1c027a977a0b79c4497e17582c334c5f17ef6ac8ca0b52d1e7d8417",
-      "bytes": 1085,
-      "origin": "Unmodified license/notice from pinned installed wheel: cachetools-6.2.2.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/certifi-2026.10.18/licenses/LICENSE",
-      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
-      "bytes": 989,
-      "origin": "Unmodified license/notice from pinned installed wheel: certifi-2026.10.18.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/charset-normalizer-3.4.4/licenses/LICENSE",
-      "sha256": "18577485d3704f1a479ded8e573c0976cfed315fd2fd17983fa988da4c2f70d1",
-      "bytes": 1092,
-      "origin": "Unmodified license/notice from pinned installed wheel: charset_normalizer-3.4.4.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/click-8.3.0/licenses/LICENSE.txt",
-      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
-      "bytes": 1475,
-      "origin": "Unmodified license/notice from pinned installed wheel: click-8.3.0.dist-info/licenses/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/colorama-0.4.6/licenses/LICENSE.txt",
-      "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318",
-      "bytes": 1491,
-      "origin": "Unmodified license/notice from pinned installed wheel: colorama-0.4.6.dist-info/licenses/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/coloredlogs-15.0.1/LICENSE.txt",
-      "sha256": "0bef4ffb1855b65570304f2018c6d44e4bab97bd5df8716ecd7800014d717267",
-      "bytes": 1056,
-      "origin": "Unmodified license/notice from pinned installed wheel: coloredlogs-15.0.1.dist-info/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/colorlog-6.10.1/licenses/LICENSE",
-      "sha256": "b1d9082bc483623fd59fc7279b457f0e40d942a76426cde257239e04dfe4125a",
-      "bytes": 1107,
-      "origin": "Unmodified license/notice from pinned installed wheel: colorlog-6.10.1.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/datasets-2.19.0/LICENSE",
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "bytes": 11358,
-      "origin": "Unmodified license/notice from pinned installed wheel: datasets-2.19.0.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/dill-0.3.8/LICENSE",
-      "sha256": "51e88a23e78877ceabd727c219c7a5e33f65da9ba03ac4fd285ba904aa1ce22b",
-      "bytes": 1790,
-      "origin": "Unmodified license/notice from pinned installed wheel: dill-0.3.8.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/diskcache-5.6.3/LICENSE",
-      "sha256": "583546baa3fd93607d845126570677a401f508e228b5044fefbc3949af179672",
-      "bytes": 559,
-      "origin": "Unmodified license/notice from pinned installed wheel: diskcache-5.6.3.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/distro-1.9.0/LICENSE",
-      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
-      "bytes": 11325,
-      "origin": "Unmodified license/notice from pinned installed wheel: distro-1.9.0.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/docstring_parser-0.18.0/licenses/LICENSE.md",
-      "sha256": "dfe514a337ae8417abd31a8af707bbd6172b03e5430bb083e145899ea97a3eea",
-      "bytes": 1084,
-      "origin": "Unmodified license/notice from pinned installed wheel: docstring_parser-0.18.0.dist-info/licenses/LICENSE.md"
-    },
-    {
-      "path": "LICENSES/python/fastapi-0.121.1/licenses/LICENSE",
-      "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
-      "bytes": 1086,
-      "origin": "Unmodified license/notice from pinned installed wheel: fastapi-0.121.1.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/filelock-3.20.0/licenses/LICENSE",
-      "sha256": "88d9b4eb60579c191ec391ca04c16130572d7eedc4a86daa58bf28c6e14c9bcd",
-      "bytes": 1210,
-      "origin": "Unmodified license/notice from pinned installed wheel: filelock-3.20.0.dist-info/licenses/LICENSE"
+      "path": "LICENSES/npm/marked/LICENSE.md",
+      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
+      "bytes": 2942,
+      "origin": "Unmodified legal text from locked npm marked 4.3.0"
     },
     {
       "path": "LICENSES/python/Flask-3.1.3/licenses/LICENSE.txt",
       "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
       "bytes": 1475,
-      "origin": "Unmodified license/notice from pinned installed wheel: flask-3.1.3.dist-info/licenses/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/frozenlist-1.8.0/licenses/LICENSE",
-      "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6",
-      "bytes": 11332,
-      "origin": "Unmodified license/notice from pinned installed wheel: frozenlist-1.8.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/fsspec-2024.3.1/LICENSE",
-      "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
-      "bytes": 1513,
-      "origin": "Unmodified license/notice from pinned installed wheel: fsspec-2024.3.1.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/grpcio-1.85.1/licenses/LICENSE",
-      "sha256": "ed9abc49f1fa3e3ce962d8ac42e176125c0ab0051ec5783dfcc807dd2a4c1f0f",
-      "bytes": 30814,
-      "origin": "Unmodified license/notice from pinned installed wheel: grpcio-1.85.1.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/h11-0.16.0/licenses/LICENSE.txt",
-      "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
-      "bytes": 1124,
-      "origin": "Unmodified license/notice from pinned installed wheel: h11-0.16.0.dist-info/licenses/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/h2-4.4.1/licenses/LICENSE",
-      "sha256": "7a65a5af0cbabf1c16251c7c6b2b7cb46d16a7222e79975b9b61fcd66a2e3f28",
-      "bytes": 1102,
-      "origin": "Unmodified license/notice from pinned installed wheel: h2-4.4.1.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/hf-xet-1.4.3/licenses/LICENSE",
-      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
-      "bytes": 11558,
-      "origin": "Unmodified license/notice from pinned installed wheel: hf_xet-1.4.3.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/hpack-4.2.0/licenses/LICENSE",
-      "sha256": "763a9342a04df62046c9dc748a5287934eb0a5331c6863b3ca0aee20e18cb4ed",
-      "bytes": 1080,
-      "origin": "Unmodified license/notice from pinned installed wheel: hpack-4.2.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/httpcore-1.0.9/licenses/LICENSE.md",
-      "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
-      "bytes": 1518,
-      "origin": "Unmodified license/notice from pinned installed wheel: httpcore-1.0.9.dist-info/licenses/LICENSE.md"
-    },
-    {
-      "path": "LICENSES/python/httpx-0.28.1/licenses/LICENSE.md",
-      "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
-      "bytes": 1508,
-      "origin": "Unmodified license/notice from pinned installed wheel: httpx-0.28.1.dist-info/licenses/LICENSE.md"
-    },
-    {
-      "path": "LICENSES/python/huggingface-hub-1.13.0/licenses/LICENSE",
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
-      "bytes": 11357,
-      "origin": "Unmodified license/notice from pinned installed wheel: huggingface_hub-1.13.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/humanfriendly-10.0/LICENSE.txt",
-      "sha256": "4ac48f4117809f2734066150450f120b3bb110ac1d3b32170795e0560dbbc1f5",
-      "bytes": 1056,
-      "origin": "Unmodified license/notice from pinned installed wheel: humanfriendly-10.0.dist-info/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/hyperframe-6.1.0/LICENSE",
-      "sha256": "763a9342a04df62046c9dc748a5287934eb0a5331c6863b3ca0aee20e18cb4ed",
-      "bytes": 1080,
-      "origin": "Unmodified license/notice from pinned installed wheel: hyperframe-6.1.0.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/idna-3.15/licenses/LICENSE.md",
-      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
-      "bytes": 1541,
-      "origin": "Unmodified license/notice from pinned installed wheel: idna-3.15.dist-info/licenses/LICENSE.md"
-    },
-    {
-      "path": "LICENSES/python/itsdangerous-2.2.0/LICENSE.txt",
-      "sha256": "63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7",
-      "bytes": 1475,
-      "origin": "Unmodified license/notice from pinned installed wheel: itsdangerous-2.2.0.dist-info/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: flask-3.1.3.dist-info/licenses/LICENSE.txt"
     },
     {
       "path": "LICENSES/python/Jinja2-3.1.6/licenses/LICENSE.txt",
       "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
       "bytes": 1475,
-      "origin": "Unmodified license/notice from pinned installed wheel: jinja2-3.1.6.dist-info/licenses/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/jiter-0.12.0/licenses/LICENSE",
-      "sha256": "e65c152aa65deaaa52019855bf1bbce4a0d592a048cb523b6ca691965741241e",
-      "bytes": 1112,
-      "origin": "Unmodified license/notice from pinned installed wheel: jiter-0.12.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/joblib-1.5.2/licenses/LICENSE.txt",
-      "sha256": "42612911c1872c5e4b43f6ae0e8ee59467cd350332241cf72ce90640264fae6a",
-      "bytes": 1527,
-      "origin": "Unmodified license/notice from pinned installed wheel: joblib-1.5.2.dist-info/licenses/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/llama_cpp_python-0.3.21/licenses/LICENSE.md",
-      "sha256": "6bb528f36ee0a3d29e360b06293eb6cad2a65039ebfd53dfcc7c67e3616fcbd7",
-      "bytes": 1077,
-      "origin": "Unmodified license/notice from pinned installed wheel: llama_cpp_python-0.3.21.dist-info/licenses/LICENSE.md"
-    },
-    {
-      "path": "LICENSES/python/markdown-it-py-4.0.0/licenses/LICENSE",
-      "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484",
-      "bytes": 1078,
-      "origin": "Unmodified license/notice from pinned installed wheel: markdown_it_py-4.0.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/markdown-it-py-4.0.0/licenses/LICENSE.markdown-it",
-      "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
-      "bytes": 1073,
-      "origin": "Unmodified license/notice from pinned installed wheel: markdown_it_py-4.0.0.dist-info/licenses/LICENSE.markdown-it"
+      "origin": "Unmodified legal text from exact-version task environment wheel: jinja2-3.1.6.dist-info/licenses/LICENSE.txt"
     },
     {
       "path": "LICENSES/python/MarkupSafe-3.0.3/licenses/LICENSE.txt",
       "sha256": "4631ec0db5fd90a547e336817264c6798214338146f8ac94b4a57f96ee8c9ec4",
       "bytes": 1503,
-      "origin": "Unmodified license/notice from pinned installed wheel: markupsafe-3.0.3.dist-info/licenses/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: markupsafe-3.0.3.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/PyYAML-6.0.3/licenses/LICENSE",
+      "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
+      "bytes": 1101,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pyyaml-6.0.3.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/Pygments-2.21.0/licenses/LICENSE",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+      "bytes": 1331,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pygments-2.21.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/Werkzeug-3.1.9/licenses/LICENSE.txt",
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+      "bytes": 1475,
+      "origin": "Unmodified legal text from exact-version task environment wheel: werkzeug-3.1.9.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/accelerate-1.11.0/licenses/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified legal text from exact-version task environment wheel: accelerate-1.11.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/aiohappyeyeballs-2.7.1/licenses/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936,
+      "origin": "Unmodified legal text from exact-version task environment wheel: aiohappyeyeballs-2.7.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/aiohttp-3.14.5/licenses/LICENSE.txt",
+      "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23",
+      "bytes": 11313,
+      "origin": "Unmodified legal text from exact-version task environment wheel: aiohttp-3.14.5.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/aiohttp-3.14.5/licenses/vendor/llhttp/LICENSE",
+      "sha256": "628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d",
+      "bytes": 1069,
+      "origin": "Unmodified legal text from exact-version task environment wheel: aiohttp-3.14.5.dist-info/licenses/vendor/llhttp/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/aiosignal-1.4.0/licenses/LICENSE",
+      "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6",
+      "bytes": 11332,
+      "origin": "Unmodified legal text from exact-version task environment wheel: aiosignal-1.4.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/annotated-doc-0.0.3/licenses/LICENSE",
+      "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
+      "bytes": 1086,
+      "origin": "Unmodified legal text from exact-version task environment wheel: annotated_doc-0.0.3.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/annotated-types-0.7.0/licenses/LICENSE",
+      "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+      "bytes": 1083,
+      "origin": "Unmodified legal text from exact-version task environment wheel: annotated_types-0.7.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/anyio-4.14.2/licenses/LICENSE",
+      "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+      "bytes": 1081,
+      "origin": "Unmodified legal text from exact-version task environment wheel: anyio-4.14.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/attrs-26.1.0/licenses/LICENSE",
+      "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f",
+      "bytes": 1109,
+      "origin": "Unmodified legal text from exact-version task environment wheel: attrs-26.1.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/blinker-1.9.0/LICENSE.txt",
+      "sha256": "9eb73a1f38597a4aa17025d2ae1be3839624c795e985d4f0e9769ce29faca467",
+      "bytes": 1054,
+      "origin": "Unmodified legal text from exact-version task environment wheel: blinker-1.9.0.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/cachetools-6.2.2/licenses/LICENSE",
+      "sha256": "23c4eff7a1c027a977a0b79c4497e17582c334c5f17ef6ac8ca0b52d1e7d8417",
+      "bytes": 1085,
+      "origin": "Unmodified legal text from exact-version task environment wheel: cachetools-6.2.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/certifi-2026.10.18/licenses/LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+      "bytes": 989,
+      "origin": "Unmodified legal text from exact-version task environment wheel: certifi-2026.10.18.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/charset-normalizer-3.4.4/licenses/LICENSE",
+      "sha256": "18577485d3704f1a479ded8e573c0976cfed315fd2fd17983fa988da4c2f70d1",
+      "bytes": 1092,
+      "origin": "Unmodified legal text from exact-version task environment wheel: charset_normalizer-3.4.4.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/click-8.3.0/licenses/LICENSE.txt",
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+      "bytes": 1475,
+      "origin": "Unmodified legal text from exact-version task environment wheel: click-8.3.0.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/colorama-0.4.6/licenses/LICENSE.txt",
+      "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318",
+      "bytes": 1491,
+      "origin": "Unmodified legal text from exact-version task environment wheel: colorama-0.4.6.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/coloredlogs-15.0.1/LICENSE.txt",
+      "sha256": "0bef4ffb1855b65570304f2018c6d44e4bab97bd5df8716ecd7800014d717267",
+      "bytes": 1056,
+      "origin": "Unmodified legal text from exact-version task environment wheel: coloredlogs-15.0.1.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/colorlog-6.10.1/licenses/LICENSE",
+      "sha256": "b1d9082bc483623fd59fc7279b457f0e40d942a76426cde257239e04dfe4125a",
+      "bytes": 1107,
+      "origin": "Unmodified legal text from exact-version task environment wheel: colorlog-6.10.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/datasets-5.0.1/licenses/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified legal text from exact-version task environment wheel: datasets-5.0.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/dill-0.3.8/LICENSE",
+      "sha256": "51e88a23e78877ceabd727c219c7a5e33f65da9ba03ac4fd285ba904aa1ce22b",
+      "bytes": 1790,
+      "origin": "Unmodified legal text from exact-version task environment wheel: dill-0.3.8.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/diskcache-5.6.3/LICENSE",
+      "sha256": "583546baa3fd93607d845126570677a401f508e228b5044fefbc3949af179672",
+      "bytes": 559,
+      "origin": "Unmodified legal text from exact-version task environment wheel: diskcache-5.6.3.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/distro-1.9.0/LICENSE",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+      "bytes": 11325,
+      "origin": "Unmodified legal text from exact-version task environment wheel: distro-1.9.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/docstring_parser-0.18.0/licenses/LICENSE.md",
+      "sha256": "dfe514a337ae8417abd31a8af707bbd6172b03e5430bb083e145899ea97a3eea",
+      "bytes": 1084,
+      "origin": "Unmodified legal text from exact-version task environment wheel: docstring_parser-0.18.0.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/fastapi-0.135.0/licenses/LICENSE",
+      "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
+      "bytes": 1086,
+      "origin": "Unmodified legal text from exact-version task environment wheel: fastapi-0.135.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/filelock-4.2.1/licenses/LICENSE",
+      "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48",
+      "bytes": 1088,
+      "origin": "Unmodified legal text from exact-version task environment wheel: filelock-4.2.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/flask-cors-6.0.1/LICENSE",
+      "sha256": "134a20d852c0cf9e0f3c228767921b76f4bfc4af4a2fc7c4cc90f6b4fd407b5c",
+      "bytes": 1056,
+      "origin": "https://raw.githubusercontent.com/corydolphin/flask-cors/6.0.1/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/flatbuffers-25.12.19/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "https://raw.githubusercontent.com/google/flatbuffers/v25.12.19/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/frozenlist-1.8.0/licenses/LICENSE",
+      "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6",
+      "bytes": 11332,
+      "origin": "Unmodified legal text from exact-version task environment wheel: frozenlist-1.8.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/fsspec-2026.6.0/licenses/LICENSE",
+      "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
+      "bytes": 1513,
+      "origin": "Unmodified legal text from exact-version task environment wheel: fsspec-2026.6.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/grpcio-1.85.1/licenses/LICENSE",
+      "sha256": "ed9abc49f1fa3e3ce962d8ac42e176125c0ab0051ec5783dfcc807dd2a4c1f0f",
+      "bytes": 30814,
+      "origin": "Unmodified legal text from exact-version task environment wheel: grpcio-1.85.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/grpcio-tools-1.80.1/LICENSE",
+      "sha256": "58c86a3f2b5cca0ebdf9ed3e7f4e6dc38e3b38796d8c3dc92064c62a4e39d0dd",
+      "bytes": 30191,
+      "origin": "https://raw.githubusercontent.com/grpc/grpc/v1.80.1/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/h11-0.16.0/licenses/LICENSE.txt",
+      "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+      "bytes": 1124,
+      "origin": "Unmodified legal text from exact-version task environment wheel: h11-0.16.0.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/h2-4.4.1/licenses/LICENSE",
+      "sha256": "7a65a5af0cbabf1c16251c7c6b2b7cb46d16a7222e79975b9b61fcd66a2e3f28",
+      "bytes": 1102,
+      "origin": "Unmodified legal text from exact-version task environment wheel: h2-4.4.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/hf-xet-1.4.3/licenses/LICENSE",
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "bytes": 11558,
+      "origin": "Unmodified legal text from exact-version task environment wheel: hf_xet-1.4.3.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/hpack-4.2.0/licenses/LICENSE",
+      "sha256": "763a9342a04df62046c9dc748a5287934eb0a5331c6863b3ca0aee20e18cb4ed",
+      "bytes": 1080,
+      "origin": "Unmodified legal text from exact-version task environment wheel: hpack-4.2.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/httpcore-1.0.9/licenses/LICENSE.md",
+      "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
+      "bytes": 1518,
+      "origin": "Unmodified legal text from exact-version task environment wheel: httpcore-1.0.9.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/httpx-0.28.1/licenses/LICENSE.md",
+      "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+      "bytes": 1508,
+      "origin": "Unmodified legal text from exact-version task environment wheel: httpx-0.28.1.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/huggingface-hub-1.13.0/licenses/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified legal text from exact-version task environment wheel: huggingface_hub-1.13.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/humanfriendly-10.0/LICENSE.txt",
+      "sha256": "4ac48f4117809f2734066150450f120b3bb110ac1d3b32170795e0560dbbc1f5",
+      "bytes": 1056,
+      "origin": "Unmodified legal text from exact-version task environment wheel: humanfriendly-10.0.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/hyperframe-6.1.0/LICENSE",
+      "sha256": "763a9342a04df62046c9dc748a5287934eb0a5331c6863b3ca0aee20e18cb4ed",
+      "bytes": 1080,
+      "origin": "Unmodified legal text from exact-version task environment wheel: hyperframe-6.1.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/idna-3.15/licenses/LICENSE.md",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+      "bytes": 1541,
+      "origin": "Unmodified legal text from exact-version task environment wheel: idna-3.15.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/itsdangerous-2.2.0/LICENSE.txt",
+      "sha256": "63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7",
+      "bytes": 1475,
+      "origin": "Unmodified legal text from exact-version task environment wheel: itsdangerous-2.2.0.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/jiter-0.12.0/licenses/LICENSE",
+      "sha256": "e65c152aa65deaaa52019855bf1bbce4a0d592a048cb523b6ca691965741241e",
+      "bytes": 1112,
+      "origin": "Unmodified legal text from exact-version task environment wheel: jiter-0.12.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/joblib-1.5.2/licenses/LICENSE.txt",
+      "sha256": "42612911c1872c5e4b43f6ae0e8ee59467cd350332241cf72ce90640264fae6a",
+      "bytes": 1527,
+      "origin": "Unmodified legal text from exact-version task environment wheel: joblib-1.5.2.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/llama_cpp_python-0.3.21/licenses/LICENSE.md",
+      "sha256": "6bb528f36ee0a3d29e360b06293eb6cad2a65039ebfd53dfcc7c67e3616fcbd7",
+      "bytes": 1077,
+      "origin": "Unmodified legal text from exact-version task environment wheel: llama_cpp_python-0.3.21.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/markdown-it-py-4.0.0/licenses/LICENSE",
+      "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484",
+      "bytes": 1078,
+      "origin": "Unmodified legal text from exact-version task environment wheel: markdown_it_py-4.0.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/markdown-it-py-4.0.0/licenses/LICENSE.markdown-it",
+      "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+      "bytes": 1073,
+      "origin": "Unmodified legal text from exact-version task environment wheel: markdown_it_py-4.0.0.dist-info/licenses/LICENSE.markdown-it"
     },
     {
       "path": "LICENSES/python/mdurl-0.1.2/LICENSE",
       "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955",
       "bytes": 2338,
-      "origin": "Unmodified license/notice from pinned installed wheel: mdurl-0.1.2.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: mdurl-0.1.2.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/mpmath-1.3.0/LICENSE",
       "sha256": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7",
       "bytes": 1537,
-      "origin": "Unmodified license/notice from pinned installed wheel: mpmath-1.3.0.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: mpmath-1.3.0.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/multidict-7.2.1/licenses/LICENSE",
       "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23",
       "bytes": 11313,
-      "origin": "Unmodified license/notice from pinned installed wheel: multidict-7.2.1.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: multidict-7.2.1.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/multiprocess-0.70.16/COPYING",
       "sha256": "9f7ff27cb930d2c3202ee07e3d2d6146f4de676d069a33da3166c98cdba83a95",
       "bytes": 1493,
-      "origin": "Unmodified license/notice from pinned installed wheel: multiprocess-0.70.16.dist-info/COPYING"
+      "origin": "Unmodified legal text from exact-version task environment wheel: multiprocess-0.70.16.dist-info/COPYING"
     },
     {
       "path": "LICENSES/python/multiprocess-0.70.16/LICENSE",
       "sha256": "e9750979d24a83676123df010f73ccb55b59bd1153fa819cce43abe41e2d1040",
       "bytes": 1930,
-      "origin": "Unmodified license/notice from pinned installed wheel: multiprocess-0.70.16.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: multiprocess-0.70.16.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/networkx-3.5/licenses/LICENSE.txt",
       "sha256": "3cf7c3a179d817b23b8b8568211769fefdf93797d207d984b8b2fa24d0220b33",
       "bytes": 1763,
-      "origin": "Unmodified license/notice from pinned installed wheel: networkx-3.5.dist-info/licenses/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: networkx-3.5.dist-info/licenses/LICENSE.txt"
     },
     {
       "path": "LICENSES/python/numpy-2.3.4/LICENSE.txt",
       "sha256": "596b953e1dcbe829b32ae444387efa15003fc6abdeca8a2179f364a6364c286e",
       "bytes": 46841,
-      "origin": "Unmodified license/notice from pinned installed wheel: numpy-2.3.4.dist-info/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: numpy-2.3.4.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/numpy-2.3.4/package/numpy/_core/include/numpy/random/LICENSE.txt",
+      "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150",
+      "bytes": 1039,
+      "origin": "Unmodified legal text from exact-version task environment wheel: numpy/_core/include/numpy/random/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/numpy-2.3.4/package/numpy/ma/LICENSE",
+      "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7",
+      "bytes": 1616,
+      "origin": "Unmodified legal text from exact-version task environment wheel: numpy/ma/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/numpy-2.3.4/package/numpy/random/LICENSE.md",
+      "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a",
+      "bytes": 3582,
+      "origin": "Unmodified legal text from exact-version task environment wheel: numpy/random/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/onnxruntime-1.23.2/LICENSE",
+      "sha256": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674",
+      "bytes": 1094,
+      "origin": "Unmodified exact-version onnxruntime wheel package-directory notice"
+    },
+    {
+      "path": "LICENSES/python/onnxruntime-1.23.2/ThirdPartyNotices.txt",
+      "sha256": "e00f828e0a33de591a355ae6606d2625f5758da7d2c844db7821c9dd3e3647b6",
+      "bytes": 333022,
+      "origin": "Unmodified exact-version onnxruntime wheel package-directory notice"
     },
     {
       "path": "LICENSES/python/packaging-25.0/licenses/LICENSE",
       "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
       "bytes": 197,
-      "origin": "Unmodified license/notice from pinned installed wheel: packaging-25.0.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: packaging-25.0.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/packaging-25.0/licenses/LICENSE.APACHE",
       "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
       "bytes": 10174,
-      "origin": "Unmodified license/notice from pinned installed wheel: packaging-25.0.dist-info/licenses/LICENSE.APACHE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: packaging-25.0.dist-info/licenses/LICENSE.APACHE"
     },
     {
       "path": "LICENSES/python/packaging-25.0/licenses/LICENSE.BSD",
       "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
       "bytes": 1344,
-      "origin": "Unmodified license/notice from pinned installed wheel: packaging-25.0.dist-info/licenses/LICENSE.BSD"
+      "origin": "Unmodified legal text from exact-version task environment wheel: packaging-25.0.dist-info/licenses/LICENSE.BSD"
     },
     {
       "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSE",
       "sha256": "9850f6b5bdef7346503065807b878deb8058b976c5c329f4c4d23bf4796ce9ae",
       "bytes": 1634,
-      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pandas-3.1.1.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/BOTTLENECK_LICENCE",
@@ -3864,451 +3936,469 @@
       "path": "LICENSES/python/pandas-3.1.1/licenses/subprojects/fast_float-8.2.10/LICENSE-APACHE",
       "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06",
       "bytes": 10767,
-      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-APACHE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-APACHE"
     },
     {
       "path": "LICENSES/python/pandas-3.1.1/licenses/subprojects/fast_float-8.2.10/LICENSE-BOOST",
       "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b",
       "bytes": 1337,
-      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-BOOST"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-BOOST"
     },
     {
       "path": "LICENSES/python/pandas-3.1.1/licenses/subprojects/fast_float-8.2.10/LICENSE-MIT",
       "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
       "bytes": 1079,
-      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-MIT"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-MIT"
     },
     {
       "path": "LICENSES/python/peft-0.11.1/LICENSE",
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
       "bytes": 11357,
-      "origin": "Unmodified license/notice from pinned installed wheel: peft-0.11.1.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: peft-0.11.1.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/pillow-13.0.0/licenses/LICENSE",
       "sha256": "988ffe8ab3480b0f4e9a0ab2702bffd73d9fb6b47198043fb3ba101a62fac236",
       "bytes": 78481,
-      "origin": "Unmodified license/notice from pinned installed wheel: pillow-13.0.0.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pillow-13.0.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/LICENSE.txt",
+      "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+      "bytes": 1093,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+      "bytes": 558,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+      "also_present_in": [
+        "pip/_vendor/cachecontrol/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/certifi/LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+      "bytes": 989,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/certifi/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+      "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+      "bytes": 14531,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+      "also_present_in": [
+        "pip/_vendor/distlib/LICENSE.txt"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/distro/LICENSE",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+      "bytes": 11325,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/distro/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/idna/LICENSE.md",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+      "bytes": 1541,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+      "also_present_in": [
+        "pip/_vendor/idna/LICENSE.md"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/msgpack/COPYING",
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+      "bytes": 614,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+      "also_present_in": [
+        "pip/_vendor/msgpack/COPYING"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/packaging/LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "bytes": 197,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/packaging/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+      "also_present_in": [
+        "pip/_vendor/packaging/LICENSE.APACHE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "bytes": 1344,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+      "also_present_in": [
+        "pip/_vendor/packaging/LICENSE.BSD"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "bytes": 1023,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/pkg_resources/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/platformdirs/LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+      "bytes": 1089,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/platformdirs/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/pygments/LICENSE",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+      "bytes": 1331,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/pygments/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+      "bytes": 1081,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/pyproject_hooks/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/requests/LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+      "bytes": 10142,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/requests/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/resolvelib/LICENSE",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+      "bytes": 751,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/resolvelib/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/rich/LICENSE",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+      "bytes": 1056,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/rich/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/tomli/LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+      "bytes": 1072,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/tomli/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/tomli_w/LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+      "bytes": 1072,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/tomli/LICENSE",
+        "pip/_vendor/tomli_w/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/truststore/LICENSE",
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+      "bytes": 1086,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+      "also_present_in": [
+        "pip/_vendor/truststore/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/pip-26.3/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+      "bytes": 1093,
+      "origin": "Unmodified legal text from exact-version task environment wheel: pip-26.3.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+      "also_present_in": [
+        "pip/_vendor/urllib3/LICENSE.txt"
+      ]
     },
     {
       "path": "LICENSES/python/portalocker-2.10.1/LICENSE",
       "sha256": "a50570fa3b3102a42d7babb0569238b0b3c0aedce0063c8e4d65060dfd3f7293",
       "bytes": 1460,
-      "origin": "Unmodified license/notice from pinned installed wheel: portalocker-2.10.1.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: portalocker-2.10.1.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/propcache-0.5.4/licenses/LICENSE",
       "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
       "bytes": 11358,
-      "origin": "Unmodified license/notice from pinned installed wheel: propcache-0.5.4.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: propcache-0.5.4.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/propcache-0.5.4/licenses/NOTICE",
       "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838",
       "bytes": 609,
-      "origin": "Unmodified license/notice from pinned installed wheel: propcache-0.5.4.dist-info/licenses/NOTICE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: propcache-0.5.4.dist-info/licenses/NOTICE"
     },
     {
       "path": "LICENSES/python/protobuf-6.33.5/LICENSE",
       "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
       "bytes": 1732,
-      "origin": "Unmodified license/notice from pinned installed wheel: protobuf-6.33.5.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: protobuf-6.33.5.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/psutil-7.2.2/LICENSE",
       "sha256": "c7adc4d5d1337a548b967421f1fbe258b93033a0417708fd6f4e38f8ecbceb80",
       "bytes": 1577,
-      "origin": "Unmodified license/notice from pinned installed wheel: psutil-7.2.2.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: psutil-7.2.2.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/pyarrow-26.0.1/licenses/LICENSE.txt",
       "sha256": "2a255e0ef5946efdb2e01a4861460ce4a3333734666d256e75f9c1731a5097da",
       "bytes": 112648,
-      "origin": "Unmodified license/notice from pinned installed wheel: pyarrow-26.0.1.dist-info/licenses/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pyarrow-26.0.1.dist-info/licenses/LICENSE.txt"
     },
     {
       "path": "LICENSES/python/pyarrow-26.0.1/licenses/NOTICE.txt",
       "sha256": "2ccca1e730e671f55b8028facf2261a6f74b561a4d96a2ccd743be19c5619236",
       "bytes": 2997,
-      "origin": "Unmodified license/notice from pinned installed wheel: pyarrow-26.0.1.dist-info/licenses/NOTICE.txt"
-    },
-    {
-      "path": "LICENSES/python/pyarrow-hotfix-0.7/licenses/LICENSE.txt",
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "bytes": 11358,
-      "origin": "Unmodified license/notice from pinned installed wheel: pyarrow_hotfix-0.7.dist-info/licenses/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pyarrow-26.0.1.dist-info/licenses/NOTICE.txt"
     },
     {
       "path": "LICENSES/python/pyasn1-0.6.5/licenses/LICENSE.rst",
       "sha256": "2aad5fc00f705c4a1addb83eed10a6a75d286a3779f0cf8519d87e62bc4735fd",
       "bytes": 1334,
-      "origin": "Unmodified license/notice from pinned installed wheel: pyasn1-0.6.5.dist-info/licenses/LICENSE.rst"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pyasn1-0.6.5.dist-info/licenses/LICENSE.rst"
     },
     {
       "path": "LICENSES/python/pyasn1_modules-0.4.2/licenses/LICENSE.txt",
       "sha256": "2aad5fc00f705c4a1addb83eed10a6a75d286a3779f0cf8519d87e62bc4735fd",
       "bytes": 1334,
-      "origin": "Unmodified license/notice from pinned installed wheel: pyasn1_modules-0.4.2.dist-info/licenses/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pyasn1_modules-0.4.2.dist-info/licenses/LICENSE.txt"
     },
     {
       "path": "LICENSES/python/pydantic-2.12.4/licenses/LICENSE",
       "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
       "bytes": 1129,
-      "origin": "Unmodified license/notice from pinned installed wheel: pydantic-2.12.4.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pydantic-2.12.4.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/pydantic_core-2.41.5/licenses/LICENSE",
       "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4",
       "bytes": 1101,
-      "origin": "Unmodified license/notice from pinned installed wheel: pydantic_core-2.41.5.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/Pygments-2.21.0/licenses/LICENSE",
-      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
-      "bytes": 1331,
-      "origin": "Unmodified license/notice from pinned installed wheel: pygments-2.21.0.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pydantic_core-2.41.5.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/pyreadline3-3.5.6/licenses/LICENSE.md",
       "sha256": "8fc4d8de61b40533023b16e64528d13371a2e9c68677df79ed5e93ba570471bd",
       "bytes": 2250,
-      "origin": "Unmodified license/notice from pinned installed wheel: pyreadline3-3.5.6.dist-info/licenses/LICENSE.md"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pyreadline3-3.5.6.dist-info/licenses/LICENSE.md"
     },
     {
       "path": "LICENSES/python/python-dateutil-4.0.0/licenses/LICENSE",
       "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e",
       "bytes": 2889,
-      "origin": "Unmodified license/notice from pinned installed wheel: python_dateutil-4.0.0.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: python_dateutil-4.0.0.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/python-dotenv-1.2.2/licenses/LICENSE",
       "sha256": "80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9",
       "bytes": 1556,
-      "origin": "Unmodified license/notice from pinned installed wheel: python_dotenv-1.2.2.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: python_dotenv-1.2.2.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/pywin32-312/licenses/adodbapi/license.txt",
       "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
       "bytes": 26925,
-      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/adodbapi/license.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pywin32-312.dist-info/licenses/adodbapi/license.txt",
+      "also_present_in": [
+        "adodbapi/license.txt"
+      ]
     },
     {
       "path": "LICENSES/python/pywin32-312/licenses/com/License.txt",
       "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
       "bytes": 1570,
-      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/com/License.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pywin32-312.dist-info/licenses/com/License.txt",
+      "also_present_in": [
+        "win32com/License.txt",
+        "win32comext/License.txt"
+      ]
     },
     {
       "path": "LICENSES/python/pywin32-312/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
       "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
       "bytes": 1087,
-      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pywin32-312.dist-info/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE"
     },
     {
       "path": "LICENSES/python/pywin32-312/licenses/pythonwin/License.txt",
       "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
       "bytes": 1541,
-      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/pythonwin/License.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pywin32-312.dist-info/licenses/pythonwin/License.txt"
     },
     {
       "path": "LICENSES/python/pywin32-312/licenses/pythonwin/Scintilla/License.txt",
       "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
       "bytes": 873,
-      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/pythonwin/Scintilla/License.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pywin32-312.dist-info/licenses/pythonwin/Scintilla/License.txt"
     },
     {
       "path": "LICENSES/python/pywin32-312/licenses/pythonwin/pywin/idle/LICENSE.txt",
       "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
       "bytes": 12540,
-      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/pythonwin/pywin/idle/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pywin32-312.dist-info/licenses/pythonwin/pywin/idle/LICENSE.txt",
+      "also_present_in": [
+        "pythonwin/pywin/idle/LICENSE.txt"
+      ]
     },
     {
       "path": "LICENSES/python/pywin32-312/licenses/win32/License.txt",
       "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
       "bytes": 1541,
-      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/win32/License.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: pywin32-312.dist-info/licenses/win32/License.txt",
+      "also_present_in": [
+        "pythonwin/License.txt",
+        "win32/License.txt"
+      ]
     },
     {
-      "path": "LICENSES/python/PyYAML-6.0.3/licenses/LICENSE",
-      "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
-      "bytes": 1101,
-      "origin": "Unmodified license/notice from pinned installed wheel: pyyaml-6.0.3.dist-info/licenses/LICENSE"
+      "path": "LICENSES/python/pywin32-312/package/win32comext/mapi/NOTICE.md",
+      "sha256": "dedf997c8f5568a0e0aff57d009f501226ea30c401323d67912b6a8f8735a825",
+      "bytes": 476,
+      "origin": "Unmodified legal text from exact-version task environment wheel: win32comext/mapi/NOTICE.md"
     },
     {
       "path": "LICENSES/python/qdrant-client-1.12.0/LICENSE",
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
       "bytes": 11357,
-      "origin": "Unmodified license/notice from pinned installed wheel: qdrant_client-1.12.0.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: qdrant_client-1.12.0.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/regex-2025.11.3/licenses/LICENSE.txt",
       "sha256": "3d220c06594b826bbabf110312f60f385f99e57e529fa4b9e536f79091f8b4c7",
       "bytes": 11792,
-      "origin": "Unmodified license/notice from pinned installed wheel: regex-2025.11.3.dist-info/licenses/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: regex-2025.11.3.dist-info/licenses/LICENSE.txt"
     },
     {
       "path": "LICENSES/python/requests-2.33.0/licenses/LICENSE",
       "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
       "bytes": 10142,
-      "origin": "Unmodified license/notice from pinned installed wheel: requests-2.33.0.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: requests-2.33.0.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/requests-2.33.0/licenses/NOTICE",
       "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc",
       "bytes": 38,
-      "origin": "Unmodified license/notice from pinned installed wheel: requests-2.33.0.dist-info/licenses/NOTICE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: requests-2.33.0.dist-info/licenses/NOTICE"
     },
     {
       "path": "LICENSES/python/rich-13.7.1/LICENSE",
       "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
       "bytes": 1056,
-      "origin": "Unmodified license/notice from pinned installed wheel: rich-13.7.1.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: rich-13.7.1.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/rsa-4.9.1/LICENSE",
       "sha256": "073f28b7d389c8fe74f607e17c27f81eaa5ace69edc43a884f23f41b41c5c726",
       "bytes": 577,
-      "origin": "Unmodified license/notice from pinned installed wheel: rsa-4.9.1.dist-info/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: rsa-4.9.1.dist-info/LICENSE"
     },
     {
       "path": "LICENSES/python/safetensors-0.6.2/licenses/LICENSE",
       "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
       "bytes": 11558,
-      "origin": "Unmodified license/notice from pinned installed wheel: safetensors-0.6.2.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: safetensors-0.6.2.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/scikit-learn-1.7.2/licenses/COPYING",
       "sha256": "1b74e02d0cb8e6502091124787fc91695b9dd92c9cb146d9d34830f9a300ab3c",
       "bytes": 2628,
-      "origin": "Unmodified license/notice from pinned installed wheel: scikit_learn-1.7.2.dist-info/licenses/COPYING"
+      "origin": "Unmodified legal text from exact-version task environment wheel: scikit_learn-1.7.2.dist-info/licenses/COPYING"
+    },
+    {
+      "path": "LICENSES/python/scikit-learn-1.7.2/package/sklearn/externals/array_api_compat/LICENSE",
+      "sha256": "464569596b7e6162762669e4e4d1fe8d2618c03901ca7ba36e2603415fb6865d",
+      "bytes": 1118,
+      "origin": "Unmodified legal text from exact-version task environment wheel: sklearn/externals/array_api_compat/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/scikit-learn-1.7.2/package/sklearn/externals/array_api_extra/LICENSE",
+      "sha256": "8b2e8a4aa8a98ed811f17be2807b1eb90dcb021c1e5a0304d784d0a24f4ee907",
+      "bytes": 1118,
+      "origin": "Unmodified legal text from exact-version task environment wheel: sklearn/externals/array_api_extra/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/scikit-learn-1.7.2/package/sklearn/svm/src/liblinear/COPYRIGHT",
+      "sha256": "5e6d496ace27b9b277e2311f894c8100660e8c95ce909c1c1f1abb4702946415",
+      "bytes": 1517,
+      "origin": "Unmodified legal text from exact-version task environment wheel: sklearn/svm/src/liblinear/COPYRIGHT"
     },
     {
       "path": "LICENSES/python/scipy-1.16.3/LICENSE.txt",
       "sha256": "564d63dbef2ef3eb1dec94908966d3edf5f11c487ee2cf2baf8bf3faef01bdd9",
       "bytes": 46756,
-      "origin": "Unmodified license/notice from pinned installed wheel: scipy-1.16.3.dist-info/LICENSE.txt"
+      "origin": "Unmodified legal text from exact-version task environment wheel: scipy-1.16.3.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/scipy-1.16.3/package/scipy/_lib/_uarray/LICENSE",
+      "sha256": "e4c4acc31e8287066d7c995d26e3ef902ca1977ee187b260b11c278366503811",
+      "bytes": 1543,
+      "origin": "Unmodified legal text from exact-version task environment wheel: scipy/_lib/_uarray/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/scipy-1.16.3/package/scipy/fft/_pocketfft/LICENSE.md",
+      "sha256": "c04661685cff9d8035fe1c4c3ab357e7f7633cafc06a73e9d90c3c5fede8a86a",
+      "bytes": 1523,
+      "origin": "Unmodified legal text from exact-version task environment wheel: scipy/fft/_pocketfft/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/scipy-1.16.3/package/scipy/sparse/linalg/_eigen/arpack/COPYING",
+      "sha256": "fcb3c6c7de1460cf7d0863c3c5996e518eb8015a2eced36911f3da178440b3df",
+      "bytes": 1937,
+      "origin": "Unmodified legal text from exact-version task environment wheel: scipy/sparse/linalg/_eigen/arpack/COPYING"
+    },
+    {
+      "path": "LICENSES/python/scipy-1.16.3/package/scipy/spatial/qhull_src/COPYING_QHULL.txt",
+      "sha256": "2a6ebb495e26dd5f88cbc40c593733da6edb27b64936f70409cd5a1acafb1c32",
+      "bytes": 1759,
+      "origin": "Unmodified legal text from exact-version task environment wheel: scipy/spatial/qhull_src/COPYING_QHULL.txt"
     },
     {
       "path": "LICENSES/python/sentence-transformers-5.6.0/licenses/LICENSE",
       "sha256": "624b030fd62b8b989dd502d5bb6322cbc0dbb524ab9c9708f32efe33d7275735",
       "bytes": 11338,
-      "origin": "Unmodified license/notice from pinned installed wheel: sentence_transformers-5.6.0.dist-info/licenses/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: sentence_transformers-5.6.0.dist-info/licenses/LICENSE"
     },
     {
       "path": "LICENSES/python/sentence-transformers-5.6.0/licenses/NOTICE.txt",
       "sha256": "95f2f1af3516527c6d19d2ba6e0bec05140a6a360fcebb56dc48debae3253867",
       "bytes": 330,
-      "origin": "Unmodified license/notice from pinned installed wheel: sentence_transformers-5.6.0.dist-info/licenses/NOTICE.txt"
-    },
-    {
-      "path": "LICENSES/python/setuptools-80.9.0/licenses/LICENSE",
-      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
-      "bytes": 1023,
-      "origin": "Unmodified license/notice from pinned installed wheel: setuptools-80.9.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/shellingham-1.5.4/LICENSE",
-      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
-      "bytes": 751,
-      "origin": "Unmodified license/notice from pinned installed wheel: shellingham-1.5.4.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/sniffio-1.3.1/LICENSE",
-      "sha256": "652c878488d1456361e08c3f8607fd7ba59892a14103d15cce4ff93c85b5cc8b",
-      "bytes": 185,
-      "origin": "Unmodified license/notice from pinned installed wheel: sniffio-1.3.1.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/sniffio-1.3.1/LICENSE.APACHE2",
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "bytes": 11358,
-      "origin": "Unmodified license/notice from pinned installed wheel: sniffio-1.3.1.dist-info/LICENSE.APACHE2"
-    },
-    {
-      "path": "LICENSES/python/sniffio-1.3.1/LICENSE.MIT",
-      "sha256": "3e6dae555eb92787fc82d1d48355677f454c7f65aeb38d3f9e72bf9a3daf034b",
-      "bytes": 1046,
-      "origin": "Unmodified license/notice from pinned installed wheel: sniffio-1.3.1.dist-info/LICENSE.MIT"
-    },
-    {
-      "path": "LICENSES/python/starlette-0.49.3/licenses/LICENSE.md",
-      "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf",
-      "bytes": 1518,
-      "origin": "Unmodified license/notice from pinned installed wheel: starlette-0.49.3.dist-info/licenses/LICENSE.md"
-    },
-    {
-      "path": "LICENSES/python/sympy-1.14.0/licenses/LICENSE",
-      "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286",
-      "bytes": 7885,
-      "origin": "Unmodified license/notice from pinned installed wheel: sympy-1.14.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/tenacity-9.1.2/licenses/LICENSE",
-      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
-      "bytes": 11357,
-      "origin": "Unmodified license/notice from pinned installed wheel: tenacity-9.1.2.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/threadpoolctl-3.6.0/licenses/LICENSE",
-      "sha256": "81ac619075248b06e53660b652d10e485f4675f5d0ae0f97ea22370da1f7e23b",
-      "bytes": 1507,
-      "origin": "Unmodified license/notice from pinned installed wheel: threadpoolctl-3.6.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/torch-2.10.0+cpu/LICENSE",
-      "sha256": "fdebf104aa527ebbdbf378de158ffb2b1dd461a37160d142e4f8ecac9e943b8e",
-      "bytes": 544783,
-      "origin": "Unmodified license/notice from pinned installed wheel: torch-2.10.0+cpu.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/torch-2.10.0+cpu/NOTICE",
-      "sha256": "1c3dec6c0342c7ed9e12af59b296c7bb1d394af5cf881db74191cc8299efce5c",
-      "bytes": 24088,
-      "origin": "Unmodified license/notice from pinned installed wheel: torch-2.10.0+cpu.dist-info/NOTICE"
-    },
-    {
-      "path": "LICENSES/python/tqdm-4.67.1/LICENCE",
-      "sha256": "dc33252e829015e3b150086fb9b3a40f6ad6fb32c2f4610ce812fa677d35986a",
-      "bytes": 1985,
-      "origin": "Unmodified license/notice from pinned installed wheel: tqdm-4.67.1.dist-info/LICENCE"
-    },
-    {
-      "path": "LICENSES/python/transformers-5.10.2/licenses/LICENSE",
-      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
-      "bytes": 11418,
-      "origin": "Unmodified license/notice from pinned installed wheel: transformers-5.10.2.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/trl-0.9.4/LICENSE",
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
-      "bytes": 11357,
-      "origin": "Unmodified license/notice from pinned installed wheel: trl-0.9.4.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/typeguard-4.6.0/licenses/LICENSE",
-      "sha256": "6163f7987dfb38d6bc320ce2b70b2f02b862bc41126516d552ef1cd43247e758",
-      "bytes": 1130,
-      "origin": "Unmodified license/notice from pinned installed wheel: typeguard-4.6.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/typer-0.23.1/licenses/LICENSE",
-      "sha256": "58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49",
-      "bytes": 1086,
-      "origin": "Unmodified license/notice from pinned installed wheel: typer-0.23.1.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/typing_extensions-4.15.0/licenses/LICENSE",
-      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
-      "bytes": 13936,
-      "origin": "Unmodified license/notice from pinned installed wheel: typing_extensions-4.15.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/typing-inspection-0.4.2/licenses/LICENSE",
-      "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
-      "bytes": 1090,
-      "origin": "Unmodified license/notice from pinned installed wheel: typing_inspection-0.4.2.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/tyro-1.0.17/licenses/LICENSE",
-      "sha256": "1470480384dd9bcd98241f67ca5ef49f4c546ea9e9ac4dedf1cc27eec466c093",
-      "bytes": 1065,
-      "origin": "Unmodified license/notice from pinned installed wheel: tyro-1.0.17.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/tzdata-2026.6/licenses/LICENSE",
-      "sha256": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46",
-      "bytes": 625,
-      "origin": "Unmodified license/notice from pinned installed wheel: tzdata-2026.6.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/tzdata-2026.6/licenses/licenses/LICENSE_APACHE",
-      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
-      "bytes": 11357,
-      "origin": "Unmodified license/notice from pinned installed wheel: tzdata-2026.6.dist-info/licenses/licenses/LICENSE_APACHE"
-    },
-    {
-      "path": "LICENSES/python/urllib3-2.8.0/licenses/LICENSE.txt",
-      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
-      "bytes": 1093,
-      "origin": "Unmodified license/notice from pinned installed wheel: urllib3-2.8.0.dist-info/licenses/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/uvicorn-0.38.0/licenses/LICENSE.md",
-      "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371",
-      "bytes": 1526,
-      "origin": "Unmodified license/notice from pinned installed wheel: uvicorn-0.38.0.dist-info/licenses/LICENSE.md"
-    },
-    {
-      "path": "LICENSES/python/watchdog-6.0.0/COPYING",
-      "sha256": "39f081828db6f94c70123fa4fb30c1bce3e215a8fdece53a49991fe076a69c08",
-      "bytes": 703,
-      "origin": "Unmodified license/notice from pinned installed wheel: watchdog-6.0.0.dist-info/COPYING"
-    },
-    {
-      "path": "LICENSES/python/watchdog-6.0.0/LICENSE",
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "bytes": 11358,
-      "origin": "Unmodified license/notice from pinned installed wheel: watchdog-6.0.0.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/websockets-15.0.1/LICENSE",
-      "sha256": "0f44514998aca209d3482d10204a8adf2aa4296ff157a36a5c0922f2280632d3",
-      "bytes": 1538,
-      "origin": "Unmodified license/notice from pinned installed wheel: websockets-15.0.1.dist-info/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/Werkzeug-3.1.9/licenses/LICENSE.txt",
-      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
-      "bytes": 1475,
-      "origin": "Unmodified license/notice from pinned installed wheel: werkzeug-3.1.9.dist-info/licenses/LICENSE.txt"
-    },
-    {
-      "path": "LICENSES/python/xxhash-4.1.0/licenses/LICENSE",
-      "sha256": "b76e99529f3e47372029e11914a8f4b95d6313463ed5a1a5c9afe96c3e015114",
-      "bytes": 1313,
-      "origin": "Unmodified license/notice from pinned installed wheel: xxhash-4.1.0.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/yarl-1.25.1/licenses/LICENSE",
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "bytes": 11358,
-      "origin": "Unmodified license/notice from pinned installed wheel: yarl-1.25.1.dist-info/licenses/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/yarl-1.25.1/licenses/NOTICE",
-      "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838",
-      "bytes": 609,
-      "origin": "Unmodified license/notice from pinned installed wheel: yarl-1.25.1.dist-info/licenses/NOTICE"
-    },
-    {
-      "path": "LICENSES/python/onnxruntime-1.23.2/LICENSE",
-      "sha256": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674",
-      "bytes": 1094,
-      "origin": "Unmodified file from pinned onnxruntime wheel, package directory"
-    },
-    {
-      "path": "LICENSES/python/onnxruntime-1.23.2/ThirdPartyNotices.txt",
-      "sha256": "e00f828e0a33de591a355ae6606d2625f5758da7d2c844db7821c9dd3e3647b6",
-      "bytes": 333022,
-      "origin": "Unmodified file from pinned onnxruntime wheel, package directory"
-    },
-    {
-      "path": "LICENSES/python/flask-cors-6.0.1/LICENSE",
-      "sha256": "134a20d852c0cf9e0f3c228767921b76f4bfc4af4a2fc7c4cc90f6b4fd407b5c",
-      "bytes": 1056,
-      "origin": "https://raw.githubusercontent.com/corydolphin/flask-cors/6.0.1/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/flatbuffers-25.12.19/LICENSE",
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "bytes": 11358,
-      "origin": "https://raw.githubusercontent.com/google/flatbuffers/v25.12.19/LICENSE"
-    },
-    {
-      "path": "LICENSES/python/grpcio-tools-1.80.1/LICENSE",
-      "sha256": "58c86a3f2b5cca0ebdf9ed3e7f4e6dc38e3b38796d8c3dc92064c62a4e39d0dd",
-      "bytes": 30191,
-      "origin": "https://raw.githubusercontent.com/grpc/grpc/v1.80.1/LICENSE"
+      "origin": "Unmodified legal text from exact-version task environment wheel: sentence_transformers-5.6.0.dist-info/licenses/NOTICE.txt"
     },
     {
       "path": "LICENSES/python/sentencepiece-0.2.1/LICENSE",
@@ -4317,28 +4407,908 @@
       "origin": "https://raw.githubusercontent.com/google/sentencepiece/v0.2.1/LICENSE"
     },
     {
+      "path": "LICENSES/python/setuptools-84.1.0/licenses/LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "bytes": 1023,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools-84.1.0.dist-info/licenses/LICENSE",
+      "also_present_in": [
+        "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+        "setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE"
+      ]
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+      "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d",
+      "bytes": 7634,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
+      "sha256": "458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04",
+      "bytes": 10278,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
+      "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683",
+      "bytes": 1076,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+      "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
+      "bytes": 1076,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
+      "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+      "bytes": 1053,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "bytes": 197,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "bytes": 1344,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+      "bytes": 1089,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+      "bytes": 1072,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
+      "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654",
+      "bytes": 1107,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
+      "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
+      "bytes": 1076,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/config/NOTICE",
+      "sha256": "2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8",
+      "bytes": 493,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/config/NOTICE"
+    },
+    {
+      "path": "LICENSES/python/setuptools-84.1.0/package/setuptools/config/_validate_pyproject/NOTICE",
+      "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7",
+      "bytes": 18737,
+      "origin": "Unmodified legal text from exact-version task environment wheel: setuptools/config/_validate_pyproject/NOTICE"
+    },
+    {
+      "path": "LICENSES/python/shellingham-1.5.4/LICENSE",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+      "bytes": 751,
+      "origin": "Unmodified legal text from exact-version task environment wheel: shellingham-1.5.4.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/sniffio-1.3.1/LICENSE",
+      "sha256": "652c878488d1456361e08c3f8607fd7ba59892a14103d15cce4ff93c85b5cc8b",
+      "bytes": 185,
+      "origin": "Unmodified legal text from exact-version task environment wheel: sniffio-1.3.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/sniffio-1.3.1/LICENSE.APACHE2",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified legal text from exact-version task environment wheel: sniffio-1.3.1.dist-info/LICENSE.APACHE2"
+    },
+    {
+      "path": "LICENSES/python/sniffio-1.3.1/LICENSE.MIT",
+      "sha256": "3e6dae555eb92787fc82d1d48355677f454c7f65aeb38d3f9e72bf9a3daf034b",
+      "bytes": 1046,
+      "origin": "Unmodified legal text from exact-version task environment wheel: sniffio-1.3.1.dist-info/LICENSE.MIT"
+    },
+    {
+      "path": "LICENSES/python/starlette-1.3.1/licenses/LICENSE.md",
+      "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf",
+      "bytes": 1518,
+      "origin": "Unmodified legal text from exact-version task environment wheel: starlette-1.3.1.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/sympy-1.14.0/licenses/LICENSE",
+      "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286",
+      "bytes": 7885,
+      "origin": "Unmodified legal text from exact-version task environment wheel: sympy-1.14.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/sympy-1.14.0/package/sympy/parsing/latex/LICENSE.txt",
+      "sha256": "007bc30a58fa40a996e772047120de4eaf31f5110e4f9c3b5f93fcdfbe2eaca1",
+      "bytes": 1075,
+      "origin": "Unmodified legal text from exact-version task environment wheel: sympy/parsing/latex/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/tenacity-9.1.2/licenses/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "bytes": 11357,
+      "origin": "Unmodified legal text from exact-version task environment wheel: tenacity-9.1.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/threadpoolctl-3.6.0/licenses/LICENSE",
+      "sha256": "81ac619075248b06e53660b652d10e485f4675f5d0ae0f97ea22370da1f7e23b",
+      "bytes": 1507,
+      "origin": "Unmodified legal text from exact-version task environment wheel: threadpoolctl-3.6.0.dist-info/licenses/LICENSE"
+    },
+    {
       "path": "LICENSES/python/tokenizers-0.22.2/LICENSE",
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
       "bytes": 11357,
       "origin": "https://raw.githubusercontent.com/huggingface/tokenizers/v0.22.2/LICENSE"
     },
     {
-      "path": "LICENSES/npm/marked/LICENSE.md",
-      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
-      "bytes": 2942,
-      "origin": "Unmodified license from installed npm marked"
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/LICENSE",
+      "sha256": "0fc92425d130d9c87a5eb7427082e3afdbff6ef169bc678e15abba4c2d37c934",
+      "bytes": 3548,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/LICENSE"
     },
     {
-      "path": "LICENSES/npm/electron/LICENSE",
-      "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/FP16/LICENSE",
+      "sha256": "68349589306bdfa3631ac7f84633956bf21b6a448ed5e43383ea75a8a5f54e4c",
+      "bytes": 1168,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/FP16/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/FXdiv/LICENSE",
+      "sha256": "9e7b48284b1aef91999d1967d093711bab8f3bbbaf31e0670ab7a3af077c0a2b",
+      "bytes": 1127,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/FXdiv/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/NNPACK/LICENSE",
+      "sha256": "a4dadeb3d59219de6cdf5cb6bf920760103eed9ae5af2e71b0e8462645397b66",
+      "bytes": 1376,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/NNPACK/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/NVTX/LICENSE.txt",
+      "sha256": "c3b19baa37cf18bac07b65700824acadcfa617316f02af10d3852ed20f4f6ab8",
+      "bytes": 12706,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/NVTX/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/NVTX/docs/LICENSE.txt",
+      "sha256": "c3b19baa37cf18bac07b65700824acadcfa617316f02af10d3852ed20f4f6ab8",
+      "bytes": 12706,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/NVTX/docs/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/NVTX/python/LICENSE.txt",
+      "sha256": "c3b19baa37cf18bac07b65700824acadcfa617316f02af10d3852ed20f4f6ab8",
+      "bytes": 12706,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/NVTX/python/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/NVTX/tools/docs/github-markdown-css/LICENSE",
+      "sha256": "fcf1a18be2e25ba82acf2c59821b030d8ee764e4e201db6ef3c51900d385515f",
+      "bytes": 1126,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/NVTX/tools/docs/github-markdown-css/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/VulkanMemoryAllocator/LICENSE.txt",
+      "sha256": "e5fc8b0b0357a75d63649c8f2552576aaa6941c361a013710bb53afc64d3a8aa",
+      "bytes": 1118,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/VulkanMemoryAllocator/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/XNNPACK/LICENSE",
+      "sha256": "4805a18e3c617424da5b7f6d8b9fde3df2fb6a5e26a6b6663a6cdb66db664d8c",
+      "bytes": 1591,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/XNNPACK/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/aiter/3rdparty/composable_kernel/LICENSE",
+      "sha256": "99ec4452f4047b6c53016a502bf94451eb317eff5aab5f63cebc16f94020d64f",
+      "bytes": 1754,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/aiter/3rdparty/composable_kernel/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/aiter/3rdparty/composable_kernel/docs/LICENSE.rst",
+      "sha256": "81c3c62d810d7277f0583179df2a28a997b013f389f97778e9e7480114e0ca06",
+      "bytes": 340,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/aiter/3rdparty/composable_kernel/docs/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/aiter/LICENSE",
+      "sha256": "844e3a38ca6f748e10eb63f07eb343ddca3b5a0a6bb40b0f621fcc54ea03deb3",
+      "bytes": 1121,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/aiter/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/benchmark/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/benchmark/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/composable_kernel/LICENSE",
+      "sha256": "99ec4452f4047b6c53016a502bf94451eb317eff5aab5f63cebc16f94020d64f",
+      "bytes": 1754,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/composable_kernel/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/composable_kernel/docs/LICENSE.rst",
+      "sha256": "81c3c62d810d7277f0583179df2a28a997b013f389f97778e9e7480114e0ca06",
+      "bytes": 340,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/composable_kernel/docs/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/cpp-httplib/LICENSE",
+      "sha256": "bb546eae5924d8ee842e0e567e6d533c5824bdebccf605f99a5b3429034e6697",
+      "bytes": 1097,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/cpp-httplib/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/cpuinfo/LICENSE",
+      "sha256": "8477bdd6a4d9f5178e5dfda1e32239c7b09c9d6da3804ae3e5c1a80210c0dd21",
+      "bytes": 1451,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/cpuinfo/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/cpuinfo/deps/clog/LICENSE",
+      "sha256": "8c29231fd0034d4b1caaae8c0a63bce71f95cd8c4b0494c8588930b75c3d2155",
+      "bytes": 1410,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/cpuinfo/deps/clog/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/cudnn_frontend/LICENSE.txt",
+      "sha256": "b6fe452605fe29245f0cbafa724b42df94a5e170bedb9d45bc9cfaa4883ad907",
+      "bytes": 1169,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/cudnn_frontend/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/cutlass/LICENSE.txt",
+      "sha256": "48eb34a9124af8fdd2ad1858a64be9827ebc42e5389c6dd4b5a93e411ac7e693",
+      "bytes": 1888,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/cutlass/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/cutlass/python/LICENSE.txt",
+      "sha256": "932c16f6c4f0187eda3af18df07300f8807eda85ca974bf46c5ed11fd91e5c2f",
+      "bytes": 1574,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/cutlass/python/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/LICENSE",
+      "sha256": "5d5d5b022ecf828c796a64ad7afcfd62971bf58a52b71668cd48137ca02824c5",
+      "bytes": 1565,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/external/composable_kernel/LICENSE",
+      "sha256": "99ec4452f4047b6c53016a502bf94451eb317eff5aab5f63cebc16f94020d64f",
+      "bytes": 1754,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/external/composable_kernel/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/external/composable_kernel/docs/LICENSE.rst",
+      "sha256": "81c3c62d810d7277f0583179df2a28a997b013f389f97778e9e7480114e0ca06",
+      "bytes": 340,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/external/composable_kernel/docs/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/external/cpuinfo/LICENSE",
+      "sha256": "8477bdd6a4d9f5178e5dfda1e32239c7b09c9d6da3804ae3e5c1a80210c0dd21",
+      "bytes": 1451,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/external/cpuinfo/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/external/cpuinfo/deps/clog/LICENSE",
+      "sha256": "8c29231fd0034d4b1caaae8c0a63bce71f95cd8c4b0494c8588930b75c3d2155",
+      "bytes": 1410,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/external/cpuinfo/deps/clog/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/external/cutlass/LICENSE.txt",
+      "sha256": "3288ff56f62ade1ef032bd860b6d92482f83f1d3073ad5125b87228b9c11e0a8",
+      "bytes": 1888,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/external/cutlass/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/external/cutlass/python/LICENSE.txt",
+      "sha256": "6b9e8b964c2a90f7743107a23bccec9ebc6f5a47d4a8fa3d986aa6f51f86da68",
+      "bytes": 1574,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/external/cutlass/python/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/external/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/external/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/external/hipify_torch/LICENSE.txt",
+      "sha256": "e63d8a0f5ab5cc02d848c6ef51b7bea58644a07223aa0acdb905260a1031b2e6",
+      "bytes": 1133,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/external/hipify_torch/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/fbgemm_gpu/docs/src/general/LICENSE.rst",
+      "sha256": "4f8f489489bc1ac9608b13243e6dbeb28070cefd6da94de0784cc919afbf10f6",
+      "bytes": 155,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/fbgemm_gpu/docs/src/general/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/fbgemm_gpu/experimental/hstu/LICENSE",
+      "sha256": "f915822057ab8cea4648efaf58b1a1eab265d51b4b56fc976ff11cd9bacd319a",
+      "bytes": 2164,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/fbgemm_gpu/experimental/hstu/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/fbgemm_gpu/src/quantize_ops/mx/LICENSE",
+      "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b",
+      "bytes": 1162,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/fbgemm_gpu/src/quantize_ops/mx/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fbgemm/fbgemm_gpu/test/quantize/mx/LICENSE",
+      "sha256": "9906940f61b1f0b533fa7d99baf55178b2808fbe113ea51dfbfad8572ccd5f2b",
+      "bytes": 1162,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fbgemm/fbgemm_gpu/test/quantize/mx/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/LICENSE",
+      "sha256": "c364d38c8ee8070159ad68f56a8bab4917b8d020548da33a01e036505c8e4add",
+      "bytes": 1587,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/csrc/composable_kernel/LICENSE",
+      "sha256": "99ec4452f4047b6c53016a502bf94451eb317eff5aab5f63cebc16f94020d64f",
+      "bytes": 1754,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/csrc/composable_kernel/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/csrc/composable_kernel/docs/LICENSE.rst",
+      "sha256": "81c3c62d810d7277f0583179df2a28a997b013f389f97778e9e7480114e0ca06",
+      "bytes": 340,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/csrc/composable_kernel/docs/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/csrc/cutlass/LICENSE.txt",
+      "sha256": "3288ff56f62ade1ef032bd860b6d92482f83f1d3073ad5125b87228b9c11e0a8",
+      "bytes": 1888,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/csrc/cutlass/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/csrc/cutlass/python/LICENSE.txt",
+      "sha256": "6b9e8b964c2a90f7743107a23bccec9ebc6f5a47d4a8fa3d986aa6f51f86da68",
+      "bytes": 1574,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/csrc/cutlass/python/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/flash_attn/cute/LICENSE",
+      "sha256": "c364d38c8ee8070159ad68f56a8bab4917b8d020548da33a01e036505c8e4add",
+      "bytes": 1587,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/flash_attn/cute/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/third_party/aiter/3rdparty/composable_kernel/LICENSE",
+      "sha256": "99ec4452f4047b6c53016a502bf94451eb317eff5aab5f63cebc16f94020d64f",
+      "bytes": 1754,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/third_party/aiter/3rdparty/composable_kernel/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/third_party/aiter/3rdparty/composable_kernel/docs/LICENSE.rst",
+      "sha256": "81c3c62d810d7277f0583179df2a28a997b013f389f97778e9e7480114e0ca06",
+      "bytes": 340,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/third_party/aiter/3rdparty/composable_kernel/docs/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flash-attention/third_party/aiter/LICENSE",
+      "sha256": "844e3a38ca6f748e10eb63f07eb343ddca3b5a0a6bb40b0f621fcc54ea03deb3",
+      "bytes": 1121,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flash-attention/third_party/aiter/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flatbuffers/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flatbuffers/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flatbuffers/dart/LICENSE",
+      "sha256": "35cf0c0dca02767d12b9a8c12ae1b6a1c08045f220df4a52b0e01563a568fe6b",
+      "bytes": 11542,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flatbuffers/dart/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/flatbuffers/swift/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/flatbuffers/swift/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/fmt/LICENSE",
+      "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf",
+      "bytes": 1458,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/fmt/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/gemmlowp/gemmlowp/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/gemmlowp/gemmlowp/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/gloo/LICENSE",
+      "sha256": "6247f690b423835966eba51cad47b4c7d6a72ca226733dd1c473e4624fe6bb23",
+      "bytes": 1555,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/gloo/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/ideep/LICENSE",
+      "sha256": "e1b43a11adfb7a5bd52089243a273ab85f0a695d0437bb34a418969501392573",
+      "bytes": 1081,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/ideep/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/ideep/mkl-dnn/LICENSE",
+      "sha256": "b1dd911e534a75dd4dfd8dbc11a3193bd177c8390e7fcf462f98d2c8c235e112",
+      "bytes": 11814,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/ideep/mkl-dnn/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/ideep/mkl-dnn/third_party/gtest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/ideep/mkl-dnn/third_party/gtest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/ideep/mkl-dnn/third_party/opencl/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/ideep/mkl-dnn/third_party/opencl/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/LICENSE",
+      "sha256": "97729794764240cc12e0e22fe31b0cea824741c601bd09bd91b832e285e1f8c5",
+      "bytes": 1642,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/LICENSE",
+      "sha256": "f08a94bfb0bdc1d7f1cb59badaf0f8c551b10db871185622dbf1fd036affa9cb",
+      "bytes": 1107,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/DCGM/LICENSE",
+      "sha256": "afdc94cf2ce0ee28688f28a4ac05c945e15772bdce245509e0f7a10f3f886351",
+      "bytes": 600,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/DCGM/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/DCGM/testing/python3/libs_3rdparty/colorama/LICENSE.txt",
+      "sha256": "9ad71830669f2e1c684236831d2450892178e7a0801bda03aa1eafe3a0fd87ed",
+      "bytes": 1754,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/DCGM/testing/python3/libs_3rdparty/colorama/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/cpr/LICENSE",
+      "sha256": "92bfc9664aff7685ef84abedd292d94d851a6c4502d1ddd45b7e833ba7952814",
+      "bytes": 1253,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/cpr/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/cpr/test/LICENSE",
+      "sha256": "a694e69af9d08c8fb14e728ad4864c8b585ae9583d7707344e4dad5a35edae92",
+      "bytes": 35907,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/cpr/test/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/fmt/LICENSE.rst",
+      "sha256": "4e79fcc686dacf1a83eeddf1813ce28bbac5bd67a8b067d740c8fcd8c8405e1d",
+      "bytes": 1435,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/fmt/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/json/test/thirdparty/doctest/LICENSE.txt",
+      "sha256": "33cc9304b7e84187407cdbd7677216bdf460eb51364d42328bdb812a521e30c4",
+      "bytes": 1107,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/json/test/thirdparty/doctest/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/json/third_party/cpplint/LICENSE",
+      "sha256": "17a82fba896445d028046d97aac3a3d0f6ccdd811a1d48d0a454512d422591b7",
+      "bytes": 1529,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/json/third_party/cpplint/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/pfs/LICENSE",
+      "sha256": "378270e2aff76eb93637baf4bdbb7313940c897d25d5086b80db27fada9d37b2",
+      "bytes": 10957,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/pfs/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/civetweb/examples/rest/cJSON/LICENSE",
+      "sha256": "a36dda207c36db5818729c54e7ad4e8b0c6fba847491ba64f372c1a2037b6d5c",
+      "bytes": 1084,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/civetweb/examples/rest/cJSON/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/civetweb/src/third_party/duktape-1.5.2/LICENSE.txt",
+      "sha256": "f95a124945067d1143f1c6de9a990f2db2426456408ee0f0bfe6de2f568a899f",
+      "bytes": 1172,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/civetweb/src/third_party/duktape-1.5.2/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/civetweb/src/third_party/duktape-1.8.0/LICENSE.txt",
+      "sha256": "5358498534dac625c89a69c10becf3dcc40f9af58e6b69ee358ebdf6934f49c6",
+      "bytes": 1172,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/civetweb/src/third_party/duktape-1.8.0/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/googletest/googlemock/scripts/generator/LICENSE",
+      "sha256": "e438ef741bf3660b5c54f4452d7c0b387c8557207cc3e9cda499e461a94df2b2",
+      "bytes": 11589,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/3rdparty/googletest/googlemock/scripts/generator/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/LICENSE",
+      "sha256": "6d7ce74f3baf30e712b96afdd88d9e3b6caff93a1281d220ba0f654f60fe1a90",
+      "bytes": 1225,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/dynolog/third_party/prometheus-cpp/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/fmt/LICENSE",
+      "sha256": "25b5db04aa6070c12ac518b91cbd0a59725c050ecb091456e6ebc3d3eeb369cf",
+      "bytes": 1458,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/fmt/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/kineto/libkineto/third_party/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/kineto/libkineto/third_party/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/llvm-openmp/LICENSE.txt",
+      "sha256": "eb3eab74fe9245818659556acf23e81b8c8a24915a4a244a23804f3fcdf1fd9c",
+      "bytes": 17315,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/llvm-openmp/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mimalloc/LICENSE",
+      "sha256": "82ade5d7d9b029044b5fbbc326207fc47c2d44ee4dd71e8a559c36d728217de9",
       "bytes": 1096,
-      "origin": "Unmodified license from installed npm electron"
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mimalloc/LICENSE"
     },
     {
-      "path": "LICENSES/common/MPL-2.0.txt",
-      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
-      "bytes": 16726,
-      "origin": "https://www.mozilla.org/media/MPL/2.0/index.txt"
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/miniz-3.0.2/LICENSE",
+      "sha256": "0115478d567121238cf6cc1c0c361926cf07a49d9e4c9e66da97fac6a01646b3",
+      "bytes": 1184,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/miniz-3.0.2/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mslk/LICENSE",
+      "sha256": "322bba2f33f594948052de342fd7d5bd26892e2a92ba75fbb5a433eff0b229c7",
+      "bytes": 1563,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mslk/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mslk/external/composable_kernel/LICENSE",
+      "sha256": "99ec4452f4047b6c53016a502bf94451eb317eff5aab5f63cebc16f94020d64f",
+      "bytes": 1754,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mslk/external/composable_kernel/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mslk/external/composable_kernel/docs/LICENSE.rst",
+      "sha256": "81c3c62d810d7277f0583179df2a28a997b013f389f97778e9e7480114e0ca06",
+      "bytes": 340,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mslk/external/composable_kernel/docs/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mslk/external/cutlass/LICENSE.txt",
+      "sha256": "3288ff56f62ade1ef032bd860b6d92482f83f1d3073ad5125b87228b9c11e0a8",
+      "bytes": 1888,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mslk/external/cutlass/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mslk/external/cutlass/python/LICENSE.txt",
+      "sha256": "6b9e8b964c2a90f7743107a23bccec9ebc6f5a47d4a8fa3d986aa6f51f86da68",
+      "bytes": 1574,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mslk/external/cutlass/python/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mslk/external/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mslk/external/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mslk/external/hipify_torch/LICENSE.txt",
+      "sha256": "e63d8a0f5ab5cc02d848c6ef51b7bea58644a07223aa0acdb905260a1031b2e6",
+      "bytes": 1133,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mslk/external/hipify_torch/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/mslk/mslk/attention/flash_attn/LICENSE",
+      "sha256": "c364d38c8ee8070159ad68f56a8bab4917b8d020548da33a01e036505c8e4add",
+      "bytes": 1587,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/mslk/mslk/attention/flash_attn/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/onnx/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/onnx/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/onnx/third_party/pybind11/LICENSE",
+      "sha256": "5494773a5dcf654c0c3c844fbb11cfc4f898ea0ea44cf467f29e5c99097da6e7",
+      "bytes": 1713,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/onnx/third_party/pybind11/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/protobuf/LICENSE",
+      "sha256": "f4df8b2457697851385d9ebb93267832c1dfa24e0e61881952f6b0c452663dc9",
+      "bytes": 1764,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/protobuf/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/protobuf/third_party/benchmark/LICENSE",
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+      "bytes": 11560,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/protobuf/third_party/benchmark/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/protobuf/third_party/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/protobuf/third_party/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/protobuf/third_party/googletest/googlemock/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/protobuf/third_party/googletest/googlemock/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/protobuf/third_party/googletest/googlemock/scripts/generator/LICENSE",
+      "sha256": "e438ef741bf3660b5c54f4452d7c0b387c8557207cc3e9cda499e461a94df2b2",
+      "bytes": 11589,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/protobuf/third_party/googletest/googlemock/scripts/generator/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/protobuf/third_party/googletest/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/protobuf/third_party/googletest/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/psimd/LICENSE",
+      "sha256": "6bc97741b2f00a1d0a2f8e9be4c8af7ff837f968fe8e494864caf57026cfdbcb",
+      "bytes": 1173,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/psimd/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/pthreadpool/LICENSE",
+      "sha256": "2aae36e3c88f88b5e8afff5ca8d05480745ba7ad7e8d62867293c604efc0ce46",
+      "bytes": 1404,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/pthreadpool/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/pybind11/LICENSE",
+      "sha256": "5494773a5dcf654c0c3c844fbb11cfc4f898ea0ea44cf467f29e5c99097da6e7",
+      "bytes": 1713,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/pybind11/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/python-peachpy/LICENSE.rst",
+      "sha256": "b74018ea5fe273c10868dec1c5b832865fa4cf5bc44715a004d172e0a49a3f23",
+      "bytes": 1458,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/python-peachpy/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/sleef/LICENSE.txt",
+      "sha256": "beb8e42e9d6b4284e03304d05a81a0755200a965fc8d0a5e0aea1e84cf805d6e",
+      "bytes": 1361,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/sleef/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/LICENSE.txt",
+      "sha256": "a51531fad20e44cae492c601bc0997d961c17a74f25f9473ff62eb70e108277d",
+      "bytes": 1565,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/third_party/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/third_party/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/third_party/googletest/googlemock/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/third_party/googletest/googlemock/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/third_party/googletest/googlemock/scripts/generator/LICENSE",
+      "sha256": "e438ef741bf3660b5c54f4452d7c0b387c8557207cc3e9cda499e461a94df2b2",
+      "bytes": 11589,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/third_party/googletest/googlemock/scripts/generator/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/third_party/googletest/googletest/LICENSE",
+      "sha256": "46c35a3c9ac8ef63c16ca69b5cf0166df9fcdb789e318175c92a219de517b8e7",
+      "bytes": 1503,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/third_party/googletest/googletest/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/third_party/libnop/LICENSE",
+      "sha256": "abd3ed80490d1d168f12f6ced5a558398640e6d375382c7b85d290689a222822",
+      "bytes": 590,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/third_party/libnop/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/third_party/libuv/LICENSE",
+      "sha256": "7aab26dd7e0e6661accc1fd9fc19410e01b466aa0ac36ea668b2013152a8ca23",
+      "bytes": 1098,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/third_party/libuv/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/third_party/pybind11/LICENSE",
+      "sha256": "15619fd6ee80e905a159b8139f7791f5ae1dce142d5101d099404cc5cf1007ba",
+      "bytes": 1705,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/third_party/pybind11/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.13.0+cpu/licenses/third_party/tensorpipe/third_party/pybind11/tools/clang/LICENSE.txt",
+      "sha256": "dcd8a8d43f2dc19ba6f879f3a7e96f59e66ecb195099f700dfdcfb50641c10c9",
+      "bytes": 2812,
+      "origin": "Unmodified legal text from exact-version task environment wheel: torch-2.13.0+cpu.dist-info/licenses/third_party/tensorpipe/third_party/pybind11/tools/clang/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/tqdm-4.67.1/LICENCE",
+      "sha256": "dc33252e829015e3b150086fb9b3a40f6ad6fb32c2f4610ce812fa677d35986a",
+      "bytes": 1985,
+      "origin": "Unmodified legal text from exact-version task environment wheel: tqdm-4.67.1.dist-info/LICENCE"
+    },
+    {
+      "path": "LICENSES/python/transformers-5.10.2/licenses/LICENSE",
+      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+      "bytes": 11418,
+      "origin": "Unmodified legal text from exact-version task environment wheel: transformers-5.10.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/trl-0.9.4/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified legal text from exact-version task environment wheel: trl-0.9.4.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/typeguard-4.6.0/licenses/LICENSE",
+      "sha256": "6163f7987dfb38d6bc320ce2b70b2f02b862bc41126516d552ef1cd43247e758",
+      "bytes": 1130,
+      "origin": "Unmodified legal text from exact-version task environment wheel: typeguard-4.6.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/typer-0.23.1/licenses/LICENSE",
+      "sha256": "58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49",
+      "bytes": 1086,
+      "origin": "Unmodified legal text from exact-version task environment wheel: typer-0.23.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/typing-inspection-0.4.2/licenses/LICENSE",
+      "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+      "bytes": 1090,
+      "origin": "Unmodified legal text from exact-version task environment wheel: typing_inspection-0.4.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/typing_extensions-4.15.0/licenses/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936,
+      "origin": "Unmodified legal text from exact-version task environment wheel: typing_extensions-4.15.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/tyro-1.0.17/licenses/LICENSE",
+      "sha256": "1470480384dd9bcd98241f67ca5ef49f4c546ea9e9ac4dedf1cc27eec466c093",
+      "bytes": 1065,
+      "origin": "Unmodified legal text from exact-version task environment wheel: tyro-1.0.17.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/tzdata-2026.6/licenses/LICENSE",
+      "sha256": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46",
+      "bytes": 625,
+      "origin": "Unmodified legal text from exact-version task environment wheel: tzdata-2026.6.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/tzdata-2026.6/licenses/licenses/LICENSE_APACHE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified legal text from exact-version task environment wheel: tzdata-2026.6.dist-info/licenses/licenses/LICENSE_APACHE"
+    },
+    {
+      "path": "LICENSES/python/urllib3-2.8.0/licenses/LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+      "bytes": 1093,
+      "origin": "Unmodified legal text from exact-version task environment wheel: urllib3-2.8.0.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/uvicorn-0.38.0/licenses/LICENSE.md",
+      "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371",
+      "bytes": 1526,
+      "origin": "Unmodified legal text from exact-version task environment wheel: uvicorn-0.38.0.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/watchdog-6.0.0/COPYING",
+      "sha256": "39f081828db6f94c70123fa4fb30c1bce3e215a8fdece53a49991fe076a69c08",
+      "bytes": 703,
+      "origin": "Unmodified legal text from exact-version task environment wheel: watchdog-6.0.0.dist-info/COPYING"
+    },
+    {
+      "path": "LICENSES/python/watchdog-6.0.0/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified legal text from exact-version task environment wheel: watchdog-6.0.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/websockets-15.0.1/LICENSE",
+      "sha256": "0f44514998aca209d3482d10204a8adf2aa4296ff157a36a5c0922f2280632d3",
+      "bytes": 1538,
+      "origin": "Unmodified legal text from exact-version task environment wheel: websockets-15.0.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/xxhash-4.1.0/licenses/LICENSE",
+      "sha256": "b76e99529f3e47372029e11914a8f4b95d6313463ed5a1a5c9afe96c3e015114",
+      "bytes": 1313,
+      "origin": "Unmodified legal text from exact-version task environment wheel: xxhash-4.1.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/yarl-1.25.1/licenses/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified legal text from exact-version task environment wheel: yarl-1.25.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/yarl-1.25.1/licenses/NOTICE",
+      "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838",
+      "bytes": 609,
+      "origin": "Unmodified legal text from exact-version task environment wheel: yarl-1.25.1.dist-info/licenses/NOTICE"
     }
   ]
 }
