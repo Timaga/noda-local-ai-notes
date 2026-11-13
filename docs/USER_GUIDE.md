@@ -18,7 +18,9 @@ Press **Ctrl + Shift + Space** to open quick capture. Enter sends the source to 
 
 The queue stores the submitted source before model processing. Its progress updates automatically. Expand an entry to inspect the source and stage results. Eligible waiting or completed entries can be removed; an executing entry is protected from deletion. Removing a completed queue entry does not delete its saved note.
 
-In the library, open a note to edit it immediately. Formatting controls work on Markdown. The eye button switches to a rendered preview. Use the title/tag control to change metadata; use the compact actions menu to move a note to the project's trash.
+In the library, notes open in formatted Markdown preview. The eye button switches to source editing; its tooltip describes the next action. Formatting controls work while editing, and switching modes keeps the draft. Opening a different note starts in preview again. Use the title/tag control to change metadata; use the compact actions menu to move a note to the project's trash.
+
+Saved **Connected notes** and backlinks appear below the note body. Open a connection by mouse or keyboard. Empty connection lists stay hidden; automatic refresh keeps the list in the active project's context.
 
 Manual creation is available from **+ Note**. The quick-capture workflow runs the enabled AI stages; manually typing a note in the editor is a separate workflow.
 

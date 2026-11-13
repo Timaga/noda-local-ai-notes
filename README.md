@@ -8,7 +8,7 @@
 
 <p align="center">Capture an idea. Find its connections. Ask your own library.</p>
 
-<p align="center">Windows x64 · beta · local inference · noncommercial source license</p>
+<p align="center">Windows x64 · local inference · Markdown files · noncommercial source license</p>
 
 <p align="center"><strong><a href="https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.17/Noda-Setup-1.0.2-beta.17-x64.exe">Download Windows Setup (x64)</a></strong> · <a href="https://github.com/Timaga/noda-local-ai-notes/releases">All versions</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="#build-from-source">Build from source</a></p>
 
@@ -23,10 +23,10 @@ The app runs note processing and chat on your computer using installed models. I
 | Task | How Noda helps |
 | --- | --- |
 | Save a thought while working | Open quick capture with `Ctrl + Shift + Space`, type, and press Enter. The queue saves the source before processing. |
-| Keep a readable library | Edit a note as soon as you open it. Choose autosave or save changes yourself. |
+| Keep a readable library | Open formatted Markdown, switch to editing, and choose autosave or manual save. |
 | Organize without tagging every sentence | Enable AI titles, existing tags, links, and experimental new topics separately. A note can have no tags or links. |
 | Keep different subjects apart | Give each project its own Markdown folder, queue, search index and chat history. |
-| Follow a connection | Explore saved note links in the graph, then open the related note. |
+| Follow a connection | Open saved connections and backlinks below a note or explore them in the graph. |
 | Ask a question across your notes | Use local retrieval and chat with clickable source notes and quotations. |
 
 ## See your notes in context
@@ -49,11 +49,11 @@ Screenshots use synthetic demo notes in an isolated application profile. The dis
 2. Follow the installation steps, then open **Noda** from the Start menu.
 3. Let Noda prepare its local runtime and the models you choose. Initial downloads require internet access.
 
-The repository and release are private for testing. Sign in to a GitHub account with repository access to download them. The Windows build is unsigned. Known dependency advisories are listed in [SECURITY.md](SECURITY.md).
+The Windows build is unsigned while code-signing arrangements are pending. Review [known security issues](docs/security-known-issues.md) before installing. Download access follows repository visibility; a private release requires an authorized GitHub account.
 
 ### Update to a newer version
 
-Back up your projects and app profile, fully exit Noda through its tray menu, then run the new version's **Setup**. Project folders and profile data are kept separately from the installed program. After installation, launch Noda from the Start menu. See [all versions](https://github.com/Timaga/noda-local-ai-notes/releases) to choose a release. Automatic application updates are not included in this beta.
+Back up your projects and app profile, fully exit Noda through its tray menu, then run the new version's **Setup**. Project folders and profile data are kept separately from the installed program. After installation, launch Noda from the Start menu. See [all versions](https://github.com/Timaga/noda-local-ai-notes/releases) to choose a release. Automatic application updates are not included.
 
 ### First run
 
@@ -83,7 +83,7 @@ The supplied note-processing profiles support **Russian and English**. Changing 
 
 ## Project status
 
-Noda is a Windows beta. The current focus is reliable capture, useful metadata and a clear local workflow. Broader model evaluation, clean-machine release validation and performance work remain part of beta testing.
+Version **1.0.2** is being prepared as a stable release. Until its versioned download is published, the download above remains the previous beta. Local checks cover isolated Python/Node workflows and native installer lifecycle scenarios. Broader model evaluation, clean-machine validation and the documented security findings remain separate release gates.
 
 See the [compliance and publication status](docs/COMPLIANCE.md) for the reviewed licenses, privacy scope and open release findings.
 
@@ -91,7 +91,7 @@ Useful contributions include reproducible bugs, accessibility improvements, tran
 
 ## Build from source
 
-Developers need Windows x64, Git, Node.js 22.12 or newer within the 22.x line, and npm. Clone using an account with repository access, then build in PowerShell:
+Developers need Windows x64, Git, Node.js 22.12 or newer within the 22.x line, and npm. Build in PowerShell:
 
 ```powershell
 git clone https://github.com/Timaga/noda-local-ai-notes.git
@@ -110,4 +110,4 @@ This is **source-available software with a noncommercial restriction**, rather t
 
 Created by **Tim Buglaev / buglAI**. Support: [tim@buglai.com](mailto:tim@buglai.com). For security reports, follow [SECURITY.md](SECURITY.md).
 
-If Noda is useful to you, a star helps other people discover the project. Reproducible feedback and thoughtful contributions help make the next beta better.
+If Noda is useful to you, a star helps other people discover the project. Reproducible feedback and thoughtful contributions help improve the next release.

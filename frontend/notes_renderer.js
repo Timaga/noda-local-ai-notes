@@ -91,6 +91,7 @@ const notesLiveApplication = window.NotesLiveApplication.create({
 const notesLiveController = window.NotesLiveSync.create({
   refresh: async context => {
     const changed = await notesLiveApplication.refresh(context);
+    if (context.isCurrent()) void relatedNotes.refresh(changed);
     if (context.isCurrent() && libraryState !== "ready") { libraryState = "ready"; renderList(true); }
     return changed;
   },
@@ -134,6 +135,9 @@ const inlineEditor = window.NotesInlineEditor.create({
     noteContentInput.value = state.content; rememberDraft();
   },
 });
+const relatedNotes = window.NotesRelatedNotes.create({ doc: document, host: document.getElementById("note-related"),
+  context: window.NodaProjectContext, request: apiRequest, getVault: notesLiveApplication.getVault,
+  text: noteText, model: window.NotesGraphModel });
 const metadataEditor = window.NotesMetadataEditor.create({
   doc: document, text: noteText, context: window.NodaProjectContext,
   getTitle: () => selectedNoteTitle, getDetail: () => selectedNoteDetail,
@@ -305,11 +309,7 @@ function noteAssetUrl(assetPath) {
 function preprocessObsidianMarkdown(markdownText) {
   const options = window.notesMarkdown.createOptions({ marked: window.marked, escapeHtml, noteAssetUrl });
   const view = window.notesMarkdown.presentation(markdownText);
-  const relatedLabel = window.nodaI18n?.t("Связанные заметки", "Related notes") ?? "Связанные заметки";
-  const related = view.related.length ? `<p>${escapeHtml(relatedLabel)}</p><ul>${view.related.map((title) =>
-    `<li><a href="#" class="internal-note-link" data-note-title="${escapeHtml(title)}">${escapeHtml(title)}</a></li>`
-  ).join("")}</ul>` : "";
-  return window.marked.parse(view.source, options) + related;
+  return window.marked.parse(view.source, options);
 }
 
 function isSafePreviewHref(value) {
@@ -548,7 +548,7 @@ function clearDraft(title) {
 function beginNewNote() {
   if (noteWritePending) return;
   noteSelectionVersion += 1;
-  void inlineEditor.autoSave(); inlineEditor.close();
+  void inlineEditor.autoSave(); inlineEditor.close(); relatedNotes.clear();
   selectedNoteTitle = "";
   selectedNoteDetail = null;
   const project = draftProject(), draft = noteDrafts.read(project, null);
@@ -579,7 +579,7 @@ async function loadNotes() {
 function renderNoteView(payload) {
   selectedNoteDetail = payload || null;
   if (!selectedNoteDetail) {
-    inlineEditor.close(); notesWorkspace.clear();
+    inlineEditor.close(); relatedNotes.clear(); notesWorkspace.clear();
     selectedNoteTitle = "";
     setEditorMode(false);
     projectsController?.update();
@@ -596,6 +596,7 @@ function renderNoteView(payload) {
   noteViewTime.textContent = formatNoteTime(selectedNoteDetail.timestamp);
   renderMarkdownPreview(selectedNoteDetail.content || "");
   inlineEditor.open(selectedNoteTitle, selectedNoteDetail);
+  relatedNotes.open(selectedNoteTitle);
   metadataEditor.refresh();
   projectsController?.notesChanged();
 }
@@ -846,7 +847,10 @@ window.addEventListener("notes-chat:open-note", (event) => {
     return;
   }
   activateNotesTab("notes");
-  selectNote(title).catch((error) => {
+  selectNote(title).then(() => {
+    if (event.detail.focusEditor && window.NodaProjectContext.isCurrent(event.detail.projectContext)
+        && selectedNoteTitle === title) inlineEditor.focus();
+  }).catch((error) => {
     setStatus("error", noteText(`Не удалось открыть источник: ${error.message}`, "Could not open the source note."));
   });
 });
@@ -869,7 +873,7 @@ window.addEventListener("DOMContentLoaded", async () => {
       throw new Error("Startup gate is unavailable.");
     }
     await window.startupGate.waitForReady();
-    inlineEditor.refreshLanguage(); metadataEditor.refreshLanguage(); renderActiveTabChrome();
+    inlineEditor.refreshLanguage(); relatedNotes.refreshLanguage(); metadataEditor.refreshLanguage(); renderActiveTabChrome();
     projectsController = window.NotesProjectsController.create({
       doc: document, context: window.NodaProjectContext, bridge: window.quickNoteBridge,
       createView: window.NotesProjectsView.create, text: noteText,
@@ -901,4 +905,4 @@ document.addEventListener("visibilitychange", () => {
   else notesLiveController.wake();
 });
 window.addEventListener("focus", () => notesLiveController.wake());
-window.addEventListener("beforeunload", () => { inlineEditor.close(); metadataEditor.dispose(); projectsController?.dispose(); notesLiveController.dispose(); }, { once: true });
+window.addEventListener("beforeunload", () => { inlineEditor.close(); relatedNotes.dispose(); metadataEditor.dispose(); projectsController?.dispose(); notesLiveController.dispose(); }, { once: true });

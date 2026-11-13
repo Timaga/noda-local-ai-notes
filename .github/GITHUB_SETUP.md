@@ -1,6 +1,6 @@
 # GitHub repository setup
 
-The repository is [Timaga/noda-local-ai-notes](https://github.com/Timaga/noda-local-ai-notes), private for owner testing. Its testing prerelease provides a versioned Windows Setup. Public repository visibility, announcements and a stable public launch remain separate owner decisions.
+The repository is [Timaga/noda-local-ai-notes](https://github.com/Timaga/noda-local-ai-notes), currently private. The owner has requested a stable 1.0.2 release and public availability **only after active owner-only access protections are verified**. Historical beta downloads remain available to authorized accounts during preparation.
 
 ## Name and About
 
@@ -52,16 +52,30 @@ These are 20 factual lowercase topics. GitHub allows up to 20 topics, each no lo
 
 ## Windows installer release
 
-- Tag: **`v1.0.2-beta.17`**.
-- Title: **`Noda 1.0.2-beta.17`**.
-- Type: **published prerelease inside the private repository**.
-- Download: [Windows x64 Setup](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.17/Noda-Setup-1.0.2-beta.17-x64.exe).
-- Notes: installation/update steps, changes and honest beta limitations.
+- Planned tag: **`v1.0.2`**.
+- Title: **`Noda 1.0.2`**.
+- Type: **stable release**, not a prerelease; publication remains pending.
+- Previous download: [beta.17 Windows x64 Setup](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.17/Noda-Setup-1.0.2-beta.17-x64.exe).
+- Notes: installation/update steps, changes, actual verification and remaining limitations.
 - Assets: the verified Setup, checksums and additional source/validation files.
 
-See [RELEASING.md](../docs/RELEASING.md) for future versions. GitHub Packages is not used for this `.exe`; users install through Releases. `/releases/latest` excludes beta prereleases, so README uses the exact version's download link.
+See [RELEASING.md](../docs/RELEASING.md). GitHub Packages is not used for this `.exe`; users install through Releases. Update the README's exact download link after the stable release asset exists.
 
 Do not label an older installer as a newer version or claim that an unsigned build is signed.
+
+## Owner-only control
+
+Public visibility grants reading and forks, not write access to this repository.
+Keep `Timaga` as the only account with write/admin access. `CODEOWNERS` routes review
+requests; it does not grant or enforce repository permissions by itself.
+
+Before public availability, verify active rules restricting creation, updates and
+deletion of branches and tags to the owner, with no unintended bypass actors.
+Retain read-only Actions workflow defaults, disable workflow approval of PRs and
+require approval for all external contributors' workflow runs once public. Recheck
+collaborators, pending invitations, deploy keys, hooks and effective rules after a
+visibility change. Do not claim that a configured but unenforced private ruleset
+protects the repository; GitHub's applicable plan must support enforcement.
 
 ## Discoverability
 

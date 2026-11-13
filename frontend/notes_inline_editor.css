@@ -15,7 +15,14 @@
 .inline-style option { background: var(--bg-elevated); color: var(--text); }
 .inline-toolbar-divider { flex-shrink: 0; height: 20px; width: 1px; margin: 0 6px; background: var(--workspace-line); }
 .inline-note-toolbar .inline-preview-toggle { margin-left: auto; }
-.inline-note-body { display: grid; grid-template-rows: minmax(0, 1fr); min-height: 0; min-width: 0; border: 1px solid var(--workspace-line); border-radius: 11px; overflow: hidden; background: color-mix(in srgb, var(--bg) 25%, transparent); }
+.inline-note-body { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; min-width: 0; border: 1px solid var(--workspace-line); border-radius: 11px; overflow: hidden; background: color-mix(in srgb, var(--bg) 25%, transparent); }
+.note-related { min-width: 0; max-height: min(180px, 30vh); overflow: auto; padding: 12px 20px; border-top: 1px solid var(--workspace-line); }
+.note-related h3 { margin: 0 0 8px; color: var(--text-muted); font-size: 12px; font-weight: 600; }
+.note-related p { margin: 0; color: var(--text-muted); font-size: 12px; }
+.note-related-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.note-related-list button { min-width: 0; max-width: 100%; min-height: 36px; padding: 7px 11px; border: 1px solid var(--workspace-line); border-radius: 8px; background: var(--bg-soft); color: var(--text); font: inherit; font-size: 13px; text-align: start; overflow-wrap: anywhere; cursor: pointer; }
+.note-related-list button:hover { border-color: var(--workspace-accent); color: var(--workspace-accent); }
+.note-related-list button:focus-visible { outline: 2px solid var(--workspace-accent); outline-offset: 2px; }
 #note-inline-content { display: block; min-width: 0; min-height: 0; width: 100%; height: 100%; margin: 0; resize: none; padding: 20px; border: 0; border-radius: 0; box-shadow: none; outline: 0; font-family: inherit; font-size: 16px; line-height: 1.75; letter-spacing: .002em; color: var(--text); background: transparent; caret-color: var(--workspace-accent); overflow: auto; overscroll-behavior: contain; tab-size: 4; }
 .inline-note-body:focus-within { border-color: color-mix(in srgb, var(--workspace-accent) 65%, var(--workspace-line)); }
 .inline-preview-slot { display: contents; }

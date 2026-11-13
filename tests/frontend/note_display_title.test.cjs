@@ -66,6 +66,7 @@ function loadRenderer(filename, response = {}) {
       NotesWorkspace: { create: () => ({ clear() {}, openNote() {} }) },
       NotesInlineEditor: { create: () => ({ inputElement: document.getElementById("note-inline-content"), isDirty: () => false, flush: async () => true, autoSave: async () => true, close() {}, open() {} }) },
       NotesMetadataEditor: { create: () => ({ refresh() {}, dispose() {} }) },
+      NotesRelatedNotes: { create: () => ({ open() {}, clear() {}, refresh() {}, dispose() {} }) },
       GenerationQueueClient: { create: () => ({}) },
       QuickCaptureProject: require("../../frontend/quick_capture_project.js"),
       NodaProjectContext: { subscribe: () => () => {}, snapshot: () => ({ status: "ready" }), isCurrent: () => true },

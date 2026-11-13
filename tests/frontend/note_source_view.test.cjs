@@ -44,7 +44,7 @@ test("RU pipeline preview strips only its wrapper and exposes exact existing tag
   const html = context.preprocessObsidianMarkdown(wrap(source, related, { version: "ru-pipeline-v1", tags }));
   assert(!html.includes("noda_source_"));
   assert(!html.includes("tags:"));
-  assert.equal((html.match(/data-note-title=/g) || []).length, related.length);
+  assert(!html.includes("data-note-title="), "Metadata connections belong to the editor panel, not the source Markdown");
 });
 
 test("both shipped wrapper versions render current author edits and retry headline", () => {
@@ -73,14 +73,14 @@ test("RU tags use Unicode code-point boundaries and the backend nested-tag gramm
   }
 });
 
-test("RU related IDs remain unlimited and escape literal labels safely", () => {
+test("RU related IDs remain complete while Markdown preview contains only the authored source", () => {
   const ids = Array.from({ length: 35 }, (_, i) => `Каталог/${i} Полная заметка`);
   ids.push('<img src=x onerror="attack()">');
   const source = wrap("Авторский текст", ids, { version: "ru-pipeline-v1", tags: ["проект"] });
   assert.deepEqual(Array.from(presentation(source).related), ids);
   const html = context.preprocessObsidianMarkdown(source);
-  assert.equal((html.match(/data-note-title=/g) || []).length, ids.length);
-  assert(html.includes("&lt;img src=x onerror=&quot;attack()&quot;&gt;"));
+  assert(!html.includes("data-note-title="));
+  assert(!html.includes("attack()"), "Metadata titles must not become source markup");
   assert(!html.includes("<img"));
   for (const related of [null, {}, [5], [null], [""], [" заметка"], ["заметка "],
     ["а\nб"], ["а\u007fб"], ["а", "а"]]) {
@@ -135,13 +135,13 @@ test("preview exposes every exact relative ID without a quota", () => {
   assert.deepEqual(Array.from(view.related), ids);
 });
 
-test("actual preview renders all related links separately and escapes their labels and IDs", () => {
+test("source preview leaves exact relation IDs to the connected-notes panel", () => {
   const ids = ['Каталог/Файл "кавычки"', '<img src=x onerror=alert(1)>', "x".repeat(230)];
   const html = context.preprocessObsidianMarkdown(wrap("Авторский текст", ids));
-  assert.equal((html.match(/data-note-title=/g) || []).length, 3);
-  assert(html.includes("&quot;кавычки&quot;"));
-  assert(html.includes("&lt;img src=x onerror=alert(1)&gt;"));
-  assert(html.includes("x".repeat(230)));
+  assert.deepEqual(Array.from(presentation(wrap("Авторский текст", ids)).related), ids);
+  assert(!html.includes("data-note-title="));
+  assert(!html.includes("onerror="));
+  assert(!html.includes("x".repeat(230)));
   assert(!html.includes("<img"));
   assert(!html.includes("noda_source_"));
   assert(html.includes("Авторский текст"));

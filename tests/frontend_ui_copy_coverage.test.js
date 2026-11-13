@@ -33,7 +33,7 @@ test("reviewed editor, queue, settings and recovery copy exists in every additio
 });
 
 test("current UI call sites and localized status arrays have catalog coverage", () => {
-  const files = ["notes_inline_editor.js", "notes_metadata_editor.js", "notes_settings_preferences.js",
+  const files = ["notes_related.js", "notes_inline_editor.js", "notes_metadata_editor.js", "notes_settings_preferences.js",
     "notes_semantic_controls.js", "quick_capture_view.js", "desktop_preferences_bridge.js", "notes_renderer.js"];
   let count = 0;
   for (const file of files) {

@@ -141,8 +141,8 @@ if ($SourceOnly) {
         }
     }
     foreach ($file in @(
-        'frontend/package-lock.json', 'scripts/windows-portable/build.ps1', 'scripts/windows-portable/installer.nsh', '.gitignore',
-        'docs/note-library-storage.md', 'tests/test_windows_portable_packaging.py',
+        'frontend/package-lock.json', 'scripts/windows-portable/build.ps1', 'scripts/windows-portable/installer.nsh', 'scripts/windows-portable/installer-repair.nsh', '.gitignore',
+        'docs/note-library-storage.md', 'tests/test_windows_portable_packaging.py', 'tests/windows_installer_lifecycle.smoke.ps1',
         'tests/frontend_desktop_settings.test.js', 'tests/frontend_ui_languages.test.js',
         'tests/frontend/portable_runtime.test.cjs', 'tests/frontend/notes_note_actions.test.cjs',
         'tests/frontend/portable_runtime_cache.test.cjs', 'tests/frontend/portable_setup_progress.test.cjs',

@@ -23,7 +23,7 @@
       <button type="button" id="note-preview-toggle" class="inline-preview-toggle" aria-pressed="false" aria-label="${uiText("Просмотр заметки", "Preview note")}" title="${uiText("Просмотр", "Preview")}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button>
     </div>
     <div class="inline-note-body"><label for="note-inline-content" class="sr-only">${uiText("Текст заметки", "Note text")}</label>
-      <textarea id="note-inline-content" maxlength="1000000" spellcheck="true" aria-describedby="note-inline-status"></textarea><div class="inline-preview-slot"></div></div>
+      <textarea id="note-inline-content" maxlength="1000000" spellcheck="true" aria-describedby="note-inline-status"></textarea><div class="inline-preview-slot"></div><section id="note-related" class="note-related" hidden></section></div>
     <footer class="inline-note-footer"><div class="inline-tags"></div><div class="inline-save-state" role="status" aria-live="polite">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span id="note-inline-status"></span>
       <button type="button" id="note-save-retry" hidden>${uiText("Повторить", "Try again")}</button>
@@ -47,7 +47,7 @@
     const retry = doc.getElementById("note-save-retry"), copy = doc.getElementById("note-save-copy");
     const manual = doc.getElementById("note-save-manual"), reload = doc.getElementById("note-reload-latest");
     const toggle = doc.getElementById("note-preview-toggle"), style = doc.getElementById("note-text-style");
-    let previewing = false, disabled = false;
+    let previewing = true, disabled = false;
     const labels = {
       saved: ["Сохранено", "Saved"], draft: ["Есть изменения", "Unsaved changes"], saving: ["Сохраняем…", "Saving…"],
       "index-pending": ["Сохранено. Поиск обновится позже.", "Saved. Search will update later."],
@@ -65,6 +65,9 @@
       input.hidden = previewing || !state.editable;
       preview.hidden = !previewing && state.editable;
       if (previewing && state.editable) renderPreview(state.content);
+      toggle.setAttribute("aria-pressed", String(previewing));
+      const toggleLabel = previewing ? text("Редактировать", "Edit") : text("Просмотр заметки", "Preview note");
+      toggle.setAttribute("aria-label", toggleLabel); toggle.title = toggleLabel;
       host.dataset.state = state.status;
       const label = (state.reloading ? text("Загружаем актуальную версию…", "Loading latest version…")
         : state.reloadError ? text("Не удалось перечитать файл. Черновик сохранён.", "Could not reload the file. Your draft is kept.")
@@ -158,12 +161,12 @@
       refreshLanguage() { localized.forEach(update => update()); if (session.getState()) render(session.getState()); },
       open(title, detail) { const changed = session.getState()?.title !== title || session.getState()?.project !== getProject();
         if (changed) {
-        previewing = false; toggle.setAttribute("aria-pressed", "false");
+        previewing = true;
       } session.open(title, detail);
         if (changed) { input.setSelectionRange(0, 0); input.scrollTop = 0; preview.scrollTop = 0; }
       },
       setDisabled(value) { disabled = value; if (session.getState()) render(session.getState()); },
-      focus() { input.focus(); }, inputElement: input,
+      focus() { if (input.hidden) { preview.tabIndex = -1; preview.focus(); } else input.focus(); }, inputElement: input,
     };
   }
   root.NotesInlineEditor = { create };

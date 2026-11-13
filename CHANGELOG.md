@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.0.2 — 2026-11-14
+
+- Open notes in formatted Markdown preview by default, with an explicit editing switch that preserves drafts.
+- Display saved connections and backlinks beneath notes, with keyboard navigation and protection against stale project responses.
+- Prepare upgrades with the current build's uninstaller, so a broken legacy beta uninstaller does not block the update.
+- Reject upgrades when application files are in use or the previous uninstaller is redirected through a directory or reparse point.
+- Preserve project data during updates and include a reproducible, isolated Windows installer lifecycle check.
+
+This stable version includes the dependency changes from beta.17 and the local interface changes from beta.18–19. The stable version label does not certify arbitrary model files or experimental training paths; see [known issues](docs/security-known-issues.md). The Windows installer remains unsigned pending issuance of a code-signing certificate.
+
+## 1.0.2-beta.19 — 2026-11-14 (local testing build)
+
+- Open notes in formatted preview by default, including legacy Obsidian Markdown.
+- Keep an explicit switch to source editing, retain drafts across mode changes and preserve editing mode during automatic refresh.
+
+## 1.0.2-beta.18 — 2026-11-14 (local testing build)
+
+- Show saved outgoing connections and backlinks below the editable note body, using the same canonical identities as Graph.
+- Open connected notes by mouse or keyboard, retain manual drafts and restore focus in editable or read-only views.
+- Refresh connections automatically, hide empty lists and reject stale project or vault responses.
+- Verify chat citation navigation, translations and narrow layouts with isolated Electron fixtures.
+
 ## 1.0.2-beta.17 — 2026-11-13
 
 ### Dependency security
