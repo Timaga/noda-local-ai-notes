@@ -2,7 +2,7 @@
   <img src="docs/assets/noda-logo.svg" width="96" alt="Noda logo">
 </p>
 
-<h1 align="center">Noda</h1>
+<h1 align="center">Noda — Local AI Notes for Windows</h1>
 
 <p align="center"><strong>Local AI for your Markdown notes.</strong></p>
 
@@ -14,7 +14,7 @@
 
 ![Noda library with projects, a note list and an editable Markdown note](docs/assets/screenshots/library.png)
 
-Noda is a desktop note-taking app for people who want to keep a personal knowledge base in local Markdown files. It combines a quick capture window, an editor, optional AI titles and tags, a knowledge graph, and chat that points back to source notes.
+Noda is a local-first AI note-taking app for Windows that keeps your personal knowledge base in Markdown files. It combines quick capture, a Markdown editor, optional AI titles and tags, a knowledge graph, semantic search and chat with cited source notes.
 
 The app runs note processing and chat on your computer using installed models. Initial setup and model downloads require internet access.
 
@@ -84,6 +84,8 @@ The supplied note-processing profiles support **Russian and English**. Changing 
 ## Project status
 
 Noda is a Windows beta. The current focus is reliable capture, useful metadata and a clear local workflow. Broader model evaluation, clean-machine release validation and performance work remain part of beta testing.
+
+See the [compliance and publication status](docs/COMPLIANCE.md) for the reviewed licenses, privacy scope and open release findings.
 
 Useful contributions include reproducible bugs, accessibility improvements, translations and small tests for real workflows. Please use synthetic notes or remove private information before sharing a report.
 

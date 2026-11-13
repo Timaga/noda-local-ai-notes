@@ -1,0 +1,585 @@
+{
+  "schema": "noda-direct-development-license-inventory-v1",
+  "audit_date": "2026-11-13",
+  "scope": "All 21 direct exact-version pins in requirements-test.txt; includes psutil shared with the Windows runtime inventory.",
+  "requirements_file": "requirements-test.txt",
+  "requirements_text_sha256": "fac0b115a48c55a3f6b64dc0b3d12ecea184ccdd13442cbe7a369e13cc772fc9",
+  "requirements_text_hash_normalization": "UTF-8 text with CRLF/CR normalized to LF, preserving the final newline.",
+  "package_code_or_wheels_redistributed_by_this_inventory": false,
+  "transitive_development_versions": "Not locked or independently inventoried. requires_dist values are upstream metadata, not a resolved environment or complete SBOM.",
+  "metadata_sources": "Official version-specific PyPI JSON. No application source or user data was uploaded.",
+  "packages": [
+    {
+      "name": "pytest",
+      "version": "8.3.4",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Changelog": "https://docs.pytest.org/en/stable/changelog.html",
+        "Homepage": "https://docs.pytest.org/en/latest/",
+        "Source": "https://github.com/pytest-dev/pytest",
+        "Tracker": "https://github.com/pytest-dev/pytest/issues",
+        "Twitter": "https://twitter.com/pytestdotorg"
+      },
+      "metadata_url": "https://pypi.org/pypi/pytest/8.3.4/json",
+      "requires_dist": [
+        "colorama; sys_platform == \"win32\"",
+        "exceptiongroup>=1.0.0rc8; python_version < \"3.11\"",
+        "iniconfig",
+        "packaging",
+        "pluggy<2,>=1.5",
+        "tomli>=1; python_version < \"3.11\"",
+        "argcomplete; extra == \"dev\"",
+        "attrs>=19.2; extra == \"dev\"",
+        "hypothesis>=3.56; extra == \"dev\"",
+        "mock; extra == \"dev\"",
+        "pygments>=2.7.2; extra == \"dev\"",
+        "requests; extra == \"dev\"",
+        "setuptools; extra == \"dev\"",
+        "xmlschema; extra == \"dev\""
+      ],
+      "metadata_sha256": "66f62214c9eebf64712924d8b7180fbdc9036a2fd08a57eb09a241aafbfa7f46",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "pytest-cov",
+      "version": "6.0.0",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Changelog": "https://pytest-cov.readthedocs.io/en/latest/changelog.html",
+        "Documentation": "https://pytest-cov.readthedocs.io/",
+        "Homepage": "https://github.com/pytest-dev/pytest-cov",
+        "Issue Tracker": "https://github.com/pytest-dev/pytest-cov/issues"
+      },
+      "metadata_url": "https://pypi.org/pypi/pytest-cov/6.0.0/json",
+      "requires_dist": [
+        "pytest>=4.6",
+        "coverage[toml]>=7.5",
+        "fields; extra == \"testing\"",
+        "hunter; extra == \"testing\"",
+        "process-tests; extra == \"testing\"",
+        "pytest-xdist; extra == \"testing\"",
+        "virtualenv; extra == \"testing\""
+      ],
+      "metadata_sha256": "747cef9116bd9e501f39dd9d0fac2023a2aada426238f1a8c21b23bbef5f243c",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "pytest-mock",
+      "version": "3.14.0",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Changelog": "https://pytest-mock.readthedocs.io/en/latest/changelog.html",
+        "Documentation": "https://pytest-mock.readthedocs.io/en/latest/",
+        "Homepage": "https://github.com/pytest-dev/pytest-mock/",
+        "Source": "https://github.com/pytest-dev/pytest-mock/",
+        "Tracker": "https://github.com/pytest-dev/pytest-mock/issues"
+      },
+      "metadata_url": "https://pypi.org/pypi/pytest-mock/3.14.0/json",
+      "requires_dist": [
+        "pytest>=6.2.5",
+        "pre-commit; extra == \"dev\"",
+        "pytest-asyncio; extra == \"dev\"",
+        "tox; extra == \"dev\""
+      ],
+      "metadata_sha256": "1cb0f1b865b0089d6dcaca210da443819a4d6dce6eed669533068121752fa645",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "pytest-asyncio",
+      "version": "0.25.2",
+      "declared_license_expression": null,
+      "declared_license_field": "Apache 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": {
+        "Bug Tracker": "https://github.com/pytest-dev/pytest-asyncio/issues",
+        "Changelog": "https://pytest-asyncio.readthedocs.io/en/latest/reference/changelog.html",
+        "Documentation": "https://pytest-asyncio.readthedocs.io",
+        "Homepage": "https://github.com/pytest-dev/pytest-asyncio",
+        "Source Code": "https://github.com/pytest-dev/pytest-asyncio"
+      },
+      "metadata_url": "https://pypi.org/pypi/pytest-asyncio/0.25.2/json",
+      "requires_dist": [
+        "pytest<9,>=8.2",
+        "sphinx>=5.3; extra == \"docs\"",
+        "sphinx-rtd-theme>=1; extra == \"docs\"",
+        "coverage>=6.2; extra == \"testing\"",
+        "hypothesis>=5.7.1; extra == \"testing\""
+      ],
+      "metadata_sha256": "aa1ca642062302896b9032ddcfd0c1f915fcbb71160f7d57389b07a2273610b1",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "pytest-xdist",
+      "version": "3.6.1",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT License  Copyright (c) 2010 Holger Krekel and contributors.  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. ",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Changelog": "https://pytest-xdist.readthedocs.io/en/latest/changelog.html",
+        "Documentation": "https://pytest-xdist.readthedocs.io/en/latest",
+        "Homepage": "https://github.com/pytest-dev/pytest-xdist",
+        "Source": "https://github.com/pytest-dev/pytest-xdist",
+        "Tracker": "https://github.com/pytest-dev/pytest-xdist/issues"
+      },
+      "metadata_url": "https://pypi.org/pypi/pytest-xdist/3.6.1/json",
+      "requires_dist": [
+        "execnet>=2.1",
+        "pytest>=7.0.0",
+        "psutil>=3.0; extra == \"psutil\"",
+        "setproctitle; extra == \"setproctitle\"",
+        "filelock; extra == \"testing\""
+      ],
+      "metadata_sha256": "7c8b3fb7c2fb41ca73c022aa553e537c777620a62d4e0e2683726577e91cbdb0",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "coverage",
+      "version": "7.6.10",
+      "declared_license_expression": null,
+      "declared_license_field": "Apache-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": {
+        "Documentation": "https://coverage.readthedocs.io/en/7.6.10",
+        "Funding": "https://tidelift.com/subscription/pkg/pypi-coverage?utm_source=pypi-coverage&utm_medium=referral&utm_campaign=pypi",
+        "Homepage": "https://github.com/nedbat/coveragepy",
+        "Issues": "https://github.com/nedbat/coveragepy/issues",
+        "Mastodon": "https://hachyderm.io/@coveragepy",
+        "Mastodon (nedbat)": "https://hachyderm.io/@nedbat"
+      },
+      "metadata_url": "https://pypi.org/pypi/coverage/7.6.10/json",
+      "requires_dist": [
+        "tomli; python_full_version <= \"3.11.0a6\" and extra == \"toml\""
+      ],
+      "metadata_sha256": "5e8795c41e97cf97c100a34e6cfad0f4b345c533959d561009ea2efdc51a9972",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "mock",
+      "version": "5.1.0",
+      "declared_license_expression": null,
+      "declared_license_field": "",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": {
+        "Homepage": "http://mock.readthedocs.org/en/latest/",
+        "Source": "https://github.com/testing-cabal/mock"
+      },
+      "metadata_url": "https://pypi.org/pypi/mock/5.1.0/json",
+      "requires_dist": [
+        "twine ; extra == 'build'",
+        "wheel ; extra == 'build'",
+        "blurb ; extra == 'build'",
+        "sphinx ; extra == 'docs'",
+        "pytest ; extra == 'test'",
+        "pytest-cov ; extra == 'test'"
+      ],
+      "metadata_sha256": "998d3846461be1a6d576cc0b951867298054c2c226aa849f3254c0e1450f39bd",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "Faker",
+      "version": "33.3.1",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT License",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Bug Tracker": "https://github.com/joke2k/faker/issues",
+        "Changes": "https://github.com/joke2k/faker/blob/master/CHANGELOG.md",
+        "Documentation": "http://faker.rtfd.org/",
+        "Homepage": "https://github.com/joke2k/faker",
+        "Source Code": "https://github.com/joke2k/faker"
+      },
+      "metadata_url": "https://pypi.org/pypi/faker/33.3.1/json",
+      "requires_dist": [
+        "python-dateutil>=2.4",
+        "typing-extensions"
+      ],
+      "metadata_sha256": "c4daa281bff0c3ccf3cf678db28fc2b057cca4bfc915e97333804d58827a4c42",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "freezegun",
+      "version": "1.5.1",
+      "declared_license_expression": null,
+      "declared_license_field": "Apache 2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": {
+        "Bug Tracker": "https://github.com/spulec/freezegun/issues",
+        "Changes": "https://github.com/spulec/freezegun/blob/master/CHANGELOG",
+        "Documentation": "https://github.com/spulec/freezegun/blob/master/README.rst",
+        "Homepage": "https://github.com/spulec/freezegun",
+        "Source Code": "https://github.com/spulec/freezegun"
+      },
+      "metadata_url": "https://pypi.org/pypi/freezegun/1.5.1/json",
+      "requires_dist": [
+        "python-dateutil>=2.7"
+      ],
+      "metadata_sha256": "5cad120cfa660ba0468dc598275442e50ef0c92863522c53eb49b1ecd14a6f55",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "requests-mock",
+      "version": "1.12.1",
+      "declared_license_expression": null,
+      "declared_license_field": "Apache-2",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": {
+        "Homepage": "https://requests-mock.readthedocs.io/",
+        "Source": "https://github.com/jamielennox/requests-mock"
+      },
+      "metadata_url": "https://pypi.org/pypi/requests-mock/1.12.1/json",
+      "requires_dist": [
+        "requests<3,>=2.22",
+        "fixtures; extra == \"fixture\""
+      ],
+      "metadata_sha256": "33e9c57a4c30e3eef6a494abd2156c105973802a95247f03155a055146bc5872",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "responses",
+      "version": "0.25.3",
+      "declared_license_expression": null,
+      "declared_license_field": "Apache 2.0",
+      "license_classifiers": [],
+      "project_urls": {
+        "Bug Tracker": "https://github.com/getsentry/responses/issues",
+        "Changes": "https://github.com/getsentry/responses/blob/master/CHANGES",
+        "Documentation": "https://github.com/getsentry/responses/blob/master/README.rst",
+        "Homepage": "https://github.com/getsentry/responses",
+        "Source Code": "https://github.com/getsentry/responses"
+      },
+      "metadata_url": "https://pypi.org/pypi/responses/0.25.3/json",
+      "requires_dist": [
+        "requests<3.0,>=2.30.0",
+        "urllib3<3.0,>=1.25.10",
+        "pyyaml",
+        "pytest>=7.0.0; extra == \"tests\"",
+        "coverage>=6.0.0; extra == \"tests\"",
+        "pytest-cov; extra == \"tests\"",
+        "pytest-asyncio; extra == \"tests\"",
+        "pytest-httpserver; extra == \"tests\"",
+        "flake8; extra == \"tests\"",
+        "types-PyYAML; extra == \"tests\"",
+        "types-requests; extra == \"tests\"",
+        "mypy; extra == \"tests\"",
+        "tomli-w; extra == \"tests\"",
+        "tomli; python_version < \"3.11\" and extra == \"tests\""
+      ],
+      "metadata_sha256": "5cd2fc3304478b529af224a1411de931fa30748615220e05e378dc548cd71a81",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "Flask-Testing",
+      "version": "0.8.1",
+      "declared_license_expression": null,
+      "declared_license_field": "BSD",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": {
+        "Homepage": "https://github.com/jarus/flask-testing"
+      },
+      "metadata_url": "https://pypi.org/pypi/Flask-Testing/0.8.1/json",
+      "requires_dist": null,
+      "metadata_sha256": "599c2cc533ed4b3061c2ed609a1e903028d0c4ccba8ff2a949f4cccbcd47717a",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "black",
+      "version": "25.1.0",
+      "declared_license_expression": "MIT",
+      "declared_license_field": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Changelog": "https://github.com/psf/black/blob/main/CHANGES.md",
+        "Documentation": "https://black.readthedocs.io/",
+        "Issues": "https://github.com/psf/black/issues",
+        "Repository": "https://github.com/psf/black"
+      },
+      "metadata_url": "https://pypi.org/pypi/black/25.1.0/json",
+      "requires_dist": [
+        "click>=8.0.0",
+        "mypy-extensions>=0.4.3",
+        "packaging>=22.0",
+        "pathspec>=0.9.0",
+        "platformdirs>=2",
+        "tomli>=1.1.0; python_version < \"3.11\"",
+        "typing-extensions>=4.0.1; python_version < \"3.11\"",
+        "colorama>=0.4.3; extra == \"colorama\"",
+        "aiohttp>=3.10; extra == \"d\"",
+        "ipython>=7.8.0; extra == \"jupyter\"",
+        "tokenize-rt>=3.2.0; extra == \"jupyter\"",
+        "uvloop>=0.15.2; extra == \"uvloop\""
+      ],
+      "metadata_sha256": "1ffb543af25620ec1afe4658eadb94457440a2da4e8957a8167173ca36bb5d7d",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "flake8",
+      "version": "7.1.1",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Homepage": "https://github.com/pycqa/flake8"
+      },
+      "metadata_url": "https://pypi.org/pypi/flake8/7.1.1/json",
+      "requires_dist": [
+        "mccabe<0.8.0,>=0.7.0",
+        "pycodestyle<2.13.0,>=2.12.0",
+        "pyflakes<3.3.0,>=3.2.0"
+      ],
+      "metadata_sha256": "55de3bd27284f43e764710acafca2e7eb0d5bed642570cc0b5a0e03dd99befdd",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "mypy",
+      "version": "1.14.1",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Changelog": "https://github.com/python/mypy/blob/master/CHANGELOG.md",
+        "Documentation": "https://mypy.readthedocs.io/en/stable/index.html",
+        "Homepage": "https://www.mypy-lang.org/",
+        "Issues": "https://github.com/python/mypy/issues",
+        "Repository": "https://github.com/python/mypy"
+      },
+      "metadata_url": "https://pypi.org/pypi/mypy/1.14.1/json",
+      "requires_dist": [
+        "typing_extensions>=4.6.0",
+        "mypy_extensions>=1.0.0",
+        "tomli>=1.1.0; python_version < \"3.11\"",
+        "psutil>=4.0; extra == \"dmypy\"",
+        "setuptools>=50; extra == \"mypyc\"",
+        "lxml; extra == \"reports\"",
+        "pip; extra == \"install-types\"",
+        "orjson; extra == \"faster-cache\""
+      ],
+      "metadata_sha256": "157c129bd9c6f13c61ca222a20b2ba23dc869cbcd5d83c7069c49dc5c711acba",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "pylint",
+      "version": "3.3.5",
+      "declared_license_expression": null,
+      "declared_license_field": "GPL-2.0-or-later",
+      "license_classifiers": [
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)"
+      ],
+      "project_urls": {
+        "Bug Tracker": "https://github.com/pylint-dev/pylint/issues",
+        "Discord Server": "https://discord.com/invite/Egy6P8AMB5",
+        "Docs: Contributor Guide": "https://pylint.readthedocs.io/en/latest/development_guide/contributor_guide/index.html",
+        "Docs: User Guide": "https://pylint.readthedocs.io/en/latest/",
+        "Source Code": "https://github.com/pylint-dev/pylint",
+        "What's New": "https://pylint.readthedocs.io/en/latest/whatsnew/3/",
+        "homepage": "https://github.com/pylint-dev/pylint"
+      },
+      "metadata_url": "https://pypi.org/pypi/pylint/3.3.5/json",
+      "requires_dist": [
+        "dill>=0.2; python_version < \"3.11\"",
+        "dill>=0.3.6; python_version >= \"3.11\"",
+        "dill>=0.3.7; python_version >= \"3.12\"",
+        "platformdirs>=2.2.0",
+        "astroid<=3.4.0-dev0,>=3.3.8",
+        "isort!=5.13.0,<7,>=4.2.5",
+        "mccabe<0.8,>=0.6",
+        "tomli>=1.1.0; python_version < \"3.11\"",
+        "tomlkit>=0.10.1",
+        "colorama>=0.4.5; sys_platform == \"win32\"",
+        "typing-extensions>=3.10.0; python_version < \"3.10\"",
+        "gitpython>3; extra == \"testutils\"",
+        "pyenchant~=3.2; extra == \"spelling\""
+      ],
+      "metadata_sha256": "aeeb1966b91e541ddbc412b3fd374ece927775dfe4ce458c7c94446cff8bafc9",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "isort",
+      "version": "5.13.2",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Changelog": "https://github.com/pycqa/isort/blob/main/CHANGELOG.md",
+        "Documentation": "https://pycqa.github.io/isort/",
+        "Homepage": "https://pycqa.github.io/isort/",
+        "Repository": "https://github.com/pycqa/isort"
+      },
+      "metadata_url": "https://pypi.org/pypi/isort/5.13.2/json",
+      "requires_dist": [
+        "colorama (>=0.4.6) ; extra == \"colors\""
+      ],
+      "metadata_sha256": "9327d2c0a2df7766424f8decd57679182715172be0213fe478729d03c9ed39d7",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "pytest-benchmark",
+      "version": "5.1.0",
+      "declared_license_expression": null,
+      "declared_license_field": "BSD-2-Clause",
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": {
+        "Changelog": "https://pytest-benchmark.readthedocs.io/en/latest/changelog.html",
+        "Documentation": "https://pytest-benchmark.readthedocs.io/",
+        "Homepage": "https://github.com/ionelmc/pytest-benchmark",
+        "Issue Tracker": "https://github.com/ionelmc/pytest-benchmark/issues"
+      },
+      "metadata_url": "https://pypi.org/pypi/pytest-benchmark/5.1.0/json",
+      "requires_dist": [
+        "pytest>=8.1",
+        "py-cpuinfo",
+        "statistics; python_version < \"3.4\"",
+        "pathlib2; python_version < \"3.4\"",
+        "aspectlib; extra == \"aspect\"",
+        "elasticsearch; extra == \"elasticsearch\"",
+        "pygal; extra == \"histogram\"",
+        "pygaljs; extra == \"histogram\"",
+        "setuptools; extra == \"histogram\""
+      ],
+      "metadata_sha256": "284ada641ff4da2c6e8bfbbd8a1b27cd1d018653ba60c5f2efa4e11394e92ed1",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "pytest-timeout",
+      "version": "2.3.1",
+      "declared_license_expression": null,
+      "declared_license_field": "MIT",
+      "license_classifiers": [
+        "License :: DFSG approved",
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Homepage": "https://github.com/pytest-dev/pytest-timeout"
+      },
+      "metadata_url": "https://pypi.org/pypi/pytest-timeout/2.3.1/json",
+      "requires_dist": [
+        "pytest >=7.0.0"
+      ],
+      "metadata_sha256": "751cb958b0ffb4176ffd65826f36c7c900f6b7be692d1943e87934cc837d4f4c",
+      "also_in_windows_runtime_inventory": false
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "declared_license_expression": null,
+      "declared_license_field": "BSD-3-Clause",
+      "license_classifiers": [],
+      "project_urls": {
+        "Homepage": "https://github.com/giampaolo/psutil"
+      },
+      "metadata_url": "https://pypi.org/pypi/psutil/7.2.2/json",
+      "requires_dist": [
+        "psleak; extra == \"dev\"",
+        "pytest; extra == \"dev\"",
+        "pytest-instafail; extra == \"dev\"",
+        "pytest-xdist; extra == \"dev\"",
+        "setuptools; extra == \"dev\"",
+        "pywin32; (os_name == \"nt\" and implementation_name != \"pypy\") and extra == \"dev\"",
+        "wheel; (os_name == \"nt\" and implementation_name != \"pypy\") and extra == \"dev\"",
+        "wmi; (os_name == \"nt\" and implementation_name != \"pypy\") and extra == \"dev\"",
+        "abi3audit; extra == \"dev\"",
+        "black; extra == \"dev\"",
+        "check-manifest; extra == \"dev\"",
+        "coverage; extra == \"dev\"",
+        "packaging; extra == \"dev\"",
+        "pylint; extra == \"dev\"",
+        "pyperf; extra == \"dev\"",
+        "pypinfo; extra == \"dev\"",
+        "pytest-cov; extra == \"dev\"",
+        "requests; extra == \"dev\"",
+        "rstcheck; extra == \"dev\"",
+        "ruff; extra == \"dev\"",
+        "sphinx; extra == \"dev\"",
+        "sphinx_rtd_theme; extra == \"dev\"",
+        "toml-sort; extra == \"dev\"",
+        "twine; extra == \"dev\"",
+        "validate-pyproject[all]; extra == \"dev\"",
+        "virtualenv; extra == \"dev\"",
+        "vulture; extra == \"dev\"",
+        "wheel; extra == \"dev\"",
+        "colorama; os_name == \"nt\" and extra == \"dev\"",
+        "pyreadline3; os_name == \"nt\" and extra == \"dev\"",
+        "psleak; extra == \"test\"",
+        "pytest; extra == \"test\"",
+        "pytest-instafail; extra == \"test\"",
+        "pytest-xdist; extra == \"test\"",
+        "setuptools; extra == \"test\"",
+        "pywin32; (os_name == \"nt\" and implementation_name != \"pypy\") and extra == \"test\"",
+        "wheel; (os_name == \"nt\" and implementation_name != \"pypy\") and extra == \"test\"",
+        "wmi; (os_name == \"nt\" and implementation_name != \"pypy\") and extra == \"test\""
+      ],
+      "metadata_sha256": "84f9d2597c3c15fe19d1ce069bfdbf25951dc423dc51d67c3979468c029b6415",
+      "also_in_windows_runtime_inventory": true
+    },
+    {
+      "name": "pytest-html",
+      "version": "4.1.1",
+      "declared_license_expression": null,
+      "declared_license_field": "",
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": {
+        "Homepage": "https://github.com/pytest-dev/pytest-html",
+        "Source": "https://github.com/pytest-dev/pytest-html",
+        "Tracker": "https://github.com/pytest-dev/pytest-html/issues"
+      },
+      "metadata_url": "https://pypi.org/pypi/pytest-html/4.1.1/json",
+      "requires_dist": [
+        "jinja2>=3.0.0",
+        "pytest-metadata>=2.0.0",
+        "pytest>=7.0.0",
+        "pip-tools>=6.13.0; extra == 'docs'",
+        "assertpy>=1.1; extra == 'test'",
+        "beautifulsoup4>=4.11.1; extra == 'test'",
+        "black>=22.1.0; extra == 'test'",
+        "flake8>=4.0.1; extra == 'test'",
+        "pre-commit>=2.17.0; extra == 'test'",
+        "pytest-mock>=3.7.0; extra == 'test'",
+        "pytest-rerunfailures>=11.1.2; extra == 'test'",
+        "pytest-xdist>=2.4.0; extra == 'test'",
+        "selenium>=4.3.0; extra == 'test'",
+        "tox>=3.24.5; extra == 'test'"
+      ],
+      "metadata_sha256": "3a9e8f9692c4e39286c53b2188ee3b8fe3f7ba3fdcde377a47abfadb6777c79a",
+      "also_in_windows_runtime_inventory": false
+    }
+  ]
+}

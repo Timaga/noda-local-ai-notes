@@ -70,9 +70,73 @@ The Qwen Research License is preserved as
 optional integration. Its presence does not make Qwen2.5 part of the release.
 Do not infer a license for Tev weights from its Apache-licensed base model.
 
+## Source and developer defaults
+
+The five portable entries above do not cover every model path in this source
+repository. Without `NODA_RUNTIME_HOME`, the legacy note-stage defaults in
+`backend/ru_pipeline/pair_settings.py` select Qwen2.5-3B for titles and Tev for
+tags. Their restrictions above also apply to developer runs. Ordinary personal
+note-taking is not automatically covered by a research/evaluation-only grant;
+Tev's unfinished weight license is not established permission for that use.
+
+Packaged Windows runs set `NODA_RUNTIME_HOME`, use Qwen3.5 with mMARCO by default,
+and exclude built-in Qwen2.5-3B/Tev pairs from the selectable catalog and saved
+selection checks. This is a boundary of the packaged catalog, not a license
+approval for arbitrary models that users import separately.
+
+## Nonportable chat catalog
+
+`backend/model_catalog.py` also exposes these ten choices from eight repositories
+when no portable runtime is configured. These are actual developer download
+options, distinct from the local offline profiles below.
+
+The official publisher metadata was observed on **2026-11-13**. The revisions in
+this table record those observations; **the legacy catalog does not pin them**.
+Its snapshot/GGUF download helpers can resolve a newer upstream revision.
+Metadata labels alone are not a completed review of exact weights, base-model
+conditions or redistribution notices. Review and pin the selected artifact
+before relying on it for use or distribution.
+
+| Developer catalog choice | Publisher repository | Observed revision | Declared model-card license |
+| --- | --- | --- | --- |
+| T-lite-it 2.1 Q4_K_M | [t-tech/T-lite-it-2.1-GGUF](https://huggingface.co/t-tech/T-lite-it-2.1-GGUF) | `fc10186e59064c2e74f59c3d5dbce233931b3b81` | Apache-2.0 |
+| T-lite-it 2.1 Q5_K_M | [t-tech/T-lite-it-2.1-GGUF](https://huggingface.co/t-tech/T-lite-it-2.1-GGUF) | `fc10186e59064c2e74f59c3d5dbce233931b3b81` | Apache-2.0 |
+| T-lite-it 2.1 Q6_K | [t-tech/T-lite-it-2.1-GGUF](https://huggingface.co/t-tech/T-lite-it-2.1-GGUF) | `fc10186e59064c2e74f59c3d5dbce233931b3b81` | Apache-2.0 |
+| Qwen3 4B Instruct 2507 Q4_K_M | [unsloth/Qwen3-4B-Instruct-2507-GGUF](https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF) | `a06e946bb6b655725eafa393f4a9745d460374c9` | Apache-2.0 |
+| Vikhr-Nemo 12B Q4_K_M | [VlSav/Vikhr-Nemo-12B-Instruct-R-21-09-24-Q4_K_M-GGUF](https://huggingface.co/VlSav/Vikhr-Nemo-12B-Instruct-R-21-09-24-Q4_K_M-GGUF) | `d479412913f4de12beffc32824df932bfc3968c4` | Apache-2.0 |
+| Qwen3.5 2B | [Qwen/Qwen3.5-2B](https://huggingface.co/Qwen/Qwen3.5-2B) | `15852e8c16360a2fea060d615a32b45270f8a8fc` | Apache-2.0 |
+| Qwen2.5 1.5B Instruct | [Qwen/Qwen2.5-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct) | `989aa7980e4cf806f80c7fef2b1adb7bc71aa306` | Apache-2.0 |
+| Qwen2.5 3B Instruct | [Qwen/Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct) | `aa8e72537993ba99e69dfaafa59ed015b17504d1` | Qwen Research License; research/evaluation only |
+| Qwen2.5 7B Instruct AWQ | [Qwen/Qwen2.5-7B-Instruct-AWQ](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-AWQ) | `b25037543e9394b818fdfca67ab2a00ecc7dd641` | Apache-2.0 |
+| Qwen2.5 14B Instruct | [Qwen/Qwen2.5-14B-Instruct](https://huggingface.co/Qwen/Qwen2.5-14B-Instruct) | `cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8` | Apache-2.0 |
+
+The Qwen2.5-3B publisher's [license at the observed revision](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/LICENSE)
+contains its research restrictions. Do not infer that license from another
+Qwen2.5 size, or treat Noda's own noncommercial license as permission for the
+upstream weights. None of these developer-catalog weights are included here.
+
 ## Custom and imported profiles
 
-Custom or imported profiles, including local ruadapt, Gemma, Qwen2.5 and T-lite descriptors, are outside this portable catalog. A profile name or descriptor does not grant model-weight rights. No weights for these profiles are included; users and distributors must review each actual publisher, revision, license and optional native runtime before downloading, using or redistributing them.
+### Local offline profiles
+
+`frontend/owned_note_profiles.json` includes local ruadapt, Gemma4, Qwen2.5-7B and
+T-lite-1.0 paths and file hashes. These are distinct from the T-lite-2.1 chat
+catalog. They do not record a publisher, exact upstream revision or license.
+The owned-profile launcher requires existing local files and disables downloads;
+the term "owned" describes the controlled runtime profile, not ownership of
+upstream model rights. No corresponding weights are included. Rights to the
+application code and artwork do not establish rights to these model weights.
+
+### User imports
+
+The importer validates public accessibility, supported artifact shape, commit and
+file integrity, and can run technical compatibility checks. It rejects private,
+gated and disabled repositories. It **does not validate or record a model's
+license**, and the resulting local descriptor is not a rights clearance.
+An ungated public download can still have research, redistribution or other
+restrictions. Before importing, using or redistributing any model, users and
+distributors must review the exact publisher, revision, full terms, attribution,
+base-model conditions and any optional native runtime separately.
 
 ## Release boundary
 

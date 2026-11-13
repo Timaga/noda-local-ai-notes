@@ -246,7 +246,7 @@ def test_get_note_asset_allows_electron_file_preview_headers(app_client, temp_no
         "/notes/assets/Pasted%20image%2020251021161301.png",
         headers={
             "Sec-Fetch-Site": "cross-site",
-            "Referer": "file:///F:/projects/TEST_GUI/frontend/notes.html",
+            "Referer": "file:///C:/ExampleApp/frontend/notes.html",
         },
     )
 

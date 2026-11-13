@@ -8,6 +8,7 @@ Inventory prepared on 2026-11-13 from the repository lockfiles and version-match
 - Frontend and build: `frontend/package-lock.json`, 284 non-root package entries. All entries declare license metadata. The lock includes development tools, optional dependencies and platform variants; these are not all included in an app release.
 - Marked is the declared production npm dependency. Electron is marked as a development dependency for installation/build purposes but its runtime is shipped in an Electron application. Electron-builder and its toolchain are build dependencies.
 - Full inventory, upstream text paths and hashes: [dependencies.json](dependencies.json). Text files are under [LICENSES](../../LICENSES/).
+- Development/test tooling has a separate [21-direct-pin inventory](DEVELOPMENT-TOOLS.md) and [publisher metadata](development-tools.json). Development transitive versions are not fully locked or inventoried; they are not part of the 109-package runtime completeness claim.
 - Python license labels below preserve the wheel metadata as declared, with missing labels for Flask-Cors and SentencePiece checked against their tagged upstream license files. Classifiers such as `BSD License` are not an invented exact SPDX expression. Read each package's complete notices for the exact license and included subcomponents.
 
 For a fresh environment, resolve and review the actual target lock and retain licensing files from those exact artifacts. A matching version does not independently prove all installed binary bytes match a lockfile hash. Changing a platform, wheel, model revision or download pin requires a new inventory.
@@ -157,7 +158,7 @@ The source repository excludes `node_modules` and build-tool executables. Lockfi
 
 ## Experimental optional requirements
 
-`backend/requirements-optional.txt` describes optional development/research GPU paths, outside the 109-package Windows production lock. They are not covered by the locked-runtime completeness statement above. In particular, its `bitsandbytes-windows>=0.45.0` requirement cannot be satisfied by the currently published `bitsandbytes-windows` release 0.37.5 ([official PyPI package page](https://pypi.org/project/bitsandbytes-windows/)). Do not present that file as a supported reproducible installation path. Optional CUDA/vLLM/GPTQ environments require a separate resolved dependency, native-library and license review.
+The supported source distribution excludes the old experimental `backend/requirements-optional.txt`; it is not an available installation path in this repository. Earlier research requirements are outside the 109-package Windows runtime lock and its completeness statement. Optional CUDA/vLLM/GPTQ environments require a separate resolved dependency, native-library and license review before use or redistribution.
 
 ## Limits of this inventory
 
