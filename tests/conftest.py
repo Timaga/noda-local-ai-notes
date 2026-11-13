@@ -20,7 +20,7 @@ from types import SimpleNamespace
 # Install isolation before test collection: several test modules import the
 # runtime at module scope, before pytest can run an autouse fixture.
 _session_sandbox = tempfile.TemporaryDirectory(prefix="noda-pytest-")
-_session_root = Path(_session_sandbox.name)
+_session_root = Path(_session_sandbox.name).resolve(strict=True)
 _startup_notes = _session_root / "startup-notes"
 _startup_notes.mkdir()
 _isolation_env = {
@@ -104,7 +104,8 @@ def test_data_dir():
     Returns:
         Path: РџСѓС‚СЊ Рє РІСЂРµРјРµРЅРЅРѕР№ РґРёСЂРµРєС‚РѕСЂРёРё СЃ С‚РµСЃС‚РѕРІС‹РјРё РґР°РЅРЅС‹РјРё
     """
-    temp_dir = Path(tempfile.mkdtemp(prefix="test_gui_"))
+    # Windows TEMP may use an 8.3 alias. Match the runtime's canonical vault root.
+    temp_dir = Path(tempfile.mkdtemp(prefix="test_gui_")).resolve(strict=True)
     yield temp_dir
     # Cleanup РїРѕСЃР»Рµ РІСЃРµС… С‚РµСЃС‚РѕРІ
     if temp_dir.exists():

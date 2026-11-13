@@ -1,4 +1,5 @@
 tests/test_manual_notes_without_embeddings.py
+tests/test_fixture_vault_paths.py
 tests/test_note_library_management.py
 tests/test_note_metadata_refresh.py
 tests/test_notes_management_endpoints.py
