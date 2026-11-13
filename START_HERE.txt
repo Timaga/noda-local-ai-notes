@@ -1,10 +1,10 @@
 Getting started with Noda
 
-Install Noda 1.0.2-beta.16 on Windows x64:
+Install Noda 1.0.2-beta.17 on Windows x64:
 
-  https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.16
+  https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.17
 
-Download Noda-Setup-1.0.2-beta.16-x64.exe from that release and run it.
+Download Noda-Setup-1.0.2-beta.17-x64.exe from that release and run it.
 Open Noda from the Start menu after installation. No developer tools are needed.
 The repository and release are private; sign in with an account that has access.
 

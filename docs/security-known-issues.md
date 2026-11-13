@@ -1,6 +1,6 @@
 # Dependency security status
 
-Reviewed on **2026-11-13** for the **1.0.2-beta.17** source candidate: 109 hash-pinned Windows runtime distributions and 282 npm dependency entries. Dependency updates do not constitute security approval for a public release.
+Reviewed on **2026-11-13** for the **1.0.2-beta.17** private prerelease: 109 hash-pinned Windows runtime distributions and 282 npm dependency entries. Dependency updates do not constitute security approval for a public release.
 
 ## Remediation of the previous 19 repository alerts
 

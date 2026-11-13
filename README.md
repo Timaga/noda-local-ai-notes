@@ -10,7 +10,7 @@
 
 <p align="center">Windows x64 · beta · local inference · noncommercial source license</p>
 
-<p align="center"><strong><a href="https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.16/Noda-Setup-1.0.2-beta.16-x64.exe">Download Windows Setup (x64)</a></strong> · <a href="https://github.com/Timaga/noda-local-ai-notes/releases">All versions</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="#build-from-source">Build from source</a></p>
+<p align="center"><strong><a href="https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.17/Noda-Setup-1.0.2-beta.17-x64.exe">Download Windows Setup (x64)</a></strong> · <a href="https://github.com/Timaga/noda-local-ai-notes/releases">All versions</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="#build-from-source">Build from source</a></p>
 
 ![Noda library with projects, a note list and an editable Markdown note](docs/assets/screenshots/library.png)
 
@@ -43,9 +43,9 @@ Screenshots use synthetic demo notes in an isolated application profile. The dis
 
 ## Install on Windows
 
-**[Download Noda 1.0.2-beta.16 Setup for Windows x64](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.16/Noda-Setup-1.0.2-beta.16-x64.exe)** · [Release notes and checksums](https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.16)
+**[Download Noda 1.0.2-beta.17 Setup for Windows x64](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.17/Noda-Setup-1.0.2-beta.17-x64.exe)** · [Release notes and checksums](https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.17)
 
-1. Download `Noda-Setup-1.0.2-beta.16-x64.exe` and run it.
+1. Download `Noda-Setup-1.0.2-beta.17-x64.exe` and run it.
 2. Follow the installation steps, then open **Noda** from the Start menu.
 3. Let Noda prepare its local runtime and the models you choose. Initial downloads require internet access.
 

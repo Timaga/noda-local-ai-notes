@@ -25,7 +25,7 @@ The detailed inventories are in [DEPENDENCIES.md](legal/DEPENDENCIES.md), [MODEL
 - **Developer model rights:** some source-mode defaults and custom profiles fall outside the reviewed portable Apache-2.0 catalog. Qwen Research restrictions and the unestablished Tev license require separate treatment. Importing a model does not verify its license. No weights are included in this repository; see [the model scope](legal/MODELS.md).
 - **Distribution checks:** retain exact notices and complete the native-library inventory if bundling standalone Python or other binaries. Microsoft prerequisites and optional CUDA retain their own terms. Verify clean installation, upgrade and backup restoration using synthetic data.
 
-The dependency changes are delivered as a separately versioned beta.17 candidate. They do not resolve the other application and model-rights findings above. The historical beta.16 tag and Setup are preserved. Functional CI success is separate from complete security, licensing and release approval.
+The dependency changes are delivered as a separately versioned private beta.17 prerelease. They do not resolve the other application and model-rights findings above. The historical beta.16 tag and Setup are preserved. Functional CI success is separate from complete security, licensing and release approval.
 
 ## Discoverability and publication
 

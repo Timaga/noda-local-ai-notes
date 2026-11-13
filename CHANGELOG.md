@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.2-beta.17 — unreleased
+## 1.0.2-beta.17 — 2026-11-13
 
 ### Dependency security
 
