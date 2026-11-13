@@ -1,0 +1,269 @@
+{
+  "schema": "noda-runtime-model-license-provenance-v1",
+  "observed_utc": "2026-11-13T17:14:59.426740+00:00",
+  "scope": "license text and public model metadata; no binaries or weights included",
+  "license_texts": [
+    {
+      "target": "LICENSES/runtime/llama.cpp-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/08ffba21e5c2f1728b6b405c05ff3913f65706d4/LICENSE",
+      "license": "MIT",
+      "scope": "llama.cpp b11564 / 08ffba21e5c2f1728b6b405c05ff3913f65706d4",
+      "status": 200,
+      "bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "target": "LICENSES/runtime/llama.cpp-NOTICE.txt",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/08ffba21e5c2f1728b6b405c05ff3913f65706d4/NOTICE",
+      "license": "MIT",
+      "scope": "optional notice discovery",
+      "status": 404,
+      "note": "No file copied; absence does not change upstream model-card declaration."
+    },
+    {
+      "target": "LICENSES/runtime/Qdrant-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/qdrant/qdrant/v1.16.0/LICENSE",
+      "license": "Apache-2.0",
+      "scope": "Qdrant v1.16.0",
+      "status": 200,
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "target": "LICENSES/runtime/Qdrant-NOTICE.txt",
+      "url": "https://raw.githubusercontent.com/qdrant/qdrant/v1.16.0/NOTICE",
+      "license": "Apache-2.0",
+      "scope": "optional notice discovery",
+      "status": 404,
+      "note": "No file copied; absence does not change upstream model-card declaration."
+    },
+    {
+      "target": "LICENSES/runtime/CPython-3.13.14-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.13.14/LICENSE",
+      "license": "PSF-2.0 AND historical notices",
+      "scope": "CPython v3.13.14",
+      "status": 200,
+      "bytes": 13809,
+      "sha256": "78b12c3a81360b357002334f0e70ea0e92eebf7a9b358805c03c48484945f3bb"
+    },
+    {
+      "target": "LICENSES/runtime/python-build-standalone-build-system-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260728/LICENSE",
+      "license": "MPL-2.0",
+      "scope": "build system only; output distribution has component licenses",
+      "status": 200,
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    {
+      "target": "LICENSES/models/Apache-2.0.txt",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "license": "Apache-2.0",
+      "scope": "full standard license text",
+      "status": 200,
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "target": "LICENSES/models/Qwen3.5-4B-GGUF-LICENSE.txt",
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/raw/e87f176479d0855a907a41277aca2f8ee7a09523/LICENSE",
+      "license": "Apache-2.0",
+      "scope": "exact quantized revision",
+      "status": 404,
+      "note": "No file copied; absence does not change upstream model-card declaration."
+    },
+    {
+      "target": "LICENSES/models/Qwen3.5-4B-base-LICENSE.txt",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B/raw/main/LICENSE",
+      "license": "Apache-2.0",
+      "scope": "upstream base model license; current main, not pinned base revision",
+      "status": 200,
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    {
+      "target": "LICENSES/models/Qwen3-4B-Instruct-2507-GGUF-LICENSE.txt",
+      "url": "https://huggingface.co/ggml-org/Qwen3-4B-Instruct-2507-Q8_0-GGUF/raw/e6f794d44f9395d0184a966c27b5ae99ea356fcb/LICENSE",
+      "license": "Apache-2.0",
+      "scope": "exact quantized revision",
+      "status": 404,
+      "note": "No file copied; absence does not change upstream model-card declaration."
+    },
+    {
+      "target": "LICENSES/models/Qwen3-4B-Instruct-2507-base-LICENSE.txt",
+      "url": "https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/raw/main/LICENSE",
+      "license": "Apache-2.0",
+      "scope": "upstream base model license; current main, not pinned base revision",
+      "status": 200,
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    {
+      "target": "LICENSES/models/mMARCO-LICENSE.txt",
+      "url": "https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1/raw/1427fd652930e4ba29e8149678df786c240d8825/LICENSE",
+      "license": "Apache-2.0",
+      "scope": "exact revision; may use standard Apache text if upstream has no separate license file",
+      "status": 404,
+      "note": "No file copied; absence does not change upstream model-card declaration."
+    },
+    {
+      "target": "LICENSES/models/Qwen3-Reranker-0.6B-LICENSE.txt",
+      "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/raw/e61197ed45024b0ed8a2d74b80b4d909f1255473/LICENSE",
+      "license": "Apache-2.0",
+      "scope": "exact revision; Noda descriptor separately downloads Apache standard text",
+      "status": 404,
+      "note": "No file copied; absence does not change upstream model-card declaration."
+    },
+    {
+      "target": "LICENSES/models/MPNet-LICENSE.txt",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2/raw/4328cf26390c98c5e3c738b4460a05b95f4911f5/LICENSE",
+      "license": "Apache-2.0",
+      "scope": "exact revision; may use standard Apache text if upstream has no separate license file",
+      "status": 404,
+      "note": "No file copied; absence does not change upstream model-card declaration."
+    },
+    {
+      "target": "LICENSES/models/Qwen2.5-3B-research-LICENSE.txt",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/raw/7dabda4d13d513e3e842b20f0d435c732f172cbe/LICENSE",
+      "license": "LicenseRef-Qwen-Research",
+      "scope": "restricted developer option; not part of distributable portable model catalog",
+      "status": 200,
+      "bytes": 7388,
+      "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9"
+    },
+    {
+      "target": "LICENSES/runtime/LLVM-OpenMP-LICENSE.txt",
+      "license": "Apache-2.0 WITH LLVM-exception AND legacy notices",
+      "scope": "exact existing license matches pinned CPU and CUDA manifest hash",
+      "status": "copied-local-license-only",
+      "bytes": 19741,
+      "sha256": "fdad1758a9e1f9d5a81e18879b3406772115edc92c24bfa36b70c654f325e8e4",
+      "origin": "Pinned local OpenMP notice"
+    },
+    {
+      "target": "LICENSES/runtime/CPython-installed-LICENSE.txt",
+      "license": "PSF-2.0 AND historical notices",
+      "scope": "exact installed runtime notice; not a complete inventory of statically bundled libraries",
+      "status": "copied-local-license-only",
+      "bytes": 22055,
+      "sha256": "76900732e5f075b725f754000ad5cab1b2cf89e355c1570138476956b6413cd3",
+      "origin": "Installed CPython runtime license notice"
+    }
+  ],
+  "pinned_model_cards": {
+    "qwen35_quantized": {
+      "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/raw/e87f176479d0855a907a41277aca2f8ee7a09523/README.md",
+      "status": 200,
+      "sha256": "28546f5fc4f22ee1b3f17b908957f17fcfa66174032136265bdb27f404bc1e6c",
+      "declared_license": [
+        "license: apache-2.0"
+      ],
+      "license_pending": false
+    },
+    "qwen3_quantized": {
+      "url": "https://huggingface.co/ggml-org/Qwen3-4B-Instruct-2507-Q8_0-GGUF/raw/e6f794d44f9395d0184a966c27b5ae99ea356fcb/README.md",
+      "status": 200,
+      "sha256": "efd9e8927588e82c8634c1de943e616710a6290b010dbf84fc18b90bf45fe713",
+      "declared_license": [
+        "license: apache-2.0"
+      ],
+      "license_pending": false
+    },
+    "mmarco": {
+      "url": "https://huggingface.co/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1/raw/1427fd652930e4ba29e8149678df786c240d8825/README.md",
+      "status": 200,
+      "sha256": "474736a65d6393a060119a8dc304563af67af4d8d86ccfee4a05dd0df107fc11",
+      "declared_license": [
+        "license: apache-2.0"
+      ],
+      "license_pending": false
+    },
+    "qwen_reranker": {
+      "url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/raw/e61197ed45024b0ed8a2d74b80b4d909f1255473/README.md",
+      "status": 200,
+      "sha256": "5bba8c734f6dd3ae48317b4139317e45a7fce48fc55e15670b23a0dd15492ab6",
+      "declared_license": [
+        "license: apache-2.0"
+      ],
+      "license_pending": false
+    },
+    "mpnet": {
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2/raw/4328cf26390c98c5e3c738b4460a05b95f4911f5/README.md",
+      "status": 200,
+      "sha256": "06184100d14bfb314649996e8e68d1aae5ec2efd6ff8865a7eec7e3741736154",
+      "declared_license": [
+        "license: apache-2.0"
+      ],
+      "license_pending": false
+    },
+    "tev": {
+      "url": "https://huggingface.co/togethercomputer/Tev1-0.8B-experimental/raw/6bb2dff14b38fea90ddb14d870166ccaf77374e9/README.md",
+      "status": 200,
+      "sha256": "be9b34191b3c4d419259d95743951069b1afe521664eda428d0c816296b4fcee",
+      "declared_license": [],
+      "license_pending": true
+    }
+  },
+  "pinned_legal_tree_discovery": {
+    "schema": "noda-pinned-hf-legal-tree-v1",
+    "observed_utc": "2026-11-13T17:22:25.711365+00:00",
+    "scope": "five portable public model trees and legal texts only; no weights",
+    "models": [
+      {
+        "repository": "unsloth/Qwen3.5-4B-GGUF",
+        "revision": "e87f176479d0855a907a41277aca2f8ee7a09523",
+        "tree_url": "https://huggingface.co/api/models/unsloth/Qwen3.5-4B-GGUF/tree/e87f176479d0855a907a41277aca2f8ee7a09523?recursive=true&expand=false&limit=1000",
+        "tree_status": 200,
+        "tree_metadata_sha256": "5ccb1066cadbc24ce75a91f76ee8e73228dbb2cfe561f3165c74380ee4967070",
+        "complete": true,
+        "tree_entries": 28,
+        "legal_paths": [],
+        "copied_legal_files": []
+      },
+      {
+        "repository": "ggml-org/Qwen3-4B-Instruct-2507-Q8_0-GGUF",
+        "revision": "e6f794d44f9395d0184a966c27b5ae99ea356fcb",
+        "tree_url": "https://huggingface.co/api/models/ggml-org/Qwen3-4B-Instruct-2507-Q8_0-GGUF/tree/e6f794d44f9395d0184a966c27b5ae99ea356fcb?recursive=true&expand=false&limit=1000",
+        "tree_status": 200,
+        "tree_metadata_sha256": "f2f1e600406e3f69e7bcc4309b87afc35bef2f9ada7718da243e3a1f738a3b28",
+        "complete": true,
+        "tree_entries": 3,
+        "legal_paths": [],
+        "copied_legal_files": []
+      },
+      {
+        "repository": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+        "revision": "1427fd652930e4ba29e8149678df786c240d8825",
+        "tree_url": "https://huggingface.co/api/models/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1/tree/1427fd652930e4ba29e8149678df786c240d8825?recursive=true&expand=false&limit=1000",
+        "tree_status": 200,
+        "tree_metadata_sha256": "f9ee7d5602615da9a883a3af7e82888f65778593b7f8fce3a3e25023de982239",
+        "complete": true,
+        "tree_entries": 25,
+        "legal_paths": [],
+        "copied_legal_files": []
+      },
+      {
+        "repository": "Qwen/Qwen3-Reranker-0.6B",
+        "revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+        "tree_url": "https://huggingface.co/api/models/Qwen/Qwen3-Reranker-0.6B/tree/e61197ed45024b0ed8a2d74b80b4d909f1255473?recursive=true&expand=false&limit=1000",
+        "tree_status": 200,
+        "tree_metadata_sha256": "2e407318e06ba81d30fd4fa2446e6d40496f732a6ef9b832f50f53c6b8a4e76d",
+        "complete": true,
+        "tree_entries": 15,
+        "legal_paths": [],
+        "copied_legal_files": []
+      },
+      {
+        "repository": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+        "revision": "4328cf26390c98c5e3c738b4460a05b95f4911f5",
+        "tree_url": "https://huggingface.co/api/models/sentence-transformers/paraphrase-multilingual-mpnet-base-v2/tree/4328cf26390c98c5e3c738b4460a05b95f4911f5?recursive=true&expand=false&limit=1000",
+        "tree_status": 200,
+        "tree_metadata_sha256": "7abdffe6844c290b5a0ebca55f26225e71c7189cc751f1e4b217cb8688ad3418",
+        "complete": true,
+        "tree_entries": 30,
+        "legal_paths": [],
+        "copied_legal_files": []
+      }
+    ]
+  }
+}

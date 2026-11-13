@@ -1,0 +1,31 @@
+* text=auto
+
+*.py text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.svg text eol=lf
+*.md text eol=lf
+*.ps1 text eol=crlf
+*.nsh text eol=crlf
+
+# Runtime verification and legal provenance depend on these exact bytes.
+scripts/windows-portable/llama-cpu-assets.json -text
+LICENSE -text
+NOTICE -text
+THIRD_PARTY_NOTICES.md -text
+LICENSES/** -text
+frontend/assets/** -text
+docs/assets/** -text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary

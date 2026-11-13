@@ -1,0 +1,90 @@
+name: Windows checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  isolated-tests:
+    name: Isolated Python and Node tests
+    runs-on: windows-2025
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      CI_VENV: ${{ runner.temp }}\noda-ci-venv
+      RESULTS_DIR: ${{ runner.temp }}\noda-check-results
+      PYTHONDONTWRITEBYTECODE: "1"
+      HF_HUB_OFFLINE: "1"
+      HF_DATASETS_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      ALLOW_MODEL_DOWNLOADS: "0"
+      QDRANT_AUTOSTART: "0"
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      PIP_NO_INPUT: "1"
+    steps:
+      - name: Check out source without persisted credentials
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - name: Set up the verified Node release
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: "22.21.0"
+          package-manager-cache: false
+
+      - name: Set up the runtime's Python release
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.13.14"
+          architecture: x64
+
+      - name: Install the hashed Windows runtime and pinned test tools
+        run: |
+          python -I -m venv $env:CI_VENV
+          if ($LASTEXITCODE -ne 0) { throw 'Could not create the isolated test environment.' }
+          $python = Join-Path $env:CI_VENV 'Scripts/python.exe'
+          & $python -I -m pip --isolated install --index-url https://pypi.org/simple --require-hashes --only-binary=:all: --retries 2 --timeout 30 -r scripts/windows-portable/requirements-win-x64.lock
+          if ($LASTEXITCODE -ne 0) { throw 'The pinned Windows runtime installation failed.' }
+          & $python -I -m pip --isolated install --index-url https://pypi.org/simple --retries 2 --timeout 30 -r requirements-test.txt
+          if ($LASTEXITCODE -ne 0) { throw 'The test tool installation failed.' }
+          & $python -I -m pip --isolated check
+          if ($LASTEXITCODE -ne 0) { throw 'The test environment has inconsistent dependencies.' }
+
+      - name: Verify license text integrity and project metadata
+        run: |
+          python -I scripts/check-licenses.py
+          if ($LASTEXITCODE -ne 0) { throw 'The license bundle integrity check failed.' }
+
+      - name: Install the locked frontend dependencies without lifecycle scripts
+        working-directory: frontend
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          if ($LASTEXITCODE -ne 0) { throw 'The frontend lockfile installation failed.' }
+
+      - name: Run the isolated suites with branch coverage
+        run: |
+          $python = Join-Path $env:CI_VENV 'Scripts/python.exe'
+          ./scripts/test.ps1 -Python $python -ResultsDirectory $env:RESULTS_DIR
+
+      - name: Retain synthetic test diagnostics
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: windows-test-results
+          path: |
+            ${{ env.RESULTS_DIR }}/*.log
+            ${{ env.RESULTS_DIR }}/*.json
+            ${{ env.RESULTS_DIR }}/*.xml
+          if-no-files-found: warn
+          retention-days: 7

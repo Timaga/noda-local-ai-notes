@@ -1,0 +1,192 @@
+/* Who: Tim Buglaev
+ * When: 2026-06-24
+ * What: Render a settings-only model switching animation that is visually distinct
+ *       from startup and provides clear ready/error states without trapping the user.
+ */
+.settings-model-switch {
+  position: fixed;
+  inset: 0;
+  z-index: 560;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: rgba(14, 16, 19, 0.96);
+  color: var(--text);
+}
+
+.settings-model-switch[hidden] {
+  display: none;
+}
+
+.settings-switch-content {
+  width: min(520px, calc(100vw - 48px));
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.settings-switch-visual {
+  position: relative;
+  width: 112px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 10px;
+}
+
+.settings-switch-core {
+  position: relative;
+  z-index: 2;
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 16px;
+  background: var(--bg-elevated);
+  color: var(--accent);
+  font-size: 42px;
+  line-height: 1;
+  box-shadow: 0 0 28px rgba(173, 185, 199, 0.16);
+  animation: settings-switch-core-pulse 1.8s ease-in-out infinite;
+}
+
+.settings-switch-note {
+  position: absolute;
+  width: 23px;
+  height: 31px;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  background: var(--bg-soft);
+  opacity: 0;
+  animation: settings-switch-note-flow 2.4s ease-in-out infinite;
+}
+
+.settings-switch-note::after {
+  content: "";
+  position: absolute;
+  inset: 7px 5px auto;
+  height: 2px;
+  background: var(--accent);
+  box-shadow: 0 6px 0 rgba(173, 185, 199, 0.55), 0 12px 0 rgba(173, 185, 199, 0.3);
+}
+
+.settings-switch-note.note-one { animation-delay: 0s; }
+.settings-switch-note.note-two { animation-delay: 0.8s; }
+.settings-switch-note.note-three { animation-delay: 1.6s; }
+
+.settings-switch-eyebrow,
+.settings-switch-model,
+.settings-switch-detail,
+.settings-switch-elapsed {
+  margin: 0;
+}
+
+.settings-switch-eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.settings-switch-content h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.settings-switch-model {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.settings-switch-detail {
+  min-height: 22px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.settings-switch-pulse {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.settings-switch-pulse span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: settings-switch-dot 1.15s ease-in-out infinite;
+}
+
+.settings-switch-pulse span:nth-child(2) { animation-delay: 0.16s; }
+.settings-switch-pulse span:nth-child(3) { animation-delay: 0.32s; }
+
+#settings-switch-download-progress {
+  width: min(100%, 300px);
+  accent-color: var(--accent);
+}
+
+.settings-switch-elapsed {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.settings-switch-close {
+  min-width: 210px;
+  min-height: 42px;
+  margin-top: 8px;
+  border: 1px solid var(--accent);
+  border-radius: 7px;
+  background: var(--accent-strong);
+  color: var(--accent-ink);
+  cursor: pointer;
+}
+
+.settings-model-switch.ready .settings-switch-core {
+  border-color: #43d38b;
+  color: #58dda0;
+  animation: none;
+}
+
+.settings-model-switch.ready .settings-switch-pulse,
+.settings-model-switch.error .settings-switch-pulse,
+.settings-model-switch.error .settings-switch-note {
+  display: none;
+}
+
+.settings-model-switch.error .settings-switch-core {
+  border-color: #e45f70;
+  color: #ff8c99;
+  animation: none;
+}
+
+@keyframes settings-switch-note-flow {
+  0% { opacity: 0; transform: translateX(-58px) scale(0.82); }
+  25% { opacity: 1; }
+  65% { opacity: 1; transform: translateX(0) scale(0.96); }
+  82%, 100% { opacity: 0; transform: translateX(0) scale(0.42); }
+}
+
+@keyframes settings-switch-core-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(173, 185, 199, 0.16); }
+  50% { transform: scale(1.045); box-shadow: 0 0 34px rgba(173, 185, 199, 0.24); }
+}
+
+@keyframes settings-switch-dot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.42; }
+  30% { transform: translateY(-7px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-switch-core,
+  .settings-switch-note,
+  .settings-switch-pulse span {
+    animation: none;
+  }
+}

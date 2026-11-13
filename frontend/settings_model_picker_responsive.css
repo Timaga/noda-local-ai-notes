@@ -1,0 +1,13 @@
+@media (max-width: 720px), (max-height: 660px) {
+  .settings-model-picker { overflow-y: auto; }
+  .settings-picker-content { height: auto; grid-template-rows: auto; padding: 14px; }
+  .settings-picker-body { grid-template-columns: 1fr; }
+  .settings-picker-library { max-height: 290px; }
+  .settings-picker-details { overflow: visible; }
+  .settings-picker-footer { flex-wrap: wrap; }
+}
+
+@media (max-width: 460px) {
+  .settings-picker-controls > * { width: 100%; }
+  .settings-picker-row { align-items: flex-start; flex-direction: column; }
+}

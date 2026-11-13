@@ -1,0 +1,30 @@
+{
+  "schema": "noda-windows-runtime-v1",
+  "vcRuntime": {
+    "version": "14.51.36247.0",
+    "url": "https://download.visualstudio.microsoft.com/download/pr/ebdab8e5-1d7b-4d9f-a11b-cbb1720c3b12/843068991DAAA1F73AD9F6239BCE4D0F6A07A51F18C37EA2A867E9BECA71295C/VC_redist.x64.exe",
+    "bytes": 18731856,
+    "sha256": "843068991daaa1f73ad9f6239bce4d0f6a07a51f18c37ea2a867e9beca71295c",
+    "signerThumbprint": "1D77A9B9E8FE2075D9AD15123257FB90DB0DA4A1"
+  },
+  "python": {
+    "version": "3.13.14",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260728/cpython-3.13.14%2B20260728-x86_64-pc-windows-msvc-install_only.tar.gz",
+    "bytes": 47026618,
+    "sha256": "7f98babaa75283ad8f70326eb27a7dea770a9e0b459a752dd64c793897a22330",
+    "executableSha256": "65a6a3439c0f4b842c086cd469678af887a24933b712f91cf2104adaa962c91c"
+  },
+  "qdrant": {
+    "version": "1.16.0",
+    "url": "https://github.com/qdrant/qdrant/releases/download/v1.16.0/qdrant-x86_64-pc-windows-msvc.zip",
+    "bytes": 29861033,
+    "sha256": "7ba0e3c64e225fb21654b84b620c03fb0f5651042ced7727cbe3d16a70151819",
+    "executableSha256": "66274d6126f49ed5d7570878a1fbefda3b14b8b519609b974b3141ac97da1a62"
+  },
+  "llama": {
+    "version": "b11564",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11564/llama-b11564-bin-win-cpu-x64.zip",
+    "bytes": 19501292,
+    "sha256": "d2cf631bd9ae31ca6426a691d42d37de2f9ac2985d687ed651b1f45013b23af8"
+  }
+}

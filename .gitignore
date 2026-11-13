@@ -1,0 +1,68 @@
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*.pyo
+.cache/
+.pytest_cache/
+.benchmarks/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.env
+.env.*
+.venv*/
+venv/
+ENV/
+
+# Build & distribution artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs & coverage
+*.log
+.coverage
+.coverage.*
+coverage.*
+coverage.xml
+coverage.json
+htmlcov/
+pytest.log
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Project storage & snapshots
+snapshots/
+storage/
+**/.noda-trash/
+**/.noda-queue/
+**/.obsidian/
+knowledge-projects.json
+desktop-settings.json
+jobs.sqlite3*
+/backend/notes/
+/notes/
+/user-data/
+/runtime/
+/qdrant_storage/
+/qdrant_snapshots/
+/output/
+/artifacts/
+/tmp/
+/tests/output/
+/tests/tmp/
+/.playwright-mcp/
+
+# Models and ANN indices
+*.gguf
+*.safetensors
+*.onnx
+*.pt
+*.pth
+/models/
+.qdrant-initialized

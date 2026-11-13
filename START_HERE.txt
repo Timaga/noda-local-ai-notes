@@ -1,0 +1,22 @@
+Getting started with Noda
+
+This is the prepared source repository for Noda 1.0.2-beta.16.
+It contains no personal note library, installed runtime cache or model weights.
+No public installer download is implied by this folder.
+
+On Windows x64 with Node.js 22.12+ within the 22.x line and npm:
+
+  npm --prefix frontend ci
+  npm --prefix frontend run build
+
+The build script prints the installer path and does not publish it.
+Start the installer you built. The initial interface starts in English.
+Create a project or connect a Markdown folder, then choose optional local models.
+First-run runtime preparation and model downloads require internet access.
+
+Read README.md for requirements, features and the source-license conditions.
+Read docs/USER_GUIDE.md for capture, data locations and backups.
+Read docs/DEVELOPMENT.md for local checks.
+Read docs/releases/1.0.2-beta.16.md before preparing a public prerelease.
+
+Support: tim@buglai.com

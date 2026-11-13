@@ -1,0 +1,87 @@
+﻿# Core ML dependencies (install first)
+torch==2.10.0
+transformers==5.10.2
+accelerate>=0.20.0
+llama-cpp-python>=0.2.0
+peft==0.11.1
+datasets==2.19.0
+trl==0.9.4
+rich==13.7.1
+markdown-it-py==4.0.0
+
+# Vector database client
+qdrant-client==1.12.0
+
+# Application dependencies
+# Who: Tim Buglaev
+# When: 2026-03-25
+# What: Removed cloud LLM SDK dependencies (google-genai/openai) to keep backend installation aligned with
+#       enforced local-only inference paths and prevent accidental cloud usage through dependency drift.
+annotated-doc==0.0.3
+annotated-types==0.7.0
+anyio==4.14.2
+blinker==1.9.0
+cachetools==6.2.2
+certifi==2026.10.18
+charset-normalizer==3.4.4
+click==8.3.0
+colorama==0.4.6
+colorlog==6.10.1
+distro==1.9.0
+fastapi==0.121.1
+filelock==3.20.0
+psutil==7.2.2
+Flask==3.1.3
+flask-cors==6.0.1
+fsspec==2024.3.1
+h11==0.16.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface-hub==1.13.0
+idna==3.15
+itsdangerous==2.2.0
+Jinja2==3.1.6
+jiter==0.12.0
+joblib==1.5.2
+MarkupSafe==3.0.3
+mpmath==1.3.0
+networkx==3.5
+numpy==2.3.4
+packaging==25.0
+pillow==13.0.0
+protobuf==6.33.5
+pyasn1==0.6.5
+pyasn1_modules==0.4.2
+pydantic==2.12.4
+pydantic_core==2.41.5
+python-dotenv==1.2.2
+PyYAML==6.0.3
+regex==2025.11.3
+requests==2.33.0
+rsa==4.9.1
+safetensors==0.6.2
+scikit-learn==1.7.2
+scipy==1.16.3
+sentence-transformers==5.6.0
+setuptools==80.9.0
+sniffio==1.3.1
+starlette==0.49.3
+sympy==1.14.0
+tenacity==9.1.2
+threadpoolctl==3.6.0
+tokenizers==0.22.2
+tqdm==4.67.1
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+urllib3==2.8.0
+uvicorn==0.38.0
+websockets==15.0.1
+Werkzeug==3.1.9
+# Who: Tim Buglaev
+# When: 2026-05-28
+# What: Upgraded watchdog to a Python 3.13-compatible release so the Windows note
+#       watcher starts cleanly instead of failing on the internal _ThreadHandle API.
+watchdog==6.0.0
+
+# The supported Windows CPU release environment is pinned separately in
+# scripts/windows-portable/requirements-win-x64.lock.

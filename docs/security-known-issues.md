@@ -1,0 +1,31 @@
+# Known dependency security issues
+
+Audit date: **2026-11-13**. Scope: the `1.0.2-beta.16` source snapshot, its 284 npm lockfile dependency entries and 109 pinned Windows Python distributions. This document records unresolved findings. Repository preparation and a successful build are **not security approval for a public release**.
+
+## Audit result
+
+- `npm audit --omit=dev`: **0 reported vulnerabilities**. The full npm audit reports **6 moderate findings** from one underlying build-tool advisory.
+- Official PyPI version advisory metadata identifies **8 affected Python packages**. Reviewed GitHub advisories include high-severity findings for `fsspec` and `starlette`; they remain in the pinned dependency set.
+- A local Gitleaks directory scan found no secrets in the preparation snapshot. This is a text-pattern check, not a guarantee that every asset or future change is safe.
+
+## Affected packages and source review
+
+| Pinned component | Finding and current exposure assessment | Upstream fix information |
+| --- | --- | --- |
+| `minimatch` 9.0.9 and 10.2.6 | [Glob preprocessing denial of service](https://github.com/advisories/GHSA-g3hv-75wg-m249), propagated through Electron packaging tools. Both entries are development dependencies. Current direct consumers use the default optimization level 1; the advisory requires level 2 or higher and an attacker-controlled pattern. | 11.0.1; no same-major fix is listed. A major override or the audit tool's suggested packager downgrade has not been validated. |
+| `accelerate` 1.11.0 | [Sharded-checkpoint path traversal and denial of service](https://github.com/advisories/GHSA-4j2p-28q2-5m79). Transformers can invoke Accelerate through automatic device mapping, so transitive exposure needs further review. | No patched version listed in the reviewed advisory. |
+| `datasets` 2.19.0 | [Folder-builder metadata path traversal](https://github.com/advisories/GHSA-379c-qx7v-6h59). Noda's training code uses `Dataset.from_list` and mapping; no folder-based builder was found. | 5.0.1; this is a major upgrade requiring training tests. |
+| `diskcache` 5.6.3 | [Unsafe pickle deserialization](https://github.com/advisories/GHSA-w8v5-vhqr-4h9v). No application cache construction was found; the installed transitive package remains affected. | No patched version listed. Avoid trusting attacker-writable cache contents. |
+| `filelock` 3.20.0 | Local file races, symlink/hard-link handling and [Windows inherited ACL behavior](https://github.com/advisories/GHSA-8mx5-7m5m-r77g). Noda uses file locks for model and download operations, so local filesystem assumptions matter. | 3.20.1/3.20.3 address earlier race issues; 4.2.1 addresses the later Windows/Unix findings. The coordinated target requires compatibility testing. |
+| `fsspec` 2024.3.1 | High-severity [template injection in `ReferenceFileSystem`](https://github.com/advisories/GHSA-27vj-qcqg-25rc). No use of this API was found in Noda. | 2026.6.0 conflicts with the current `datasets` constraint (`fsspec<=2024.3.1`). Upgrade the pair together. |
+| `setuptools` 80.9.0 | Source-distribution exclusion and legacy Windows wheel-installation path issues. The affected operations concern packaging/installing untrusted inputs; normal note editing does not invoke them. | 83.0.0 and 84.1.0 respectively. [Windows advisory](https://github.com/advisories/GHSA-xmj3-9gf7-h52w). |
+| `starlette` 0.49.3 | High-severity [Windows static-file UNC handling](https://github.com/advisories/GHSA-wqp7-x3pw-xc5r) and [URL-encoded form denial of service](https://github.com/advisories/GHSA-82w8-qh3p-5jfq), plus request URL/dispatch issues. Noda serves its application through Flask; no Starlette/FastAPI application, `StaticFiles` mount or `request.form()` route was found. | The reviewed fixes range from 1.0.1 to 1.3.1. Starlette 1.3.1 conflicts with pinned FastAPI 0.121.1 (`starlette<0.50.0`); update them together or remove the unused stack after dependency review. |
+| `torch` 2.10.0+cpu | [TorchScript memory corruption](https://github.com/advisories/GHSA-rrmf-rvhw-rf47) and [PT2 archive deserialization](https://github.com/advisories/GHSA-33x2-ppm4-v46v) require review. No direct TorchScript compilation or PT2 loader was found; the CPU build's native components were not audited. Advisory severity differs between feeds for the PT2 issue. | The reviewed TorchScript fix is 2.13.0; no PT2 fix is stated. A full native runtime update requires compatible wheels, model tests and refreshed notices. |
+
+No reachable high/critical exploit was demonstrated by this source review. **That does not establish unreachability**: dependencies can invoke other dependencies, optional training/model-import paths differ from normal note use, and native parsers were not fuzzed. Model loading is a trust boundary; legacy/training loaders do not universally require `safetensors`, and training permits remote model code.
+
+## Required follow-up before release approval
+
+The maintainer must coordinate dependency updates or removal of unused components, resolve the incompatible `datasets`/`fsspec` and FastAPI/Starlette constraints, and decide how to handle advisories without published fixes. Rebuild from the updated locks, run note generation/search/import and training regression checks, refresh third-party notices, and repeat vulnerability and secret scans. Do not treat an automatic `audit fix` as a tested remediation.
+
+This check used public package names and versions; repository source, private notes and credentials were not sent to external analyzers. It does not certify regulatory compliance, audit downloaded model weights, or replace separate review of Electron/Chromium, CPython, Qdrant, llama.cpp and other native runtime components. Report newly discovered vulnerabilities using [SECURITY.md](../SECURITY.md).

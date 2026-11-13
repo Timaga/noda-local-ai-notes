@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-16 -->
+  <!-- What: Allow note preview images from the local Flask asset endpoint while
+       keeping scripts/styles local and preserving the sandboxed Electron renderer. -->
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      connect-src 'self' http://127.0.0.1:5000 http://127.0.0.1:18741;
+      img-src 'self' data: http://127.0.0.1:5000 http://127.0.0.1:18741;
+      style-src 'self' 'unsafe-inline';
+      script-src 'self';
+    "
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-02 -->
+  <!-- What: Apply the finalized Noda product identity to the main notes window. -->
+  <title>Noda</title>
+  <link rel="icon" type="image/png" href="assets/noda-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="notes_projects.css" />
+  <link rel="stylesheet" href="notes_library.css" />
+  <link rel="stylesheet" href="notes_graph.css" />
+  <link rel="stylesheet" href="notes_chat_search.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-23 -->
+  <!-- What: Load isolated settings layout styles so the notes and chat workspaces
+       keep their existing responsive behavior while settings remain full-screen. -->
+  <link rel="stylesheet" href="notes_settings.css" />
+  <link rel="stylesheet" href="note_model_pair_picker.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-24 -->
+  <!-- What: Load the settings-only model catalog layout separately from the
+       startup picker so model changes do not show launch progress steps. -->
+  <link rel="stylesheet" href="settings_model_picker.css" />
+  <link rel="stylesheet" href="settings_model_picker_responsive.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-24 -->
+  <!-- What: Load the settings-only runtime switch animation without changing the
+       dedicated startup window styles or lifecycle. -->
+  <link rel="stylesheet" href="settings_model_switch.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-02 -->
+  <!-- What: Load the shared theme after every component stylesheet so the selected
+       palette applies to notes, chat, settings, and model dialogs. -->
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="ui_controls.css" />
+  <link rel="stylesheet" href="notes_workspace.css" />
+  <link rel="stylesheet" href="notes_inline_editor.css" />
+  <link rel="stylesheet" href="notes_metadata_editor.css" />
+  <link rel="stylesheet" href="preferences.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-03 -->
+  <!-- What: Reuse the dedicated Noda loader in the notes readiness gate. -->
+  <link rel="stylesheet" href="startup_noda_loader.css" />
+  <link rel="stylesheet" href="support_footer.css" />
+</head>
+<body class="notes-page app-loading">
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-14 -->
+  <!-- What: Added the shared startup loading gate so the notes-management panel
+       cannot load or mutate notes before backend, Qdrant, and vLLM are ready. -->
+  <div id="startup-overlay" class="startup-overlay" role="status" aria-live="polite" aria-busy="true">
+    <div class="startup-panel">
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-07-09 -->
+      <!-- What: Reuse the exact Noda wave-to-node animation in the notes gate so
+           every startup surface has the same branded loading state. -->
+      <div class="startup-switch-visual" aria-hidden="true">
+        <span class="startup-noda-stage">
+          <img class="startup-noda-art startup-noda-shell" src="assets/noda-icon.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-outer" src="assets/noda-wave-outer.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-primary" src="assets/noda-wave-primary.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-middle" src="assets/noda-wave-middle.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-inner" src="assets/noda-wave-inner.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-core" src="assets/noda-wave-core.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-outer" src="assets/noda-wave-outer.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-primary" src="assets/noda-wave-primary.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-middle" src="assets/noda-wave-middle.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-inner" src="assets/noda-wave-inner.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-core" src="assets/noda-wave-core.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-node" src="assets/noda-wave-node.png" alt="" draggable="false" />
+          <span class="startup-noda-impact"></span>
+        </span>
+        <span class="startup-switch-core">◇</span>
+      </div>
+      <p class="eyebrow" data-en="Starting Noda">Запуск приложения</p>
+      <h2 id="startup-title" data-en="Loading…">Загружаемся…</h2>
+      <p id="startup-message" data-en="Please wait. The notes panel will open once the services are ready.">Пожалуйста, подождите. Панель заметок откроется после запуска сервисов.</p>
+      <p id="startup-detail" data-en="Checking the backend, Qdrant, the notes index and the model.">Проверяем backend, Qdrant, индекс заметок и модель.</p>
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-06-15 -->
+      <!-- What: Added the shared startup model picker before vLLM warmup so the full
+           notes panel follows the same selectable Hugging Face model flow. -->
+      <div id="startup-model-picker" class="startup-model-picker" hidden>
+        <div id="startup-model-list" class="startup-model-list" aria-label="Выбор модели" data-en-aria-label="Model selection"></div>
+        <p id="startup-model-status" class="startup-model-status" data-en="Choose a model profile for this session.">Выберите профиль модели для этого запуска.</p>
+      </div>
+      <div class="startup-progress" aria-hidden="true">
+        <div id="startup-progress-bar"></div>
+      </div>
+      <ol class="startup-steps">
+        <li data-startup-phase="backend"><span data-en="Flask service">Служба Flask</span></li>
+        <li data-startup-phase="qdrant"><span data-en="Qdrant and notes index">Qdrant и индекс заметок</span></li>
+        <li data-startup-phase="runtime-config"><span data-en="Model configuration">Конфигурация модели</span></li>
+        <li data-startup-phase="model-select"><span data-en="Model selection">Выбор модели</span></li>
+        <li data-startup-phase="model-download"><span data-en="Hugging Face cache">Кэш Hugging Face</span></li>
+        <li data-startup-phase="wsl"><span data-en="WSL runtime">Среда WSL</span></li>
+        <li data-startup-phase="vllm"><span data-en="vLLM and TurboQuant">vLLM и TurboQuant</span></li>
+      </ol>
+      <button id="startup-retry-btn" type="button" class="secondary-btn" hidden data-en="Retry startup">Повторить запуск</button>
+    </div>
+  </div>
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-16 -->
+  <!-- What: Rebuilt the notes panel into a dashboard shell with note/chat/settings
+       tabs and a read-first notes browser while preserving existing create/delete
+       controls and DOM ids used by the renderer/API tests. -->
+  <div class="notes-shell notes-dashboard-shell">
+    <header class="notes-hero">
+      <div>
+        <p class="eyebrow" data-en="Notes library">Управление заметками</p>
+        <h1 data-en="All notes">Все заметки</h1>
+      </div>
+      <div class="notes-header-actions">
+        <button type="button" id="refresh-notes-btn" class="secondary-btn notes-action-btn">
+          <span class="ui-icon" data-ui-icon="refresh" aria-hidden="true"></span>
+          <span data-en="Refresh">Обновить</span>
+        </button>
+        <button type="button" id="new-note-btn" class="notes-primary-btn">
+          <span class="ui-icon" data-ui-icon="plus" aria-hidden="true"></span>
+          <span data-en="New note">Новая заметка</span>
+        </button>
+      </div>
+    </header>
+
+    <nav class="notes-tabs" aria-label="Разделы панели заметок" data-en-aria-label="Notes panel sections">
+      <button type="button" class="notes-tab active" data-notes-tab="notes" aria-selected="true">
+        <span class="ui-icon" data-ui-icon="note" aria-hidden="true"></span>
+        <span data-en="Notes">Заметки</span>
+      </button>
+      <button type="button" class="notes-tab" id="notes-chat-tab" data-notes-tab="chat" aria-selected="false">
+        <span class="ui-icon" data-ui-icon="chat" aria-hidden="true"></span>
+        <span data-en="Notes chat">Чат по заметкам</span>
+      </button>
+      <button type="button" class="notes-tab" id="notes-settings-tab" data-notes-tab="settings" aria-selected="false">
+        <span class="ui-icon" data-ui-icon="settings" aria-hidden="true"></span>
+        <span data-en="Settings">Настройки</span>
+      </button>
+      <button type="button" class="notes-tab" id="notes-graph-tab" data-notes-tab="graph" aria-selected="false" aria-controls="notes-tab-graph">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m5 5 10 2-5 9L5 5m0 0 5 11M5 5l10 2"/><circle cx="5" cy="5" r="2.4" fill="currentColor"/><circle cx="15" cy="7" r="2.4" fill="currentColor"/><circle cx="10" cy="16" r="2.4" fill="currentColor"/></svg>
+        <span data-en="Graph">Граф</span>
+      </button>
+    </nav>
+
+    <section class="status-card notes-status-inline" id="notes-status-card">
+      <p id="notes-status-text" data-en="Loading notes...">Загрузка заметок...</p>
+    </section>
+
+    <main class="notes-workspace">
+      <section class="notes-tab-panel" id="notes-tab-graph" data-notes-panel="graph" aria-label="Граф связей заметок" data-en-aria-label="Note connections graph" aria-busy="false" hidden>
+        <div class="graph-workspace">
+          <div class="graph-toolbar">
+            <button type="button" id="graph-project-button" class="graph-project-button" title="Выбрать проект" data-en-title="Choose project">
+              <span class="ui-icon" data-ui-icon="folder" aria-hidden="true"></span>
+              <strong id="graph-project" data-en="Current project">Текущий проект</strong>
+              <span class="ui-icon ui-chevron" data-ui-icon="chevron" aria-hidden="true"></span>
+            </button>
+            <label><span class="sr-only" data-en="Find a note">Найти заметку</span><input id="graph-search" type="search" placeholder="Найти заметку…" data-en-placeholder="Find a note…" maxlength="200" autocomplete="off" /></label>
+            <label><input id="graph-linked-only" type="checkbox" /><span data-en="Connected only">Только со связями</span></label>
+            <span id="graph-count" class="graph-counter"></span>
+          </div>
+          <div class="graph-layout">
+            <div class="graph-stage">
+              <canvas id="graph-canvas" class="graph-canvas" tabindex="0" role="img" aria-label="Граф заметок. Стрелки: перемещение, плюс и минус: масштаб, 0: весь граф. Заметки доступны в списке справа." data-en-aria-label="Notes graph. Arrow keys: pan, plus and minus: zoom, 0: fit graph. Notes are available in the list on the right."></canvas>
+              <p class="graph-hint" data-en="Hover to see connections · Drag a node to pull its branch · Scroll to zoom">Наведение подсвечивает связи · Перетащите точку, чтобы потянуть ветку · Колесо меняет масштаб</p>
+              <div id="graph-empty" class="graph-empty" hidden></div>
+              <div class="graph-controls" role="group" aria-label="Управление графом" data-en-aria-label="Graph controls">
+                <button id="graph-zoom-out" type="button" aria-label="Уменьшить" data-en-aria-label="Zoom out">−</button><output id="graph-zoom-value" aria-label="Масштаб" data-en-aria-label="Zoom">100%</output><button id="graph-zoom-in" type="button" aria-label="Увеличить" data-en-aria-label="Zoom in">+</button><button id="graph-fit" type="button" data-en="Fit graph">Весь граф</button>
+              </div>
+            </div>
+            <aside class="graph-aside" aria-label="Заметки в графе" data-en-aria-label="Notes in graph">
+              <div class="graph-status-line"><p id="graph-status" class="graph-status" role="status" aria-live="polite"></p><button type="button" id="graph-retry" class="graph-retry" data-en="Retry" hidden>Повторить</button></div>
+              <ul class="graph-legend" aria-label="Обозначения графа" data-en-aria-label="Graph legend">
+                <li><span class="graph-legend-note" aria-hidden="true"></span><span data-en="Note">Заметка</span></li>
+                <li><span class="graph-legend-link" aria-hidden="true"></span><span data-en="Saved link">Сохранённая связь</span></li>
+                <li><span class="graph-legend-focus" aria-hidden="true"></span><span data-en="Focused note">Заметка в фокусе</span></li>
+              </ul>
+              <p id="graph-unresolved" class="graph-unresolved" role="status" hidden></p>
+              <p id="graph-no-links" class="graph-no-links" data-en="There are no saved connections yet. Notes without links are shown as separate nodes." hidden>Сохранённых связей пока нет. Заметки без ссылок показаны отдельными точками.</p>
+              <div id="graph-selection" class="graph-selection"></div>
+              <h2 data-en="Notes in graph">Заметки в графе</h2>
+              <div id="graph-note-list" class="graph-note-list"></div>
+              <button type="button" id="graph-show-more" class="graph-more" hidden></button>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section class="notes-tab-panel active" id="notes-tab-notes" data-notes-panel="notes">
+        <section class="notes-control-panel notes-projects-workspace">
+          <div class="notes-projects-context">
+            <nav id="projects-breadcrumb" class="projects-breadcrumb" aria-label="Текущий проект" data-en-aria-label="Current project">
+              <span id="project-breadcrumb-root" data-en="Projects">Проекты</span>
+              <span id="project-breadcrumb-separator" class="project-breadcrumb-separator ui-icon" data-ui-icon="forward" aria-hidden="true" hidden></span>
+              <span id="project-breadcrumb-note" hidden></span>
+            </nav>
+            <p id="projects-message" class="projects-message" role="status" aria-live="polite" hidden></p>
+          </div>
+          <div class="notes-layout notes-browser-layout notes-projects-layout" aria-busy="false">
+            <aside id="notes-projects-panel" class="notes-projects-panel" aria-labelledby="projects-heading">
+              <header class="notes-projects-heading">
+                <h2 id="projects-heading" data-en="Projects">Проекты</h2>
+                <span id="projects-total" hidden>0</span>
+                <details id="projects-add-menu" class="notes-compact-menu projects-add-menu">
+                  <summary aria-label="Добавить проект" data-en-aria-label="Add project" title="Добавить проект" data-en-title="Add project"><span class="ui-icon" data-ui-icon="plus" aria-hidden="true"></span></summary>
+                  <div class="notes-projects-actions notes-menu-surface">
+                    <button id="create-project-btn" type="button" disabled data-en="New project">Новый проект</button>
+                    <button id="connect-project-btn" type="button" disabled data-en="Connect folder">Подключить папку</button>
+                  </div>
+                </details>
+              </header>
+              <ul id="projects-list" class="projects-list" aria-label="Список проектов" data-en-aria-label="Project list"></ul>
+            </aside>
+            <aside class="notes-sidebar notes-library-sidebar" aria-label="Список заметок" data-en-aria-label="Notes list">
+              <header class="notes-list-heading">
+                <div class="notes-list-heading-label"><button id="workspace-project-toggle" type="button" aria-label="Выбрать проект" data-en-aria-label="Choose project" aria-expanded="false" aria-controls="notes-projects-panel"><span id="notes-list-heading" data-en="Notes">Заметки</span><span class="ui-icon ui-chevron" data-ui-icon="chevron" aria-hidden="true"></span></button><span id="notes-count">0</span></div>
+                <div id="notes-create-slot"></div>
+              </header>
+              <div class="notes-toolbar">
+                <span id="qdrant-state" hidden></span>
+                <label class="notes-search-field"><span class="ui-icon" data-ui-icon="search" aria-hidden="true"></span><span class="sr-only" data-en="Search notes">Поиск по заметкам</span><input id="notes-search" type="search" placeholder="Поиск по заметкам…" data-en-placeholder="Search notes…" autocomplete="off" maxlength="200" /></label>
+                <details class="notes-compact-menu notes-filter-menu">
+                  <summary aria-label="Фильтры и сортировка" data-en-aria-label="Filters and sort" title="Фильтры и сортировка" data-en-title="Filters and sort"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16M8 3v6m8 0v6M9 15v6"/></svg></summary>
+                  <div class="notes-menu-surface notes-filter-popover">
+                    <div class="notes-filter-row" aria-label="Фильтры заметок" data-en-aria-label="Note filters"><button type="button" class="notes-filter active" data-notes-filter="all" data-en="All">Все</button><button type="button" class="notes-filter" data-notes-filter="tagged" data-en="Tagged">С тегами</button><button type="button" class="notes-filter" data-notes-filter="recent" data-en="Last 7 days">За 7 дней</button></div>
+                    <div class="notes-sort-options" role="group" aria-labelledby="notes-sort-heading"><p id="notes-sort-heading" data-en="Sort">Сортировка</p><button type="button" data-notes-sort="newest" aria-pressed="true" data-en="Newest first">Новые сверху</button><button type="button" data-notes-sort="oldest" aria-pressed="false" data-en="Oldest first">Старые сверху</button><button type="button" data-notes-sort="title" aria-pressed="false" data-en="By title">По названию</button></div>
+                    <select id="notes-sort-select" hidden aria-label="Сортировка заметок" data-en-aria-label="Sort notes"><option value="newest">newest</option><option value="oldest">oldest</option><option value="title">title</option></select>
+                  </div>
+                </details>
+              </div>
+              <div id="notes-refresh-slot" hidden></div>
+              <div id="notes-library-retry" class="notes-library-actions" hidden>
+                <span id="notes-library-error" role="status"></span>
+                <button id="notes-library-retry-btn" type="button" class="secondary-btn" data-en="Try again">Повторить</button>
+              </div>
+              <ul id="notes-list" class="notes-list"></ul>
+              <div class="notes-library-actions notes-library-trash-actions">
+                <button id="note-trash-btn" type="button" class="secondary-btn" data-en="Trash">Корзина</button>
+              </div>
+            </aside>
+
+            <section id="notes-viewer" class="notes-viewer" aria-label="Редактор заметки" data-en-aria-label="Note editor">
+              <div id="note-view-empty" class="note-view-empty" data-en="Select a note from the list.">Выберите заметку из списка.</div>
+              <article id="note-view-panel" class="note-view-panel" hidden>
+                <header class="note-view-header">
+                  <button id="note-list-back" type="button" class="note-list-back" aria-label="К списку заметок" data-en-aria-label="Back to notes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+                  <h2 id="note-view-title" data-en="Untitled">Без названия</h2>
+                  <details class="notes-compact-menu note-actions-menu">
+                    <summary aria-label="Действия с заметкой" data-en-aria-label="Note actions" title="Действия с заметкой" data-en-title="Note actions"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></summary>
+                    <div class="notes-menu-surface"><button type="button" id="delete-note-btn" class="note-trash-action" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 10v7m4-7v7"/></svg><span data-en="Move to trash">В корзину</span></button></div>
+                  </details>
+                  <div id="note-view-tags" class="tag-row compact"></div>
+                  <div class="note-view-meta" hidden>
+                    <span id="note-view-source" data-en="Source: cache">Источник: кэш</span>
+                    <span id="note-view-time" data-en="No date">Без даты</span>
+                  </div>
+                </header>
+                <div id="note-view-content" class="note-view-content markdown-preview"></div>
+              </article>
+
+              <section id="note-create-panel" class="notes-editor" aria-label="Новая заметка" data-en-aria-label="New note" hidden>
+                <div class="editor-grid">
+                  <label>
+                    <span data-en="Title">Название</span>
+                    <input id="note-title-input" type="text" maxlength="160" autocomplete="off" />
+                  </label>
+                  <label>
+                    <span data-en="Tags">Теги</span>
+                    <input id="note-tags-input" type="text" maxlength="512" autocomplete="off" />
+                  </label>
+                </div>
+                <label class="content-field">
+                  <span data-en="Content">Содержимое</span>
+                  <textarea id="note-content-input" maxlength="20000"></textarea>
+                </label>
+                <div class="editor-actions">
+                  <span id="note-draft-state" aria-live="polite"></span>
+                  <button type="button" id="discard-note-draft-btn" class="secondary-btn" data-en="Discard draft">Отменить правки</button>
+                  <button type="button" id="save-note-btn" data-en="Create">Создать</button>
+                </div>
+              </section>
+            </section>
+            <dialog id="note-trash-dialog" class="project-name-dialog" aria-labelledby="note-trash-title">
+              <div class="project-name-form">
+                <h2 id="note-trash-title" data-en="Project trash">Корзина проекта</h2>
+                <p id="note-trash-status" aria-live="polite"></p>
+                <ul id="note-trash-list" class="note-trash-list"></ul>
+                <form method="dialog" class="editor-actions">
+                  <button type="submit" class="secondary-btn" data-en="Close">Закрыть</button>
+                </form>
+              </div>
+            </dialog>
+            <div id="projects-switch-overlay" class="projects-switch-overlay" role="status" aria-live="polite" hidden>
+              <span class="projects-switch-spinner" aria-hidden="true"></span>
+              <span id="projects-switch-label" data-en="Opening project…">Открываем проект…</span>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-06-19 -->
+      <!-- What: Added the full notes-chat workspace so users can keep local chat
+           history, ask RAG questions against indexed notes, and inspect returned
+           note sources without leaving the notes panel. -->
+      <section class="notes-tab-panel" id="notes-tab-chat" data-notes-panel="chat" hidden>
+        <section class="chat-dashboard" aria-label="Чат по заметкам" data-en-aria-label="Notes chat">
+          <aside class="chat-history-panel" aria-label="История чатов" data-en-aria-label="Chat history">
+            <div class="chat-history-summary">
+              <span id="chat-qdrant-state" data-en="Qdrant: waiting">Qdrant: ожидание</span>
+              <span id="chat-count" data-en="0 chats">0 чатов</span>
+              <button type="button" id="chat-new-btn" class="notes-primary-btn chat-new-btn" disabled>
+                <span class="ui-icon" data-ui-icon="plus" aria-hidden="true"></span>
+                <span data-en="New chat">Новый чат</span>
+              </button>
+            </div>
+            <label class="chat-search-field">
+              <span class="ui-icon" data-ui-icon="search" aria-hidden="true"></span>
+              <input id="chat-search" type="search" aria-label="Поиск по истории чатов" data-en-aria-label="Search chat history" placeholder="Поиск по чатам" data-en-placeholder="Search chats" autocomplete="off" />
+            </label>
+            <ul id="chat-history-list" class="chat-history-list"></ul>
+            <footer class="chat-history-footer">
+              <p id="chat-storage-hint" role="status"></p>
+              <button type="button" id="chat-export-btn" class="secondary-btn" data-en="Export project chats (JSON)" title="Сохранить сообщения и цитаты проекта в локальный файл" data-en-title="Save project messages and excerpts to a local file">Экспорт чатов проекта (JSON)</button>
+            </footer>
+          </aside>
+
+          <section class="chat-conversation-panel" aria-label="Диалог по заметкам" data-en-aria-label="Notes conversation">
+            <header class="chat-conversation-header">
+              <div>
+                <h2 id="chat-title" data-en="New chat">Новый чат</h2>
+                <p id="chat-subtitle" data-en="Answers from notes • Source: Qdrant • 0 notes in the library">Ответы по заметкам • Источник: Qdrant • 0 заметок в базе</p>
+                <button type="button" id="chat-semantic-setup" class="secondary-btn" data-en="Set up semantic search…" hidden>Настроить смысловой поиск…</button>
+              </div>
+              <button type="button" id="chat-menu-btn" class="chat-icon-btn ui-icon-button" data-ui-icon="trash" aria-label="Удалить чат" data-en-aria-label="Delete chat" title="Удалить чат" data-en-title="Delete chat"></button>
+            </header>
+
+            <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+
+            <form id="chat-form" class="chat-compose">
+              <div class="chat-compose-row">
+                <input id="chat-input" type="text" aria-label="Вопрос по заметкам" data-en-aria-label="Question about your notes" aria-describedby="chat-query-hint" placeholder="Спросите что-нибудь по заметкам..." data-en-placeholder="Ask a question about your notes..." autocomplete="off" />
+                <button type="submit" id="chat-send-btn" class="notes-primary-btn">
+                  <span class="ui-icon" data-ui-icon="send" aria-hidden="true"></span>
+                  <span data-en="Send">Отправить</span>
+                </button>
+                <button type="button" id="chat-stop-btn" class="secondary-btn" data-en="Stop waiting" hidden>Остановить ожидание</button>
+                <p id="chat-query-hint" class="chat-query-hint" role="status"></p>
+              </div>
+            </form>
+          </section>
+        </section>
+      </section>
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-06-23 -->
+      <!-- What: Added the settings workspace for selecting an allowlisted local model,
+           choosing a validated notes directory, and controlling startup prompts. -->
+      <section class="notes-tab-panel" id="notes-tab-settings" data-notes-panel="settings" hidden>
+        <section class="settings-dashboard" aria-label="Настройки приложения" data-en-aria-label="App settings">
+          <div class="settings-summary-bar">
+            <span id="settings-runtime-state" class="settings-state-pill">
+              <span aria-hidden="true"></span>
+              <span data-en="Checking the runtime">Проверяем среду запуска</span>
+            </span>
+            <span class="settings-summary-label" data-en="Startup settings">Основные параметры запуска</span>
+          </div>
+
+          <!-- Who: Tim Buglaev -->
+          <!-- When: 2026-07-10 -->
+          <!-- The default theme keeps its saved key for existing profiles. -->
+          <section class="settings-section settings-theme-section" aria-labelledby="settings-theme-heading">
+            <div class="settings-section-icon settings-theme-icon" data-settings-icon="theme" aria-hidden="true">
+              <svg class="settings-section-icon-svg" viewBox="0 0 24 24" focusable="false">
+                <path d="M12 3a9 9 0 1 0 0 18h1.2a2.3 2.3 0 0 0 0-4.6h-1.1a1.8 1.8 0 0 1 0-3.6H16A5 5 0 0 0 16 3Z" />
+                <circle cx="8" cy="9" r="1" />
+                <circle cx="11" cy="6.5" r="1" />
+                <circle cx="15" cy="7" r="1" />
+              </svg>
+            </div>
+            <div class="settings-section-body">
+              <h2 id="settings-theme-heading" data-en="Interface theme">Тема интерфейса</h2>
+              <p data-en="Choose the default graphite theme or Noda Red.">Выберите основную графитовую тему или Noda Red.</p>
+              <fieldset id="settings-theme-options" class="settings-theme-options">
+                <legend class="sr-only" data-en="Interface theme">Тема интерфейса</legend>
+                <label class="settings-theme-option">
+                  <input id="settings-theme-classic-blue" type="radio" name="settings-theme" value="classic-blue" />
+                  <span class="settings-theme-preview settings-theme-preview-blue" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </span>
+                  <span class="settings-theme-copy">
+                    <strong data-en="Graphite">Графит</strong>
+                    <small data-en="Dark grey surfaces with light grey controls.">Тёмно-серый фон и светло-серые элементы управления.</small>
+                  </span>
+                </label>
+                <label class="settings-theme-option">
+                  <input id="settings-theme-noda-red" type="radio" name="settings-theme" value="noda-red" />
+                  <span class="settings-theme-preview settings-theme-preview-red" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </span>
+                  <span class="settings-theme-copy">
+                    <strong>Noda Red</strong>
+                    <small data-en="Alternative theme with graphite, coral red accents and a warm glow.">Альтернативная тема: графит, коралловый красный и тёплое свечение.</small>
+                  </span>
+                </label>
+              </fieldset>
+            </div>
+          </section>
+
+          <section id="settings-note-pairs-section" class="settings-section" aria-labelledby="settings-note-pairs-heading" hidden>
+            <div class="settings-section-icon" data-settings-icon="note-pairs" aria-hidden="true">
+              <svg class="settings-section-icon-svg" viewBox="0 0 24 24" focusable="false">
+                <rect x="3" y="4" width="5" height="4" rx="1" />
+                <rect x="3" y="10" width="5" height="4" rx="1" />
+                <rect x="3" y="16" width="5" height="4" rx="1" />
+                <path d="M12 6h9M12 12h9M12 18h9" />
+              </svg>
+            </div>
+            <div class="settings-section-body">
+              <h2 id="settings-note-pairs-heading" data-en="Note processing">Обработка заметок</h2>
+              <p data-en="Choose a preset or set the generator and reranker separately. Imported models stay in the lists.">Выберите готовую связку или настройте генератор и ранжировщик отдельно. Импортированные модели сохраняются в списках.</p>
+              <fieldset id="settings-note-pairs-fields" aria-labelledby="settings-note-pairs-heading">
+                <div class="settings-note-pairs-form">
+                  <div id="settings-note-pairs-picker"></div>
+                  <div class="settings-note-pairs-actions">
+                    <button type="button" id="settings-note-pairs-apply" class="secondary-btn settings-side-button" data-en="Apply processing settings" disabled>Применить настройки</button>
+                    <p id="settings-note-pairs-status" class="settings-field-note" role="status"></p>
+                    <progress id="settings-note-pairs-progress" max="100" aria-labelledby="settings-note-pairs-status" hidden></progress>
+                  </div>
+                </div>
+                <div class="settings-note-pairs-startup" role="group" aria-labelledby="settings-note-pairs-startup-heading">
+                  <h3 id="settings-note-pairs-startup-heading" data-en="Model pair selection on startup">Выбор связок при запуске</h3>
+                  <p id="settings-note-pairs-startup-note" class="settings-field-note" data-en="After the first setup, these screens are skipped using your saved pairs. Clear a checkbox to show that step again if it is enabled. Use the main Save changes button for these checkboxes.">После первой настройки используются сохранённые связки. Снимите галочку, чтобы снова показывать экран включённого этапа. Эти галочки сохраняются общей кнопкой «Сохранить изменения».</p>
+                  <label class="settings-checkbox-row">
+                    <input id="settings-skip-note-title" type="checkbox" aria-describedby="settings-note-pairs-startup-note" />
+                    <span><strong data-en="Skip title pair selection">Пропускать выбор связки для заголовков</strong></span>
+                  </label>
+                  <label class="settings-checkbox-row">
+                    <input id="settings-skip-note-tags" type="checkbox" aria-describedby="settings-note-pairs-startup-note" />
+                    <span><strong data-en="Skip tag pair selection">Пропускать выбор связки для тегов</strong></span>
+                  </label>
+                  <label class="settings-checkbox-row">
+                    <input id="settings-skip-note-links" type="checkbox" aria-describedby="settings-note-pairs-startup-note" />
+                    <span><strong data-en="Skip note link pair selection">Пропускать выбор связки для связей между заметками</strong></span>
+                  </label>
+                </div>
+              </fieldset>
+              <button type="button" id="settings-note-pairs-cancel" class="secondary-btn" hidden
+                      data-en="Stop download">Остановить загрузку</button>
+            </div>
+          </section>
+
+          <section class="settings-section" aria-labelledby="settings-model-heading">
+            <div class="settings-section-icon" data-settings-icon="model" aria-hidden="true">
+              <svg class="settings-section-icon-svg" viewBox="0 0 24 24" focusable="false">
+                <rect x="5" y="5" width="14" height="14" rx="3" />
+                <circle cx="12" cy="12" r="3" />
+                <path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" />
+                <path class="settings-icon-detail" d="M12 9v6M9 12h6" />
+              </svg>
+            </div>
+            <div class="settings-section-body">
+              <h2 id="settings-model-heading" data-en="Default model">Модель по умолчанию</h2>
+              <p id="settings-model-description" data-en="Choose the local model for processing notes and answering questions.">Выберите локальную модель для обработки заметок и ответов в чате.</p>
+              <div class="settings-control-row">
+                <button type="button" id="settings-model-open" class="settings-value-button" aria-haspopup="dialog">
+                  <span id="settings-model-name" data-en="Loading model catalog...">Загрузка каталога...</span>
+                  <span class="ui-icon ui-chevron" data-ui-icon="chevron" aria-hidden="true"></span>
+                </button>
+                <button type="button" id="settings-model-choose" class="secondary-btn settings-side-button" aria-haspopup="dialog">
+                  <span class="ui-icon" data-ui-icon="model" aria-hidden="true"></span>
+                  <span data-en="Choose model">Выбрать модель</span>
+                </button>
+              </div>
+              <div id="settings-model-badges" class="settings-badges" aria-label="Параметры модели" data-en-aria-label="Model parameters"></div>
+              <label id="settings-skip-model-row" class="settings-checkbox-row">
+                <input id="settings-skip-model" type="checkbox" />
+                <span>
+                  <strong id="settings-skip-model-label" data-en="Skip model selection on startup">Пропускать выбор модели при запуске программы</strong>
+                  <small id="settings-skip-model-note" data-en="Noda will automatically use the saved model.">Приложение будет автоматически использовать сохранённую модель.</small>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <!-- Who: Tim Buglaev -->
+          <!-- When: 2026-07-10 -->
+          <!-- What: Replace the colored lightning glyph with a consistent speedometer
+               SVG while preserving TurboQuant capability and launch preferences. -->
+          <section class="settings-section" aria-labelledby="settings-turboquant-heading">
+            <div class="settings-section-icon settings-turboquant-icon" data-settings-icon="turboquant" aria-hidden="true">
+              <svg class="settings-section-icon-svg" viewBox="0 0 24 24" focusable="false">
+                <path d="M4 17a8 8 0 1 1 16 0" />
+                <path d="M6.3 17h11.4" />
+                <path d="m12 13 4-4" />
+                <circle cx="12" cy="13" r="1.5" />
+                <path class="settings-icon-detail" d="M7 10.5 5.5 9M17 10.5 18.5 9M12 7V5" />
+              </svg>
+            </div>
+            <div class="settings-section-body">
+              <h2 id="settings-turboquant-heading">TurboQuant</h2>
+              <p data-en="Compresses the conversation KV cache to reduce VRAM use and support longer context.">Сжимает KV-кэш диалога модели, чтобы экономить видеопамять и обрабатывать более длинный контекст.</p>
+              <label class="settings-checkbox-row settings-turboquant-toggle">
+                <input id="settings-turboquant-enabled" type="checkbox" />
+                <span>
+                  <strong data-en="Enable TurboQuant for the selected model">Включить TurboQuant для выбранной модели</strong>
+                  <small data-en="This restarts the local model and may take a few minutes.">Изменение перезапустит локальную модель и может занять несколько минут.</small>
+                </span>
+              </label>
+              <p id="settings-turboquant-capability" class="settings-capability-status" role="status" aria-live="polite" data-en="Checking GPU compatibility...">
+                Проверяем совместимость видеокарты...
+              </p>
+              <label class="settings-checkbox-row">
+                <input id="settings-skip-turboquant" type="checkbox" />
+                <span>
+                  <strong data-en="Skip the TurboQuant prompt on startup">Не спрашивать о TurboQuant при запуске</strong>
+                  <small data-en="Noda will use this choice automatically. You can change it here.">Текущее состояние будет использоваться автоматически. Изменить его можно здесь.</small>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <!-- Who: Tim Buglaev -->
+          <!-- When: 2026-07-10 -->
+          <!-- What: Replace the empty square with a folder SVG so the local notes
+               directory setting remains recognizable at every responsive size. -->
+          <section class="settings-section" aria-labelledby="settings-path-heading">
+            <div class="settings-section-icon" data-settings-icon="notes-path" aria-hidden="true">
+              <svg class="settings-section-icon-svg" viewBox="0 0 24 24" focusable="false">
+                <path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h4l2 2h6A2.5 2.5 0 0 1 20.5 9.5v7A2.5 2.5 0 0 1 18 19H6a2.5 2.5 0 0 1-2.5-2.5Z" />
+                <path class="settings-icon-detail" d="M3.5 10h17" />
+              </svg>
+            </div>
+            <div class="settings-section-body">
+              <h2 id="settings-path-heading" data-en="Current project folder">Папка текущего проекта</h2>
+              <p data-en="Create and connect note folders in Projects.">Создавайте и подключайте папки заметок в разделе «Проекты».</p>
+              <div class="settings-control-row">
+                <input id="settings-notes-path" class="settings-path-input" type="text" readonly aria-label="Путь к заметкам" data-en-aria-label="Notes folder" />
+                <button type="button" id="settings-path-browse" class="secondary-btn settings-side-button">
+                  <span class="ui-icon" data-ui-icon="folder" aria-hidden="true"></span>
+                  <span data-en="Browse">Обзор</span>
+                </button>
+              </div>
+              <p class="settings-field-note" data-en="Use a local folder containing Markdown notes.">Поддерживается локальная папка с Markdown-заметками.</p>
+              <label class="settings-checkbox-row">
+                <input id="settings-skip-path" type="checkbox" />
+                <span>
+                  <strong data-en="Skip notes folder selection on startup">Пропускать выбор пути к заметкам при запуске</strong>
+                  <small data-en="Noda will open the saved folder automatically.">Приложение будет сразу открывать сохранённую папку.</small>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <section class="settings-section settings-editor-preferences" aria-labelledby="settings-editor-heading">
+            <div class="settings-section-icon" aria-hidden="true"><span class="ui-icon" data-ui-icon="settings"></span></div>
+            <div class="settings-section-body">
+              <h2 id="settings-editor-heading" data-en="Editor and shortcuts">Редактор и сочетания клавиш</h2>
+              <p data-en="Customize writing and quick capture.">Настройте работу с текстом и быстрый ввод.</p>
+              <div class="settings-preferences-grid">
+                <label for="settings-quick-hotkey"><span data-en="Quick capture shortcut">Сочетание для быстрого ввода</span><input id="settings-quick-hotkey" type="text" maxlength="80" autocomplete="off" spellcheck="false" aria-describedby="settings-quick-hotkey-note" /><small id="settings-quick-hotkey-note" data-en="Use a combination such as Ctrl+Shift+Space.">Например Ctrl+Shift+Space.</small></label>
+                <label for="settings-editor-font-size"><span data-en="Editor font size">Размер шрифта редактора</span><input id="settings-editor-font-size" type="number" min="14" max="24" step="1" /></label>
+                <label for="settings-interface-density"><span data-en="Interface density">Плотность интерфейса</span><select id="settings-interface-density"><option value="comfortable" data-en="Comfortable">Обычная</option><option value="compact" data-en="Compact">Компактная</option></select></label>
+                <label for="settings-editor-autosave-delay"><span data-en="Autosave delay (milliseconds)">Пауза автосохранения (миллисекунды)</span><input id="settings-editor-autosave-delay" type="number" min="500" max="10000" step="1" /></label>
+              </div>
+              <label class="settings-checkbox-row"><input id="settings-editor-autosave" type="checkbox" /><span><strong data-en="Save notes automatically">Сохранять заметки автоматически</strong><small data-en="When disabled, use Save or Ctrl+S. Drafts are kept locally.">Если выключено, используйте «Сохранить» или Ctrl+S. Черновики остаются на устройстве.</small></span></label>
+            </div>
+          </section>
+
+          <section class="settings-section" aria-labelledby="settings-language-heading">
+            <div class="settings-section-icon" data-settings-icon="language" aria-hidden="true">
+              <svg class="settings-section-icon-svg" viewBox="0 0 24 24" focusable="false">
+                <circle cx="12" cy="12" r="9" />
+                <ellipse cx="12" cy="12" rx="4" ry="9" />
+                <path class="settings-icon-detail" d="M3 12h18" />
+              </svg>
+            </div>
+            <div class="settings-section-body">
+              <h2 id="settings-language-heading" data-en="Interface language">Язык интерфейса</h2>
+              <select id="settings-language" class="settings-path-input" aria-labelledby="settings-language-heading" aria-describedby="settings-language-note">
+              </select>
+              <p id="settings-language-note" class="settings-field-note" data-en="The language changes after a full restart. Closing the window only hides Noda in the tray.">Язык изменится после полного перезапуска. Закрытие окна только скрывает Noda в трей.</p>
+              <button id="settings-language-restart" type="button" class="secondary-btn" data-en="Restart now" hidden>Перезапустить сейчас</button>
+              <p id="settings-language-restart-note" class="settings-field-note" role="status" hidden></p>
+            </div>
+          </section>
+
+          <section class="settings-section" aria-labelledby="settings-semantic-heading">
+            <div class="settings-section-icon" aria-hidden="true"><svg class="settings-section-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg></div>
+            <div class="settings-section-body">
+              <h2 id="settings-semantic-heading" data-en="Semantic search">Смысловой поиск</h2>
+              <p data-en="Set up the search model to find related notes and use notes chat.">Настройте модель поиска для поиска связанных заметок и чата по заметкам.</p>
+              <button type="button" id="settings-semantic-setup" class="secondary-btn" data-en="Set up semantic search…">Настроить смысловой поиск…</button>
+              <p id="settings-semantic-status" class="settings-field-note" role="status"></p>
+            </div>
+          </section>
+          <section class="settings-startup-note" aria-labelledby="settings-startup-heading">
+            <span class="settings-info-icon" aria-hidden="true">i</span>
+            <div>
+              <h3 id="settings-startup-heading" data-en="Startup behavior">Поведение при запуске</h3>
+              <!-- Who: Tim Buglaev
+                   When: 2026-07-01
+                   What: Clarify that saved choices skip only interactive prompts while
+                   startup service progress remains visible on every application launch. -->
+              <p data-en="Saved choices let Noda skip the corresponding prompts. The startup animation still appears while services load.">Сохранённые параметры пропускают только экраны выбора. Процесс загрузки сервисов отображается всегда.</p>
+              <p data-en="You can change these settings at any time.">Настройки можно изменить позже в любой момент.</p>
+            </div>
+          </section>
+
+          <div class="settings-footer">
+            <p id="settings-status" role="status" aria-live="polite"></p>
+            <button type="button" id="settings-cancel" class="settings-cancel-button" data-en="Cancel">Отменить</button>
+            <button type="button" id="settings-save" class="notes-primary-btn settings-save-button">
+              <span class="ui-icon" data-ui-icon="save" aria-hidden="true"></span>
+              <span data-en="Save changes">Сохранить изменения</span>
+            </button>
+          </div>
+        </section>
+
+        <div id="settings-model-modal" class="settings-model-modal" role="dialog" aria-modal="true" aria-labelledby="settings-model-dialog-title" hidden>
+          <div class="settings-model-dialog">
+            <header class="settings-model-dialog-header">
+              <div>
+                <p class="eyebrow" data-en="Local models">Локальные модели</p>
+                <h2 id="settings-model-dialog-title" data-en="Choose a model">Выберите модель</h2>
+              </div>
+              <p id="settings-model-progress" class="settings-model-progress" role="status" aria-live="polite"></p>
+              <button type="button" id="settings-model-close" class="settings-dialog-close" aria-label="Закрыть выбор модели" data-en-aria-label="Close model selection"><span class="ui-icon" data-ui-icon="close" aria-hidden="true"></span></button>
+            </header>
+            <div id="settings-model-picker" class="settings-model-picker"></div>
+          </div>
+        </div>
+
+        <!-- Who: Tim Buglaev -->
+        <!-- When: 2026-06-24 -->
+        <!-- What: Added a settings-specific model switch wait screen with a compact
+             branded animation instead of reusing application startup progress. -->
+        <div id="settings-model-switch" class="settings-model-switch" role="status" aria-live="polite" aria-busy="true" hidden>
+          <div class="settings-switch-content">
+            <div class="settings-switch-visual" aria-hidden="true">
+              <span class="settings-switch-core">◇</span>
+              <span class="settings-switch-note note-one"></span>
+              <span class="settings-switch-note note-two"></span>
+              <span class="settings-switch-note note-three"></span>
+            </div>
+            <p class="settings-switch-eyebrow" data-en="LOCAL MODEL">ЛОКАЛЬНАЯ МОДЕЛЬ</p>
+            <h2 id="settings-switch-title" data-en="Switching models">Переключаем модель</h2>
+            <p id="settings-switch-model" class="settings-switch-model"></p>
+            <p id="settings-switch-detail" class="settings-switch-detail" data-en="Preparing the runtime and loading model weights...">Подготавливаем среду запуска и загружаем веса в память...</p>
+            <div class="settings-switch-pulse" aria-hidden="true"><span></span><span></span><span></span></div>
+            <progress id="settings-switch-download-progress" aria-labelledby="settings-switch-title" hidden></progress>
+            <p id="settings-switch-elapsed" class="settings-switch-elapsed" data-en="Elapsed: 0 s">Прошло: 0 с.</p>
+            <button id="settings-switch-stop-download" type="button" class="settings-switch-close" hidden
+                    data-en="Stop download">Остановить загрузку</button>
+            <button id="settings-switch-close" type="button" class="settings-switch-close" hidden data-en="Back to settings">Вернуться к настройкам</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="project-management-dialog" class="project-name-dialog" aria-labelledby="project-management-heading">
+    <div class="project-name-form">
+      <h2 id="project-management-heading"></h2>
+      <div class="project-management-actions">
+        <button id="project-management-open" type="button" class="project-action-button" data-en="Open folder">Открыть папку</button>
+        <button id="project-management-rename" type="button" class="project-action-button" data-en="Rename project">Переименовать проект</button>
+        <button id="project-management-backup" type="button" class="project-action-button" aria-describedby="project-management-backup-hint" data-en="Save a copy of notes…">Сохранить копию заметок…</button>
+        <button id="project-management-detach" type="button" class="project-action-button" data-en="Disconnect project">Отключить проект</button>
+      </div>
+      <p id="project-management-backup-hint" class="project-management-hint" data-en="The backup includes Markdown with metadata and PNG, JPEG, GIF, WebP and SVG images. Names starting with a dot, symbolic links, other attachments, trash, queue, drafts, chats, settings and the index are excluded.">Копия включает Markdown с метаданными и изображения PNG, JPEG, GIF, WebP и SVG. Файлы и папки с точкой в начале имени, символические ссылки, другие вложения, корзина, очередь, черновики, чаты, настройки и индекс исключены.</p>
+      <p id="project-management-hint" class="project-management-hint" data-en="Switch to another project to disconnect this one." hidden>Откройте другой проект, чтобы отключить этот.</p>
+      <p id="project-management-status" class="project-name-error" role="status" hidden></p>
+      <p id="project-management-error" class="project-name-error" role="alert" hidden></p>
+      <form method="dialog" class="project-dialog-actions">
+        <button id="project-management-close" type="submit" data-en="Close">Закрыть</button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog id="project-name-dialog" class="project-name-dialog" aria-labelledby="project-name-heading">
+    <form id="project-name-form" class="project-name-form" novalidate>
+      <h2 id="project-name-heading" data-en="New project">Новый проект</h2>
+      <label for="project-name-input" data-en="Project name">Название проекта</label>
+      <input id="project-name-input" type="text" maxlength="80" autocomplete="off" required />
+      <p id="project-name-error" class="project-name-error" role="alert" hidden></p>
+      <div class="project-dialog-actions">
+        <button id="project-name-cancel" type="button" class="project-action-button" data-en="Cancel">Отмена</button>
+        <button id="project-name-submit" type="submit" class="project-confirm-button" data-en="Choose parent folder">Выбрать папку</button>
+      </div>
+    </form>
+  </dialog>
+  <script src="ui_translations.js"></script>
+  <script src="ui_languages.js"></script>
+  <script src="i18n.js"></script>
+  <script src="support_footer.js"></script>
+  <script src="desktop_preferences.js"></script>
+  <script src="preferences_renderer.js"></script>
+  <script src="project_context.js"></script>
+  <script src="model_locale.js"></script>
+  <script src="startup_gate.js"></script>
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-16 -->
+  <!-- What: Load the bundled marked browser build before the notes renderer so
+       Obsidian-style Markdown preview works without enabling Node integration. -->
+  <script src="node_modules/marked/marked.min.js"></script>
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-23 -->
+  <!-- What: Reuse the startup model catalog UI inside settings and wire it through
+       the restricted Electron settings bridge. -->
+  <script src="startup_model_picker.js"></script>
+  <script src="model_compatibility.js"></script>
+  <script src="settings_model_picker.js"></script>
+  <script src="settings_chat_model_import.js"></script>
+  <script src="note_stage_components.js"></script>
+  <script src="note_model_pair_picker.js"></script>
+  <script src="notes_settings_note_pairs.js"></script>
+  <script src="notes_markdown.js"></script>
+  <script src="notes_list_view.js"></script>
+  <script src="notes_live_application.js"></script>
+  <script src="notes_live_sync.js"></script>
+  <script src="notes_graph_model.js"></script>
+  <script src="notes_graph_canvas.js"></script>
+  <script src="notes_graph_renderer.js"></script>
+  <script src="notes_projects_view.js"></script>
+  <script src="notes_projects_controller.js"></script>
+  <script src="notes_note_actions.js"></script>
+  <script src="notes_library_tools.js"></script>
+  <script src="notes_editor_session.js"></script>
+  <script src="notes_editor_commands.js"></script>
+  <script src="notes_inline_editor.js"></script>
+  <script src="notes_project_picker.js"></script>
+  <script src="notes_workspace.js"></script>
+  <script src="notes_metadata_editor.js"></script>
+  <script src="notes_renderer.js"></script>
+  <script src="notes_chat_search.js"></script>
+  <script src="notes_semantic_controls.js"></script>
+  <script src="notes_chat_renderer.js"></script>
+  <script src="notes_settings_preferences.js"></script>
+  <script src="notes_settings_renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+.notes-sidebar.notes-library-sidebar {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.notes-library-sidebar .notes-list {
+  grid-row: 2;
+}
+
+.notes-library-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.notes-library-trash-actions {
+  grid-row: 3;
+  border-top: 1px solid var(--line);
+}
+
+.note-trash-list {
+  max-height: 45vh;
+  overflow-y: auto;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+}
+
+.note-trash-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  overflow-wrap: anywhere;
+}
+
+.note-trash-list li button { flex-shrink: 0; }

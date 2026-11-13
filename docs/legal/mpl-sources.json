@@ -1,0 +1,36 @@
+{
+  "license": {
+    "path": "LICENSES/common/MPL-2.0.txt",
+    "url": "https://www.mozilla.org/media/MPL/2.0/index.txt",
+    "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+    "bytes": 16726
+  },
+  "covered_packages": [
+    {
+      "package": "certifi",
+      "version": "2026.10.18",
+      "source_files": [
+        {
+          "filename": "certifi-2026.10.18.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/7e/eb/a2aa1ac3ea30dd3f30ca57f40232138b6b0040719316ecb85daf61167771/certifi-2026.10.18.tar.gz",
+          "sha256": "b9995d97b64d0431a5af837d8ca8cd6238104d1f319f04bd93ea43124d6c861e",
+          "bytes": 135227
+        }
+      ],
+      "project_url": "https://pypi.org/project/certifi/"
+    },
+    {
+      "package": "tqdm",
+      "version": "4.67.1",
+      "source_files": [
+        {
+          "filename": "tqdm-4.67.1.tar.gz",
+          "url": "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz",
+          "sha256": "f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2",
+          "bytes": 169737
+        }
+      ],
+      "project_url": "https://pypi.org/project/tqdm/"
+    }
+  ]
+}

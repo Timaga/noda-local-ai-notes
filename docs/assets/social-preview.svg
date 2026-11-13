@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-labelledby="title description">
+<title id="title">Noda — Local AI notes. Your Markdown.</title>
+<desc id="description">Capture, connect and ask questions about Markdown notes with local AI on Windows.</desc>
+<rect width="1280" height="640" fill="#11161d"/>
+<g id="accent"><path d="M88 77h46" stroke="#ff7548" stroke-width="5"/><path d="M88 548h1104" stroke="#303946"/></g>
+<g id="status"><rect x="1020" y="65" width="172" height="38" rx="19" fill="#25201f" stroke="#624135"/><text x="1106" y="90" fill="#ff7548" font-family="Arial,Helvetica,sans-serif" font-size="16" text-anchor="middle">WINDOWS BETA</text></g>
+<g id="wordmark" font-family="Arial,Helvetica,sans-serif"><text x="88" y="132" fill="#aab4c3" font-size="15">PERSONAL KNOWLEDGE, ON YOUR COMPUTER</text><text x="80" y="278" fill="#eff3f8" font-size="124" font-weight="700">Noda</text></g>
+<g id="tagline" font-family="Arial,Helvetica,sans-serif"><text x="88" y="350" fill="#eff3f8" font-size="38">Local AI notes. Your Markdown.</text><text x="88" y="466" fill="#aab4c3" font-size="24">Capture · Connect · Ask</text><text x="88" y="586" fill="#8591a2" font-size="18">Markdown files · Local models · Connected notes</text></g>
+<g id="icon" transform="translate(905 175) scale(0.56)">
+  <g transform="translate(0 20)" fill="none" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="#A1AAB9" d="M 360 148 L 261 52 Q 238 30 215 52 L 65 202 Q 31 236 65 270 L 215 420 Q 238 442 261 420 L 360 324"/>
+    <path stroke="#E0E5ED" d="M 324 186 C 303 186 284 178 267 161 L 251 145 Q 238 132 225 145 L 144 226 Q 134 236 144 246 L 225 327 Q 238 340 251 327 L 267 311 C 284 294 303 286 324 286"/>
+    <circle cx="419" cy="236" r="44" fill="#FF7548"/>
+  </g>
+</g>
+</svg>

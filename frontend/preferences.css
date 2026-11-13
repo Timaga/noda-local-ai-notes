@@ -1,0 +1,10 @@
+:root { --editor-font-size: 16px; }
+.notes-page #note-inline-content,
+.notes-page .inline-note-body .note-view-content,
+.notes-page #note-content-input,
+.quick-capture-page #prompt-input { font-size: var(--editor-font-size); }
+:root[data-interface-density="compact"] .notes-page .note-list-button { padding-block: 8px; gap: 4px; }
+:root[data-interface-density="compact"] .notes-page .projects-list { gap: 2px; }
+:root[data-interface-density="compact"] .notes-page .project-button { min-height: 38px; padding-block: 7px; }
+:root[data-interface-density="compact"] .settings-section { padding-block: 18px; }
+:root[data-interface-density="compact"] .chat-history-item { padding-block: 9px; }

@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible problem using synthetic data.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please remove private note text, chat history, tokens and personal paths.
+        Report vulnerabilities privately through SECURITY.md instead of this form.
+  - type: input
+    id: version
+    attributes:
+      label: Noda version
+      description: Include the exact beta/build number.
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and hardware
+      description: Windows 10/11, x64, RAM and CPU/GPU when relevant. No serial numbers.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: A minimal sequence in a new test project is most useful.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and error
+      description: Redact private text before sharing screenshots or logs.
+    validations:
+      required: true
+  - type: textarea
+    id: models
+    attributes:
+      label: Model settings, if relevant
+      description: Stage, generator/ranker names and whether semantic search is installed.
+  - type: textarea
+    id: sample
+    attributes:
+      label: Minimal synthetic note
+      description: Optional invented text that reproduces a title, tag, link or chat issue.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed private notes, credentials and personal information from this report.
+          required: true

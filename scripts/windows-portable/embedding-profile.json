@@ -1,0 +1,19 @@
+{
+  "schema": "noda-embedding-profile-v1",
+  "repository": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+  "revision": "4328cf26390c98c5e3c738b4460a05b95f4911f5",
+  "weightsHash": "b5722100700c48b74c9c199c5f39ff9493c94d1497f719e791d4bc3861d7714a",
+  "weightsBytes": 1112201288,
+  "files": [
+    "1_Pooling/config.json",
+    "config.json",
+    "config_sentence_transformers.json",
+    "model.safetensors",
+    "modules.json",
+    "sentence_bert_config.json",
+    "sentencepiece.bpe.model",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json"
+  ]
+}

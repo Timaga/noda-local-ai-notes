@@ -1,0 +1,284 @@
+/* Who: Tim Buglaev
+ * When: 2026-07-02
+ * What: Keep the optional vault selector bounded and responsive after removing the
+ *       launcher titlebar, with clear disabled, busy, selected, and error states.
+ */
+
+body.startup-notes-directory-page {
+  background: transparent;
+}
+
+.startup-notes-directory-page .startup-overlay {
+  inset: 0;
+  overflow: hidden;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(155, 164, 179, 0.08), transparent 36%),
+    var(--bg);
+}
+
+.startup-page .startup-overlay.notes-directory-select .startup-panel {
+  width: min(920px, calc(100vw - 48px));
+  height: min(680px, calc(100vh - 48px));
+  min-height: 520px;
+  max-width: none;
+  max-height: none;
+  overflow: hidden;
+  display: grid;
+  padding: 0;
+  border-color: var(--line);
+  border-radius: 20px;
+  background: var(--bg-elevated);
+  box-shadow:
+    0 28px 100px rgba(0, 0, 0, 0.44),
+    0 18px 72px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(217, 223, 232, 0.09);
+}
+
+.startup-page .startup-overlay.notes-directory-select .startup-panel > :not(#startup-notes-directory) {
+  display: none;
+}
+
+.startup-notes-directory {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(44px, 7vh, 70px) clamp(42px, 7vw, 82px) 40px;
+  text-align: center;
+}
+
+.startup-notes-directory[hidden] {
+  display: none;
+}
+
+.startup-directory-step {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 0 20px rgba(172, 181, 195, 0.13);
+}
+
+.startup-directory-step-label {
+  margin: 20px 0 30px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.startup-notes-directory h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.startup-directory-description {
+  margin: 20px 0 0;
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.startup-directory-field {
+  width: 100%;
+  min-height: 84px;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  margin-top: 50px;
+  padding: 12px 14px 12px 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-soft);
+  text-align: left;
+}
+
+.startup-directory-icon {
+  position: relative;
+  width: 32px;
+  height: 23px;
+  border-radius: 4px;
+  background: var(--accent-strong);
+  box-shadow: 0 4px 14px rgba(172, 181, 195, 0.13);
+}
+
+.startup-directory-icon::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 2px;
+  width: 15px;
+  height: 8px;
+  border-radius: 3px 3px 0 0;
+  background: var(--accent);
+}
+
+.startup-directory-path {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.startup-directory-path.selected {
+  color: var(--text);
+}
+
+.startup-directory-choose,
+.startup-directory-next {
+  min-height: 48px;
+  border: 1px solid var(--accent);
+  border-radius: 9px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.startup-directory-choose {
+  min-width: 130px;
+  background: var(--input-bg);
+}
+
+.startup-directory-choose:hover:not(:disabled) {
+  background: var(--bg-soft);
+}
+
+.startup-directory-info {
+  width: 100%;
+  min-height: 82px;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  margin-top: 34px;
+  padding: 17px 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--text-muted);
+  text-align: left;
+}
+
+.startup-directory-info p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.startup-directory-info-icon {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.startup-directory-status {
+  width: 100%;
+  min-height: 20px;
+  margin: 14px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: left;
+}
+
+.startup-directory-status.error {
+  color: #ff9ba6;
+}
+
+.startup-directory-actions {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.startup-directory-next {
+  min-width: 150px;
+  color: var(--accent-ink);
+  padding: 0 24px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+}
+
+.startup-directory-next > span[aria-hidden="true"] {
+  margin-left: 10px;
+  font-size: 25px;
+  line-height: 0;
+}
+
+.startup-directory-choose:disabled,
+.startup-directory-next:disabled {
+  border-color: var(--line);
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.82;
+}
+
+@media (max-width: 760px), (max-height: 680px) {
+  .startup-notes-directory-page .startup-overlay {
+    padding: 14px;
+  }
+
+  .startup-page .startup-overlay.notes-directory-select .startup-panel {
+    width: calc(100vw - 28px);
+    height: calc(100vh - 28px);
+    min-height: 0;
+  }
+
+  .startup-notes-directory {
+    padding: 28px 24px 24px;
+  }
+
+  .startup-directory-step-label {
+    margin: 12px 0 18px;
+  }
+
+  .startup-directory-description {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .startup-directory-field {
+    grid-template-columns: 28px minmax(0, 1fr);
+    margin-top: 24px;
+    padding: 12px 14px;
+  }
+
+  .startup-directory-icon {
+    width: 27px;
+    height: 20px;
+  }
+
+  .startup-directory-choose {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .startup-directory-info {
+    margin-top: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .startup-directory-step {
+    box-shadow: none;
+  }
+}

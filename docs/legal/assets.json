@@ -1,0 +1,105 @@
+{
+  "schema": "noda-artwork-provenance-v1",
+  "audit_date": "2026-11-13",
+  "scope": "Existing frontend/assets files; rights confirmed by project owner on 2026-11-13, not an independent legal opinion.",
+  "assets": [
+    {
+      "path": "frontend/assets/liquid-veins.mp4",
+      "bytes": 3306288,
+      "sha256": "5687a51fe37e74f5c61afbf49521aaeb0c30fbbb07dd1a06061a98d442aa71f6",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights.",
+      "prior_record": "Existing THIRD_PARTY_NOTICES.md also records author confirmation that this animation was created for Noda."
+    },
+    {
+      "path": "frontend/assets/noda-bot-signal.svg",
+      "bytes": 562,
+      "sha256": "6ae389ed0932e402c0686164c4263e4e9f1ac773f2ecf7dcfb04dee534daa6e9",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-icon.ico",
+      "bytes": 144607,
+      "sha256": "356cbf73974a817b605b42150725639f42e6d083d96da7a65176b1e6a987f245",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-icon.png",
+      "bytes": 1537114,
+      "sha256": "f7cc4046e6f3646f6f7aa7bc722319ea487b01e0999c369db6e0c13350810c37",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-search-loop.mp4",
+      "bytes": 565894,
+      "sha256": "3c5fb5c3bafc213d281a4c14d2959a820c70f01de8537f46c8eaf83d8524f7a4",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-search-poster.png",
+      "bytes": 1106682,
+      "sha256": "13f3d70bee393d0ddca5b8fef0b578086c93e480112b091da7e62bea698c6fa5",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-tray.png",
+      "bytes": 8625,
+      "sha256": "70c721f010909b15ab820402df62291bc3ce080f91a2f4c3d03d2618bb44773c",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-wave-core.png",
+      "bytes": 19432,
+      "sha256": "af6dde3509caf1fc63f9725a7a0f21730eb8f44a9b2c0d12ccf9882812379dd7",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-wave-inner.png",
+      "bytes": 21547,
+      "sha256": "c59a01e5cd9f5dff8feb5a0e110a3d66d66868f69adb124ef417f7010bb0fede",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-wave-middle.png",
+      "bytes": 25513,
+      "sha256": "bcfbd4caf9604b2767985bf99b23b12ed106343e7f551bd44a04bfa7af0205f6",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-wave-node.png",
+      "bytes": 19436,
+      "sha256": "2a5ca5e651b63c301cc4dffa0aca4760e1ffd956cedd06cc3fe5a8ed55bac4ca",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-wave-outer.png",
+      "bytes": 104195,
+      "sha256": "bdb994d205e527e500b9c6c8140cc635270930c7816409d79747fd94cf56d4cb",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    },
+    {
+      "path": "frontend/assets/noda-wave-primary.png",
+      "bytes": 92976,
+      "sha256": "33e70740ce998d41651404350ca3ed94a5b88c509e81fecbbd33f6a4727c3efa",
+      "provenance_status": "rights-confirmed-by-project-owner-2026-11-13",
+      "external_source": "Project-supplied; owner confirmation covers publication rights."
+    }
+  ],
+  "owner_confirmation": {
+    "date": "2026-11-13",
+    "scope": "Project source, current logo, both Noda animations and their 13 derived application asset files",
+    "statement": "The project owner confirmed that the materials were created by/for them or that they hold publication rights.",
+    "evidence": "Explicit owner reply during repository preparation; no independent authorship assessment."
+  }
+}

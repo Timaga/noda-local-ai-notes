@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "generated_from": [
+    "scripts.ru_title_gpu_profiles.PROFILES",
+    "backend.note_title_method.METHODS"
+  ],
+  "profiles": {
+    "qwen35": {
+      "model": "models/ru-title-qwen35-4b-q8-v1/Qwen3.5-4B-Q8_0.gguf",
+      "sha256": "10cc391b403021dd11c614679d2fd92f611c3681d29e29651b717316965d61e1",
+      "alias": "ru-title-qwen35-4b-q8-v1",
+      "parameters": 4659865088,
+      "nominal_size_billion": 4,
+      "context": 8192
+    },
+    "qwen3": {
+      "model": "models/ru-title-qwen3-4b-instruct-q8-v1/qwen3-4b-instruct-2507-q8_0.gguf",
+      "sha256": "ae916ede1c010a26955ee8ae2e908bf8815a3f135ec860439ab924701c69d5f1",
+      "alias": "ru-title-qwen3-4b-instruct-q8-v1",
+      "parameters": 4022468096,
+      "nominal_size_billion": 4,
+      "context": 8192
+    },
+    "ruadapt": {
+      "model": "models/ru-title-ruadapt-4b-q8-v1/Q8_0.gguf",
+      "sha256": "3a2edc3b273ee09e46fcca98b57ff8eaf02653fa3b3055ce79273c29e8c3e011",
+      "alias": "ru-title-ruadapt-q8-v1",
+      "parameters": 4007937536,
+      "nominal_size_billion": 4,
+      "context": 8192
+    },
+    "gemma4": {
+      "model": "models/ru-title-gemma4-e2b-q8-v1/gemma-4-E2B-it-Q8_0.gguf",
+      "sha256": "996d08777aadc6bfd3c7375ef70ba25a0f55240075860754fdb18d6d860aa63a",
+      "alias": "ru-title-gemma4-q8-v1",
+      "parameters": 5123178051,
+      "nominal_size_billion": 2,
+      "context": 8192
+    },
+    "qwen25": {
+      "model": "models/qwen2.5-7b-instruct-q5_k_m-00001-of-00002.gguf",
+      "sha256": "42f6693004793ee6cf1b2b723f0273b10f86a3bb2a949bd9128d4cda5fb866cd",
+      "alias": "ru-title-qwen25-7b-q5-k-m-v1",
+      "parameters": 7615616512,
+      "nominal_size_billion": 7,
+      "context": 8192
+    },
+    "tlite": {
+      "model": "models/ru-title-tlite-7b-q8-v1/t-lite-it-1.0-q8_0.gguf",
+      "sha256": "6ba966fbc586a243577a962afa2ba0f7223f62e1a55a6c00311e0787c50b285e",
+      "alias": "ru-title-tlite-7b-q8-v1",
+      "parameters": 7612756480,
+      "nominal_size_billion": 7,
+      "context": 8192
+    }
+  },
+  "methods": {
+    "reviewed": {
+      "strategy": "review-v1",
+      "stages": 2
+    },
+    "planned": {
+      "strategy": "planned-v1",
+      "stages": 3
+    }
+  }
+}

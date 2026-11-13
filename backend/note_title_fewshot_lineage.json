@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "candidate": "independent-russian-title-fewshot-v1",
+  "training_version": "ordinary-ru-title-demonstrations-v1",
+  "canonical_training_sha256": "e428fdcf304c719f418ecede839f3250efd4afd629ece3a2e114872ad49acd34",
+  "training_source": "backend/note_title_fewshot_examples.py",
+  "author": "Codex, a GPT-based coding agent",
+  "authorship": "AI-authored synthetic source/title pairs and corrections",
+  "created_date": "2026-10-12",
+  "human_authorship_claim": false,
+  "model_authorship_denial": false,
+  "weight_training": false,
+  "in_context_training": true,
+  "writer_pair_count": 8,
+  "editor_correction_count": 4,
+  "selection_criteria": [
+    "Ordinary neutral everyday topics, independently authored before candidate evaluation",
+    "Full source first, then natural short Russian title",
+    "Illustrations of negation, condition, question, intention, action stage and uncertainty",
+    "General meaning and language behavior, without case-specific keyword rules"
+  ],
+  "data_access": {
+    "DEV_or_CLOSED_note_content_read": false,
+    "evaluation_answers_or_reference_titles_read": false,
+    "acceptance_metric_tuning": false,
+    "repository_interfaces_and_synthetic_tests_inspected": true
+  },
+  "evidence_boundary": "Demonstrations illustrate general style and logic only; the current full source is the sole evidence for its title",
+  "runtime": {
+    "title_producer": "Existing verified local inference adapter through common _invoke",
+    "writer_native_message_count": 18,
+    "editor_native_message_count": 10,
+    "maximum_format_attempts_per_stage": 2,
+    "private_draft_maximum_words": 24,
+    "final_title_maximum_words": 12,
+    "title_maximum_characters": 90,
+    "full_prompt_admission_required": true,
+    "source_or_examples_truncation": false,
+    "fallback": false,
+    "private_analysis_persistence": false
+  },
+  "semantic_accuracy_claim": false,
+  "acceptance_score_promise": false
+}

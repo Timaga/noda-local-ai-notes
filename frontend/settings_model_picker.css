@@ -1,0 +1,208 @@
+.settings-model-picker {
+  min-height: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.settings-picker-content {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 20px 24px 16px;
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+  gap: 12px;
+  color: var(--text);
+}
+
+.settings-picker-intro,
+.settings-picker-controls,
+.settings-picker-footer,
+.settings-hf-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settings-picker-intro {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+}
+
+.settings-picker-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  overflow-wrap: anywhere;
+}
+
+.settings-picker-muted,
+.settings-picker-hardware,
+.settings-picker-empty,
+.settings-picker-row-title small {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.settings-picker-hardware {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5px 9px;
+}
+
+.settings-picker-controls { flex-wrap: wrap; }
+.settings-picker-search { flex: 1 1 240px; }
+
+.settings-picker-search,
+.settings-picker-sort,
+.settings-hf-dialog input,
+.settings-picker-import,
+.settings-picker-cancel,
+.settings-picker-choose {
+  min-height: 44px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.settings-picker-import { background: var(--bg-elevated); }
+.settings-picker-import,
+.settings-picker-cancel,
+.settings-picker-choose { font-weight: 650; cursor: pointer; }
+.settings-picker-choose { background: var(--accent); color: var(--input-bg); }
+.settings-picker-content button:disabled,
+.settings-hf-dialog button:disabled { opacity: .55; cursor: default; }
+
+.settings-picker-content :focus-visible,
+.settings-hf-dialog :focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.settings-picker-filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.settings-picker-filters button {
+  min-height: 36px;
+  padding: 4px 11px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.settings-picker-filters button[aria-pressed="true"] {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--bg-elevated);
+}
+
+.settings-picker-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+  gap: 12px;
+  min-height: 0;
+}
+
+.settings-picker-library,
+.settings-picker-details {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  min-width: 0;
+  min-height: 0;
+}
+
+.settings-picker-library {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.settings-picker-count {
+  margin: 0;
+  padding: 12px 14px 9px;
+  font-size: 14px;
+}
+
+.settings-picker-list { overflow-y: auto; padding: 3px 8px 8px; }
+.settings-picker-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 12px;
+  width: 100%;
+  min-height: 56px;
+  padding: 8px 10px;
+  margin-bottom: 3px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.settings-picker-row:hover { background: var(--input-bg); }
+.settings-picker-row[aria-pressed="true"] { border-color: var(--accent); background: var(--input-bg); }
+.settings-picker-row-title { display: grid; gap: 3px; min-width: 0; overflow-wrap: anywhere; }
+.settings-picker-fit { font-size: 12px; font-weight: 650; flex-shrink: 0; }
+.settings-picker-fit.compat-fit,
+.settings-picker-compat-box.compat-fit > strong { color: var(--ok, #65d9a0); }
+.settings-picker-fit.compat-edge,
+.settings-picker-compat-box.compat-edge > strong { color: var(--warn); }
+.settings-picker-fit.compat-hard,
+.settings-picker-compat-box.compat-hard > strong,
+.settings-hf-error { color: #ff8f9c; }
+
+.settings-picker-details { padding: 16px; overflow: auto; overflow-wrap: anywhere; }
+.settings-picker-details h3 { margin: 0 0 6px; font-size: 17px; }
+.settings-picker-details p { margin: 0; }
+.settings-picker-empty { padding: 6px; }
+.settings-picker-specs { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin: 16px 0; font-size: 13px; }
+.settings-picker-specs dt { color: var(--text-muted); }
+.settings-picker-specs dd { margin: 0; text-align: right; }
+
+.settings-picker-compat-box,
+.settings-hf-result {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--input-bg);
+  padding: 11px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.settings-picker-compat-box p { margin-top: 5px; }
+.settings-picker-footer { justify-content: flex-end; }
+.settings-picker-footer > span { margin-right: auto; }
+
+.settings-hf-dialog {
+  width: min(510px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  box-sizing: border-box;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-elevated);
+  color: var(--text);
+  box-shadow: 0 20px 65px #0009;
+}
+
+.settings-hf-dialog::backdrop { background: #080a10aa; }
+.settings-hf-dialog form { display: grid; gap: 10px; }
+.settings-hf-dialog h2 { margin: 0; font-size: 20px; }
+.settings-hf-dialog p { margin: 0; }
+.settings-hf-dialog label { font-size: 14px; font-weight: 650; }
+.settings-hf-dialog [role="status"]:empty { display: none; }
+.settings-hf-dialog progress { width: 100%; accent-color: var(--accent); }
+.settings-hf-result { overflow-wrap: anywhere; }
+.settings-hf-result p + p { margin-top: 6px; }
+.settings-hf-actions { justify-content: flex-end; flex-wrap: wrap; }

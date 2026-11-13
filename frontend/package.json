@@ -1,0 +1,32 @@
+{
+  "name": "noda",
+  "productName": "Noda",
+  "version": "1.0.2-beta.16",
+  "description": "Noda local AI notes desktop app by buglAI",
+  "main": "main.js",
+  "author": "buglAI",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "scripts": {
+    "start": "node start-electron.js",
+    "build": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ../scripts/windows-portable/build.ps1 -Installer"
+  },
+  "dependencies": {
+    "marked": "^4.3.0"
+  },
+  "devDependencies": {
+    "electron": "42.11.18",
+    "electron-builder": "26.18.1"
+  },
+  "build": {
+    "appId": "ai.buglai.noda",
+    "productName": "Noda",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/noda-icon.ico",
+      "artifactName": "${productName}-Setup-${version}.exe"
+    }
+  }
+}

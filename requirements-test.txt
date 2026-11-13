@@ -1,0 +1,46 @@
+# Test dependencies for Noda
+# Install with: pip install -r requirements-test.txt
+
+# Core testing framework
+pytest==8.3.4
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+pytest-asyncio==0.25.2
+pytest-xdist==3.6.1
+
+# Code coverage
+coverage[toml]==7.6.10
+
+# Mocking and testing utilities
+mock==5.1.0
+# Who: Tim Buglaev
+# When: 2026-04-06
+# What: Replaced unavailable Faker pin (33.4.2) with nearest published patch-line version
+#       so test dependency installation remains reproducible across clean environments.
+faker==33.3.1
+freezegun==1.5.1
+
+# HTTP testing
+requests-mock==1.12.1
+responses==0.25.3
+
+# Flask testing
+Flask-Testing==0.8.1
+
+# Quality and linting (optional)
+black==25.1.0
+flake8==7.1.1
+mypy==1.14.1
+pylint==3.3.5
+isort==5.13.2
+
+# Performance testing
+pytest-benchmark==5.1.0
+pytest-timeout==2.3.1
+psutil==7.2.2
+
+# Documentation
+pytest-html==4.1.1
+
+# All production dependencies are required for testing
+-r backend/requirements.txt

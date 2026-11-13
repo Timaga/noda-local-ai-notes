@@ -1,0 +1,291 @@
+.note-pair-stages {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.note-pair-stage {
+  display: grid;
+  grid-template-columns: minmax(145px, 0.7fr) minmax(0, 1.3fr);
+  gap: 18px;
+  align-items: start;
+  padding: 14px 16px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-elevated);
+}
+
+.note-pair-stage-intro {
+  min-width: 0;
+  padding-top: 3px;
+}
+
+.note-pair-stage-name {
+  display: block;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.note-pair-description,
+.note-pair-recommended {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.note-pair-recommended.is-missing,
+.note-pair-error,
+.note-pair-experimental {
+  color: var(--warn);
+}
+
+.note-pair-stage-experimental {
+  border-color: color-mix(in srgb, var(--warn) 48%, var(--line));
+  background: color-mix(in srgb, var(--warn) 5%, var(--bg-elevated));
+}
+
+.note-pair-experiment-badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 7px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  color: var(--warn);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.note-pair-switch {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 36px;
+  margin-bottom: 6px;
+  gap: 9px;
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.note-pair-switch-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.note-pair-switch-track {
+  display: inline-flex;
+  flex: 0 0 36px;
+  align-items: center;
+  height: 20px;
+  padding: 2px;
+  border: 1px solid var(--text-muted);
+  border-radius: 12px;
+  color: var(--text-muted);
+  background: var(--input-bg);
+}
+
+.note-pair-switch-track::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.note-pair-switch-input:checked + .note-pair-switch-track {
+  justify-content: flex-end;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.note-pair-stage-experimental .note-pair-switch-input:checked + .note-pair-switch-track {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
+.note-pair-switch-input:focus-visible + .note-pair-switch-track {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.note-pair-switch-input:disabled + .note-pair-switch-track {
+  opacity: 0.65;
+}
+
+.note-pair-selected-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 10px;
+  margin: 5px 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.note-pair-selected-meta:empty {
+  display: none;
+}
+
+.note-pair-select,
+.note-pair-reset {
+  min-height: 38px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+}
+
+.note-pair-select {
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.note-pair-reset {
+  margin-top: 12px;
+  background: var(--bg-elevated);
+  cursor: pointer;
+}
+
+.note-pair-select:focus-visible,
+.note-pair-reset:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.note-pair-reset:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--bg-soft);
+}
+
+.note-pair-select:disabled,
+.note-pair-reset:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.note-component-fields {
+  display: grid;
+  gap: 6px;
+  min-inline-size: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.note-component-label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.note-component-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.note-component-input {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.note-component-input select {
+  min-width: 0;
+}
+
+.note-component-add {
+  flex: none;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.note-import-dialog {
+  width: min(490px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--bg-elevated, #20252c);
+  color: var(--text, #e2e7ee);
+  box-shadow: 0 20px 60px #0008;
+}
+
+.note-import-dialog::backdrop {
+  background: #0a0d12b3;
+}
+
+.note-import-form {
+  display: grid;
+  gap: 12px;
+}
+
+.note-import-form h3,
+.note-import-status {
+  margin: 0;
+}
+
+.note-import-form input {
+  margin-top: 5px;
+}
+
+.note-import-status {
+  font-size: 13px;
+}
+
+.note-import-status:empty {
+  display: none;
+}
+
+.note-import-preview {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  overflow-wrap: anywhere;
+}
+
+.note-import-preview p {
+  margin: 6px 0 0;
+}
+
+.note-import-status[data-state="error"] {
+  color: var(--warn, #ffb467);
+}
+
+.note-import-progress {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.note-import-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.note-import-actions button {
+  margin: 0;
+}
+
+.note-import-actions button[type="submit"] {
+  background: var(--accent);
+  color: var(--accent-text, #171b21);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .note-pair-stage {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .note-component-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

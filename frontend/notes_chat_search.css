@@ -1,0 +1,94 @@
+.chat-search-status {
+  width: min(352px, 100%);
+}
+
+.chat-search-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #14181c;
+}
+
+.chat-search-video,
+.chat-search-poster {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.chat-search-video[hidden],
+.chat-search-poster[hidden] {
+  display: none;
+}
+
+.chat-search-caption {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.chat-message-bubble.pending:has(.chat-search-status) {
+  width: min(392px, calc(100% - 54px));
+}
+
+.chat-history-panel:has(.chat-history-footer) {
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+}
+
+.chat-history-footer,
+.chat-query-hint,
+.chat-citation {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.chat-history-footer p {
+  margin: 8px 0 0;
+}
+
+.chat-compose-row .chat-query-hint {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+#chat-menu-btn {
+  --ui-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 7h16m-14 0 1 14h10l1-14M9 7V4h6v3m-5 4v6m4-6v6'/%3E%3C/svg%3E");
+}
+
+.chat-history-footer button,
+.chat-message-bubble .chat-retry-btn {
+  margin-top: 8px;
+}
+
+.chat-query-hint[data-invalid="true"],
+.chat-history-footer [data-warning="true"] {
+  color: #ffb2a8;
+}
+
+.chat-search-field:focus-within,
+#chat-input:focus-visible {
+  outline: 2px solid var(--text-muted);
+  outline-offset: 2px;
+}
+
+.chat-citation {
+  margin-top: 8px;
+}
+
+.chat-citation summary {
+  cursor: pointer;
+}
+
+.chat-citation blockquote {
+  margin: 6px 0;
+  padding-inline-start: 10px;
+  border-inline-start: 2px solid currentColor;
+  white-space: pre-wrap;
+}

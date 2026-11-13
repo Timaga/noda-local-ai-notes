@@ -1,0 +1,27 @@
+name: Feature request
+description: Describe the workflow you want to improve.
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe a concrete note-taking workflow and what gets in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Proposed behavior
+      description: What should happen, including the result you expect to see?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current workaround or alternatives
+  - type: textarea
+    id: example
+    attributes:
+      label: Synthetic example
+      description: Use invented content rather than a private library or chat history.

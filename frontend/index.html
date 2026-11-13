@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="quick-capture-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      connect-src 'self' http://127.0.0.1:5000 http://127.0.0.1:18741;
+      img-src 'self' data:;
+      style-src 'self' 'unsafe-inline';
+      script-src 'self';
+    "
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-02 -->
+  <!-- Load the shared Graphite and Noda Red theme after the base component styles. -->
+  <title data-en="Noda — Quick note">Noda — быстрая заметка</title>
+  <link rel="icon" type="image/png" href="assets/noda-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="ui_controls.css" />
+  <link rel="stylesheet" href="preferences.css" />
+  <link rel="stylesheet" href="quick_capture.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-03 -->
+  <!-- What: Reuse the dedicated Noda loader in the quick-capture readiness gate. -->
+  <link rel="stylesheet" href="startup_noda_loader.css" />
+  <link rel="stylesheet" href="support_footer.css" />
+</head>
+<body class="quick-capture-page quick-slim app-loading">
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-14 -->
+  <!-- What: Added a startup loading gate so quick capture stays blocked until
+       backend, Qdrant, note indexing, and managed vLLM are ready. -->
+  <div id="startup-overlay" class="startup-overlay" role="status" aria-live="polite" aria-busy="true">
+    <div class="startup-panel">
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-07-09 -->
+      <!-- What: Reuse the exact Noda wave-to-node animation in the embedded gate
+           so fallback startup matches the dedicated launcher. -->
+      <div class="startup-switch-visual" aria-hidden="true">
+        <span class="startup-noda-stage">
+          <img class="startup-noda-art startup-noda-shell" src="assets/noda-icon.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-outer" src="assets/noda-wave-outer.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-primary" src="assets/noda-wave-primary.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-middle" src="assets/noda-wave-middle.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-inner" src="assets/noda-wave-inner.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-wave startup-noda-wave-core" src="assets/noda-wave-core.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-outer" src="assets/noda-wave-outer.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-primary" src="assets/noda-wave-primary.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-middle" src="assets/noda-wave-middle.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-inner" src="assets/noda-wave-inner.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-current startup-noda-wave-core" src="assets/noda-wave-core.png" alt="" draggable="false" />
+          <img class="startup-noda-art startup-noda-node" src="assets/noda-wave-node.png" alt="" draggable="false" />
+          <span class="startup-noda-impact"></span>
+        </span>
+        <span class="startup-switch-core">◇</span>
+      </div>
+      <p class="eyebrow" data-en="Starting Noda">Запуск приложения</p>
+      <h2 id="startup-title" data-en="Loading…">Загружаемся…</h2>
+      <p id="startup-message" data-en="Please wait while the local services start.">Пожалуйста, подождите. Интерфейс станет доступен после запуска сервисов.</p>
+      <p id="startup-detail" data-en="Checking the backend, Qdrant, the note index, and the model.">Проверяем сервер, Qdrant, индекс заметок и модель.</p>
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-06-15 -->
+      <!-- What: Added a startup model picker before vLLM warmup so users can select
+           downloaded or downloadable Hugging Face models before heavy loading begins. -->
+      <div id="startup-model-picker" class="startup-model-picker" hidden>
+        <div id="startup-model-list" class="startup-model-list" aria-label="Выбор модели" data-en-aria-label="Model selection"></div>
+        <p id="startup-model-status" class="startup-model-status" data-en="Choose a model profile for this session.">Выберите профиль модели для этого запуска.</p>
+      </div>
+      <div class="startup-progress" aria-hidden="true">
+        <div id="startup-progress-bar"></div>
+      </div>
+      <ol class="startup-steps">
+        <li data-startup-phase="backend"><span data-en="Flask server">Сервер Flask</span></li>
+        <li data-startup-phase="qdrant"><span data-en="Qdrant and note index">Qdrant и индекс заметок</span></li>
+        <li data-startup-phase="runtime-config"><span data-en="Model configuration">Конфигурация модели</span></li>
+        <li data-startup-phase="model-select"><span data-en="Model selection">Выбор модели</span></li>
+        <li data-startup-phase="model-download"><span data-en="Hugging Face cache">Кэш Hugging Face</span></li>
+        <li data-startup-phase="wsl"><span data-en="WSL runtime">Среда WSL</span></li>
+        <li data-startup-phase="vllm"><span data-en="vLLM and TurboQuant">vLLM и TurboQuant</span></li>
+      </ol>
+      <button id="startup-retry-btn" type="button" class="secondary-btn" hidden data-en="Retry startup">Повторить запуск</button>
+    </div>
+  </div>
+  <main class="shell quick-shell" aria-label="Быстрая заметка" data-en-aria-label="Quick note">
+    <form class="quick-entry" id="quick-note-form">
+      <span class="quick-entry-bolt" aria-hidden="true">
+        <svg viewBox="0 0 24 32" focusable="false"><path d="M14 1 2 18h9L9 31l14-19h-9z" /></svg>
+      </span>
+      <label class="sr-only" for="prompt-input" data-en="Note text">Текст заметки</label>
+      <textarea id="prompt-input" rows="1" maxlength="4000" spellcheck="true"
+        placeholder="Быстрая заметка…" data-en-placeholder="Quick note…"
+        aria-describedby="quick-input-help quick-feedback"></textarea>
+      <button type="button" id="quick-queue-toggle" class="quick-queue-toggle"
+        aria-controls="quick-queue-panel" aria-expanded="false"
+        aria-label="Посмотреть очередь" data-en-aria-label="Show queue">
+        <svg class="quick-queue-icon" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+          <circle cx="4" cy="6" r="1.6" /><circle cx="4" cy="14" r="1.6" /><circle cx="4" cy="22" r="1.6" />
+          <path d="M10 6h15M10 14h15M10 22h15" />
+        </svg>
+        <span class="ui-icon ui-chevron" data-ui-icon="chevron" aria-hidden="true"></span>
+        <span id="quick-queue-badge" class="quick-queue-badge" hidden></span>
+      </button>
+      <button type="submit" id="enqueue-btn" hidden data-en="Add to queue">В очередь</button>
+    </form>
+    <div id="quick-input-meta" class="quick-input-meta">
+      <span id="quick-active-project" class="quick-active-project"></span>
+      <span id="quick-input-help" data-en="Enter to send · Shift + Enter for a new line">Enter — отправить · Shift + Enter — новая строка</span>
+    </div>
+    <p id="quick-feedback" class="quick-feedback" role="status" aria-live="polite" hidden></p>
+    <p id="quick-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <section id="quick-queue-panel" class="quick-queue-panel" aria-label="Очередь генерации" data-en-aria-label="Generation queue" hidden>
+      <div class="quick-queue-heading"><span data-en="Queue">Очередь</span><span id="queue-counter" data-en="Queue: 0">Очередь: 0</span></div>
+      <div id="quick-queue-history" class="quick-queue-history" hidden>
+        <p id="quick-queue-retention"></p>
+        <button id="quick-queue-cleanup" class="quick-source-button" type="button" data-en="Clear completed">Очистить завершённые</button>
+        <button id="quick-queue-recent" class="quick-source-button" type="button" data-en="Back to recent" hidden>К недавним</button>
+        <button id="quick-queue-earlier" class="quick-source-button" type="button" data-en="Earlier entries" hidden>Ранние задания</button>
+        <p id="quick-queue-cleanup-status" role="status" hidden></p>
+      </div>
+      <ul id="jobs-list" class="quick-jobs-list"></ul>
+    </section>
+    <div class="quick-legacy" hidden aria-hidden="true">
+      <span id="runtime-status"></span><span id="turboquant-status"></span>
+      <input id="turboquant-toggle" type="checkbox" />
+      <span id="hotkey-value"></span><button id="quick-close-btn" type="button"></button>
+      <button id="notes-panel-btn" type="button"></button><ul id="recent-notes-list"></ul>
+      <section id="status-card"><p id="status-text"></p></section>
+      <article id="note-preview"></article>
+    </div>
+  </main>
+
+  <script src="ui_translations.js"></script>
+  <script src="ui_languages.js"></script>
+  <script src="i18n.js"></script>
+  <script src="support_footer.js"></script>
+  <script src="desktop_preferences.js"></script>
+  <script src="preferences_renderer.js"></script>
+  <script src="startup_gate.js"></script>
+  <script src="project_context.js"></script>
+  <script src="generation_retry_client.js"></script>
+  <script src="generation_queue_client.js"></script>
+  <script src="quick_capture_view.js"></script>
+  <script src="quick_capture_project.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

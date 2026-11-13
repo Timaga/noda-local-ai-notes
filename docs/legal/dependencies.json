@@ -1,0 +1,4344 @@
+{
+  "schema": "noda-dependency-license-inventory-v1",
+  "scope": "Windows runtime lock and frontend npm lock; upstream components retain their own licenses",
+  "python": [
+    {
+      "name": "accelerate",
+      "version": "1.11.0",
+      "direct": true,
+      "declared_license": "Apache",
+      "wheel_sha256": "a628fa6beb069b8e549460fc449135d5bd8d73e7a11fd09f0bc9fc4ace7f06f1",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "direct": false,
+      "declared_license": "PSF-2.0",
+      "wheel_sha256": "9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.5",
+      "direct": false,
+      "declared_license": "Apache-2.0 AND MIT",
+      "wheel_sha256": "d05e94cdfe0d15d0206f970722d2554780ce562787b21b218b275447f8751319",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "direct": false,
+      "declared_license": "Apache 2.0",
+      "wheel_sha256": "053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.3",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "348ec6664a76f1fd3be81f43dffbee4c7e8ce931ba71ec67cc7f4ade7fbbb580",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.7.0",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: MIT License",
+      "wheel_sha256": "1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "anyio",
+      "version": "4.14.2",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "blinker",
+      "version": "1.9.0",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: MIT License",
+      "wheel_sha256": "ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "cachetools",
+      "version": "6.2.2",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "6c09c98183bf58560c97b2abfcedcbaf6a896a490f534b031b661d3723b45ace",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "certifi",
+      "version": "2026.10.18",
+      "direct": true,
+      "declared_license": "MPL-2.0",
+      "wheel_sha256": "73191c47aaa79da394e8fee2dbc2ec827432cab56311122c9e47abf79e390f62",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.4.4",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "b435cba5f4f750aa6c0a0d92c541fb79f69a387c91e61f1795227e4ed9cece14",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "click",
+      "version": "8.3.0",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "9b9f285302c6e3064f4330c05f05b81945b2a39544279343e6e7c5f27a9baddc",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: BSD License",
+      "wheel_sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "coloredlogs",
+      "version": "15.0.1",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "colorlog",
+      "version": "6.10.1",
+      "direct": true,
+      "declared_license": "MIT License",
+      "wheel_sha256": "2d7e8348291948af66122cff006c9f8da6255d224e7cf8e37d8de2df3bad8c9c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "datasets",
+      "version": "2.19.0",
+      "direct": true,
+      "declared_license": "Apache 2.0",
+      "wheel_sha256": "f57c5316e123d4721b970c68c1cb856505f289cda58f5557ffe745b49c011a8e",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "dill",
+      "version": "0.3.8",
+      "direct": false,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "c36ca9ffb54365bdd2f8eb3eff7d2a21237f8452b57ace88b1ac615b7e815bd7",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "diskcache",
+      "version": "5.6.3",
+      "direct": false,
+      "declared_license": "Apache 2.0",
+      "wheel_sha256": "5e31b2d5fbad117cc363ebaf6b689474db18a1f6438bc82358b024abd4c2ca19",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "direct": true,
+      "declared_license": "Apache License, Version 2.0",
+      "wheel_sha256": "7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "docstring_parser",
+      "version": "0.18.0",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "b3fcbed555c47d8479be0796ef7e19c2670d428d72e96da63f3a40122860374b",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "fastapi",
+      "version": "0.121.1",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "2c5c7028bc3a58d8f5f09aecd3fd88a000ccc0c5ad627693264181a3c33aa1fc",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "filelock",
+      "version": "3.20.0",
+      "direct": true,
+      "declared_license": "Unlicense",
+      "wheel_sha256": "339b4732ffda5cd79b13f4e2711a31b0365ce445d95d243bb996273d072546a2",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "Flask",
+      "version": "3.1.3",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "f4bcbefc124291925f1a26446da31a5178f9483862233b23c0c96a20701f670c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "flask-cors",
+      "version": "6.0.1",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "c7b2cbfb1a31aa0d2e5341eea03a6805349f7a61647daee1a15c46bbe981494c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "direct": false,
+      "declared_license": "Apache 2.0",
+      "wheel_sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "878be833caa6a3821caf85eb39c5ba92d28e85df26d57afb06b35b2efd937231",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "fsspec",
+      "version": "2024.3.1",
+      "direct": true,
+      "declared_license": "BSD",
+      "wheel_sha256": "918d18d41bf73f0e2b261824baeb1b124bcf771767e3a26425cd7dec3332f512",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "grpcio",
+      "version": "1.85.1",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "c17d61af28b322c48ab3881c685e5f6e7e367c56844cf589ee7707be9477b969",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "grpcio-tools",
+      "version": "1.80.1",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "eadef5323673e867bf2fb63b37bef7d8a4afe8d2ee74b8afdea6b70b841a9121",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "h2",
+      "version": "4.4.1",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "0e25f1462b23c9cb82d9eb02e28bc706dac2a68cb457c6a0d74d63c8a2a5d0e6",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.4.3",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "6b591fcad34e272a5b02607485e4f2a1334aebf1bc6d16ce8eb1eb8978ac2021",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "hpack",
+      "version": "4.2.0",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "858ac0b02280fa582b5080d68db0899c62a80375e0e5413a74970c5e518b6986",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "1.13.0",
+      "direct": true,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "e942cb50d6a08dd5306688b1ac05bda157fd2fcc88b63dae405f7bd0d3234005",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "humanfriendly",
+      "version": "10.0",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "hyperframe",
+      "version": "6.1.0",
+      "direct": false,
+      "declared_license": "License :: OSI Approved :: MIT License",
+      "wheel_sha256": "b03380493a519fce58ea5af42e4a42317bf9bd425596f7a0835ffce80f1a42e5",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "idna",
+      "version": "3.15",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "048adeaf8c2d788c40fee287673ccaa74c24ffd8dcf09ffa555a2fbb59f10ac8",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "itsdangerous",
+      "version": "2.2.0",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: BSD License",
+      "wheel_sha256": "c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: BSD License",
+      "wheel_sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "jiter",
+      "version": "0.12.0",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: MIT License",
+      "wheel_sha256": "e25012eb0c456fcc13354255d0338cd5397cce26c77b2832b3c4e2e255ea5d9a",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "joblib",
+      "version": "1.5.2",
+      "direct": true,
+      "declared_license": "BSD 3-Clause",
+      "wheel_sha256": "4e1f0bdbb987e6d843c70cf43714cb276623def372df3c22fe5266b2670bc241",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "llama_cpp_python",
+      "version": "0.3.21",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "1a533dec5e2ff32685a1ae8f9ced13c6de7e14d02bfe7a8512895fe7a9c3038b",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.0.0",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: MIT License",
+      "wheel_sha256": "87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.3",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "9a1abfdc021a164803f4d485104931fb8f8c1efd55bc6b748d2f5774e78b62c5",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "direct": false,
+      "declared_license": "License :: OSI Approved :: MIT License",
+      "wheel_sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "direct": true,
+      "declared_license": "BSD",
+      "wheel_sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "multidict",
+      "version": "7.2.1",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "ce0f884408938fbd72e764031d0e23a8f5e438a7bf73641089c7a6465cb84456",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "multiprocess",
+      "version": "0.70.16",
+      "direct": false,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "fc0544c531920dde3b00c29863377f87e1632601092ea2daca74e4beb40faa2e",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "networkx",
+      "version": "3.5",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: BSD License",
+      "wheel_sha256": "0030d386a9a06dee3565298b4a734b68589749a544acbb6c412dc9e2489ec6ec",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "numpy",
+      "version": "2.3.4",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: BSD License",
+      "wheel_sha256": "56209416e81a7893036eea03abcb91c130643eb14233b2515c90dcac963fe99d",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.23.2",
+      "direct": false,
+      "declared_license": "MIT License",
+      "wheel_sha256": "1f9cc0a55349c584f083c1c076e611a7c35d5b867d5d6e6d6c823bf821978088",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "packaging",
+      "version": "25.0",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: Apache Software License; License :: OSI Approved :: BSD License",
+      "wheel_sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pandas",
+      "version": "3.1.1",
+      "direct": false,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "6d84760cc1bd799440a66b4df2ceb7a508870f3b8b4d8dda21befd62779cd3b4",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "peft",
+      "version": "0.11.1",
+      "direct": true,
+      "declared_license": "Apache",
+      "wheel_sha256": "76f2d2a4c9e0644e2741465663b8a02097775e9725d26d7b41551e6f1e72e7dd",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0",
+      "direct": true,
+      "declared_license": "MIT-CMU",
+      "wheel_sha256": "9dda0788a9932776a75d8bcc020076edc308ce2508b51f6739a45e3158b3fc42",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "portalocker",
+      "version": "2.10.1",
+      "direct": false,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "53a5984ebc86a025552264b459b46a2086e269b21823cb572f8f28ee759e45bf",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.4",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "0c889f6fa84957bc7e8b4eab71fd16a0455068d5045e3aa40c733071d2b2fd77",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "protobuf",
+      "version": "6.33.5",
+      "direct": true,
+      "declared_license": "3-Clause BSD License",
+      "wheel_sha256": "3093804752167bcab3998bec9f1048baae6e29505adaf1afd14a37bddede533c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "eb7e81434c8d223ec4a219b5fc1c47d0417b12be7ea866e24fb5ad6e84b3d988",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pyarrow",
+      "version": "26.0.1",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "8196f36a2f4cb8d2d6ef3651941b80e5ccf125d7653657d99af5bb298e7a7026",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pyarrow-hotfix",
+      "version": "0.7",
+      "direct": false,
+      "declared_license": "Apache License, Version 2.0",
+      "wheel_sha256": "3236f3b5f1260f0e2ac070a55c1a7b339c4bb7267839bd2015e283234e758100",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pyasn1",
+      "version": "0.6.5",
+      "direct": true,
+      "declared_license": "BSD-2-Clause",
+      "wheel_sha256": "4017b0fce125096b8573b39c989fdb1a4b19cf761e683398184550fea0e66587",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pyasn1_modules",
+      "version": "0.4.2",
+      "direct": true,
+      "declared_license": "BSD",
+      "wheel_sha256": "29253a9207ce32b64c3ac6600edc75368f98473906e8fd1043bd6b5b1de2c14a",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pydantic",
+      "version": "2.12.4",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "92d3d202a745d46f9be6df459ac5a064fdaa3c1c4cd8adcfa332ccf3c05f871e",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.41.5",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "79ec52ec461e99e13791ec6508c722742ad745571f234ea6255bed38c6480f11",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "direct": false,
+      "declared_license": "BSD-2-Clause",
+      "wheel_sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pyreadline3",
+      "version": "3.5.6",
+      "direct": false,
+      "declared_license": "BSD",
+      "wheel_sha256": "8449b734232e42a5dcd74048e39b60db2839a4c38cf3ae2bf7707d58b5389c0d",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "python-dateutil",
+      "version": "4.0.0",
+      "direct": false,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "a5e246f79eb80475e691bf93862cead98decd8a498cf53ba0516fcdc0f50dc1c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "1d8214789a24de455a8b8bd8ae6fe3c6b69a5e3d64aa8a8e5d68e694bbcb285a",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "pywin32",
+      "version": "312",
+      "direct": false,
+      "declared_license": "PSF",
+      "wheel_sha256": "c53e878d15a1c44788082bfe712a905433473aa38f86375b7cf8b45e3acbaaf9",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "79005a0d97d5ddabfeeea4cf676af11e647e41d81c9a7722a193022accdb6b7c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "qdrant-client",
+      "version": "1.12.0",
+      "direct": true,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "6db5ac1e244272f8b67e9dbc0da557816efef6f919cd8ee134469c751fe72c03",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "regex",
+      "version": "2025.11.3",
+      "direct": true,
+      "declared_license": "Apache-2.0 AND CNRI-Python",
+      "wheel_sha256": "bac4200befe50c670c405dc33af26dad5a3b6b255dd6c000d92fe4629f9ed6a5",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "requests",
+      "version": "2.33.0",
+      "direct": true,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "3324635456fa185245e24865e810cecec7b4caf933d7eb133dcde67d48cee69b",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "rich",
+      "version": "13.7.1",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "4edbae314f59eb482f54e9e30bf00d33350aaa94f4bfcd4e9e3110e64d0d7222",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "rsa",
+      "version": "4.9.1",
+      "direct": true,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "68635866661c6836b8d39430f97a996acbd61bfa49406748ea243539fe239762",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "safetensors",
+      "version": "0.6.2",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: Apache Software License",
+      "wheel_sha256": "c7b214870df923cbc1593c3faee16bec59ea462758699bd3fee399d00aac072c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.7.2",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "63a9afd6f7b229aad94618c01c252ce9e6fa97918c5ca19c9a17a087d819440c",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "scipy",
+      "version": "1.16.3",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: BSD License",
+      "wheel_sha256": "062246acacbe9f8210de8e751b16fc37458213f124bef161a5a02c7a39284304",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "sentence-transformers",
+      "version": "5.6.0",
+      "direct": true,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "d2075b5e687a1611005e20ab04a6846994d51adfcf39610aed066af3c0c0b81f",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "sentencepiece",
+      "version": "0.2.1",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "10ed3dab2044c47f7a2e7b4969b0c430420cdd45735d78c8f853191fa0e3148b",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "setuptools",
+      "version": "80.9.0",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "062d34222ad13e0cc312a4c02d73f059e86a4acbfbdea8f8f76b28c99f306922",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4",
+      "direct": false,
+      "declared_license": "ISC License",
+      "wheel_sha256": "7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "direct": true,
+      "declared_license": "MIT OR Apache-2.0",
+      "wheel_sha256": "2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "starlette",
+      "version": "0.49.3",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "b579b99715fdc2980cf88c8ec96d3bf1ce16f5a8051a7c2b84ef9b1cdecaea2f",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "direct": true,
+      "declared_license": "BSD",
+      "wheel_sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "tenacity",
+      "version": "9.1.2",
+      "direct": true,
+      "declared_license": "Apache 2.0",
+      "wheel_sha256": "f77bf36710d8b73a50b2dd155c97b870017ad21afe6ab300326b0371b3b05138",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.6.0",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.2",
+      "direct": true,
+      "declared_license": "License :: OSI Approved :: Apache Software License",
+      "wheel_sha256": "c9ea31edff2968b44a88f97d784c2f16dc0729b8b143ed004699ebca91f05c48",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "torch",
+      "version": "2.10.0+cpu",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "b719da5af01b59126ac13eefd6ba3dd12d002dc0e8e79b8b365e55267a8189d3",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "tqdm",
+      "version": "4.67.1",
+      "direct": true,
+      "declared_license": "MPL-2.0 AND MIT",
+      "wheel_sha256": "26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "transformers",
+      "version": "5.10.2",
+      "direct": true,
+      "declared_license": "Apache 2.0 License",
+      "wheel_sha256": "8a669db546f82c7c3618cb46ceb0f0afd89292bc70f319c058f8332ec63e268d",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "trl",
+      "version": "0.9.4",
+      "direct": true,
+      "declared_license": "Apache 2.0",
+      "wheel_sha256": "a7322f73d818e4ff73441520ae2494ce46ce4c8052058fff7cb80d323ff87e28",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "typeguard",
+      "version": "4.6.0",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "79878165bb86f2cf5d41d159a0ff1792a796cf496882d2fe1b1c6c7049b9cdd7",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "typer",
+      "version": "0.23.1",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "3291ad0d3c701cbf522012faccfbb29352ff16ad262db2139e6b01f15781f14e",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.15.0",
+      "direct": true,
+      "declared_license": "PSF-2.0",
+      "wheel_sha256": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.2",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "4ed1cacbdc298c220f1bd249ed5287caa16f34d44ef4e9c3d0cbad5b521545e7",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "tyro",
+      "version": "1.0.17",
+      "direct": false,
+      "declared_license": "MIT",
+      "wheel_sha256": "89bbe5b4907965cac4077d2a1c3eaa3648afe177e214c57e490906d0ffef84c1",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.6",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "0a10eec6e13ef16b627fabed9a5f2ba61a62b1c67f327305f4e7e412a70b4aec",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "direct": true,
+      "declared_license": "MIT",
+      "wheel_sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.38.0",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "48c0afd214ceb59340075b4a052ea1ee91c16fbc2a9b1469cca0e54566977b02",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "watchdog",
+      "version": "6.0.0",
+      "direct": true,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "cbafb470cf848d93b5d013e2ecb245d4aa1c8fd0504e863ccefa32445359d680",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "websockets",
+      "version": "15.0.1",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "e09473f095a819042ecb2ab9465aee615bd9c2028e4ef7d933600a8401c79561",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "Werkzeug",
+      "version": "3.1.9",
+      "direct": true,
+      "declared_license": "BSD-3-Clause",
+      "wheel_sha256": "6392e50c78460ba618e5b21f08a71f59c99ce99cdc6cf6e3dd7e6ccca8754fab",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "xxhash",
+      "version": "4.1.0",
+      "direct": false,
+      "declared_license": "BSD-2-Clause",
+      "wheel_sha256": "3cb7f59ea87872554c5484afc43a7c1e6c5295f4b53e76a4bfffcf72b4a67877",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    },
+    {
+      "name": "yarl",
+      "version": "1.25.1",
+      "direct": false,
+      "declared_license": "Apache-2.0",
+      "wheel_sha256": "1f51020b2eb8a003c84925638ec63c21a750a4bddd3a22ec8eac6a742dadf1b9",
+      "additional_notices": "See LICENSES/python/; native wheel notices can contain multiple component licenses."
+    }
+  ],
+  "npm": [
+    {
+      "path": "node_modules/@electron-internal/extract-zip",
+      "version": "1.0.5",
+      "license": "BSD-2-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron-internal/extract-zip/-/extract-zip-1.0.5.tgz",
+      "integrity": "sha512-+bqFCP98pLI0Tt0XQo1TmlXtwjWchISndDOxCkEcIuUgXWpBnLyRI+2DU+mesvnMMX6L1XDqYNA0lXNDHd/yiA=="
+    },
+    {
+      "path": "node_modules/@electron/asar",
+      "version": "3.4.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron/asar/-/asar-3.4.1.tgz",
+      "integrity": "sha512-i4/rNPRS84t0vSRa2HorerGRXWyF4vThfHesw0dmcWHp+cspK743UanA0suA5Q5y8kzY2y6YKrvbIUn69BCAiA=="
+    },
+    {
+      "path": "node_modules/@electron/asar/node_modules/balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
+    },
+    {
+      "path": "node_modules/@electron/asar/node_modules/brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.21.tgz",
+      "integrity": "sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw=="
+    },
+    {
+      "path": "node_modules/@electron/asar/node_modules/minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz",
+      "integrity": "sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w=="
+    },
+    {
+      "path": "node_modules/@electron/fuses",
+      "version": "1.8.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron/fuses/-/fuses-1.8.0.tgz",
+      "integrity": "sha512-zx0EIq78WlY/lBb1uXlziZmDZI4ubcCXIMJ4uGjXzZW0nS19TjSPeXPAjzzTmKQlJUZm0SbmZhPKP7tuQ1SsEw=="
+    },
+    {
+      "path": "node_modules/@electron/fuses/node_modules/fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-9.1.0.tgz",
+      "integrity": "sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ=="
+    },
+    {
+      "path": "node_modules/@electron/get",
+      "version": "5.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron/get/-/get-5.0.0.tgz",
+      "integrity": "sha512-pjoBpru1KdEtcExBnuHAP1cAc/5faoedw0hzJkL3o4/IJp7HNF1+fbrdxT3gMYRX2oJfvnA/WXeCTVQpYYxyJA=="
+    },
+    {
+      "path": "node_modules/@electron/notarize",
+      "version": "2.5.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron/notarize/-/notarize-2.5.0.tgz",
+      "integrity": "sha512-jNT8nwH1f9X5GEITXaQ8IF/KdskvIkOFfB2CvwumsveVidzpSc+mvhhTMdAGSYF3O+Nq49lJ7y+ssODRXu06+A=="
+    },
+    {
+      "path": "node_modules/@electron/notarize/node_modules/fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-9.1.0.tgz",
+      "integrity": "sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ=="
+    },
+    {
+      "path": "node_modules/@electron/osx-sign",
+      "version": "1.3.3",
+      "license": "BSD-2-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron/osx-sign/-/osx-sign-1.3.3.tgz",
+      "integrity": "sha512-KZ8mhXvWv2rIEgMbWZ4y33bDHyUKMXnx4M0sTyPNK/vcB81ImdeY9Ggdqy0SWbMDgmbqyQ+phgejh6V3R2QuSg=="
+    },
+    {
+      "path": "node_modules/@electron/osx-sign/node_modules/isbinaryfile",
+      "version": "4.0.10",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/isbinaryfile/-/isbinaryfile-4.0.10.tgz",
+      "integrity": "sha512-iHrqe5shvBUcFbmZq9zOQHBoeOhZJu6RQGrDpBgenUm/Am+F3JM2MgQj+rK3Z601fzrL5gLZWtAPH2OBaSVcyw=="
+    },
+    {
+      "path": "node_modules/@electron/rebuild",
+      "version": "4.2.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron/rebuild/-/rebuild-4.2.1.tgz",
+      "integrity": "sha512-IS4pG3BysRrCLJ8xTAfvg+IQDbiUoAzdJy2SfjcYKnLDy5DpCdjnPdhS5Zf5UMfrkB24xu0KC+TqcOxg+eG+6w=="
+    },
+    {
+      "path": "node_modules/@electron/universal",
+      "version": "2.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron/universal/-/universal-2.0.3.tgz",
+      "integrity": "sha512-Wn9sPYIVFRFl5HmwMJkARCCf7rqK/EurkfQ/rJZ14mHP3iYTjZSIOSVonEAnhWeAXwtw7zOekGRlc6yTtZ0t+g=="
+    },
+    {
+      "path": "node_modules/@electron/universal/node_modules/balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
+    },
+    {
+      "path": "node_modules/@electron/universal/node_modules/brace-expansion",
+      "version": "2.1.7",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.1.7.tgz",
+      "integrity": "sha512-uZbew1NqdmPDTMJ8ah1y+b+9QEJrfkXFk3RcTQw3X0jW/xRUvFKsg1CfQdSYGdTbXZWExtU3J3ccxtnfw1Fi0g=="
+    },
+    {
+      "path": "node_modules/@electron/universal/node_modules/fs-extra",
+      "version": "11.4.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-11.4.1.tgz",
+      "integrity": "sha512-KYAb4c9BJQI6QqGKthV68OHe0badztdXJWKo0WtBA9IuCFPTKvE5ZdUBglP833aMjhaSPNO4A5j/EkzZtGlKjA=="
+    },
+    {
+      "path": "node_modules/@electron/universal/node_modules/minimatch",
+      "version": "9.0.9",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-9.0.9.tgz",
+      "integrity": "sha512-OBwBN9AL4dqmETlpS2zasx+vTeWclWzkblfZk7KTA5j3jeOONz/tRCnZomUyvNg83wL5Zv9Ss6HMJXAgL8R2Yg=="
+    },
+    {
+      "path": "node_modules/@electron/windows-sign",
+      "version": "1.2.2",
+      "license": "BSD-2-Clause",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/@electron/windows-sign/-/windows-sign-1.2.2.tgz",
+      "integrity": "sha512-dfZeox66AvdPtb2lD8OsIIQh12Tp0GNCRUDfBHIKGpbmopZto2/A8nSpYYLoedPIHpqkeblZ/k8OV0Gy7PYuyQ=="
+    },
+    {
+      "path": "node_modules/@electron/windows-sign/node_modules/fs-extra",
+      "version": "11.4.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-11.4.1.tgz",
+      "integrity": "sha512-KYAb4c9BJQI6QqGKthV68OHe0badztdXJWKo0WtBA9IuCFPTKvE5ZdUBglP833aMjhaSPNO4A5j/EkzZtGlKjA=="
+    },
+    {
+      "path": "node_modules/@isaacs/fs-minipass",
+      "version": "4.0.1",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@isaacs/fs-minipass/-/fs-minipass-4.0.1.tgz",
+      "integrity": "sha512-wgm9Ehl2jpeqP3zw/7mo3kRHFp5MEDhqAdwy1fTGkHAwnkGOVsgpvQhL8B5n1qlb01jV3n/bI0ZfZp5lWA1k4w=="
+    },
+    {
+      "path": "node_modules/@malept/cross-spawn-promise",
+      "version": "2.0.0",
+      "license": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@malept/cross-spawn-promise/-/cross-spawn-promise-2.0.0.tgz",
+      "integrity": "sha512-1DpKU0Z5ThltBwjNySMC14g0CkbyhCaz9FkhxqNsZI6uAPJXFS8cMXlBKo26FJ8ZuW6S9GCMcR9IO5k2X5/9Fg=="
+    },
+    {
+      "path": "node_modules/@malept/flatpak-bundler",
+      "version": "0.4.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@malept/flatpak-bundler/-/flatpak-bundler-0.4.0.tgz",
+      "integrity": "sha512-9QOtNffcOF/c1seMCDnjckb3R9WHcG34tky+FHpNKKCW0wc/scYLwMtO+ptyGUfMW0/b/n4qRiALlaFHc9Oj7Q=="
+    },
+    {
+      "path": "node_modules/@malept/flatpak-bundler/node_modules/fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-9.1.0.tgz",
+      "integrity": "sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ=="
+    },
+    {
+      "path": "node_modules/@noble/hashes",
+      "version": "1.8.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@noble/hashes/-/hashes-1.8.0.tgz",
+      "integrity": "sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A=="
+    },
+    {
+      "path": "node_modules/@peculiar/asn1-schema",
+      "version": "2.11.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@peculiar/asn1-schema/-/asn1-schema-2.11.1.tgz",
+      "integrity": "sha512-jaU9OaCcbZUdyXx9hMETZB9xoNmxTGjOGFqd3cOwKFkpKnyKd9WxF3uqj4PvX4cyOMP9bSdHg5YyML2qtx/d/g=="
+    },
+    {
+      "path": "node_modules/@peculiar/json-schema",
+      "version": "1.1.12",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@peculiar/json-schema/-/json-schema-1.1.12.tgz",
+      "integrity": "sha512-coUfuoMeIB7B8/NMekxaDzLhaYmp0HZNPEjYRm9goRou8UZIC3z21s0sL9AWoCw4EG876QyO3kYrc61WNF9B/w=="
+    },
+    {
+      "path": "node_modules/@peculiar/utils",
+      "version": "2.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@peculiar/utils/-/utils-2.0.3.tgz",
+      "integrity": "sha512-+oL3HPFRIZ1St2K50lWCXiioIgSoxzz7R1J3uF6neO2yl1sgmpgY6XXJH4BdpoDkMWznQTeYF6oWNDZLCdQ4eQ=="
+    },
+    {
+      "path": "node_modules/@peculiar/webcrypto",
+      "version": "1.7.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@peculiar/webcrypto/-/webcrypto-1.7.2.tgz",
+      "integrity": "sha512-ktTSACRJ5WdpfjHjFT2EWJQQPacGv1cPCDfEbdmpAHOxdFiYqPe4lfnXGA3D8Dg9/0kHPYSvyRlgujIOVlTdvQ=="
+    },
+    {
+      "path": "node_modules/@sindresorhus/is",
+      "version": "4.6.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@sindresorhus/is/-/is-4.6.0.tgz",
+      "integrity": "sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw=="
+    },
+    {
+      "path": "node_modules/@szmarczak/http-timer",
+      "version": "4.0.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@szmarczak/http-timer/-/http-timer-4.0.6.tgz",
+      "integrity": "sha512-4BAffykYOgO+5nzBWYwE3W90sBgLJoUPRWWcL8wlyiM8IB8ipJz3UMJ9KXQd1RKQXpKp8Tutn80HZtWsu2u76w=="
+    },
+    {
+      "path": "node_modules/@types/cacheable-request",
+      "version": "6.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@types/cacheable-request/-/cacheable-request-6.0.3.tgz",
+      "integrity": "sha512-IQ3EbTzGxIigb1I3qPZc1rWJnH0BmSKv5QYTalEwweFvyBDLSAe24zP0le/hyi7ecGfZVlIVAg4BZqb8WBwKqw=="
+    },
+    {
+      "path": "node_modules/@types/debug",
+      "version": "4.1.13",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@types/debug/-/debug-4.1.13.tgz",
+      "integrity": "sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw=="
+    },
+    {
+      "path": "node_modules/@types/fs-extra",
+      "version": "9.0.13",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@types/fs-extra/-/fs-extra-9.0.13.tgz",
+      "integrity": "sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA=="
+    },
+    {
+      "path": "node_modules/@types/http-cache-semantics",
+      "version": "4.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@types/http-cache-semantics/-/http-cache-semantics-4.2.0.tgz",
+      "integrity": "sha512-L3LgimLHXtGkWikKnsPg0/VFx9OGZaC+eN1u4r+OB1XRqH3meBIAVC2zr1WdMH+RHmnRkqliQAOHNJ/E0j/e0Q=="
+    },
+    {
+      "path": "node_modules/@types/keyv",
+      "version": "3.1.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@types/keyv/-/keyv-3.1.4.tgz",
+      "integrity": "sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg=="
+    },
+    {
+      "path": "node_modules/@types/ms",
+      "version": "2.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@types/ms/-/ms-2.1.0.tgz",
+      "integrity": "sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA=="
+    },
+    {
+      "path": "node_modules/@types/node",
+      "version": "24.12.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-24.12.4.tgz",
+      "integrity": "sha512-GUUEShf+PBCGW2KaXwcIt3Yk+e3pkKwWKb9GSyM9WQVE+ep2jzmHdGsHzu4wgcZy5fN9FBdVzjpBQsYlpfpgLA=="
+    },
+    {
+      "path": "node_modules/@types/responselike",
+      "version": "1.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@types/responselike/-/responselike-1.0.3.tgz",
+      "integrity": "sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw=="
+    },
+    {
+      "path": "node_modules/@xmldom/xmldom",
+      "version": "0.8.15",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.8.15.tgz",
+      "integrity": "sha512-/5NV/vDALVFDXgLmfsy9TRCBlKwO2LNBFzpzvb9iIj+jR+eSc6DLYYvVOdivT/jm7MtU6TebYuRmzEOI7w40UA=="
+    },
+    {
+      "path": "node_modules/abbrev",
+      "version": "4.0.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-4.0.0.tgz",
+      "integrity": "sha512-a1wflyaL0tHtJSmLSOVybYhy22vRih4eduhhrkcjgrWGnRfrZtovJ2FRjxuTtkkj47O/baf0R86QU5OuYpz8fA=="
+    },
+    {
+      "path": "node_modules/agent-base",
+      "version": "7.1.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/agent-base/-/agent-base-7.1.4.tgz",
+      "integrity": "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ=="
+    },
+    {
+      "path": "node_modules/ajv",
+      "version": "8.20.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.20.0.tgz",
+      "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA=="
+    },
+    {
+      "path": "node_modules/ansi-regex",
+      "version": "5.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
+      "integrity": "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ=="
+    },
+    {
+      "path": "node_modules/ansi-styles",
+      "version": "4.3.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+      "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg=="
+    },
+    {
+      "path": "node_modules/app-builder-lib",
+      "version": "26.18.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/app-builder-lib/-/app-builder-lib-26.18.1.tgz",
+      "integrity": "sha512-HxHcSQoy8RmiFCSxgKyt5Lrwx8HCURh5834TRaHEjkDkVS2wVt3RnkQDkG0zaQZfhz3d8WQtF8zv914xSm0ZpA=="
+    },
+    {
+      "path": "node_modules/app-builder-lib/node_modules/@electron/get",
+      "version": "3.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/@electron/get/-/get-3.1.0.tgz",
+      "integrity": "sha512-F+nKc0xW+kVbBRhFzaMgPy3KwmuNTYX1fx6+FxxoSnNgwYX6LD7AKBTWkU0MQ6IBoe7dz069CNkR673sPAgkCQ=="
+    },
+    {
+      "path": "node_modules/app-builder-lib/node_modules/@electron/get/node_modules/fs-extra",
+      "version": "8.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-8.1.0.tgz",
+      "integrity": "sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g=="
+    },
+    {
+      "path": "node_modules/app-builder-lib/node_modules/@electron/get/node_modules/semver",
+      "version": "6.3.2",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/semver/-/semver-6.3.2.tgz",
+      "integrity": "sha512-GYrCADwpu6yV5OAvchkQ27Z5wwMxWAEMg5NNWjyHh/5DboFFqbdbvYNIvZouQpxXyeMPoTOh0vdPYKlf0ZswdQ=="
+    },
+    {
+      "path": "node_modules/app-builder-lib/node_modules/ci-info",
+      "version": "4.3.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/ci-info/-/ci-info-4.3.1.tgz",
+      "integrity": "sha512-Wdy2Igu8OcBpI2pZePZ5oWjPC38tmDVx5WKUXKwlLYkA0ozo85sLsLvkBbBn/sZaSCMFOGZJ14fvW9t5/d7kdA=="
+    },
+    {
+      "path": "node_modules/app-builder-lib/node_modules/env-paths",
+      "version": "2.2.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz",
+      "integrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A=="
+    },
+    {
+      "path": "node_modules/app-builder-lib/node_modules/jsonfile",
+      "version": "4.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz",
+      "integrity": "sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg=="
+    },
+    {
+      "path": "node_modules/app-builder-lib/node_modules/semver",
+      "version": "7.7.4",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.7.4.tgz",
+      "integrity": "sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA=="
+    },
+    {
+      "path": "node_modules/app-builder-lib/node_modules/universalify",
+      "version": "0.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/universalify/-/universalify-0.1.2.tgz",
+      "integrity": "sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg=="
+    },
+    {
+      "path": "node_modules/argparse",
+      "version": "2.0.1",
+      "license": "Python-2.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz",
+      "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="
+    },
+    {
+      "path": "node_modules/asn1js",
+      "version": "3.1.0",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/asn1js/-/asn1js-3.1.0.tgz",
+      "integrity": "sha512-HWYi1THkOqguCiO+vwj09ZkQFD2kKEsejYHAYCtX0D80WVdoDnvRc9IukXX/jeb0T9NRWJnRtqwdbHltnFjwXA=="
+    },
+    {
+      "path": "node_modules/async",
+      "version": "3.2.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/async/-/async-3.2.6.tgz",
+      "integrity": "sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA=="
+    },
+    {
+      "path": "node_modules/async-exit-hook",
+      "version": "2.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/async-exit-hook/-/async-exit-hook-2.0.1.tgz",
+      "integrity": "sha512-NW2cX8m1Q7KPA7a5M2ULQeZ2wR5qI5PAbw5L0UOMxdioVk9PMZ0h1TmyZEkPYrCvYjDlFICusOu1dlEKAAeXBw=="
+    },
+    {
+      "path": "node_modules/asynckit",
+      "version": "0.4.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz",
+      "integrity": "sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q=="
+    },
+    {
+      "path": "node_modules/at-least-node",
+      "version": "1.0.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/at-least-node/-/at-least-node-1.0.0.tgz",
+      "integrity": "sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg=="
+    },
+    {
+      "path": "node_modules/aws4",
+      "version": "1.13.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.13.2.tgz",
+      "integrity": "sha512-lHe62zvbTB5eEABUVi/AwVh0ZKY9rMMDhmm+eeyuuUQbQ3+J+fONVQOZyj+DdrvD4BY33uYniyRJ4UJIaSKAfw=="
+    },
+    {
+      "path": "node_modules/balanced-match",
+      "version": "4.0.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-4.0.4.tgz",
+      "integrity": "sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA=="
+    },
+    {
+      "path": "node_modules/base64-js",
+      "version": "1.5.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz",
+      "integrity": "sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA=="
+    },
+    {
+      "path": "node_modules/bluebird",
+      "version": "3.7.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/bluebird/-/bluebird-3.7.2.tgz",
+      "integrity": "sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg=="
+    },
+    {
+      "path": "node_modules/boolean",
+      "version": "3.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/boolean/-/boolean-3.2.0.tgz",
+      "integrity": "sha512-d0II/GO9uf9lfUHH2BQsjxzRJZBdsjgsBiW4BvhWk/3qoKwQFjIDVN19PfX8F2D/r9PCMTtLWjYVCFrpeYUzsw=="
+    },
+    {
+      "path": "node_modules/brace-expansion",
+      "version": "5.0.12",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-5.0.12.tgz",
+      "integrity": "sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ=="
+    },
+    {
+      "path": "node_modules/buffer-from",
+      "version": "1.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz",
+      "integrity": "sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ=="
+    },
+    {
+      "path": "node_modules/builder-util",
+      "version": "26.18.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/builder-util/-/builder-util-26.18.1.tgz",
+      "integrity": "sha512-t+1Xnzj8jQ2FnJWtQOKVCuzv3QGjvNhE6er757omlKFysQexdrCVI9eM/uu4+39IiMCtM2l/30O1Yrqqbt4HQw=="
+    },
+    {
+      "path": "node_modules/builder-util-runtime",
+      "version": "9.7.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/builder-util-runtime/-/builder-util-runtime-9.7.1.tgz",
+      "integrity": "sha512-LLAn0Ddqz0YIyysCysBkg18qEdAzMASiADSZl5G8gpxsqu1RJrdFAqoAW9suwg0GHKMqrycISFSD/9RqSm5d6g=="
+    },
+    {
+      "path": "node_modules/bytestreamjs",
+      "version": "2.0.1",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/bytestreamjs/-/bytestreamjs-2.0.1.tgz",
+      "integrity": "sha512-U1Z/ob71V/bXfVABvNr/Kumf5VyeQRBEm6Txb0PQ6S7V5GpBM3w4Cbqz/xPDicR5tN0uvDifng8C+5qECeGwyQ=="
+    },
+    {
+      "path": "node_modules/cacheable-lookup",
+      "version": "5.0.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/cacheable-lookup/-/cacheable-lookup-5.0.4.tgz",
+      "integrity": "sha512-2/kNscPhpcxrOigMZzbiWF7dz8ilhb/nIHU3EyZiXWXpeq/au8qJ8VhdftMkty3n7Gj6HIGalQG8oiBNB3AJgA=="
+    },
+    {
+      "path": "node_modules/cacheable-request",
+      "version": "7.0.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/cacheable-request/-/cacheable-request-7.0.4.tgz",
+      "integrity": "sha512-v+p6ongsrp0yTGbJXjgxPow2+DL93DASP4kXCDKb8/bwRtt9OEF3whggkkDkGNzgcWy2XaF4a8nZglC7uElscg=="
+    },
+    {
+      "path": "node_modules/call-bind-apply-helpers",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/call-bind-apply-helpers/-/call-bind-apply-helpers-1.0.2.tgz",
+      "integrity": "sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ=="
+    },
+    {
+      "path": "node_modules/chalk",
+      "version": "4.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz",
+      "integrity": "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="
+    },
+    {
+      "path": "node_modules/chownr",
+      "version": "3.0.0",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/chownr/-/chownr-3.0.0.tgz",
+      "integrity": "sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g=="
+    },
+    {
+      "path": "node_modules/chromium-pickle-js",
+      "version": "0.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/chromium-pickle-js/-/chromium-pickle-js-0.2.0.tgz",
+      "integrity": "sha512-1R5Fho+jBq0DDydt+/vHWj5KJNJCKdARKOCwZUen84I5BreWoLqRLANH1U87eJy1tiASPtMnGqJJq0ZsLoRPOw=="
+    },
+    {
+      "path": "node_modules/ci-info",
+      "version": "4.4.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/ci-info/-/ci-info-4.4.0.tgz",
+      "integrity": "sha512-77PSwercCZU2Fc4sX94eF8k8Pxte6JAwL4/ICZLFjJLqegs7kCuAsqqj/70NQF6TvDpgFjkubQB2FW2ZZddvQg=="
+    },
+    {
+      "path": "node_modules/cliui",
+      "version": "8.0.1",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/cliui/-/cliui-8.0.1.tgz",
+      "integrity": "sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ=="
+    },
+    {
+      "path": "node_modules/clone-response",
+      "version": "1.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/clone-response/-/clone-response-1.0.3.tgz",
+      "integrity": "sha512-ROoL94jJH2dUVML2Y/5PEDNaSHgeOdSDicUyS7izcF63G6sTc/FTjLub4b8Il9S8S0beOfYt0TaA5qvFK+w0wA=="
+    },
+    {
+      "path": "node_modules/color-convert",
+      "version": "2.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+      "integrity": "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ=="
+    },
+    {
+      "path": "node_modules/color-name",
+      "version": "1.1.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+      "integrity": "sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA=="
+    },
+    {
+      "path": "node_modules/combined-stream",
+      "version": "1.0.8",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
+      "integrity": "sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg=="
+    },
+    {
+      "path": "node_modules/commander",
+      "version": "5.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/commander/-/commander-5.1.0.tgz",
+      "integrity": "sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg=="
+    },
+    {
+      "path": "node_modules/compare-version",
+      "version": "0.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/compare-version/-/compare-version-0.1.2.tgz",
+      "integrity": "sha512-pJDh5/4wrEnXX/VWRZvruAGHkzKdr46z11OlTPN+VrATlWWhSKewNCJ1futCO5C7eJB3nPMFZA1LeYtcFboZ2A=="
+    },
+    {
+      "path": "node_modules/concat-map",
+      "version": "0.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+      "integrity": "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg=="
+    },
+    {
+      "path": "node_modules/core-util-is",
+      "version": "1.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz",
+      "integrity": "sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ=="
+    },
+    {
+      "path": "node_modules/cross-dirname",
+      "version": "0.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/cross-dirname/-/cross-dirname-0.1.0.tgz",
+      "integrity": "sha512-+R08/oI0nl3vfPcqftZRpytksBXDzOUveBq/NBVx0sUp1axwzPQrKinNx5yd5sxPu8j1wIy8AfnVQ+5eFdha6Q=="
+    },
+    {
+      "path": "node_modules/cross-spawn",
+      "version": "7.0.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.6.tgz",
+      "integrity": "sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA=="
+    },
+    {
+      "path": "node_modules/cross-spawn/node_modules/isexe",
+      "version": "2.0.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
+      "integrity": "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw=="
+    },
+    {
+      "path": "node_modules/cross-spawn/node_modules/which",
+      "version": "2.0.2",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
+      "integrity": "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA=="
+    },
+    {
+      "path": "node_modules/debug",
+      "version": "4.4.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.3.tgz",
+      "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA=="
+    },
+    {
+      "path": "node_modules/decompress-response",
+      "version": "6.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz",
+      "integrity": "sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ=="
+    },
+    {
+      "path": "node_modules/decompress-response/node_modules/mimic-response",
+      "version": "3.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz",
+      "integrity": "sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ=="
+    },
+    {
+      "path": "node_modules/defer-to-connect",
+      "version": "2.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/defer-to-connect/-/defer-to-connect-2.0.1.tgz",
+      "integrity": "sha512-4tvttepXG1VaYGrRibk5EwJd1t4udunSOVMdLSAL6mId1ix438oPwPZMALY41FCijukO1L0twNcGsdzS7dHgDg=="
+    },
+    {
+      "path": "node_modules/define-data-property",
+      "version": "1.1.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/define-data-property/-/define-data-property-1.1.4.tgz",
+      "integrity": "sha512-rBMvIzlpA8v6E+SJZoo++HAYqsLrkg7MSfIinMPFhmkorw7X+dOXVJQs+QT69zGkzMyfDnIMN2Wid1+NbL3T+A=="
+    },
+    {
+      "path": "node_modules/define-properties",
+      "version": "1.2.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/define-properties/-/define-properties-1.2.1.tgz",
+      "integrity": "sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg=="
+    },
+    {
+      "path": "node_modules/delayed-stream",
+      "version": "1.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz",
+      "integrity": "sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ=="
+    },
+    {
+      "path": "node_modules/detect-node",
+      "version": "2.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/detect-node/-/detect-node-2.1.0.tgz",
+      "integrity": "sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g=="
+    },
+    {
+      "path": "node_modules/dir-compare",
+      "version": "4.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/dir-compare/-/dir-compare-4.2.0.tgz",
+      "integrity": "sha512-2xMCmOoMrdQIPHdsTawECdNPwlVFB9zGcz3kuhmBO6U3oU+UQjsue0i8ayLKpgBcm+hcXPMVSGUN9d+pvJ6+VQ=="
+    },
+    {
+      "path": "node_modules/dir-compare/node_modules/balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
+    },
+    {
+      "path": "node_modules/dir-compare/node_modules/brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.21.tgz",
+      "integrity": "sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw=="
+    },
+    {
+      "path": "node_modules/dir-compare/node_modules/minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz",
+      "integrity": "sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w=="
+    },
+    {
+      "path": "node_modules/dmg-builder",
+      "version": "26.18.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/dmg-builder/-/dmg-builder-26.18.1.tgz",
+      "integrity": "sha512-ihBAAhXUQiO+fIQGirYSLuKfgGa81zIrIzgSSkbm1fPcE0cXqnxNLtUQgxYHpezxWOaeXxmh9AuPemONZuMKbg=="
+    },
+    {
+      "path": "node_modules/dotenv",
+      "version": "16.6.1",
+      "license": "BSD-2-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz",
+      "integrity": "sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow=="
+    },
+    {
+      "path": "node_modules/dotenv-expand",
+      "version": "11.0.7",
+      "license": "BSD-2-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/dotenv-expand/-/dotenv-expand-11.0.7.tgz",
+      "integrity": "sha512-zIHwmZPRshsCdpMDyVsqGmgyP0yT8GAgXUnkdAoJisxvf33k7yO6OuoKmcTGuXPWSsm8Oh88nZicRLA9Y0rUeA=="
+    },
+    {
+      "path": "node_modules/dunder-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/dunder-proto/-/dunder-proto-1.0.1.tgz",
+      "integrity": "sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A=="
+    },
+    {
+      "path": "node_modules/duplexer2",
+      "version": "0.1.4",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/duplexer2/-/duplexer2-0.1.4.tgz",
+      "integrity": "sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA=="
+    },
+    {
+      "path": "node_modules/ejs",
+      "version": "3.1.10",
+      "license": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/ejs/-/ejs-3.1.10.tgz",
+      "integrity": "sha512-UeJmFfOrAQS8OJWPZ4qtgHyWExa088/MtK5UEyoJGFH67cDEXkZSviOiKRCZ4Xij0zxI3JECgYs3oKx+AizQBA=="
+    },
+    {
+      "path": "node_modules/electron",
+      "version": "42.11.18",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/electron/-/electron-42.11.18.tgz",
+      "integrity": "sha512-hbzodG06x/l7uq+oeyob5ugv6qZBmJRWC7Uto5QEE99xSHUARz6d+++Rz+79T/ssTYTQkONW4ciTTcJuAbXKIQ=="
+    },
+    {
+      "path": "node_modules/electron-builder",
+      "version": "26.18.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/electron-builder/-/electron-builder-26.18.1.tgz",
+      "integrity": "sha512-uA3To9X/D4ozwP8k/o/MCfKi/xETyPV0FkhTaqdgIT679uexsQ8QFE+PhF8x6PY8W1jIJrw9/yadTuOWTpmAew=="
+    },
+    {
+      "path": "node_modules/electron-builder-squirrel-windows",
+      "version": "26.18.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/electron-builder-squirrel-windows/-/electron-builder-squirrel-windows-26.18.1.tgz",
+      "integrity": "sha512-EZmCBoO1nJbtzTPTPcbQEqo1IGiu2iGID/qeFTQZsJ1ETPPdXHZSxvu9ie0+XhjjQWbK4JxzYyUtRB/qw+lSVQ=="
+    },
+    {
+      "path": "node_modules/electron-publish",
+      "version": "26.18.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/electron-publish/-/electron-publish-26.18.1.tgz",
+      "integrity": "sha512-VlAkMx9kgPP/TGn5q5sgCSYwKtMUXBGhXT2XwFi3p3lMJZDgCIWErikWBaI6tJg8PbMeXZ6vK1eR2+DzcZsb5w=="
+    },
+    {
+      "path": "node_modules/electron-winstaller",
+      "version": "5.4.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/electron-winstaller/-/electron-winstaller-5.4.0.tgz",
+      "integrity": "sha512-bO3y10YikuUwUuDUQRM4KfwNkKhnpVO7IPdbsrejwN9/AABJzzTQ4GeHwyzNSrVO+tEH3/Np255a3sVZpZDjvg=="
+    },
+    {
+      "path": "node_modules/electron-winstaller/node_modules/fs-extra",
+      "version": "7.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-7.0.1.tgz",
+      "integrity": "sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw=="
+    },
+    {
+      "path": "node_modules/electron-winstaller/node_modules/jsonfile",
+      "version": "4.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-4.0.0.tgz",
+      "integrity": "sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg=="
+    },
+    {
+      "path": "node_modules/electron-winstaller/node_modules/universalify",
+      "version": "0.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/universalify/-/universalify-0.1.2.tgz",
+      "integrity": "sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg=="
+    },
+    {
+      "path": "node_modules/emoji-regex",
+      "version": "8.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A=="
+    },
+    {
+      "path": "node_modules/end-of-stream",
+      "version": "1.4.5",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz",
+      "integrity": "sha512-ooEGc6HP26xXq/N+GCGOT0JKCLDGrq2bQUZrQ7gyrJiZANJ/8YDTxTpQBXGMn+WbIQXNVpyWymm7KYVICQnyOg=="
+    },
+    {
+      "path": "node_modules/env-paths",
+      "version": "3.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/env-paths/-/env-paths-3.0.0.tgz",
+      "integrity": "sha512-dtJUTepzMW3Lm/NPxRf3wP4642UWhjL2sQxc+ym2YMj1m/H2zDNQOlezafzkHwn6sMstjHTwG6iQQsctDW/b1A=="
+    },
+    {
+      "path": "node_modules/err-code",
+      "version": "2.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz",
+      "integrity": "sha512-2bmlRpNKBxT/CRmPOlyISQpNj+qSeYvcym/uT0Jx2bMOlKLtSy1ZmLuVxSEKKyor/N5yhvp/ZiG1oE3DEYMSFA=="
+    },
+    {
+      "path": "node_modules/es-define-property",
+      "version": "1.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/es-define-property/-/es-define-property-1.0.1.tgz",
+      "integrity": "sha512-e3nRfgfUZ4rNGL232gUgX06QNyyez04KdjFrF+LTRoOXmrOgFKDg4BCdsjW8EnT69eqdYGmRpJwiPVYNrCaW3g=="
+    },
+    {
+      "path": "node_modules/es-errors",
+      "version": "1.3.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/es-errors/-/es-errors-1.3.0.tgz",
+      "integrity": "sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw=="
+    },
+    {
+      "path": "node_modules/es-object-atoms",
+      "version": "1.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/es-object-atoms/-/es-object-atoms-1.1.2.tgz",
+      "integrity": "sha512-HWcBoN6NileqtSydK2FqHbS/LoDd2pqrnQHLyJzBj4kOp/ky2MWMN694xOfkK8/SnUsW2DH7EfyVlydKCsm1Zw=="
+    },
+    {
+      "path": "node_modules/es-set-tostringtag",
+      "version": "2.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/es-set-tostringtag/-/es-set-tostringtag-2.1.0.tgz",
+      "integrity": "sha512-j6vWzfrGVfyXxge+O0x5sh6cvxAog0a/4Rdd2K36zCMV5eJ+/+tOAngRO8cODMNWbVRdVlmGZQL2YS3yR8bIUA=="
+    },
+    {
+      "path": "node_modules/es6-error",
+      "version": "4.1.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/es6-error/-/es6-error-4.1.1.tgz",
+      "integrity": "sha512-Um/+FxMr9CISWh0bi5Zv0iOD+4cFh5qLeks1qhAopKVAJw3drgKbKySikp7wGhDL0HPeaja0P5ULZrxLkniUVg=="
+    },
+    {
+      "path": "node_modules/escalade",
+      "version": "3.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz",
+      "integrity": "sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA=="
+    },
+    {
+      "path": "node_modules/escape-string-regexp",
+      "version": "4.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz",
+      "integrity": "sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA=="
+    },
+    {
+      "path": "node_modules/exponential-backoff",
+      "version": "3.1.3",
+      "license": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.3.tgz",
+      "integrity": "sha512-ZgEeZXj30q+I0EN+CbSSpIyPaJ5HVQD18Z1m+u1FXbAeT94mr1zw50q4q6jiiC447Nl/YTcIYSAftiGqetwXCA=="
+    },
+    {
+      "path": "node_modules/fast-deep-equal",
+      "version": "3.1.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+      "integrity": "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q=="
+    },
+    {
+      "path": "node_modules/fast-uri",
+      "version": "3.1.9",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.9.tgz",
+      "integrity": "sha512-hS/0Wt3Ya043oKXs0sIxrMpKQITXhMLIrVAKKXi4gozGC9v7YRWVnXIZzjNPTO02M9BdxLCWqK1yRXgNziVyJQ=="
+    },
+    {
+      "path": "node_modules/fdir",
+      "version": "6.5.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz",
+      "integrity": "sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg=="
+    },
+    {
+      "path": "node_modules/filelist",
+      "version": "1.0.6",
+      "license": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/filelist/-/filelist-1.0.6.tgz",
+      "integrity": "sha512-5giy2PkLYY1cP39p17Ech+2xlpTRL9HLspOfEgm0L6CwBXBTgsK5ou0JtzYuepxkaQ/tvhCFIJ5uXo0OrM2DxA=="
+    },
+    {
+      "path": "node_modules/filelist/node_modules/balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
+    },
+    {
+      "path": "node_modules/filelist/node_modules/brace-expansion",
+      "version": "2.1.7",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.1.7.tgz",
+      "integrity": "sha512-uZbew1NqdmPDTMJ8ah1y+b+9QEJrfkXFk3RcTQw3X0jW/xRUvFKsg1CfQdSYGdTbXZWExtU3J3ccxtnfw1Fi0g=="
+    },
+    {
+      "path": "node_modules/filelist/node_modules/minimatch",
+      "version": "5.1.9",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-5.1.9.tgz",
+      "integrity": "sha512-7o1wEA2RyMP7Iu7GNba9vc0RWWGACJOCZBJX2GJWip0ikV+wcOsgVuY9uE8CPiyQhkGFSlhuSkZPavN7u1c2Fw=="
+    },
+    {
+      "path": "node_modules/form-data",
+      "version": "4.0.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/form-data/-/form-data-4.0.6.tgz",
+      "integrity": "sha512-vKatAh4SlVfgbv+YtmhiRjhEMJsYpsG1Y2rMQtR+SVSbytsSD1YGzDIcrAJmdFec88u/+VoGmxnl+80gL1tRCQ=="
+    },
+    {
+      "path": "node_modules/fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-10.1.0.tgz",
+      "integrity": "sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ=="
+    },
+    {
+      "path": "node_modules/fs.realpath",
+      "version": "1.0.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+      "integrity": "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw=="
+    },
+    {
+      "path": "node_modules/function-bind",
+      "version": "1.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz",
+      "integrity": "sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA=="
+    },
+    {
+      "path": "node_modules/get-caller-file",
+      "version": "2.0.5",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz",
+      "integrity": "sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg=="
+    },
+    {
+      "path": "node_modules/get-intrinsic",
+      "version": "1.3.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.3.0.tgz",
+      "integrity": "sha512-9fSjSaos/fRIVIp+xSJlE6lfwhES7LNtKaCBIamHsjr2na1BiABJPo0mOjjz8GJDURarmCPGqaiVg5mfjb98CQ=="
+    },
+    {
+      "path": "node_modules/get-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/get-proto/-/get-proto-1.0.1.tgz",
+      "integrity": "sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g=="
+    },
+    {
+      "path": "node_modules/get-stream",
+      "version": "5.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz",
+      "integrity": "sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA=="
+    },
+    {
+      "path": "node_modules/glob",
+      "version": "7.2.3",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/glob/-/glob-7.2.3.tgz",
+      "integrity": "sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q=="
+    },
+    {
+      "path": "node_modules/glob/node_modules/balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
+      "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="
+    },
+    {
+      "path": "node_modules/glob/node_modules/brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.21.tgz",
+      "integrity": "sha512-9zeA+KLZNNzglF2TPKRQEDyx6Yby7daAkuy8MiPzpXPsYDWi/DRM8jmwUDxokQjYqBpv5DgPiwD4h4ZZSy1Ujw=="
+    },
+    {
+      "path": "node_modules/glob/node_modules/minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz",
+      "integrity": "sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w=="
+    },
+    {
+      "path": "node_modules/global-agent",
+      "version": "3.0.0",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/global-agent/-/global-agent-3.0.0.tgz",
+      "integrity": "sha512-PT6XReJ+D07JvGoxQMkT6qji/jVNfX/h364XHZOWeRzy64sSFr+xJ5OX7LI3b4MPQzdL4H8Y8M0xzPpsVMwA8Q=="
+    },
+    {
+      "path": "node_modules/globalthis",
+      "version": "1.0.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/globalthis/-/globalthis-1.0.4.tgz",
+      "integrity": "sha512-DpLKbNU4WylpxJykQujfCcwYWiV/Jhm50Goo0wrVILAv5jOr9d+H+UR3PhSCD2rCCEIg0uc+G+muBTwD54JhDQ=="
+    },
+    {
+      "path": "node_modules/gopd",
+      "version": "1.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz",
+      "integrity": "sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg=="
+    },
+    {
+      "path": "node_modules/got",
+      "version": "11.8.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/got/-/got-11.8.6.tgz",
+      "integrity": "sha512-6tfZ91bOr7bOXnK7PRDCGBLa1H4U080YHNaAQ2KsMGlLEzRbk44nsZF2E1IeRc3vtJHPVbKCYgdFbaGO2ljd8g=="
+    },
+    {
+      "path": "node_modules/graceful-fs",
+      "version": "4.2.11",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz",
+      "integrity": "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ=="
+    },
+    {
+      "path": "node_modules/has-flag",
+      "version": "4.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz",
+      "integrity": "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ=="
+    },
+    {
+      "path": "node_modules/has-property-descriptors",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/has-property-descriptors/-/has-property-descriptors-1.0.2.tgz",
+      "integrity": "sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg=="
+    },
+    {
+      "path": "node_modules/has-symbols",
+      "version": "1.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/has-symbols/-/has-symbols-1.1.0.tgz",
+      "integrity": "sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ=="
+    },
+    {
+      "path": "node_modules/has-tostringtag",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/has-tostringtag/-/has-tostringtag-1.0.2.tgz",
+      "integrity": "sha512-NqADB8VjPFLM2V0VvHUewwwsw0ZWBaIdgo+ieHtK3hasLz4qeCRjYcqfB6AQrBggRKppKF8L52/VqdVsO47Dlw=="
+    },
+    {
+      "path": "node_modules/hasown",
+      "version": "2.0.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/hasown/-/hasown-2.0.4.tgz",
+      "integrity": "sha512-T2UbfbBEF32wiepXIsMlTW9+dDYC6wMh/t/vYA4tuOMKqWz/n3vr1NFSxQiyP+zk2mXsoMA/i/7qV6LKut1t1A=="
+    },
+    {
+      "path": "node_modules/hosted-git-info",
+      "version": "4.1.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-4.1.0.tgz",
+      "integrity": "sha512-kyCuEOWjJqZuDbRHzL8V93NzQhwIB71oFWSyzVo+KPZI+pnQPPxucdkrOZvkLRnrf5URsQM+IJ09Dw29cRALIA=="
+    },
+    {
+      "path": "node_modules/http-cache-semantics",
+      "version": "4.3.0",
+      "license": "BSD-2-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.3.0.tgz",
+      "integrity": "sha512-M5t5LlJpS1UHMjvwRQVdFHvPISGeLAxNcrWuJkeGh0KxsqCHZ1O3NXZU/8x7cD0BDcGW8kapxMKTvwlqrNkHkA=="
+    },
+    {
+      "path": "node_modules/http-proxy-agent",
+      "version": "7.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz",
+      "integrity": "sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig=="
+    },
+    {
+      "path": "node_modules/http2-wrapper",
+      "version": "1.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/http2-wrapper/-/http2-wrapper-1.0.3.tgz",
+      "integrity": "sha512-V+23sDMr12Wnz7iTcDeJr3O6AIxlnvT/bmaAAAP/Xda35C90p9599p0F1eHR/N1KILWSoWVAiOMFjBBXaXSMxg=="
+    },
+    {
+      "path": "node_modules/https-proxy-agent",
+      "version": "7.0.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz",
+      "integrity": "sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw=="
+    },
+    {
+      "path": "node_modules/inflight",
+      "version": "1.0.6",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+      "integrity": "sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA=="
+    },
+    {
+      "path": "node_modules/inherits",
+      "version": "2.0.4",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+      "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ=="
+    },
+    {
+      "path": "node_modules/is-fullwidth-code-point",
+      "version": "3.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
+      "integrity": "sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg=="
+    },
+    {
+      "path": "node_modules/isarray",
+      "version": "1.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
+      "integrity": "sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ=="
+    },
+    {
+      "path": "node_modules/isbinaryfile",
+      "version": "5.0.7",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/isbinaryfile/-/isbinaryfile-5.0.7.tgz",
+      "integrity": "sha512-gnWD14Jh3FzS3CPhF0AxNOJ8CxqeblPTADzI38r0wt8ZyQl5edpy75myt08EG2oKvpyiqSqsx+Wkz9vtkbTqYQ=="
+    },
+    {
+      "path": "node_modules/isexe",
+      "version": "3.1.5",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/isexe/-/isexe-3.1.5.tgz",
+      "integrity": "sha512-6B3tLtFqtQS4ekarvLVMZ+X+VlvQekbe4taUkf/rhVO3d/h0M2rfARm/pXLcPEsjjMsFgrFgSrhQIxcSVrBz8w=="
+    },
+    {
+      "path": "node_modules/jake",
+      "version": "10.9.4",
+      "license": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/jake/-/jake-10.9.4.tgz",
+      "integrity": "sha512-wpHYzhxiVQL+IV05BLE2Xn34zW1S223hvjtqk0+gsPrwd/8JNLXJgZZM/iPFsYc1xyphF+6M6EvdE5E9MBGkDA=="
+    },
+    {
+      "path": "node_modules/jiti",
+      "version": "2.7.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz",
+      "integrity": "sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ=="
+    },
+    {
+      "path": "node_modules/js-yaml",
+      "version": "4.3.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-4.3.2.tgz",
+      "integrity": "sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA=="
+    },
+    {
+      "path": "node_modules/json-buffer",
+      "version": "3.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.1.tgz",
+      "integrity": "sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ=="
+    },
+    {
+      "path": "node_modules/json-schema-traverse",
+      "version": "1.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+      "integrity": "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug=="
+    },
+    {
+      "path": "node_modules/json-stringify-safe",
+      "version": "5.0.1",
+      "license": "ISC",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz",
+      "integrity": "sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA=="
+    },
+    {
+      "path": "node_modules/json5",
+      "version": "2.2.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/json5/-/json5-2.2.3.tgz",
+      "integrity": "sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg=="
+    },
+    {
+      "path": "node_modules/jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-6.2.1.tgz",
+      "integrity": "sha512-zwOTdL3rFQ/lRdBnntKVOX6k5cKJwEc1HdilT71BWEu7J41gXIB2MRp+vxduPSwZJPWBxEzv4yH1wYLJGUHX4Q=="
+    },
+    {
+      "path": "node_modules/keyv",
+      "version": "4.5.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/keyv/-/keyv-4.5.4.tgz",
+      "integrity": "sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw=="
+    },
+    {
+      "path": "node_modules/lazy-val",
+      "version": "1.0.5",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/lazy-val/-/lazy-val-1.0.5.tgz",
+      "integrity": "sha512-0/BnGCCfyUMkBpeDgWihanIAF9JmZhHBgUhEqzvf+adhNGLoP6TaiI5oF8oyb3I45P+PcnrqihSf01M0l0G5+Q=="
+    },
+    {
+      "path": "node_modules/lodash",
+      "version": "4.18.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.18.1.tgz",
+      "integrity": "sha512-dMInicTPVE8d1e5otfwmmjlxkZoUpiVLwyeTdUsi/Caj/gfzzblBcCE5sRHV/AsjuCmxWrte2TNGSYuCeCq+0Q=="
+    },
+    {
+      "path": "node_modules/lowercase-keys",
+      "version": "2.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-2.0.0.tgz",
+      "integrity": "sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA=="
+    },
+    {
+      "path": "node_modules/lru-cache",
+      "version": "6.0.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz",
+      "integrity": "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA=="
+    },
+    {
+      "path": "node_modules/marked",
+      "version": "4.3.0",
+      "license": "MIT",
+      "dev": false,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/marked/-/marked-4.3.0.tgz",
+      "integrity": "sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A=="
+    },
+    {
+      "path": "node_modules/matcher",
+      "version": "3.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/matcher/-/matcher-3.0.0.tgz",
+      "integrity": "sha512-OkeDaAZ/bQCxeFAozM55PKcKU0yJMPGifLwV4Qgjitu+5MoAfSQN4lsLJeXZ1b8w0x+/Emda6MZgXS1jvsapng=="
+    },
+    {
+      "path": "node_modules/math-intrinsics",
+      "version": "1.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz",
+      "integrity": "sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g=="
+    },
+    {
+      "path": "node_modules/mime",
+      "version": "2.6.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/mime/-/mime-2.6.0.tgz",
+      "integrity": "sha512-USPkMeET31rOMiarsBNIHZKLGgvKc/LrjofAnBlOttf5ajRvqiRA8QsenbcooctK6d6Ts6aqZXBA+XbkKthiQg=="
+    },
+    {
+      "path": "node_modules/mime-db",
+      "version": "1.52.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz",
+      "integrity": "sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg=="
+    },
+    {
+      "path": "node_modules/mime-types",
+      "version": "2.1.35",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz",
+      "integrity": "sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw=="
+    },
+    {
+      "path": "node_modules/mimic-response",
+      "version": "1.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.1.tgz",
+      "integrity": "sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ=="
+    },
+    {
+      "path": "node_modules/minimatch",
+      "version": "10.2.6",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-10.2.6.tgz",
+      "integrity": "sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A=="
+    },
+    {
+      "path": "node_modules/minimist",
+      "version": "1.2.8",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz",
+      "integrity": "sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA=="
+    },
+    {
+      "path": "node_modules/minipass",
+      "version": "7.1.3",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minipass/-/minipass-7.1.3.tgz",
+      "integrity": "sha512-tEBHqDnIoM/1rXME1zgka9g6Q2lcoCkxHLuc7ODJ5BxbP5d4c2Z5cGgtXAku59200Cx7diuHTOYfSBD8n6mm8A=="
+    },
+    {
+      "path": "node_modules/minizlib",
+      "version": "3.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/minizlib/-/minizlib-3.1.0.tgz",
+      "integrity": "sha512-KZxYo1BUkWD2TVFLr0MQoM8vUUigWD3LlD83a/75BqC+4qE0Hb1Vo5v1FgcfaNXvfXzr+5EhQ6ing/CaBijTlw=="
+    },
+    {
+      "path": "node_modules/mkdirp",
+      "version": "0.5.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz",
+      "integrity": "sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw=="
+    },
+    {
+      "path": "node_modules/ms",
+      "version": "2.1.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
+      "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA=="
+    },
+    {
+      "path": "node_modules/node-abi",
+      "version": "4.40.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/node-abi/-/node-abi-4.40.0.tgz",
+      "integrity": "sha512-GuvqvtrOk+AC27RidBxBsMzVNkwNl7PjHgc4NXbmdvSVLgIUjpaqcG1FjNRYnt2Yn9Ytq+Ln37XsBaglUcte/w=="
+    },
+    {
+      "path": "node_modules/node-api-version",
+      "version": "0.2.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/node-api-version/-/node-api-version-0.2.1.tgz",
+      "integrity": "sha512-2xP/IGGMmmSQpI1+O/k72jF/ykvZ89JeuKX3TLJAYPDVLUalrshrLHkeVcCCZqG/eEa635cr8IBYzgnDvM2O8Q=="
+    },
+    {
+      "path": "node_modules/node-gyp",
+      "version": "12.4.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/node-gyp/-/node-gyp-12.4.0.tgz",
+      "integrity": "sha512-OMcPNvqTCFUnNaBlmdgq+lfNqY7gTiSmNRDjY3uAXRyudeKZEZxu3CLtjMQrx4zZxCX2b/mpNqTtwuCJgXhHkw=="
+    },
+    {
+      "path": "node_modules/node-gyp/node_modules/env-paths",
+      "version": "2.2.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz",
+      "integrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A=="
+    },
+    {
+      "path": "node_modules/node-gyp/node_modules/isexe",
+      "version": "4.0.0",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/isexe/-/isexe-4.0.0.tgz",
+      "integrity": "sha512-FFUtZMpoZ8RqHS3XeXEmHWLA4thH+ZxCv2lOiPIn1Xc7CxrqhWzNSDzD+/chS/zbYezmiwWLdQC09JdQKmthOw=="
+    },
+    {
+      "path": "node_modules/node-gyp/node_modules/undici",
+      "version": "6.29.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/undici/-/undici-6.29.1.tgz",
+      "integrity": "sha512-EvRlUt/QqAEvXdQeRMYUfwOQsfzpDztykrG2owGEE/rBOBoYv9uF39ZzsNDh4lTFHhTr2XOZjKkYgueD12ZmGA=="
+    },
+    {
+      "path": "node_modules/node-gyp/node_modules/which",
+      "version": "6.0.1",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/which/-/which-6.0.1.tgz",
+      "integrity": "sha512-oGLe46MIrCRqX7ytPUf66EAYvdeMIZYn3WaocqqKZAxrBpkqHfL/qvTyJ/bTk5+AqHCjXmrv3CEWgy368zhRUg=="
+    },
+    {
+      "path": "node_modules/node-int64",
+      "version": "0.4.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/node-int64/-/node-int64-0.4.0.tgz",
+      "integrity": "sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw=="
+    },
+    {
+      "path": "node_modules/nopt",
+      "version": "9.0.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/nopt/-/nopt-9.0.0.tgz",
+      "integrity": "sha512-Zhq3a+yFKrYwSBluL4H9XP3m3y5uvQkB/09CwDruCiRmR/UJYnn9W4R48ry0uGC70aeTPKLynBtscP9efFFcPw=="
+    },
+    {
+      "path": "node_modules/normalize-url",
+      "version": "6.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz",
+      "integrity": "sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A=="
+    },
+    {
+      "path": "node_modules/object-keys",
+      "version": "1.1.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/object-keys/-/object-keys-1.1.1.tgz",
+      "integrity": "sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA=="
+    },
+    {
+      "path": "node_modules/once",
+      "version": "1.4.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+      "integrity": "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w=="
+    },
+    {
+      "path": "node_modules/p-cancelable",
+      "version": "2.1.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/p-cancelable/-/p-cancelable-2.1.1.tgz",
+      "integrity": "sha512-BZOr3nRQHOntUjTrH8+Lh54smKHoHyur8We1V8DSMVrl5A2malOOwuJRnKRDjSnkoeBh4at6BwEnb5I7Jl31wg=="
+    },
+    {
+      "path": "node_modules/p-limit",
+      "version": "3.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-3.1.0.tgz",
+      "integrity": "sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ=="
+    },
+    {
+      "path": "node_modules/path-is-absolute",
+      "version": "1.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+      "integrity": "sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg=="
+    },
+    {
+      "path": "node_modules/path-key",
+      "version": "3.1.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz",
+      "integrity": "sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q=="
+    },
+    {
+      "path": "node_modules/pe-library",
+      "version": "0.4.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/pe-library/-/pe-library-0.4.1.tgz",
+      "integrity": "sha512-eRWB5LBz7PpDu4PUlwT0PhnQfTQJlDDdPa35urV4Osrm0t0AqQFGn+UIkU3klZvwJ8KPO3VbBFsXquA6p6kqZw=="
+    },
+    {
+      "path": "node_modules/picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz",
+      "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="
+    },
+    {
+      "path": "node_modules/picomatch",
+      "version": "4.0.7",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz",
+      "integrity": "sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA=="
+    },
+    {
+      "path": "node_modules/pkijs",
+      "version": "3.4.3",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/pkijs/-/pkijs-3.4.3.tgz",
+      "integrity": "sha512-V9kOzaItwDgqlryhXysQsAXUEKi5O7kqWUaP3dXI7MLvkPqWWMb4wVb1QAtmEDCKI+XIAINsZoNKMFF7sZb1eg=="
+    },
+    {
+      "path": "node_modules/plist",
+      "version": "3.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/plist/-/plist-3.1.0.tgz",
+      "integrity": "sha512-uysumyrvkUX0rX/dEVqt8gC3sTBzd4zoWfLeS29nb53imdaXVvLINYXTI2GNqzaMuvacNx4uJQ8+b3zXR0pkgQ=="
+    },
+    {
+      "path": "node_modules/postject",
+      "version": "1.0.0-alpha.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/postject/-/postject-1.0.0-alpha.6.tgz",
+      "integrity": "sha512-b9Eb8h2eVqNE8edvKdwqkrY6O7kAwmI8kcnBv1NScolYJbo59XUF0noFq+lxbC1yN20bmC0WBEbDC5H/7ASb0A=="
+    },
+    {
+      "path": "node_modules/postject/node_modules/commander",
+      "version": "9.5.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/commander/-/commander-9.5.0.tgz",
+      "integrity": "sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ=="
+    },
+    {
+      "path": "node_modules/proc-log",
+      "version": "6.1.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/proc-log/-/proc-log-6.1.0.tgz",
+      "integrity": "sha512-iG+GYldRf2BQ0UDUAd6JQ/RwzaQy6mXmsk/IzlYyal4A4SNFw54MeH4/tLkF4I5WoWG9SQwuqWzS99jaFQHBuQ=="
+    },
+    {
+      "path": "node_modules/process-nextick-args",
+      "version": "2.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+      "integrity": "sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag=="
+    },
+    {
+      "path": "node_modules/progress",
+      "version": "2.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/progress/-/progress-2.0.3.tgz",
+      "integrity": "sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA=="
+    },
+    {
+      "path": "node_modules/promise-retry",
+      "version": "2.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/promise-retry/-/promise-retry-2.0.1.tgz",
+      "integrity": "sha512-y+WKFlBR8BGXnsNlIHFGPZmyDf3DFMoLhaflAnyZgV6rG6xu+JwesTo2Q9R6XwYmtmwAFCkAk3e35jEdoeh/3g=="
+    },
+    {
+      "path": "node_modules/proper-lockfile",
+      "version": "4.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/proper-lockfile/-/proper-lockfile-4.1.2.tgz",
+      "integrity": "sha512-TjNPblN4BwAWMXU8s9AEz4JmQxnD1NNL7bNOY/AKUzyamc379FWASUhc/K1pL2noVb+XmZKLL68cjzLsiOAMaA=="
+    },
+    {
+      "path": "node_modules/pump",
+      "version": "3.0.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/pump/-/pump-3.0.4.tgz",
+      "integrity": "sha512-VS7sjc6KR7e1ukRFhQSY5LM2uBWAUPiOPa/A3mkKmiMwSmRFUITt0xuj+/lesgnCv+dPIEYlkzrcyXgquIHMcA=="
+    },
+    {
+      "path": "node_modules/pvtsutils",
+      "version": "1.3.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/pvtsutils/-/pvtsutils-1.3.6.tgz",
+      "integrity": "sha512-PLgQXQ6H2FWCaeRak8vvk1GW462lMxB5s3Jm673N82zI4vqtVUPuZdffdZbPDFRoU8kAhItWFtPCWiPpp4/EDg=="
+    },
+    {
+      "path": "node_modules/pvutils",
+      "version": "1.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/pvutils/-/pvutils-1.2.0.tgz",
+      "integrity": "sha512-BbubeCEyTuQjVMakvJQ/Sxbc93F2pwmbsxONT/ZRrwU7Ua38d8unYTwXpTVLAKJ4BDuH9IGztCjQcd/N/39Dvg=="
+    },
+    {
+      "path": "node_modules/quick-lru",
+      "version": "5.1.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz",
+      "integrity": "sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA=="
+    },
+    {
+      "path": "node_modules/read-binary-file-arch",
+      "version": "1.0.6",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/read-binary-file-arch/-/read-binary-file-arch-1.0.6.tgz",
+      "integrity": "sha512-BNg9EN3DD3GsDXX7Aa8O4p92sryjkmzYYgmgTAc6CA4uGLEDzFfxOxugu21akOxpcXHiEgsYkC6nPsQvLLLmEg=="
+    },
+    {
+      "path": "node_modules/readable-stream",
+      "version": "2.3.8",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.8.tgz",
+      "integrity": "sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA=="
+    },
+    {
+      "path": "node_modules/require-directory",
+      "version": "2.1.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
+      "integrity": "sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q=="
+    },
+    {
+      "path": "node_modules/require-from-string",
+      "version": "2.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz",
+      "integrity": "sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw=="
+    },
+    {
+      "path": "node_modules/resedit",
+      "version": "1.7.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/resedit/-/resedit-1.7.2.tgz",
+      "integrity": "sha512-vHjcY2MlAITJhC0eRD/Vv8Vlgmu9Sd3LX9zZvtGzU5ZImdTN3+d6e/4mnTyV8vEbyf1sgNIrWxhWlrys52OkEA=="
+    },
+    {
+      "path": "node_modules/resolve-alpn",
+      "version": "1.2.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/resolve-alpn/-/resolve-alpn-1.2.1.tgz",
+      "integrity": "sha512-0a1F4l73/ZFZOakJnQ3FvkJ2+gSTQWz/r2KE5OdDY0TxPm5h4GkqkWWfM47T7HsbnOtcJVEF4epCVy6u7Q3K+g=="
+    },
+    {
+      "path": "node_modules/responselike",
+      "version": "2.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/responselike/-/responselike-2.0.1.tgz",
+      "integrity": "sha512-4gl03wn3hj1HP3yzgdI7d3lCkF95F21Pz4BPGvKHinyQzALR5CapwC8yIi0Rh58DEMQ/SguC03wFj2k0M/mHhw=="
+    },
+    {
+      "path": "node_modules/retry",
+      "version": "0.12.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/retry/-/retry-0.12.0.tgz",
+      "integrity": "sha512-9LkiTwjUh6rT555DtE9rTX+BKByPfrMzEAtnlEtdEwr3Nkffwiihqe2bWADg+OQRjt9gl6ICdmB/ZFDCGAtSow=="
+    },
+    {
+      "path": "node_modules/rimraf",
+      "version": "2.6.3",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.6.3.tgz",
+      "integrity": "sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA=="
+    },
+    {
+      "path": "node_modules/roarr",
+      "version": "2.15.4",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/roarr/-/roarr-2.15.4.tgz",
+      "integrity": "sha512-CHhPh+UNHD2GTXNYhPWLnU8ONHdI+5DI+4EYIAOaiD63rHeYlZvyh8P+in5999TTSFgUYuKUAjzRI4mdh/p+2A=="
+    },
+    {
+      "path": "node_modules/safe-buffer",
+      "version": "5.1.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
+      "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g=="
+    },
+    {
+      "path": "node_modules/sanitize-filename",
+      "version": "1.6.5",
+      "license": "WTFPL OR ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/sanitize-filename/-/sanitize-filename-1.6.5.tgz",
+      "integrity": "sha512-+dVApt46/oAFWRP0KBSnYNLRw1peY7o/b12tmpllPNFpjfwkPuZut1+DiKaD9zYx5r2SHwc+XMLSBaDiyUJw3g=="
+    },
+    {
+      "path": "node_modules/sax",
+      "version": "1.6.1",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/sax/-/sax-1.6.1.tgz",
+      "integrity": "sha512-42tBVwLWnaQvW5zc4HbZrTuWccECCZfBi92FDuwtqxasH+JbPB3/FOKb1m222K42R4WxuxzzMsTswfzgtSu64Q=="
+    },
+    {
+      "path": "node_modules/semver",
+      "version": "7.8.1",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.8.1.tgz",
+      "integrity": "sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg=="
+    },
+    {
+      "path": "node_modules/semver-compare",
+      "version": "1.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/semver-compare/-/semver-compare-1.0.0.tgz",
+      "integrity": "sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow=="
+    },
+    {
+      "path": "node_modules/serialize-error",
+      "version": "7.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/serialize-error/-/serialize-error-7.0.1.tgz",
+      "integrity": "sha512-8I8TjW5KMOKsZQTvoxjuSIa7foAwPWGOts+6o7sgjz41/qMD9VQHEDxi6PBvK2l0MXUmqZyNpUK+T2tQaaElvw=="
+    },
+    {
+      "path": "node_modules/shebang-command",
+      "version": "2.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz",
+      "integrity": "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA=="
+    },
+    {
+      "path": "node_modules/shebang-regex",
+      "version": "3.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz",
+      "integrity": "sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A=="
+    },
+    {
+      "path": "node_modules/signal-exit",
+      "version": "3.0.7",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz",
+      "integrity": "sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ=="
+    },
+    {
+      "path": "node_modules/simple-update-notifier",
+      "version": "2.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/simple-update-notifier/-/simple-update-notifier-2.0.0.tgz",
+      "integrity": "sha512-a2B9Y0KlNXl9u/vsW6sTIu9vGEpfKu2wRV6l1H3XEas/0gUIzGzBoP/IouTcUQbm9JWZLH3COxyn03TYlFax6w=="
+    },
+    {
+      "path": "node_modules/source-map",
+      "version": "0.6.1",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
+      "integrity": "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
+    },
+    {
+      "path": "node_modules/source-map-support",
+      "version": "0.5.21",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz",
+      "integrity": "sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w=="
+    },
+    {
+      "path": "node_modules/sprintf-js",
+      "version": "1.1.3",
+      "license": "BSD-3-Clause",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.3.tgz",
+      "integrity": "sha512-Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA=="
+    },
+    {
+      "path": "node_modules/stat-mode",
+      "version": "1.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/stat-mode/-/stat-mode-1.0.0.tgz",
+      "integrity": "sha512-jH9EhtKIjuXZ2cWxmXS8ZP80XyC3iasQxMDV8jzhNJpfDb7VbQLVW4Wvsxz9QZvzV+G4YoSfBUVKDOyxLzi/sg=="
+    },
+    {
+      "path": "node_modules/string_decoder",
+      "version": "1.1.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
+      "integrity": "sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg=="
+    },
+    {
+      "path": "node_modules/string-width",
+      "version": "4.2.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
+      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g=="
+    },
+    {
+      "path": "node_modules/strip-ansi",
+      "version": "6.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
+      "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A=="
+    },
+    {
+      "path": "node_modules/sumchecker",
+      "version": "3.0.1",
+      "license": "Apache-2.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/sumchecker/-/sumchecker-3.0.1.tgz",
+      "integrity": "sha512-MvjXzkz/BOfyVDkG0oFOtBxHX2u3gKbMHIF/dXblZsgD3BWOFLmHovIpZY7BykJdAjcqRCBi1WYBNdEC9yI7vg=="
+    },
+    {
+      "path": "node_modules/supports-color",
+      "version": "7.2.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz",
+      "integrity": "sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw=="
+    },
+    {
+      "path": "node_modules/tar",
+      "version": "7.5.22",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/tar/-/tar-7.5.22.tgz",
+      "integrity": "sha512-MFO/QzvtAOmJbkhOaCTvbGcFN9L9b+JunIsDwaKljSOdcLMea3NJ1k9Usz/rjdfSXTq4dfzfeS7W4p4YOAAHeA=="
+    },
+    {
+      "path": "node_modules/tar/node_modules/yallist",
+      "version": "5.0.0",
+      "license": "BlueOak-1.0.0",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/yallist/-/yallist-5.0.0.tgz",
+      "integrity": "sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw=="
+    },
+    {
+      "path": "node_modules/temp",
+      "version": "0.9.4",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/temp/-/temp-0.9.4.tgz",
+      "integrity": "sha512-yYrrsWnrXMcdsnu/7YMYAofM1ktpL5By7vZhf15CrXijWWrEYZks5AXBudalfSWJLlnen/QUJUB5aoB0kqZUGA=="
+    },
+    {
+      "path": "node_modules/temp-file",
+      "version": "3.4.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/temp-file/-/temp-file-3.4.0.tgz",
+      "integrity": "sha512-C5tjlC/HCtVUOi3KWVokd4vHVViOmGjtLwIh4MuzPo/nMYTV/p1urt3RnMz2IWXDdKEGJH3k5+KPxtqRsUYGtg=="
+    },
+    {
+      "path": "node_modules/tiny-async-pool",
+      "version": "1.3.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/tiny-async-pool/-/tiny-async-pool-1.3.0.tgz",
+      "integrity": "sha512-01EAw5EDrcVrdgyCLgoSPvqznC0sVxDSVeiOz09FUpjh71G79VCqneOr+xvt7T1r76CF6ZZfPjHorN2+d+3mqA=="
+    },
+    {
+      "path": "node_modules/tiny-async-pool/node_modules/semver",
+      "version": "5.7.3",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/semver/-/semver-5.7.3.tgz",
+      "integrity": "sha512-kM18BPOqTi0+TB68703/GJRpAML5Me+IDQsR1J26YB3EFKKNEyHIVZuWDX7+WKQB3tHwDwgk24BfhdpWUbytvQ=="
+    },
+    {
+      "path": "node_modules/tinyglobby",
+      "version": "0.2.17",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz",
+      "integrity": "sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g=="
+    },
+    {
+      "path": "node_modules/tmp",
+      "version": "0.2.7",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/tmp/-/tmp-0.2.7.tgz",
+      "integrity": "sha512-e0votIpp4Uo2AJYSzVHV6xCcawuiez3DzqDAbrTc3YxBkplN6e+dM13ZeIcZnDg/QpSuU2zfZ3rzwY8ukEnaXw=="
+    },
+    {
+      "path": "node_modules/tmp-promise",
+      "version": "3.0.3",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/tmp-promise/-/tmp-promise-3.0.3.tgz",
+      "integrity": "sha512-RwM7MoPojPxsOBYnyd2hy0bxtIlVrihNs9pj5SUvY8Zz1sQcQG2tG1hSr8PDxfgEB8RNKDhqbIlroIarSNDNsQ=="
+    },
+    {
+      "path": "node_modules/truncate-utf8-bytes",
+      "version": "1.0.2",
+      "license": "WTFPL",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/truncate-utf8-bytes/-/truncate-utf8-bytes-1.0.2.tgz",
+      "integrity": "sha512-95Pu1QXQvruGEhv62XCMO3Mm90GscOCClvrIUwCM0PYOXK3kaF3l3sIHxx71ThJfcbM2O5Au6SO3AWCSEfW4mQ=="
+    },
+    {
+      "path": "node_modules/tslib",
+      "version": "2.9.1",
+      "license": "0BSD",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.9.1.tgz",
+      "integrity": "sha512-a4Ux9VKuIMHsOS7ENbEq6hK2ZGYIT27Rtl0E4eD9KqwxhKiQeMZE/9xb3IdYwWaSOyIBQLExhQgXDTYoiCxnWA=="
+    },
+    {
+      "path": "node_modules/type-fest",
+      "version": "0.13.1",
+      "license": "(MIT OR CC0-1.0)",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.13.1.tgz",
+      "integrity": "sha512-34R7HTnG0XIJcBSn5XhDd7nNFPRcXYRZrBB2O2jdKqYODldSzBAqzsWoZYYvduky73toYS/ESqxPvkDf/F0XMg=="
+    },
+    {
+      "path": "node_modules/undici",
+      "version": "7.30.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/undici/-/undici-7.30.2.tgz",
+      "integrity": "sha512-mLyPQnHwUxaM/rideoK/+KL8DaAJLRl4aBCfmX444aCSLnIaomqPLtNRe2jdCYcsk5wZzXrDIQC8ZeYNRAYyIA=="
+    },
+    {
+      "path": "node_modules/undici-types",
+      "version": "7.16.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-7.16.0.tgz",
+      "integrity": "sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw=="
+    },
+    {
+      "path": "node_modules/universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/universalify/-/universalify-2.0.1.tgz",
+      "integrity": "sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw=="
+    },
+    {
+      "path": "node_modules/unzipper",
+      "version": "0.12.5",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/unzipper/-/unzipper-0.12.5.tgz",
+      "integrity": "sha512-tXYOi9R57Uj/2Z25SOs5RRSzq886MBQj2gY8dPL+xl/kv6s6SvByoKfAtvfVeEuhntWDgjd2o9p2lb4TVPAz0A=="
+    },
+    {
+      "path": "node_modules/unzipper/node_modules/fs-extra",
+      "version": "11.3.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-11.3.1.tgz",
+      "integrity": "sha512-eXvGGwZ5CL17ZSwHWd3bbgk7UUpF6IFHtP57NYYakPvHOs8GDgDe5KJI36jIJzDkJ6eJjuzRA8eBQb6SkKue0g=="
+    },
+    {
+      "path": "node_modules/utf8-byte-length",
+      "version": "1.0.5",
+      "license": "(WTFPL OR MIT)",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/utf8-byte-length/-/utf8-byte-length-1.0.5.tgz",
+      "integrity": "sha512-Xn0w3MtiQ6zoz2vFyUVruaCL53O/DwUvkEeOvj+uulMm0BkUGYWmBYVyElqZaSLhY6ZD0ulfU3aBra2aVT4xfA=="
+    },
+    {
+      "path": "node_modules/util-deprecate",
+      "version": "1.0.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
+      "integrity": "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw=="
+    },
+    {
+      "path": "node_modules/webcrypto-core",
+      "version": "1.9.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/webcrypto-core/-/webcrypto-core-1.9.2.tgz",
+      "integrity": "sha512-gsXecm82UQNlTBURJGuqOWy1Ww08S3kZUcr3aOJS02Pk0xLtkfeUAVC0u0xhgdonFme80edSJUIJyuvL/7250Q=="
+    },
+    {
+      "path": "node_modules/which",
+      "version": "5.0.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/which/-/which-5.0.0.tgz",
+      "integrity": "sha512-JEdGzHwwkrbWoGOlIHqQ5gtprKGOenpDHpxE9zVR1bWbOtYRyPPHMe9FaP6x61CmNaTThSkb0DAJte5jD+DmzQ=="
+    },
+    {
+      "path": "node_modules/wrap-ansi",
+      "version": "7.0.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz",
+      "integrity": "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q=="
+    },
+    {
+      "path": "node_modules/wrappy",
+      "version": "1.0.2",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+      "integrity": "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ=="
+    },
+    {
+      "path": "node_modules/xmlbuilder",
+      "version": "15.1.1",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-15.1.1.tgz",
+      "integrity": "sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg=="
+    },
+    {
+      "path": "node_modules/y18n",
+      "version": "5.0.8",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/y18n/-/y18n-5.0.8.tgz",
+      "integrity": "sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA=="
+    },
+    {
+      "path": "node_modules/yallist",
+      "version": "4.0.0",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
+      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A=="
+    },
+    {
+      "path": "node_modules/yargs",
+      "version": "17.7.2",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/yargs/-/yargs-17.7.2.tgz",
+      "integrity": "sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w=="
+    },
+    {
+      "path": "node_modules/yargs-parser",
+      "version": "21.1.1",
+      "license": "ISC",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-21.1.1.tgz",
+      "integrity": "sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw=="
+    },
+    {
+      "path": "node_modules/yocto-queue",
+      "version": "0.1.0",
+      "license": "MIT",
+      "dev": true,
+      "optional": false,
+      "resolved": "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz",
+      "integrity": "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q=="
+    }
+  ],
+  "legal_files": [
+    {
+      "path": "LICENSES/python/accelerate-1.11.0/licenses/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified license/notice from pinned installed wheel: accelerate-1.11.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/aiohappyeyeballs-2.7.1/licenses/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936,
+      "origin": "Unmodified license/notice from pinned installed wheel: aiohappyeyeballs-2.7.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/aiohttp-3.14.5/licenses/LICENSE.txt",
+      "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23",
+      "bytes": 11313,
+      "origin": "Unmodified license/notice from pinned installed wheel: aiohttp-3.14.5.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/aiohttp-3.14.5/licenses/vendor/llhttp/LICENSE",
+      "sha256": "628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d",
+      "bytes": 1069,
+      "origin": "Unmodified license/notice from pinned installed wheel: aiohttp-3.14.5.dist-info/licenses/vendor/llhttp/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/aiosignal-1.4.0/licenses/LICENSE",
+      "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6",
+      "bytes": 11332,
+      "origin": "Unmodified license/notice from pinned installed wheel: aiosignal-1.4.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/annotated-doc-0.0.3/licenses/LICENSE",
+      "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
+      "bytes": 1086,
+      "origin": "Unmodified license/notice from pinned installed wheel: annotated_doc-0.0.3.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/annotated-types-0.7.0/licenses/LICENSE",
+      "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+      "bytes": 1083,
+      "origin": "Unmodified license/notice from pinned installed wheel: annotated_types-0.7.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/anyio-4.14.2/licenses/LICENSE",
+      "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+      "bytes": 1081,
+      "origin": "Unmodified license/notice from pinned installed wheel: anyio-4.14.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/attrs-26.1.0/licenses/LICENSE",
+      "sha256": "882115c95dfc2af1eeb6714f8ec6d5cbcabf667caff8729f42420da63f714e9f",
+      "bytes": 1109,
+      "origin": "Unmodified license/notice from pinned installed wheel: attrs-26.1.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/blinker-1.9.0/LICENSE.txt",
+      "sha256": "9eb73a1f38597a4aa17025d2ae1be3839624c795e985d4f0e9769ce29faca467",
+      "bytes": 1054,
+      "origin": "Unmodified license/notice from pinned installed wheel: blinker-1.9.0.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/cachetools-6.2.2/licenses/LICENSE",
+      "sha256": "23c4eff7a1c027a977a0b79c4497e17582c334c5f17ef6ac8ca0b52d1e7d8417",
+      "bytes": 1085,
+      "origin": "Unmodified license/notice from pinned installed wheel: cachetools-6.2.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/certifi-2026.10.18/licenses/LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+      "bytes": 989,
+      "origin": "Unmodified license/notice from pinned installed wheel: certifi-2026.10.18.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/charset-normalizer-3.4.4/licenses/LICENSE",
+      "sha256": "18577485d3704f1a479ded8e573c0976cfed315fd2fd17983fa988da4c2f70d1",
+      "bytes": 1092,
+      "origin": "Unmodified license/notice from pinned installed wheel: charset_normalizer-3.4.4.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/click-8.3.0/licenses/LICENSE.txt",
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+      "bytes": 1475,
+      "origin": "Unmodified license/notice from pinned installed wheel: click-8.3.0.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/colorama-0.4.6/licenses/LICENSE.txt",
+      "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318",
+      "bytes": 1491,
+      "origin": "Unmodified license/notice from pinned installed wheel: colorama-0.4.6.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/coloredlogs-15.0.1/LICENSE.txt",
+      "sha256": "0bef4ffb1855b65570304f2018c6d44e4bab97bd5df8716ecd7800014d717267",
+      "bytes": 1056,
+      "origin": "Unmodified license/notice from pinned installed wheel: coloredlogs-15.0.1.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/colorlog-6.10.1/licenses/LICENSE",
+      "sha256": "b1d9082bc483623fd59fc7279b457f0e40d942a76426cde257239e04dfe4125a",
+      "bytes": 1107,
+      "origin": "Unmodified license/notice from pinned installed wheel: colorlog-6.10.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/datasets-2.19.0/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified license/notice from pinned installed wheel: datasets-2.19.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/dill-0.3.8/LICENSE",
+      "sha256": "51e88a23e78877ceabd727c219c7a5e33f65da9ba03ac4fd285ba904aa1ce22b",
+      "bytes": 1790,
+      "origin": "Unmodified license/notice from pinned installed wheel: dill-0.3.8.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/diskcache-5.6.3/LICENSE",
+      "sha256": "583546baa3fd93607d845126570677a401f508e228b5044fefbc3949af179672",
+      "bytes": 559,
+      "origin": "Unmodified license/notice from pinned installed wheel: diskcache-5.6.3.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/distro-1.9.0/LICENSE",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+      "bytes": 11325,
+      "origin": "Unmodified license/notice from pinned installed wheel: distro-1.9.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/docstring_parser-0.18.0/licenses/LICENSE.md",
+      "sha256": "dfe514a337ae8417abd31a8af707bbd6172b03e5430bb083e145899ea97a3eea",
+      "bytes": 1084,
+      "origin": "Unmodified license/notice from pinned installed wheel: docstring_parser-0.18.0.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/fastapi-0.121.1/licenses/LICENSE",
+      "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
+      "bytes": 1086,
+      "origin": "Unmodified license/notice from pinned installed wheel: fastapi-0.121.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/filelock-3.20.0/licenses/LICENSE",
+      "sha256": "88d9b4eb60579c191ec391ca04c16130572d7eedc4a86daa58bf28c6e14c9bcd",
+      "bytes": 1210,
+      "origin": "Unmodified license/notice from pinned installed wheel: filelock-3.20.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/Flask-3.1.3/licenses/LICENSE.txt",
+      "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+      "bytes": 1475,
+      "origin": "Unmodified license/notice from pinned installed wheel: flask-3.1.3.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/frozenlist-1.8.0/licenses/LICENSE",
+      "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6",
+      "bytes": 11332,
+      "origin": "Unmodified license/notice from pinned installed wheel: frozenlist-1.8.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/fsspec-2024.3.1/LICENSE",
+      "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
+      "bytes": 1513,
+      "origin": "Unmodified license/notice from pinned installed wheel: fsspec-2024.3.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/grpcio-1.85.1/licenses/LICENSE",
+      "sha256": "ed9abc49f1fa3e3ce962d8ac42e176125c0ab0051ec5783dfcc807dd2a4c1f0f",
+      "bytes": 30814,
+      "origin": "Unmodified license/notice from pinned installed wheel: grpcio-1.85.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/h11-0.16.0/licenses/LICENSE.txt",
+      "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+      "bytes": 1124,
+      "origin": "Unmodified license/notice from pinned installed wheel: h11-0.16.0.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/h2-4.4.1/licenses/LICENSE",
+      "sha256": "7a65a5af0cbabf1c16251c7c6b2b7cb46d16a7222e79975b9b61fcd66a2e3f28",
+      "bytes": 1102,
+      "origin": "Unmodified license/notice from pinned installed wheel: h2-4.4.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/hf-xet-1.4.3/licenses/LICENSE",
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "bytes": 11558,
+      "origin": "Unmodified license/notice from pinned installed wheel: hf_xet-1.4.3.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/hpack-4.2.0/licenses/LICENSE",
+      "sha256": "763a9342a04df62046c9dc748a5287934eb0a5331c6863b3ca0aee20e18cb4ed",
+      "bytes": 1080,
+      "origin": "Unmodified license/notice from pinned installed wheel: hpack-4.2.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/httpcore-1.0.9/licenses/LICENSE.md",
+      "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
+      "bytes": 1518,
+      "origin": "Unmodified license/notice from pinned installed wheel: httpcore-1.0.9.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/httpx-0.28.1/licenses/LICENSE.md",
+      "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+      "bytes": 1508,
+      "origin": "Unmodified license/notice from pinned installed wheel: httpx-0.28.1.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/huggingface-hub-1.13.0/licenses/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified license/notice from pinned installed wheel: huggingface_hub-1.13.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/humanfriendly-10.0/LICENSE.txt",
+      "sha256": "4ac48f4117809f2734066150450f120b3bb110ac1d3b32170795e0560dbbc1f5",
+      "bytes": 1056,
+      "origin": "Unmodified license/notice from pinned installed wheel: humanfriendly-10.0.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/hyperframe-6.1.0/LICENSE",
+      "sha256": "763a9342a04df62046c9dc748a5287934eb0a5331c6863b3ca0aee20e18cb4ed",
+      "bytes": 1080,
+      "origin": "Unmodified license/notice from pinned installed wheel: hyperframe-6.1.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/idna-3.15/licenses/LICENSE.md",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+      "bytes": 1541,
+      "origin": "Unmodified license/notice from pinned installed wheel: idna-3.15.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/itsdangerous-2.2.0/LICENSE.txt",
+      "sha256": "63af09891b6be8ad1a4252ed43af0f4efba7fc948e228367bed7f3c5ae0b09d7",
+      "bytes": 1475,
+      "origin": "Unmodified license/notice from pinned installed wheel: itsdangerous-2.2.0.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/Jinja2-3.1.6/licenses/LICENSE.txt",
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+      "bytes": 1475,
+      "origin": "Unmodified license/notice from pinned installed wheel: jinja2-3.1.6.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/jiter-0.12.0/licenses/LICENSE",
+      "sha256": "e65c152aa65deaaa52019855bf1bbce4a0d592a048cb523b6ca691965741241e",
+      "bytes": 1112,
+      "origin": "Unmodified license/notice from pinned installed wheel: jiter-0.12.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/joblib-1.5.2/licenses/LICENSE.txt",
+      "sha256": "42612911c1872c5e4b43f6ae0e8ee59467cd350332241cf72ce90640264fae6a",
+      "bytes": 1527,
+      "origin": "Unmodified license/notice from pinned installed wheel: joblib-1.5.2.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/llama_cpp_python-0.3.21/licenses/LICENSE.md",
+      "sha256": "6bb528f36ee0a3d29e360b06293eb6cad2a65039ebfd53dfcc7c67e3616fcbd7",
+      "bytes": 1077,
+      "origin": "Unmodified license/notice from pinned installed wheel: llama_cpp_python-0.3.21.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/markdown-it-py-4.0.0/licenses/LICENSE",
+      "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484",
+      "bytes": 1078,
+      "origin": "Unmodified license/notice from pinned installed wheel: markdown_it_py-4.0.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/markdown-it-py-4.0.0/licenses/LICENSE.markdown-it",
+      "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+      "bytes": 1073,
+      "origin": "Unmodified license/notice from pinned installed wheel: markdown_it_py-4.0.0.dist-info/licenses/LICENSE.markdown-it"
+    },
+    {
+      "path": "LICENSES/python/MarkupSafe-3.0.3/licenses/LICENSE.txt",
+      "sha256": "4631ec0db5fd90a547e336817264c6798214338146f8ac94b4a57f96ee8c9ec4",
+      "bytes": 1503,
+      "origin": "Unmodified license/notice from pinned installed wheel: markupsafe-3.0.3.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/mdurl-0.1.2/LICENSE",
+      "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955",
+      "bytes": 2338,
+      "origin": "Unmodified license/notice from pinned installed wheel: mdurl-0.1.2.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/mpmath-1.3.0/LICENSE",
+      "sha256": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7",
+      "bytes": 1537,
+      "origin": "Unmodified license/notice from pinned installed wheel: mpmath-1.3.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/multidict-7.2.1/licenses/LICENSE",
+      "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23",
+      "bytes": 11313,
+      "origin": "Unmodified license/notice from pinned installed wheel: multidict-7.2.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/multiprocess-0.70.16/COPYING",
+      "sha256": "9f7ff27cb930d2c3202ee07e3d2d6146f4de676d069a33da3166c98cdba83a95",
+      "bytes": 1493,
+      "origin": "Unmodified license/notice from pinned installed wheel: multiprocess-0.70.16.dist-info/COPYING"
+    },
+    {
+      "path": "LICENSES/python/multiprocess-0.70.16/LICENSE",
+      "sha256": "e9750979d24a83676123df010f73ccb55b59bd1153fa819cce43abe41e2d1040",
+      "bytes": 1930,
+      "origin": "Unmodified license/notice from pinned installed wheel: multiprocess-0.70.16.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/networkx-3.5/licenses/LICENSE.txt",
+      "sha256": "3cf7c3a179d817b23b8b8568211769fefdf93797d207d984b8b2fa24d0220b33",
+      "bytes": 1763,
+      "origin": "Unmodified license/notice from pinned installed wheel: networkx-3.5.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/numpy-2.3.4/LICENSE.txt",
+      "sha256": "596b953e1dcbe829b32ae444387efa15003fc6abdeca8a2179f364a6364c286e",
+      "bytes": 46841,
+      "origin": "Unmodified license/notice from pinned installed wheel: numpy-2.3.4.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/packaging-25.0/licenses/LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "bytes": 197,
+      "origin": "Unmodified license/notice from pinned installed wheel: packaging-25.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/packaging-25.0/licenses/LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "origin": "Unmodified license/notice from pinned installed wheel: packaging-25.0.dist-info/licenses/LICENSE.APACHE"
+    },
+    {
+      "path": "LICENSES/python/packaging-25.0/licenses/LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "bytes": 1344,
+      "origin": "Unmodified license/notice from pinned installed wheel: packaging-25.0.dist-info/licenses/LICENSE.BSD"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSE",
+      "sha256": "9850f6b5bdef7346503065807b878deb8058b976c5c329f4c4d23bf4796ce9ae",
+      "bytes": 1634,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/BOTTLENECK_LICENCE",
+      "sha256": "053a90e30580f5d9d79817add1567f88b4a3eeb11bcded9ecf74619d17768066",
+      "bytes": 1360,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/BOTTLENECK_LICENCE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/DATEUTIL_LICENSE",
+      "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e",
+      "bytes": 2889,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/DATEUTIL_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/HAVEN_LICENSE",
+      "sha256": "48216b40b3d1b19452923dd6fd74655bf5c0df9d76b51eb0efade7e0b88bfbcc",
+      "bytes": 1099,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/HAVEN_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/KLIB_LICENSE",
+      "sha256": "7463172c3a23321c1838896eba437f70a6de80ac5a840b2960966c8c5444abf1",
+      "bytes": 1104,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/KLIB_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/MUSL_LICENSE",
+      "sha256": "50a343c1ce9e27cd6c58023f13b91d2cd679861fe7fb6bbbbfbec3dcafc3583f",
+      "bytes": 6203,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/MUSL_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/NUMPY_LICENSE",
+      "sha256": "81d42da02a56b611c35abc83d2241564b46bec3a5b1960b395d55cebca68fb6f",
+      "bytes": 1542,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/NUMPY_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/PACKAGING_LICENSE",
+      "sha256": "1871330068a18f1f07c3f147a41c008e59f367f217041ca6eb20b0298639a128",
+      "bytes": 11519,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/PACKAGING_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/PSF_LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/PSF_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/PYPERCLIP_LICENSE",
+      "sha256": "eafcd440e3570c6bc7b77dcec15dec398d13bc9b5e897336b221ff81ff19f345",
+      "bytes": 1486,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/PYPERCLIP_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/PYUPGRADE_LICENSE",
+      "sha256": "70aedcd6928272bd176e4fdc3384af22ee759d006fb15105d994756e4f2d1b7a",
+      "bytes": 1058,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/PYUPGRADE_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/SAS7BDAT_LICENSE",
+      "sha256": "458d5fd4175825440ad32d6bf6af45d1a19d4adb316b557d869c6560b6692e00",
+      "bytes": 1059,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/SAS7BDAT_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/STATSBASE_JL_LICENSE",
+      "sha256": "f371ccf0fb892a4cd9f2e550c4b8cf4362793d17028dc642ad55c1e01a41dfe1",
+      "bytes": 1249,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/STATSBASE_JL_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/ULTRAJSON_LICENSE",
+      "sha256": "2bfbb5bb8ec66d136ec62d836ddc0c0019d44ef4d9389f1f6cab1c1109d774a2",
+      "bytes": 5974,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/ULTRAJSON_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/LICENSES/XSIMD_LICENSE",
+      "sha256": "501352acba62cc54e8e3d293754d606f919c9b425b962193c211f9fa29cd9940",
+      "bytes": 1606,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/LICENSES/XSIMD_LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/subprojects/fast_float-8.2.10/LICENSE-APACHE",
+      "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06",
+      "bytes": 10767,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-APACHE"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/subprojects/fast_float-8.2.10/LICENSE-BOOST",
+      "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b",
+      "bytes": 1337,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-BOOST"
+    },
+    {
+      "path": "LICENSES/python/pandas-3.1.1/licenses/subprojects/fast_float-8.2.10/LICENSE-MIT",
+      "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
+      "bytes": 1079,
+      "origin": "Unmodified license/notice from pinned installed wheel: pandas-3.1.1.dist-info/licenses/subprojects/fast_float-8.2.10/LICENSE-MIT"
+    },
+    {
+      "path": "LICENSES/python/peft-0.11.1/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified license/notice from pinned installed wheel: peft-0.11.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pillow-13.0.0/licenses/LICENSE",
+      "sha256": "988ffe8ab3480b0f4e9a0ab2702bffd73d9fb6b47198043fb3ba101a62fac236",
+      "bytes": 78481,
+      "origin": "Unmodified license/notice from pinned installed wheel: pillow-13.0.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/portalocker-2.10.1/LICENSE",
+      "sha256": "a50570fa3b3102a42d7babb0569238b0b3c0aedce0063c8e4d65060dfd3f7293",
+      "bytes": 1460,
+      "origin": "Unmodified license/notice from pinned installed wheel: portalocker-2.10.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/propcache-0.5.4/licenses/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified license/notice from pinned installed wheel: propcache-0.5.4.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/propcache-0.5.4/licenses/NOTICE",
+      "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838",
+      "bytes": 609,
+      "origin": "Unmodified license/notice from pinned installed wheel: propcache-0.5.4.dist-info/licenses/NOTICE"
+    },
+    {
+      "path": "LICENSES/python/protobuf-6.33.5/LICENSE",
+      "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+      "bytes": 1732,
+      "origin": "Unmodified license/notice from pinned installed wheel: protobuf-6.33.5.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/psutil-7.2.2/LICENSE",
+      "sha256": "c7adc4d5d1337a548b967421f1fbe258b93033a0417708fd6f4e38f8ecbceb80",
+      "bytes": 1577,
+      "origin": "Unmodified license/notice from pinned installed wheel: psutil-7.2.2.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pyarrow-26.0.1/licenses/LICENSE.txt",
+      "sha256": "2a255e0ef5946efdb2e01a4861460ce4a3333734666d256e75f9c1731a5097da",
+      "bytes": 112648,
+      "origin": "Unmodified license/notice from pinned installed wheel: pyarrow-26.0.1.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/pyarrow-26.0.1/licenses/NOTICE.txt",
+      "sha256": "2ccca1e730e671f55b8028facf2261a6f74b561a4d96a2ccd743be19c5619236",
+      "bytes": 2997,
+      "origin": "Unmodified license/notice from pinned installed wheel: pyarrow-26.0.1.dist-info/licenses/NOTICE.txt"
+    },
+    {
+      "path": "LICENSES/python/pyarrow-hotfix-0.7/licenses/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified license/notice from pinned installed wheel: pyarrow_hotfix-0.7.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/pyasn1-0.6.5/licenses/LICENSE.rst",
+      "sha256": "2aad5fc00f705c4a1addb83eed10a6a75d286a3779f0cf8519d87e62bc4735fd",
+      "bytes": 1334,
+      "origin": "Unmodified license/notice from pinned installed wheel: pyasn1-0.6.5.dist-info/licenses/LICENSE.rst"
+    },
+    {
+      "path": "LICENSES/python/pyasn1_modules-0.4.2/licenses/LICENSE.txt",
+      "sha256": "2aad5fc00f705c4a1addb83eed10a6a75d286a3779f0cf8519d87e62bc4735fd",
+      "bytes": 1334,
+      "origin": "Unmodified license/notice from pinned installed wheel: pyasn1_modules-0.4.2.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/pydantic-2.12.4/licenses/LICENSE",
+      "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+      "bytes": 1129,
+      "origin": "Unmodified license/notice from pinned installed wheel: pydantic-2.12.4.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pydantic_core-2.41.5/licenses/LICENSE",
+      "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4",
+      "bytes": 1101,
+      "origin": "Unmodified license/notice from pinned installed wheel: pydantic_core-2.41.5.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/Pygments-2.21.0/licenses/LICENSE",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+      "bytes": 1331,
+      "origin": "Unmodified license/notice from pinned installed wheel: pygments-2.21.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pyreadline3-3.5.6/licenses/LICENSE.md",
+      "sha256": "8fc4d8de61b40533023b16e64528d13371a2e9c68677df79ed5e93ba570471bd",
+      "bytes": 2250,
+      "origin": "Unmodified license/notice from pinned installed wheel: pyreadline3-3.5.6.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/python-dateutil-4.0.0/licenses/LICENSE",
+      "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e",
+      "bytes": 2889,
+      "origin": "Unmodified license/notice from pinned installed wheel: python_dateutil-4.0.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/python-dotenv-1.2.2/licenses/LICENSE",
+      "sha256": "80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9",
+      "bytes": 1556,
+      "origin": "Unmodified license/notice from pinned installed wheel: python_dotenv-1.2.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pywin32-312/licenses/adodbapi/license.txt",
+      "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
+      "bytes": 26925,
+      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/adodbapi/license.txt"
+    },
+    {
+      "path": "LICENSES/python/pywin32-312/licenses/com/License.txt",
+      "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
+      "bytes": 1570,
+      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/com/License.txt"
+    },
+    {
+      "path": "LICENSES/python/pywin32-312/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+      "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
+      "bytes": 1087,
+      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/pywin32-312/licenses/pythonwin/License.txt",
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+      "bytes": 1541,
+      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/pythonwin/License.txt"
+    },
+    {
+      "path": "LICENSES/python/pywin32-312/licenses/pythonwin/Scintilla/License.txt",
+      "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
+      "bytes": 873,
+      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/pythonwin/Scintilla/License.txt"
+    },
+    {
+      "path": "LICENSES/python/pywin32-312/licenses/pythonwin/pywin/idle/LICENSE.txt",
+      "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
+      "bytes": 12540,
+      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/pythonwin/pywin/idle/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/pywin32-312/licenses/win32/License.txt",
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+      "bytes": 1541,
+      "origin": "Unmodified license/notice from pinned installed wheel: pywin32-312.dist-info/licenses/win32/License.txt"
+    },
+    {
+      "path": "LICENSES/python/PyYAML-6.0.3/licenses/LICENSE",
+      "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
+      "bytes": 1101,
+      "origin": "Unmodified license/notice from pinned installed wheel: pyyaml-6.0.3.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/qdrant-client-1.12.0/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified license/notice from pinned installed wheel: qdrant_client-1.12.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/regex-2025.11.3/licenses/LICENSE.txt",
+      "sha256": "3d220c06594b826bbabf110312f60f385f99e57e529fa4b9e536f79091f8b4c7",
+      "bytes": 11792,
+      "origin": "Unmodified license/notice from pinned installed wheel: regex-2025.11.3.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/requests-2.33.0/licenses/LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+      "bytes": 10142,
+      "origin": "Unmodified license/notice from pinned installed wheel: requests-2.33.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/requests-2.33.0/licenses/NOTICE",
+      "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc",
+      "bytes": 38,
+      "origin": "Unmodified license/notice from pinned installed wheel: requests-2.33.0.dist-info/licenses/NOTICE"
+    },
+    {
+      "path": "LICENSES/python/rich-13.7.1/LICENSE",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+      "bytes": 1056,
+      "origin": "Unmodified license/notice from pinned installed wheel: rich-13.7.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/rsa-4.9.1/LICENSE",
+      "sha256": "073f28b7d389c8fe74f607e17c27f81eaa5ace69edc43a884f23f41b41c5c726",
+      "bytes": 577,
+      "origin": "Unmodified license/notice from pinned installed wheel: rsa-4.9.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/safetensors-0.6.2/licenses/LICENSE",
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "bytes": 11558,
+      "origin": "Unmodified license/notice from pinned installed wheel: safetensors-0.6.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/scikit-learn-1.7.2/licenses/COPYING",
+      "sha256": "1b74e02d0cb8e6502091124787fc91695b9dd92c9cb146d9d34830f9a300ab3c",
+      "bytes": 2628,
+      "origin": "Unmodified license/notice from pinned installed wheel: scikit_learn-1.7.2.dist-info/licenses/COPYING"
+    },
+    {
+      "path": "LICENSES/python/scipy-1.16.3/LICENSE.txt",
+      "sha256": "564d63dbef2ef3eb1dec94908966d3edf5f11c487ee2cf2baf8bf3faef01bdd9",
+      "bytes": 46756,
+      "origin": "Unmodified license/notice from pinned installed wheel: scipy-1.16.3.dist-info/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/sentence-transformers-5.6.0/licenses/LICENSE",
+      "sha256": "624b030fd62b8b989dd502d5bb6322cbc0dbb524ab9c9708f32efe33d7275735",
+      "bytes": 11338,
+      "origin": "Unmodified license/notice from pinned installed wheel: sentence_transformers-5.6.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/sentence-transformers-5.6.0/licenses/NOTICE.txt",
+      "sha256": "95f2f1af3516527c6d19d2ba6e0bec05140a6a360fcebb56dc48debae3253867",
+      "bytes": 330,
+      "origin": "Unmodified license/notice from pinned installed wheel: sentence_transformers-5.6.0.dist-info/licenses/NOTICE.txt"
+    },
+    {
+      "path": "LICENSES/python/setuptools-80.9.0/licenses/LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "bytes": 1023,
+      "origin": "Unmodified license/notice from pinned installed wheel: setuptools-80.9.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/shellingham-1.5.4/LICENSE",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+      "bytes": 751,
+      "origin": "Unmodified license/notice from pinned installed wheel: shellingham-1.5.4.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/sniffio-1.3.1/LICENSE",
+      "sha256": "652c878488d1456361e08c3f8607fd7ba59892a14103d15cce4ff93c85b5cc8b",
+      "bytes": 185,
+      "origin": "Unmodified license/notice from pinned installed wheel: sniffio-1.3.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/sniffio-1.3.1/LICENSE.APACHE2",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified license/notice from pinned installed wheel: sniffio-1.3.1.dist-info/LICENSE.APACHE2"
+    },
+    {
+      "path": "LICENSES/python/sniffio-1.3.1/LICENSE.MIT",
+      "sha256": "3e6dae555eb92787fc82d1d48355677f454c7f65aeb38d3f9e72bf9a3daf034b",
+      "bytes": 1046,
+      "origin": "Unmodified license/notice from pinned installed wheel: sniffio-1.3.1.dist-info/LICENSE.MIT"
+    },
+    {
+      "path": "LICENSES/python/starlette-0.49.3/licenses/LICENSE.md",
+      "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf",
+      "bytes": 1518,
+      "origin": "Unmodified license/notice from pinned installed wheel: starlette-0.49.3.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/sympy-1.14.0/licenses/LICENSE",
+      "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286",
+      "bytes": 7885,
+      "origin": "Unmodified license/notice from pinned installed wheel: sympy-1.14.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/tenacity-9.1.2/licenses/LICENSE",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "bytes": 11357,
+      "origin": "Unmodified license/notice from pinned installed wheel: tenacity-9.1.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/threadpoolctl-3.6.0/licenses/LICENSE",
+      "sha256": "81ac619075248b06e53660b652d10e485f4675f5d0ae0f97ea22370da1f7e23b",
+      "bytes": 1507,
+      "origin": "Unmodified license/notice from pinned installed wheel: threadpoolctl-3.6.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.10.0+cpu/LICENSE",
+      "sha256": "fdebf104aa527ebbdbf378de158ffb2b1dd461a37160d142e4f8ecac9e943b8e",
+      "bytes": 544783,
+      "origin": "Unmodified license/notice from pinned installed wheel: torch-2.10.0+cpu.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/torch-2.10.0+cpu/NOTICE",
+      "sha256": "1c3dec6c0342c7ed9e12af59b296c7bb1d394af5cf881db74191cc8299efce5c",
+      "bytes": 24088,
+      "origin": "Unmodified license/notice from pinned installed wheel: torch-2.10.0+cpu.dist-info/NOTICE"
+    },
+    {
+      "path": "LICENSES/python/tqdm-4.67.1/LICENCE",
+      "sha256": "dc33252e829015e3b150086fb9b3a40f6ad6fb32c2f4610ce812fa677d35986a",
+      "bytes": 1985,
+      "origin": "Unmodified license/notice from pinned installed wheel: tqdm-4.67.1.dist-info/LICENCE"
+    },
+    {
+      "path": "LICENSES/python/transformers-5.10.2/licenses/LICENSE",
+      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+      "bytes": 11418,
+      "origin": "Unmodified license/notice from pinned installed wheel: transformers-5.10.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/trl-0.9.4/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified license/notice from pinned installed wheel: trl-0.9.4.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/typeguard-4.6.0/licenses/LICENSE",
+      "sha256": "6163f7987dfb38d6bc320ce2b70b2f02b862bc41126516d552ef1cd43247e758",
+      "bytes": 1130,
+      "origin": "Unmodified license/notice from pinned installed wheel: typeguard-4.6.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/typer-0.23.1/licenses/LICENSE",
+      "sha256": "58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49",
+      "bytes": 1086,
+      "origin": "Unmodified license/notice from pinned installed wheel: typer-0.23.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/typing_extensions-4.15.0/licenses/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "bytes": 13936,
+      "origin": "Unmodified license/notice from pinned installed wheel: typing_extensions-4.15.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/typing-inspection-0.4.2/licenses/LICENSE",
+      "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+      "bytes": 1090,
+      "origin": "Unmodified license/notice from pinned installed wheel: typing_inspection-0.4.2.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/tyro-1.0.17/licenses/LICENSE",
+      "sha256": "1470480384dd9bcd98241f67ca5ef49f4c546ea9e9ac4dedf1cc27eec466c093",
+      "bytes": 1065,
+      "origin": "Unmodified license/notice from pinned installed wheel: tyro-1.0.17.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/tzdata-2026.6/licenses/LICENSE",
+      "sha256": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46",
+      "bytes": 625,
+      "origin": "Unmodified license/notice from pinned installed wheel: tzdata-2026.6.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/tzdata-2026.6/licenses/licenses/LICENSE_APACHE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "Unmodified license/notice from pinned installed wheel: tzdata-2026.6.dist-info/licenses/licenses/LICENSE_APACHE"
+    },
+    {
+      "path": "LICENSES/python/urllib3-2.8.0/licenses/LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+      "bytes": 1093,
+      "origin": "Unmodified license/notice from pinned installed wheel: urllib3-2.8.0.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/uvicorn-0.38.0/licenses/LICENSE.md",
+      "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371",
+      "bytes": 1526,
+      "origin": "Unmodified license/notice from pinned installed wheel: uvicorn-0.38.0.dist-info/licenses/LICENSE.md"
+    },
+    {
+      "path": "LICENSES/python/watchdog-6.0.0/COPYING",
+      "sha256": "39f081828db6f94c70123fa4fb30c1bce3e215a8fdece53a49991fe076a69c08",
+      "bytes": 703,
+      "origin": "Unmodified license/notice from pinned installed wheel: watchdog-6.0.0.dist-info/COPYING"
+    },
+    {
+      "path": "LICENSES/python/watchdog-6.0.0/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified license/notice from pinned installed wheel: watchdog-6.0.0.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/websockets-15.0.1/LICENSE",
+      "sha256": "0f44514998aca209d3482d10204a8adf2aa4296ff157a36a5c0922f2280632d3",
+      "bytes": 1538,
+      "origin": "Unmodified license/notice from pinned installed wheel: websockets-15.0.1.dist-info/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/Werkzeug-3.1.9/licenses/LICENSE.txt",
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+      "bytes": 1475,
+      "origin": "Unmodified license/notice from pinned installed wheel: werkzeug-3.1.9.dist-info/licenses/LICENSE.txt"
+    },
+    {
+      "path": "LICENSES/python/xxhash-4.1.0/licenses/LICENSE",
+      "sha256": "b76e99529f3e47372029e11914a8f4b95d6313463ed5a1a5c9afe96c3e015114",
+      "bytes": 1313,
+      "origin": "Unmodified license/notice from pinned installed wheel: xxhash-4.1.0.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/yarl-1.25.1/licenses/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "Unmodified license/notice from pinned installed wheel: yarl-1.25.1.dist-info/licenses/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/yarl-1.25.1/licenses/NOTICE",
+      "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838",
+      "bytes": 609,
+      "origin": "Unmodified license/notice from pinned installed wheel: yarl-1.25.1.dist-info/licenses/NOTICE"
+    },
+    {
+      "path": "LICENSES/python/onnxruntime-1.23.2/LICENSE",
+      "sha256": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674",
+      "bytes": 1094,
+      "origin": "Unmodified file from pinned onnxruntime wheel, package directory"
+    },
+    {
+      "path": "LICENSES/python/onnxruntime-1.23.2/ThirdPartyNotices.txt",
+      "sha256": "e00f828e0a33de591a355ae6606d2625f5758da7d2c844db7821c9dd3e3647b6",
+      "bytes": 333022,
+      "origin": "Unmodified file from pinned onnxruntime wheel, package directory"
+    },
+    {
+      "path": "LICENSES/python/flask-cors-6.0.1/LICENSE",
+      "sha256": "134a20d852c0cf9e0f3c228767921b76f4bfc4af4a2fc7c4cc90f6b4fd407b5c",
+      "bytes": 1056,
+      "origin": "https://raw.githubusercontent.com/corydolphin/flask-cors/6.0.1/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/flatbuffers-25.12.19/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "https://raw.githubusercontent.com/google/flatbuffers/v25.12.19/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/grpcio-tools-1.80.1/LICENSE",
+      "sha256": "58c86a3f2b5cca0ebdf9ed3e7f4e6dc38e3b38796d8c3dc92064c62a4e39d0dd",
+      "bytes": 30191,
+      "origin": "https://raw.githubusercontent.com/grpc/grpc/v1.80.1/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/sentencepiece-0.2.1/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "origin": "https://raw.githubusercontent.com/google/sentencepiece/v0.2.1/LICENSE"
+    },
+    {
+      "path": "LICENSES/python/tokenizers-0.22.2/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "origin": "https://raw.githubusercontent.com/huggingface/tokenizers/v0.22.2/LICENSE"
+    },
+    {
+      "path": "LICENSES/npm/marked/LICENSE.md",
+      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
+      "bytes": 2942,
+      "origin": "Unmodified license from installed npm marked"
+    },
+    {
+      "path": "LICENSES/npm/electron/LICENSE",
+      "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+      "bytes": 1096,
+      "origin": "Unmodified license from installed npm electron"
+    },
+    {
+      "path": "LICENSES/common/MPL-2.0.txt",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "bytes": 16726,
+      "origin": "https://www.mozilla.org/media/MPL/2.0/index.txt"
+    }
+  ]
+}

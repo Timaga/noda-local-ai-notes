@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="startup-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      connect-src 'self' http://127.0.0.1:5000 http://127.0.0.1:18741;
+      img-src 'self' data:;
+      style-src 'self' 'unsafe-inline';
+      script-src 'self';
+    "
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-02 -->
+  <!-- What: Apply the finalized Noda icon and product name to the launcher. -->
+  <title>Noda</title>
+  <link rel="icon" type="image/png" href="assets/noda-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-06-30 -->
+  <!-- What: Load the optional pre-backend vault selection layout separately from
+       the compact loading and full model-selection launcher styles. -->
+  <link rel="stylesheet" href="startup_notes_directory.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-02 -->
+  <!-- What: Load the compatibility-gated TurboQuant explanation shown before
+       vLLM starts, keeping it separate from the compact loading card. -->
+  <link rel="stylesheet" href="startup_turboquant.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-02 -->
+  <!-- Load the shared theme for startup, selectors, and loading states. -->
+  <link rel="stylesheet" href="theme.css" />
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-03 -->
+  <!-- What: Load the dedicated Noda logo animation after shared component/theme
+       styles so its layered cycle and reduced-motion fallback remain deterministic. -->
+  <link rel="stylesheet" href="startup_noda_loader.css" />
+  <link rel="stylesheet" href="startup_language.css" />
+  <link rel="stylesheet" href="note_model_pair_picker.css" />
+  <link rel="stylesheet" href="startup_model_pairs.css" />
+  <link rel="stylesheet" href="ui_controls.css" />
+  <link rel="stylesheet" href="support_footer.css" />
+</head>
+<body class="startup-page app-loading">
+  <!-- Who: Tim Buglaev -->
+  <!-- When: 2026-07-02 -->
+  <!-- What: Remove launcher chrome and window buttons so compact startup renders as
+       one rounded card; operating-system close requests still use safe confirmation. -->
+  <div id="startup-overlay" class="startup-overlay startup-standalone startup-icon-only" role="status" aria-live="polite" aria-busy="true">
+    <div class="startup-panel">
+      <div class="startup-switch-visual" aria-hidden="true">
+        <span class="startup-noda-stage startup-video-stage">
+          <img class="startup-noda-art" src="assets/noda-icon.png" alt="" draggable="false" />
+          <video id="startup-loader-video" class="startup-noda-art" src="assets/liquid-veins.mp4" muted loop playsinline preload="none"></video>
+        </span>
+        <span class="startup-switch-core">◇</span>
+      </div>
+      <p class="eyebrow" data-en="App startup">Запуск приложения</p>
+      <h2 id="startup-title" data-en="Loading…">Загружаемся…</h2>
+      <p id="startup-message" data-en="Please wait while the local services start.">Пожалуйста, подождите. Интерфейс станет доступен после запуска сервисов.</p>
+      <p id="startup-detail" data-en="Starting Flask, Qdrant, and the notes index…">Инициализируем Flask, Qdrant и индекс заметок...</p>
+      <section id="startup-provisioning" class="startup-provisioning" hidden>
+        <p id="startup-provisioning-detail"></p>
+        <progress id="startup-provisioning-progress" aria-labelledby="startup-title"></progress>
+        <p id="startup-provisioning-count"></p>
+      </section>
+
+      <section id="startup-language" class="startup-language" aria-labelledby="startup-language-title" hidden>
+        <p class="startup-language-step"><span aria-hidden="true">01</span> Noda</p>
+        <h2 id="startup-language-title" tabindex="-1">Choose your language</h2>
+        <div class="startup-language-options">
+          <button id="startup-language-ru" type="button" value="ru" lang="ru">
+            <span class="startup-language-label">
+              <svg class="startup-language-flag" width="24" height="16" viewBox="0 0 24 16" aria-hidden="true" focusable="false">
+                <path fill="#fff" d="M0 0h24v16H0z"/>
+                <path fill="#0039a6" d="M0 5.333h24v5.334H0z"/>
+                <path fill="#d52b1e" d="M0 10.667h24V16H0z"/>
+              </svg>
+              Русский
+            </span>
+            <span class="startup-language-code" aria-hidden="true">RU</span>
+          </button>
+          <button id="startup-language-en" type="button" value="en" lang="en">
+            <span class="startup-language-label">
+              <svg class="startup-language-flag" width="24" height="12" viewBox="0 0 60 30" aria-hidden="true" focusable="false">
+                <path fill="#012169" d="M0 0h60v30H0z"/>
+                <path fill="none" stroke="#fff" stroke-width="6" d="M0 0l60 30M60 0L0 30"/>
+                <path fill="#c8102e" d="M0 0v2l26 13h4L0 0zm60 0h-4L30 13v2L60 0zM0 30h4l26-13v-2L0 30zm60 0v-2L34 15h-4l30 15z"/>
+                <path fill="none" stroke="#fff" stroke-width="10" d="M30 0v30M0 15h60"/>
+                <path fill="none" stroke="#c8102e" stroke-width="6" d="M30 0v30M0 15h60"/>
+              </svg>
+              English
+            </span>
+            <span class="startup-language-code" aria-hidden="true">EN</span>
+          </button>
+        </div>
+        <p id="startup-language-status" class="startup-language-status" role="status"></p>
+      </section>
+
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-06-30 -->
+      <!-- What: Add an in-launcher vault selection step; the renderer can request
+           only a native directory dialog and cannot submit an arbitrary path. -->
+      <section
+        id="startup-notes-directory"
+        class="startup-notes-directory"
+        aria-labelledby="startup-notes-directory-title"
+        hidden
+      >
+        <div class="startup-directory-step" aria-hidden="true">2</div>
+        <p class="startup-directory-step-label" data-en="Step 2 · Notes folder">Шаг 2 · Папка заметок</p>
+        <h2 id="startup-notes-directory-title" data-en="Choose your notes folder">Выберите папку с заметками</h2>
+        <p class="startup-directory-description">
+          <span data-en="Select the folder where you keep your notes.">Укажите папку, в которой находятся ваши заметки.</span><br />
+          <span data-en="Noda uses it to index, search, and save notes.">Она будет использоваться для индексации, поиска и сохранения новых записей.</span>
+        </p>
+
+        <div class="startup-directory-field">
+          <span class="startup-directory-icon" aria-hidden="true"></span>
+          <span id="startup-directory-path" class="startup-directory-path" data-en="No folder selected">Папка не выбрана</span>
+          <button id="startup-directory-choose" type="button" class="startup-directory-choose" data-en="Browse…">Выбрать...</button>
+        </div>
+
+        <div class="startup-directory-info">
+          <span class="startup-directory-info-icon" aria-hidden="true">i</span>
+          <p data-en="Supports Markdown files (.md) and local Obsidian attachments.">Поддерживаются Markdown-файлы (.md) и локальные вложения Obsidian.</p>
+        </div>
+
+        <p id="startup-directory-status" class="startup-directory-status" role="status" aria-live="polite"></p>
+        <div class="startup-directory-actions">
+          <button id="startup-directory-next" type="button" class="startup-directory-next" disabled>
+            <span data-en="Next">Далее</span> <span class="ui-icon" data-ui-icon="forward" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-07-02 -->
+      <!-- What: Explain TurboQuant in plain language and collect only enable/skip
+           booleans; hardware support is decided and enforced in Electron main. -->
+      <section
+        id="startup-turboquant"
+        class="startup-turboquant"
+        aria-labelledby="startup-turboquant-title"
+        hidden
+      >
+        <div class="startup-turboquant-icon" aria-hidden="true">⚡</div>
+        <p class="startup-turboquant-kicker" data-en="Optional optimization">Дополнительная оптимизация</p>
+        <h2 id="startup-turboquant-title" data-en="Enable TurboQuant?">Включить TurboQuant?</h2>
+        <p class="startup-turboquant-description" data-en="TurboQuant compresses the model’s conversation memory. This frees up video memory for longer notes and chats.">
+          TurboQuant сжимает память текущего диалога модели. Это освобождает видеопамять
+          и позволяет работать с более длинными заметками и перепиской.
+        </p>
+        <ul class="startup-turboquant-benefits">
+          <li><span aria-hidden="true">✓</span> <span class="startup-turboquant-benefit-text" data-en="Uses less video memory">Меньше расход видеопамяти</span></li>
+          <li><span aria-hidden="true">✓</span> <span class="startup-turboquant-benefit-text" data-en="Fits more text in context">Больше текста помещается в контекст</span></li>
+          <li><span aria-hidden="true">i</span> <span class="startup-turboquant-benefit-text" data-en="The model restarts after you choose">После выбора модель запустится заново</span></li>
+        </ul>
+        <p id="startup-turboquant-hardware" class="startup-turboquant-hardware" data-en="Checking GPU compatibility...">
+          Проверяем видеокарту...
+        </p>
+        <p id="startup-turboquant-current" class="startup-turboquant-current"></p>
+        <label class="startup-turboquant-skip">
+          <input id="startup-turboquant-skip" type="checkbox" />
+          <span data-en="Don’t ask again at startup">Больше не спрашивать при запуске</span>
+        </label>
+        <p id="startup-turboquant-status" class="startup-turboquant-status" role="status" aria-live="polite"></p>
+        <div class="startup-turboquant-actions">
+          <button id="startup-turboquant-disable" type="button" class="secondary-btn" data-en="Leave off">Оставить выключенным</button>
+          <button id="startup-turboquant-enable" type="button" class="notes-primary-btn" data-en="Enable TurboQuant">Включить TurboQuant</button>
+        </div>
+      </section>
+
+      <div id="startup-model-picker" class="startup-model-picker" hidden>
+        <div id="startup-model-list" class="startup-model-list" aria-label="Выбор модели" data-en-aria-label="Model selection"></div>
+        <p id="startup-model-status" class="startup-model-status" data-en="Choose a model for this session.">Выберите модель для этого запуска.</p>
+      </div>
+
+      <div class="startup-progress-row">
+        <div class="startup-progress" aria-hidden="true">
+          <div id="startup-progress-bar"></div>
+        </div>
+        <span id="startup-phase-counter" class="startup-phase-counter" aria-live="polite">1/7</span>
+      </div>
+
+      <ol class="startup-steps">
+        <li data-startup-phase="backend"><span data-en="Backend and Flask">Backend и Flask</span></li>
+        <li data-startup-phase="qdrant"><span data-en="Qdrant and notes index">Qdrant и индекс заметок</span></li>
+        <li data-startup-phase="runtime-config"><span data-en="Model configuration">Конфигурация модели</span></li>
+        <li data-startup-phase="model-select"><span data-en="Model selection">Выбор модели</span></li>
+        <li data-startup-phase="model-download"><span data-en="Hugging Face cache">Кеш Hugging Face</span></li>
+        <li data-startup-phase="wsl"><span data-en="WSL runtime">Среда WSL</span></li>
+        <li data-startup-phase="vllm"><span data-en="vLLM and TurboQuant">vLLM и TurboQuant</span></li>
+      </ol>
+
+      <button id="startup-details-toggle" type="button" class="startup-details-toggle" aria-expanded="false" data-en="Startup details">
+        Детали запуска
+      </button>
+      <div id="startup-details-panel" class="startup-details-panel" hidden>
+        <p id="startup-detail-log" data-en="Starting Flask, Qdrant, and the notes index…">Инициализируем Flask, Qdrant и индекс заметок...</p>
+      </div>
+
+      <!-- Who: Tim Buglaev -->
+      <!-- When: 2026-07-02 -->
+      <!-- What: Keep only failure recovery; successful readiness now opens the notes
+           list automatically without an intermediate confirmation button. -->
+      <button id="startup-retry-btn" type="button" class="secondary-btn" data-en="Retry startup" hidden>Повторить запуск</button>
+    </div>
+  </div>
+
+  <div id="startup-note-download" class="startup-confirm-backdrop startup-download-backdrop" hidden>
+    <section class="startup-confirm-card" aria-labelledby="startup-note-download-title">
+      <h3 id="startup-note-download-title" data-en="Downloading note models">Скачиваем модели для заметок</h3>
+      <p id="startup-note-download-model" role="status"></p>
+      <progress id="startup-note-download-progress" max="100" value="0"
+                aria-labelledby="startup-note-download-title"></progress>
+      <div class="startup-download-figures">
+        <span id="startup-note-download-size"></span>
+        <span id="startup-note-download-percent"></span>
+      </div>
+      <button id="startup-note-download-cancel" type="button" class="secondary-btn" hidden
+              data-en="Stop download">Остановить загрузку</button>
+    </section>
+  </div>
+
+  <dialog id="startup-pair-skip-dialog" class="startup-confirm-card startup-pair-skip-dialog"
+          aria-labelledby="startup-pair-skip-heading" aria-describedby="startup-pair-skip-warning startup-pair-skip-question">
+    <form method="dialog">
+      <h3 id="startup-pair-skip-heading"></h3>
+      <p id="startup-pair-skip-warning"></p>
+      <p id="startup-pair-skip-question" data-en="Continue?">Продолжить?</p>
+      <div class="startup-confirm-actions">
+        <button type="submit" value="cancel" class="secondary-btn" autofocus data-en="Cancel">Отмена</button>
+        <button type="submit" value="skip" class="secondary-btn startup-pair-skip-confirm" data-en="Continue">Продолжить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="startup-stop-dialog" class="startup-confirm-backdrop" role="dialog" aria-modal="true" aria-labelledby="startup-stop-title" hidden>
+    <div class="startup-confirm-card">
+      <h3 id="startup-stop-title" data-en="Stop starting Noda?">Остановить запуск приложения?</h3>
+      <p data-en="Noda will close and stop the backend, Qdrant, and model.">Backend, Qdrant и модель будут остановлены вместе с приложением.</p>
+      <div class="startup-confirm-actions">
+        <button id="startup-stop-confirm-btn" type="button" class="danger-btn" data-en="Stop startup">Остановить</button>
+        <button id="startup-stop-cancel-btn" type="button" class="secondary-btn" data-en="Keep waiting">Продолжить ожидание</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="ui_translations.js"></script>
+  <script src="ui_languages.js"></script>
+  <script src="ui_language_flags.js"></script>
+  <script src="i18n.js"></script>
+  <script src="support_footer.js"></script>
+  <script src="model_locale.js"></script>
+  <script src="startup_language_renderer.js"></script>
+  <script src="note_stage_components.js"></script>
+  <script src="note_model_pair_picker.js"></script>
+  <script src="startup_pair_skip.js"></script>
+  <script src="startup_note_download.js"></script>
+  <script src="startup_model_picker.js"></script>
+  <script src="startup_notes_directory.js"></script>
+  <script src="startup_turboquant.js"></script>
+  <script src="startup_gate.js"></script>
+  <script src="startup_renderer.js"></script>
+</body>
+</html>
