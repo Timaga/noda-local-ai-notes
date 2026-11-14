@@ -10,7 +10,7 @@
 
 <p align="center">Windows x64 · local inference · Markdown files · noncommercial source license</p>
 
-<p align="center"><strong><a href="https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.17/Noda-Setup-1.0.2-beta.17-x64.exe">Download Windows Setup (x64)</a></strong> · <a href="https://github.com/Timaga/noda-local-ai-notes/releases">All versions</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="#build-from-source">Build from source</a></p>
+<p align="center"><strong><a href="https://github.com/Timaga/noda-local-ai-notes/releases">Download Windows Setup (x64)</a></strong> · <a href="docs/releases/1.0.2.md">1.0.2 release notes</a> · <a href="docs/USER_GUIDE.md">User guide</a> · <a href="#build-from-source">Build from source</a></p>
 
 ![Noda library with projects, a note list and an editable Markdown note](docs/assets/screenshots/library.png)
 
@@ -43,13 +43,13 @@ Screenshots use synthetic demo notes in an isolated application profile. The dis
 
 ## Install on Windows
 
-**[Download Noda 1.0.2-beta.17 Setup for Windows x64](https://github.com/Timaga/noda-local-ai-notes/releases/download/v1.0.2-beta.17/Noda-Setup-1.0.2-beta.17-x64.exe)** · [Release notes and checksums](https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.17)
+**[Windows x64 Setup, releases and checksums](https://github.com/Timaga/noda-local-ai-notes/releases)** · [Noda 1.0.2 release notes](docs/releases/1.0.2.md)
 
-1. Download `Noda-Setup-1.0.2-beta.17-x64.exe` and run it.
+1. Download the current version's `Noda-Setup-<version>-x64.exe` and run it.
 2. Follow the installation steps, then open **Noda** from the Start menu.
 3. Let Noda prepare its local runtime and the models you choose. Initial downloads require internet access.
 
-The Windows build is unsigned while code-signing arrangements are pending. Review [known security issues](docs/security-known-issues.md) before installing. Download access follows repository visibility; a private release requires an authorized GitHub account.
+The Windows build is unsigned while code-signing arrangements are pending. Review [known security issues](docs/security-known-issues.md) before installing.
 
 ### Update to a newer version
 
@@ -58,7 +58,7 @@ Back up your projects and app profile, fully exit Noda through its tray menu, th
 ### First run
 
 1. Start in English and create a project or connect a Markdown folder. Other interface languages remain available in Settings.
-2. Choose the processing models you want, or disable optional AI stages.
+2. Let initial preparation download the semantic-search model (about 1.1 GB), then choose processing models or disable optional AI stages. Setup does not bundle model weights.
 3. Create a quick note, watch its queue entry, then open the result in the library.
 
 The base runtime requires Windows 10 or 11 x64 and an AVX2-capable processor. **16 GB RAM is a useful starting point for the recommended local model profile.** Larger models need more resources. Download sizes are shown before model installation; leave additional disk space for the runtime, model weights and temporary downloads.
@@ -83,7 +83,7 @@ The supplied note-processing profiles support **Russian and English**. Changing 
 
 ## Project status
 
-Version **1.0.2** is being prepared as a stable release. Until its versioned download is published, the download above remains the previous beta. Local checks cover isolated Python/Node workflows and native installer lifecycle scenarios. Broader model evaluation, clean-machine validation and the documented security findings remain separate release gates.
+Current source version: **1.0.2**. The supported workflow uses ready-made local models for note processing, indexing and chat. Fine-tuning is disabled. Source and native checks cover isolated workflows, renderer trust boundaries and installer lifecycle scenarios. Exact-binary clean-machine validation and broader model evaluation remain documented limitations.
 
 See the [compliance and publication status](docs/COMPLIANCE.md) for the reviewed licenses, privacy scope and open release findings.
 

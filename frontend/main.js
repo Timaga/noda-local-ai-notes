@@ -54,7 +54,8 @@ const { localizeDesktopMenu } = require("./desktop_menu");
 const { buildHardwareProfile, detectNvidiaGpu } = require("./hardware_profile");
 const { evaluateTurboQuantCapability } = require("./turboquant_capability");
 const { initializeOwnedProfileEnvironment, applyOwnedProfileSettings, assertProfileMutable } = require("./owned_note_profile");
-const { usesRuNotePipeline, shouldStartManagedAtStartup, startupReadyStatus, ensureChatRuntimeReady, isGenerationSender, ensureGenerationRuntimeReady } = require("./ru_note_startup");
+const { usesRuNotePipeline, shouldStartManagedAtStartup, startupReadyStatus, ensureChatRuntimeReady, ensureGenerationRuntimeReady } = require("./ru_note_startup");
+const { protectRenderer, isTrustedRenderer, isTrustedSender: isGenerationSender } = require("./renderer_trust");
 const { createStartupNoteSelection, saveNotePairs } = require("./note_pair_selection");
 const {
   NoteModelDownloadError, prepareNoteModels, previewNoteModel, importNoteModel, downloadChatModel, downloadPortableChatPreset,
@@ -2587,6 +2588,7 @@ function createStartupWindow() {
     webPreferences: createSecureWindowPreferences(),
   });
 
+  protectRenderer(startupWindow, path.join(__dirname, "startup.html"), { openExternal: url => shell.openExternal(url) });
   startupWindow.loadFile(path.join(__dirname, "startup.html"));
   startupWindow.webContents.on("did-finish-load", () => {
     sendStartupStatusToWindow(startupWindow);
@@ -2693,7 +2695,7 @@ function minimizeStartupWindow() {
 // What: Restrict startup window-control IPC to the dedicated startup renderer so
 //       other windows cannot stop launch or manipulate startup state directly.
 function isStartupWindowSender(event) {
-  return Boolean(startupWindow && !startupWindow.isDestroyed() && event.sender === startupWindow.webContents);
+  return isTrustedRenderer(event, startupWindow);
 }
 
 function denyInvalidStartupSender(action) {
@@ -2706,7 +2708,7 @@ function denyInvalidStartupSender(action) {
 // What: Restrict settings filesystem/model IPC to the dedicated notes window so quick
 //       capture and startup renderers cannot mutate vault or runtime preferences.
 function isNotesWindowSender(event) {
-  return Boolean(notesWindow && !notesWindow.isDestroyed() && event.sender === notesWindow.webContents);
+  return isTrustedRenderer(event, notesWindow);
 }
 
 function denyInvalidNotesSender(action) {
@@ -2746,6 +2748,7 @@ function createQuickWindow() {
     webPreferences: createSecureWindowPreferences(),
   });
 
+  protectRenderer(quickWindow, path.join(__dirname, "index.html"), { openExternal: url => shell.openExternal(url) });
   quickWindow.loadFile(path.join(__dirname, "index.html"));
   // Who: Tim Buglaev
   // When: 2026-06-14
@@ -2804,6 +2807,7 @@ function createNotesWindow() {
     webPreferences: createSecureWindowPreferences(),
   });
 
+  protectRenderer(notesWindow, path.join(__dirname, "notes.html"), { openExternal: url => shell.openExternal(url) });
   notesWindow.loadFile(path.join(__dirname, "notes.html"));
   // Who: Tim Buglaev
   // When: 2026-06-14
@@ -2970,7 +2974,10 @@ ipcMain.handle("quick-note:ensure-generation-runtime", async (event, draft) => p
 // When: 2026-06-14
 // What: Expose a read-only startup snapshot for renderer loading gates without
 //       giving renderers direct access to backend, WSL, or process controls.
-ipcMain.handle("quick-note:get-startup-status", async () => getStartupStatusPayload());
+ipcMain.handle("quick-note:get-startup-status", async event => {
+  if (!isGenerationSender(event, [startupWindow, quickWindow, notesWindow])) return denyInvalidNotesSender("get-startup-status");
+  return getStartupStatusPayload();
+});
 ipcMain.handle("quick-note:select-startup-language", (event, language) => {
   if (!isStartupWindowSender(event)) return denyInvalidStartupSender("select-startup-language");
   return startupLanguage.select(language);
@@ -3000,7 +3007,8 @@ ipcMain.handle("quick-note:confirm-startup-notes-directory", async (event) => {
   }
   return confirmStartupNotesDirectory();
 });
-ipcMain.handle("quick-note:open-notes-panel", async () => {
+ipcMain.handle("quick-note:open-notes-panel", async event => {
+  if (!isGenerationSender(event, [startupWindow, quickWindow, notesWindow])) return denyInvalidNotesSender("open-notes-panel");
   showNotesWindow();
   return { ok: true };
 });
@@ -3221,9 +3229,16 @@ ipcMain.handle("quick-note:stop-startup", async (event) => {
   requestAppQuit();
   return { ok: true };
 });
-ipcMain.handle("quick-note:get-hotkey", async () => desktopHotkey.get());
-ipcMain.handle("quick-note:resize-capture", (event, height) => quickCapture.resize(event, height));
-ipcMain.handle("quick-note:toggle-window", async () => {
+ipcMain.handle("quick-note:get-hotkey", async event => {
+  if (!isGenerationSender(event, [startupWindow, quickWindow, notesWindow])) return denyInvalidNotesSender("get-hotkey");
+  return desktopHotkey.get();
+});
+ipcMain.handle("quick-note:resize-capture", (event, height) => {
+  if (!isGenerationSender(event, [quickWindow])) return denyInvalidNotesSender("resize-capture");
+  return quickCapture.resize(event, height);
+});
+ipcMain.handle("quick-note:toggle-window", async event => {
+  if (!isGenerationSender(event, [startupWindow, quickWindow, notesWindow])) return denyInvalidNotesSender("toggle-window");
   toggleQuickWindow();
   return { ok: true };
 });

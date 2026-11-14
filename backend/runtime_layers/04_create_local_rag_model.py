@@ -524,41 +524,6 @@ if SELECTED_QUANTIZATION_BACKEND == "bitsandbytes" and not BITSANDBYTES_AVAILABL
             print(f"bitsandbytes not found{reason_text}, quantization disabled (CPU mode).")
             RAG_LOCAL_MODEL_QUANTIZATION = None
 
-def run_training_if_needed():
-    """Checks for new notes and runs the fine-tuning pipeline if necessary."""
-    if not all([TrainingPipeline, PipelineConfig]):
-        print("[WARNING] Training pipeline components not available, skipping.")
-        return
-
-    print("[START] Checking for new notes to fine-tune the model...")
-
-    try:
-        config = PipelineConfig(
-            notes_dir=NOTES_DIR,
-            trained_notes_path=_project_data_path("training/trained_notes.json", BASE_DIR / "storage" / "trained_notes.json"),
-            adapter_path=_project_data_path("training/artifacts/adapter", BASE_DIR / "models" / "lora_adapters"),
-            artifacts_dir=_project_data_path("training/artifacts", BASE_DIR / "storage" / "pipeline" / "artifacts"),
-            dataset_path=_project_data_path("training/dataset/notes.jsonl", BASE_DIR / "storage" / "pipeline" / "dataset" / "notes.jsonl"),
-            model_id=RAG_LOCAL_MODEL_ID,
-            require_gpu=TRAINING_REQUIRE_GPU,
-        )
-
-        pipeline = TrainingPipeline(config)
-        result = pipeline.run()
-
-        if result.success:
-            if result.status == 'skipped':
-                print(f"[SUCCESS] Training skipped: {result.message}")
-            else:
-                print(f"[SUCCESS] Training successful: {result.message}")
-        else:
-            print(f"[ERROR] Training failed: {result.message}")
-
-    except Exception as e:
-        print(f"[ERROR] An error occurred during the training pipeline execution: {e}")
-
-# Временно отключаем автоматическое обучение при старте
-# run_training_if_needed()
 NOTE_BASE_TITLE = os.environ.get("NOTE_BASE_TITLE", "Заметка")
 MODEL_INIT_RESULT = None
 

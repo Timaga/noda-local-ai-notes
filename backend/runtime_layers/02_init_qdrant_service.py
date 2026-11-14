@@ -126,7 +126,7 @@ def _load_embedding_model(startup=False):
             from sentence_transformers import SentenceTransformer
 
             logger.info(f"Loading embedding model: {model_id}")
-            _embedding_model = SentenceTransformer(model_id, local_files_only=True)
+            _embedding_model = SentenceTransformer(model_id, local_files_only=True, trust_remote_code=False)
             try:
                 if hasattr(_embedding_model, "get_sentence_embedding_dimension"):
                     dim = _embedding_model.get_sentence_embedding_dimension()

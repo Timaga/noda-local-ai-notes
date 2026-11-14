@@ -440,6 +440,7 @@ function renderQdrantState() {
 //       so the chat tab can render counts and source state without duplicating
 //       the notes-panel cache lifecycle.
 function syncNotesChatState() {
+  window.notesSemanticControls?.update(qdrantInfo);
   if (window.notesChatController && typeof window.notesChatController.setNotesState === "function") {
     window.notesChatController.setNotesState({
       notes,

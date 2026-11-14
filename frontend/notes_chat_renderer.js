@@ -11,7 +11,6 @@
   const MAX_STORED_MESSAGES = 80;
   const t = (ru, en) => window.nodaI18n?.t(ru, en) ?? ru;
 
-  const chatQdrantState = document.getElementById("chat-qdrant-state");
   const chatCount = document.getElementById("chat-count");
   const chatNewBtn = document.getElementById("chat-new-btn");
   const chatSearch = document.getElementById("chat-search");
@@ -265,12 +264,13 @@
 
   function updateChatStatus() {
     const ready = scopeCurrent();
+    if (chatSubtitle) chatSubtitle.hidden = false;
     if (chatNewBtn) chatNewBtn.disabled = !ready;
     if (!ready) {
       const message = boundProject?.status === "error"
         ? t("Проект недоступен. Выберите проект снова.", "The project is unavailable. Select it again.")
         : t("Переключение проекта…", "Switching project…");
-      for (const element of [chatQdrantState, chatSubtitle]) {
+      for (const element of [chatSubtitle]) {
         if (element) { element.textContent = message; element.classList.remove("active"); }
       }
       return;
@@ -280,9 +280,6 @@
     if (setupSearch) setupSearch.hidden = !semanticSearchBlocked();
     if (semanticSearchBlocked()) {
       const disabled = embedding === "disabled";
-      chatQdrantState?.classList.remove("active");
-      if (chatQdrantState) chatQdrantState.textContent = disabled ? t("Только текстовый поиск", "Text search only")
-        : t("Модель поиска недоступна", "Search model unavailable");
       if (chatSubtitle) chatSubtitle.textContent = disabled
         ? t("Чтобы включить чат, выберите «Настроить смысловой поиск» в меню значка Noda у часов Windows и перезапустите приложение.",
           "To enable chat, choose Set up semantic search from the Noda tray menu and restart the app.")
@@ -292,18 +289,10 @@
     }
     const qdrantReady = qdrantSnapshot.available === true;
     const qdrantOffline = qdrantSnapshot.available === false;
-    const countText = window.nodaI18n?.count(notesSnapshot.length, ["заметка", "заметки", "заметок"], "note", "notes")
-      ?? `${notesSnapshot.length} заметок`;
-    if (chatQdrantState) {
-      chatQdrantState.textContent = qdrantReady ? t("Qdrant активен", "Qdrant active")
-        : qdrantOffline ? t("Поиск недоступен", "Search unavailable") : t("Проверяем поиск…", "Checking search…");
-      chatQdrantState.classList.toggle("active", qdrantReady);
-    }
     if (chatSubtitle) {
-      chatSubtitle.textContent = qdrantReady ? t(`Ответы по заметкам • Qdrant • ${countText} в базе`,
-        `Answers from notes • Qdrant • ${countText} in the library`)
-        : qdrantOffline ? t("Поиск по заметкам недоступен. Дождитесь восстановления Qdrant и повторите запрос.",
-          "Note search is unavailable. Wait for Qdrant to recover and retry.")
+      chatSubtitle.hidden = qdrantReady;
+      chatSubtitle.textContent = qdrantReady ? ""
+        : qdrantOffline ? t("Поиск недоступен", "Search unavailable")
           : t("Проверяем доступность поиска по заметкам…", "Checking whether note search is available…");
     }
   }
@@ -490,7 +479,7 @@
     });
     const count = document.createElement("span");
     count.className = "chat-source-count";
-    const origin = contextSource === "qdrant" ? "Qdrant" : contextSource === "cache" ? t("кэш", "cache")
+    const origin = contextSource === "cache" ? t("кэш", "cache")
       : contextSource === "unavailable" ? t("недоступен", "unavailable") : "";
     count.textContent = `${formatSourceCount(sources.length)}${origin ? ` • ${origin}` : ""}`;
     row.appendChild(count);

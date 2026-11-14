@@ -2,7 +2,7 @@
 
 Noda's Windows application is distributed through **GitHub Releases**. Each version has a Git tag, short release notes and a versioned `Noda-Setup-<version>-x64.exe`. GitHub Packages is for package registries and is not used for this desktop installer.
 
-Version **1.0.2** is being prepared as a stable release; [release notes](releases/1.0.2.md) record its scope and remaining gates. The previous published testing release is [v1.0.2-beta.17](https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.17). The repository remains private until the owner's required access protections are active and verified.
+Version **1.0.2** is the stable source version; [release notes](releases/1.0.2.md) record its scope and verification limits. GitHub Releases records actual publication status. Historical beta tags and assets are retained.
 
 ## Prepare another version
 
@@ -15,9 +15,9 @@ Version **1.0.2** is being prepared as a stable release; [release notes](release
 7. Attach Setup and its checksums. Lead the release notes with the download, installation/update steps, changes and known limitations. GitHub also provides source archives for the tag.
 8. Update README's download link only after the version and asset exist. Never replace an existing version's installer silently; use another version for changed application code.
 
-README keeps a working previous-version link until the new asset exists. After publishing 1.0.2, replace it with the exact stable Setup link and verify it anonymously. `/releases/latest` does not select prereleases.
+README links to the existing Releases page until a versioned asset exists. Verify download links anonymously after publication. `/releases/latest` does not select prereleases.
 
-The owner has requested public availability only after access protection is active. Before changing visibility, verify sole-owner write access, no unintended invitations or write deploy keys, active owner-only rules for branches and tags, read-only workflow permissions and disabled workflow PR approval. Recheck those settings after changing visibility. A public repository permits reading and forks; it does not grant write access to visitors. No workflow automatically publishes a release on every source push.
+The owner has authorized public availability with sole-owner write access. Before changing visibility, verify no unintended collaborators, invitations or write deploy keys, read-only workflow permissions and disabled workflow PR approval. Additional branch/tag rules are optional under the owner's current decision. Recheck access after changing visibility. A public repository permits reading and forks; it does not grant write access to visitors. No workflow automatically publishes a release on every source push.
 
 Before a public binary launch, resolve the applicable security and installation gates in [the release notes](releases/1.0.2.md) and [known dependency issues](security-known-issues.md). An unresolved high-risk finding needs a concrete mitigation or explicit owner risk acceptance; changing the version label does not resolve it.
 

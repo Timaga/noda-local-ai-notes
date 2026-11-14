@@ -2,6 +2,11 @@
 
 ## 1.0.2 — 2026-11-14
 
+- Install the semantic-search model during first preparation by default; reuse verified cached files on subsequent launches and retain explicit text-only choices.
+- Hide semantic-search setup after the model is ready, and retain recovery controls for disabled or unavailable search.
+- Remove decorative runtime/startup and healthy Qdrant labels from Settings and Chat while preserving errors, progress and citations.
+- Disable fine-tuning through HTTP, scheduled and legacy Python entry points; remove simulated training metrics and placeholder GGUF exports.
+- Validate IPC against the registered local main-frame document, block embedded app navigation and keep web links in the external browser.
 - Open notes in formatted Markdown preview by default, with an explicit editing switch that preserves drafts.
 - Display saved connections and backlinks beneath notes, with keyboard navigation and protection against stale project responses.
 - Prepare upgrades with the current build's uninstaller, so a broken legacy beta uninstaller does not block the update.

@@ -11,8 +11,8 @@ It supplements applicable agent instructions; it does not prove release readines
 - The shipped Python/Qdrant/llama.cpp versions and archive hashes are pinned in
   `scripts/windows-portable/runtime-assets.json`; Python wheels are pinned in
   `scripts/windows-portable/requirements-win-x64.lock`.
-- Repository owner and CODEOWNER: `Timaga` (Tim Buglaev). GitHub access and active
-  branch/tag protections must be verified separately before public availability.
+- Repository owner and CODEOWNER: `Timaga` (Tim Buglaev). Verify sole-owner write
+  access before public availability. Extra branch/tag rules are an owner decision.
   Incident escalation is via `SECURITY.md`; no response-time commitment is declared.
   Local checks do not replace maintainer review.
 

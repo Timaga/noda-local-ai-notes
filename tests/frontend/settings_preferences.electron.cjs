@@ -84,6 +84,22 @@ async function run() {
     assert.ok(boxes.every(box => box.top === boxes[0].top), JSON.stringify(boxes));
     await capture("01-settings.png");
   });
+  await check("search recovery is hidden when ready and service badges do not clutter settings", async () => {
+    await evaluate(`document.getElementById('notes-settings-tab').click();
+      const section=document.getElementById('settings-semantic-section');
+      window.notesSemanticControls.update({embedding_status:'ready',available:true});
+      assert(section.hidden&&!section.getClientRects().length,'configured search still shows setup');
+      assert(!document.querySelector('.settings-summary-bar'),'runtime summary remains visible');
+      assert(!document.getElementById('chat-qdrant-state'),'technical chat badge remains');
+      window.notesSemanticControls.update({embedding_status:'unavailable'});
+      assert(!section.hidden&&section.getClientRects().length===1,'recovery card cannot be opened');
+      document.getElementById('settings-semantic-setup').focus();
+      window.notesSemanticControls.update({embedding_status:'ready',available:false});
+      assert(section.hidden,'a service failure incorrectly requests model installation');
+      assert(document.activeElement.id==='notes-settings-tab','focus remains in the hidden recovery card');
+      document.querySelector('.settings-theme-section').scrollIntoView({block:'start'});`);
+    await capture("11-clean-settings-search-ready.png");
+  });
   await check("editor setting fields align in rows and keep consistent sizes at wide and narrow widths", async () => {
     for (const width of [1440, 860, 640]) {
       win.setSize(width, 900);
@@ -227,8 +243,10 @@ async function run() {
       assert(!addMenu.open&&document.body.classList.contains('projects-drawer-open')&&document.activeElement===addMenu.querySelector('summary'),'Escape hid a focused nested menu');
       document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
       assert(!document.body.classList.contains('projects-drawer-open')&&document.activeElement===trigger,'Escape lost focus');
-      inlineEditor.inputElement.focus();document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
-      assert(document.activeElement===inlineEditor.inputElement,'closed drawer stole focus');
+      inlineEditor.focus();const editorFocus=document.activeElement;
+      assert(editorFocus===inlineEditor.inputElement||editorFocus.id==='note-view-content','editor did not receive focus');
+      document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+      assert(document.activeElement===editorFocus,'closed drawer stole focus');
       const arrow=trigger.querySelector('[data-ui-icon="chevron"]');assert(arrow&&arrow.getAttribute('aria-hidden')==='true','project arrow is not a shared decorative icon');
       assert(getComputedStyle(arrow).width==='16px'&&getComputedStyle(arrow).maskImage!=='none','project arrow is not rendered');
       const select=document.getElementById('note-text-style');assert(getComputedStyle(select).backgroundImage!=='none','editor selector lost its shared arrow');`);

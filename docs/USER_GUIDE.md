@@ -38,6 +38,15 @@ The library offers text search, tag/time filters and sorting. The graph displays
 
 Semantic search requires a search model. Chat uses the active project's indexed note fragments and provides clickable source notes and quotations. Generated answers may be incomplete or wrong. Open the source and check the quoted text.
 
+New profiles download the search model during initial preparation. Later launches
+reuse its verified cache. The semantic-search setup card stays hidden while the
+model is ready and appears only when search is disabled or the model cannot load.
+If preparation fails, you can explicitly continue with text search and retry later.
+An existing text-only choice is retained until you enable semantic search.
+
+Search, titles, tags, links and chat use ready-made models. Model fine-tuning is
+disabled in this release; adding notes updates the search index without retraining.
+
 ## Save behavior and language
 
 Choose autosave or manual save in Settings. With autosave disabled, save or discard changes before actions that require a clean note. Cancelling a dialog should leave the text unchanged.
