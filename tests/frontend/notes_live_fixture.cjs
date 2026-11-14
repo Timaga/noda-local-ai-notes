@@ -51,6 +51,25 @@ function setup(data) {
   window.fetch = async (url, options = {}) => {
     const parsed = new URL(url, location.href), pathname = parsed.pathname;
     state.calls.push({ path: pathname, method: options.method || "GET" });
+    if (pathname === "/rag" && state.ragPayload) return response(state.ragPayload);
+    if (pathname === "/notes-graph") {
+      if (parsed.searchParams.has("expected_vault_id") && parsed.searchParams.get("expected_vault_id") !== state.vault) {
+        return response({ code: "vault_changed", error: "Synthetic vault changed" }, 409);
+      }
+      const revision = state.revision.toString(16).padStart(64, "0");
+      if (parsed.searchParams.get("if_revision") === revision) return response({ unchanged: true, revision, vault_id: state.vault });
+      const nodes = Object.entries(state.details).map(([id, detail]) => ({ id,
+        title: window.notesMarkdown.presentation(detail.content).title || detail.display_title || id }));
+      const edges = [], seen = new Set();
+      for (const [id, detail] of Object.entries(state.details)) {
+        for (const target of window.notesMarkdown.presentation(detail.content).related) {
+          const peer = nodes.find(node => node.id === target || node.title === target);
+          const key = peer && JSON.stringify([id, peer.id].sort());
+          if (peer && peer.id !== id && !seen.has(key)) { seen.add(key); edges.push({ source: id, target: peer.id }); }
+        }
+      }
+      return response({ nodes, edges, revision, vault_id: state.vault });
+    }
     if (pathname === "/notes") {
       if (parsed.searchParams.has("expected_vault_id") && parsed.searchParams.get("expected_vault_id") !== state.vault) {
         return response({ code: "vault_changed", error: "Synthetic vault changed", vault_id: state.vault }, 409);

@@ -6,6 +6,8 @@ const path = require("node:path");
 const test = require("node:test");
 const vm = require("node:vm");
 const { createStartupLanguageSelection } = require("../frontend/startup_language");
+const { protectRenderer, isTrustedRenderer } = require("../frontend/renderer_trust");
+const { pathToFileURL } = require("node:url");
 
 test("an explicitly reset language waits for a saved, valid choice before proceeding", async () => {
   const calls = [];
@@ -101,8 +103,11 @@ test("only the dedicated startup window can submit a language", async () => {
   assert.ok(start >= 0 && end > start, "Expected startup language IPC handler");
   const calls = [];
   const denied = { ok: false, error: "forbidden" };
-  const startup = {};
+  const documentPath = path.resolve("synthetic/startup.html");
+  const startup = { mainFrame: { url: pathToFileURL(documentPath).href }, setWindowOpenHandler() {}, on() {} };
   let destroyed = false;
+  const trustedWindow = { isDestroyed: () => destroyed, webContents: startup };
+  protectRenderer(trustedWindow, documentPath);
   let handle;
   const context = vm.createContext({
     ipcMain: { handle: (channel, callback) => {
@@ -110,20 +115,21 @@ test("only the dedicated startup window can submit a language", async () => {
       handle = callback;
     } },
     startupLanguage: { select: language => { calls.push(language); return { ok: true, language }; } },
-    startupWindow: { isDestroyed: () => destroyed, webContents: startup },
+    startupWindow: trustedWindow, isTrustedRenderer,
     denyInvalidStartupSender: () => denied,
   });
   vm.runInContext(main.slice(senderStart, senderEnd + 2) + "\n" + main.slice(start, end + 4), context);
   assert.equal(await handle({ sender: {} }, "en"), denied);
   destroyed = true;
-  assert.equal(await handle({ sender: startup }, "en"), denied);
+  assert.equal(await handle({ sender: startup, senderFrame: startup.mainFrame }, "en"), denied);
   destroyed = false;
   const startupWindow = context.startupWindow;
   context.startupWindow = null;
-  assert.equal(await handle({ sender: startup }, "en"), denied);
+  assert.equal(await handle({ sender: startup, senderFrame: startup.mainFrame }, "en"), denied);
   context.startupWindow = startupWindow;
   assert.deepEqual(calls, []);
-  const result = await handle({ sender: startup }, "en");
+  assert.equal(await handle({ sender: startup, senderFrame: { url: startup.mainFrame.url } }, "en"), denied);
+  const result = await handle({ sender: startup, senderFrame: startup.mainFrame }, "en");
   assert.equal(result.ok, true);
   assert.equal(result.language, "en");
   assert.deepEqual(calls, ["en"]);

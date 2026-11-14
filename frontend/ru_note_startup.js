@@ -58,6 +58,7 @@ async function ensureChatRuntimeReady(options) {
 }
 
 function isGenerationSender(event, windows) {
+  // Identity-only helper. Privileged desktop IPC uses renderer_trust instead.
   return windows.some(window => Boolean(window && !window.isDestroyed() && event.sender === window.webContents));
 }
 

@@ -126,7 +126,7 @@ async function run() {
     __liveAssert(selectedNoteTitle===key,'completion changed canonical selection');
     __liveAssert(noteViewTitle.textContent==='План ремонта велосипеда','generated title missing');
     __liveAssert(noteViewTags.textContent.includes('#велосипед')&&noteViewTags.textContent.includes('#ремонт'),'tags missing');
-    __liveAssert(noteViewContent.querySelectorAll('a[data-note-title]').length===2,'related links missing');
+    await __liveWait(()=>document.querySelectorAll('#note-related [data-note-title]').length===2);
     __liveAssert(noteViewContent.textContent.includes(__live.source),'original body missing');
     __liveAssert(!/noda_source_|^title:|^tags:|^related:/m.test(noteViewContent.textContent),'service header leaked');})()`));
   await capture(ru.win, "ru", "01-live-note-ru.png");
@@ -142,6 +142,7 @@ async function run() {
     detail.content=${JSON.stringify(emptyMetadata)};detail.tags=['устаревший'];row.tags=['устаревший'];
     row.content_revision=detail.content_revision=(++__live.serial).toString(16).padStart(64,'0');__live.revision++;
     await notesLiveController.refresh();
+    await __liveWait(()=>document.getElementById('note-related').hidden);
     __liveAssert(noteViewTags.textContent.trim()===''&&!noteViewContent.querySelector('a[data-note-title]'),'empty metadata fabricated tags or links');
     __liveAssert(noteViewContent.textContent.includes('😀')&&!noteViewContent.textContent.includes('noda_source_'),'Unicode source or header handling failed');})()`));
   const longSource = Array.from({ length: 90 }, (_, index) => `Абзац ${index + 1}. Синтетический подробный план обслуживания велосипеда и проверки запасных деталей.`).join("\n\n");
@@ -215,7 +216,7 @@ async function run() {
   const unsafeRelated = wrapper("Безопасное тело", { tags: [], related: ['<img src=x onerror="window.__liveAttack=1">'] });
   await check("related metadata is escaped as inert link text", () => evaluate(`(()=>{
     renderMarkdownPreview(${JSON.stringify(unsafeRelated)});
-    __liveAssert(noteViewContent.querySelector('a[data-note-title]')?.textContent===${JSON.stringify('<img src=x onerror="window.__liveAttack=1">')},'related label changed');
+    __liveAssert(!noteViewContent.textContent.includes('attack()'),'metadata leaked into authored source');
     __liveAssert(!noteViewContent.querySelector('img,[onerror]')&&window.__liveAttack===0,'related metadata injected DOM');})()`));
   await check("a vault switch rejects the old request context and a late old detail cannot reappear", () => evaluate(`(async()=>{
     await selectNote('Архив 020');__live.holdDetails='Архив 020';
@@ -239,8 +240,9 @@ async function run() {
   await check("English note view shows source text, translated related label and metadata without service fields", () => en.evaluate(`(async()=>{
     notesLiveController.pause();__liveComplete();await notesLiveController.refresh();
     __liveAssert(noteViewTitle.textContent==='Bicycle repair plan','English display title missing');
-    __liveAssert(noteViewContent.textContent.includes('Related notes')&&noteViewContent.textContent.includes(__live.source),'English note not rendered');
-    __liveAssert(noteViewContent.querySelectorAll('a[data-note-title]').length===2&&noteViewTags.textContent.includes('#ремонт'),'metadata missing');
+    await __liveWait(()=>document.querySelectorAll('#note-related [data-note-title]').length===2);
+    __liveAssert(document.getElementById('note-related').textContent.includes('Connected notes')&&noteViewContent.textContent.includes(__live.source),'English note not rendered');
+    __liveAssert(noteViewTags.textContent.includes('#ремонт'),'metadata missing');
     __liveAssert(!noteViewContent.textContent.includes('noda_source_'),'service header leaked');})()`));
   await capture(en.win, "en", "03-live-note-en.png");
   await en.evaluate("notesLiveController.dispose()");

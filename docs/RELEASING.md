@@ -2,7 +2,7 @@
 
 Noda's Windows application is distributed through **GitHub Releases**. Each version has a Git tag, short release notes and a versioned `Noda-Setup-<version>-x64.exe`. GitHub Packages is for package registries and is not used for this desktop installer.
 
-The current testing release is [v1.0.2-beta.17](https://github.com/Timaga/noda-local-ai-notes/releases/tag/v1.0.2-beta.17). The repository remains private. Publishing a prerelease inside it keeps downloads limited to accounts with repository access.
+Version **1.0.2** is the stable source version; [release notes](releases/1.0.2.md) record its scope and verification limits. GitHub Releases records actual publication status. Historical beta tags and assets are retained.
 
 ## Prepare another version
 
@@ -15,13 +15,22 @@ The current testing release is [v1.0.2-beta.17](https://github.com/Timaga/noda-l
 7. Attach Setup and its checksums. Lead the release notes with the download, installation/update steps, changes and known limitations. GitHub also provides source archives for the tag.
 8. Update README's download link only after the version and asset exist. Never replace an existing version's installer silently; use another version for changed application code.
 
-The current beta uses a pinned version download link. `/releases/latest` does not select prereleases, so use the specific beta tag or [all versions](https://github.com/Timaga/noda-local-ai-notes/releases).
+README links to the existing Releases page until a versioned asset exists. Verify download links anonymously after publication. `/releases/latest` does not select prereleases.
 
-Public availability is a separate owner decision. Before a public binary launch, resolve the applicable security and installation gates in [the release notes](releases/1.0.2-beta.17.md) and [known dependency issues](security-known-issues.md). No workflow automatically publishes a release on every source push.
+The owner has authorized public availability with sole-owner write access. Before changing visibility, verify no unintended collaborators, invitations or write deploy keys, read-only workflow permissions and disabled workflow PR approval. Additional branch/tag rules are optional under the owner's current decision. Recheck access after changing visibility. A public repository permits reading and forks; it does not grant write access to visitors. No workflow automatically publishes a release on every source push.
+
+Before a public binary launch, resolve the applicable security and installation gates in [the release notes](releases/1.0.2.md) and [known dependency issues](security-known-issues.md). An unresolved high-risk finding needs a concrete mitigation or explicit owner risk acceptance; changing the version label does not resolve it.
 
 ## Installing and updating
 
-Users download **Setup**, run it, then launch the installed Noda from the Start menu. For another version, they back up their projects/profile, fully exit Noda through its tray menu and run that version's Setup. This beta does not provide an automatic updater.
+Users download **Setup**, run it, then launch the installed Noda from the Start menu. For another version, they back up their projects/profile, fully exit Noda through its tray menu and run that version's Setup. Noda does not provide an automatic updater.
+
+Setup prepares an existing installation with the current uninstaller before the
+standard upgrade. It backs up the previous uninstaller for an aborted operation,
+rejects redirected uninstaller paths and checks for files in use first. This avoids
+depending on a broken legacy beta uninstaller. User projects and profile data are
+kept outside application files. Replacing program files cannot reverse queue
+schema changes: restore a compatible backup when a downgrade requires it.
 
 Initial runtime/model downloads still need internet access. Do not describe the small application installer as a complete offline model bundle. Private repository tokens must never be embedded in the application to enable downloads or updates.
 

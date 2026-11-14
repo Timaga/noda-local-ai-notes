@@ -1,7 +1,7 @@
 {
   "schema": "noda-license-manifest-v1",
   "project_license": "PolyForm-Noncommercial-1.0.0",
-  "project_version": "1.0.2-beta.17",
+  "project_version": "1.0.2",
   "vendor_license_count": 313,
   "files": [
     {"path": "LICENSE", "kind": "project-license", "sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"},

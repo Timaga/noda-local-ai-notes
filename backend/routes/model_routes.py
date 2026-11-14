@@ -4,6 +4,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from flask import jsonify, request
+from backend.routes.training_routes import register_disabled_training_routes
 
 # Who: Tim Buglaev
 # When: 2026-06-15
@@ -20,6 +21,7 @@ except ImportError:  # pragma: no cover - package import fallback
 # What: Extracted model, training, and model-management endpoints into a dedicated module to separate HTTP
 #       orchestration from core application bootstrapping while preserving endpoint contracts and status codes.
 def register_model_routes(app, deps):
+    register_disabled_training_routes(app)
     module = deps.module
     # Who: Tim Buglaev
     # When: 2026-04-06
@@ -672,34 +674,6 @@ def register_model_routes(app, deps):
                 ),
                 status_code,
             )
-
-    @app.route("/training/run", methods=["POST"])
-    def training_run():
-        payload = request.get_json(silent=True) or {}
-        blocking = bool(payload.get("blocking"))
-        dry_run = bool(payload.get("dry_run"))
-        reason = payload.get("reason") or "manual"
-        runner = module._get_training_runner()
-        status = runner.start_run(blocking=blocking, reason=reason, dry_run=dry_run)
-        http_code = 200
-        if status.get("status") == "busy":
-            http_code = 409
-        elif status.get("status") == "failed":
-            http_code = 500
-        return jsonify(status), http_code
-
-    @app.route("/training/status", methods=["GET"])
-    def training_status():
-        runner = module._get_training_runner()
-        runtime_status = runner.current_status()
-        file_status = {}
-        try:
-            status_path = Path(module.TRAINING_STATUS_PATH)
-            if status_path.exists():
-                file_status = json.loads(status_path.read_text(encoding="utf-8"))
-        except Exception as exc:
-            file_status = {"error": str(exc)}
-        return jsonify({"runtime": runtime_status, "file": file_status})
 
     @app.route("/model/swap", methods=["POST"])
     def model_swap():

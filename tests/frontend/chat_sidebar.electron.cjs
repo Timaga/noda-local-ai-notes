@@ -87,18 +87,22 @@ async function run() {
         && button.getBoundingClientRect().bottom <= search.getBoundingClientRect().top
         && !refresh.getClientRects().length && !newNote.getClientRects().length;
     })()`), true);
-    assert.equal(await evaluate(`(() => {
+    const composerLayout = await evaluate(`(() => {
       const form = document.getElementById('chat-form');
       const workspace = form.closest('.notes-workspace');
       const panel = form.closest('.chat-conversation-panel');
       const inset = workspace.closest('.notes-dashboard-shell').getBoundingClientRect().bottom
         - panel.getBoundingClientRect().bottom;
-      return form.children.length === 1
-        && form.querySelector('#chat-input').getClientRects().length === 1
-        && form.querySelector('#chat-send-btn').getClientRects().length === 1
-        && document.getElementById('chat-qdrant-state').getClientRects().length === 1
-        && Math.abs(inset - parseFloat(getComputedStyle(workspace).paddingBottom) - 1) < 1;
-    })()`), true);
+      return {children:form.children.length,input:form.querySelector('#chat-input').getClientRects().length,
+        send:form.querySelector('#chat-send-btn').getClientRects().length,badge:!!document.getElementById('chat-qdrant-state'),
+        inset,padding:parseFloat(getComputedStyle(workspace).paddingBottom),
+        border:parseFloat(getComputedStyle(workspace.closest('.notes-dashboard-shell')).borderBottomWidth)};
+    })()`);
+    assert.equal(composerLayout.children, 1);
+    assert.equal(composerLayout.input, 1);
+    assert.equal(composerLayout.send, 1);
+    assert.equal(composerLayout.badge, false);
+    assert.ok(Math.abs(composerLayout.inset - composerLayout.padding - composerLayout.border) < 1, JSON.stringify(composerLayout));
     if (output) {
       await waitFor("document.getElementById('startup-overlay').hidden || getComputedStyle(document.getElementById('startup-overlay')).opacity === '0'");
       await evaluate("new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))");
@@ -149,7 +153,7 @@ async function run() {
     assert.deepEqual(await evaluate("window.__projects.violations"), []);
 
     await evaluate("document.querySelector('[data-notes-tab=notes]').click()");
-    assert.equal(await evaluate("document.getElementById('refresh-notes-btn').getClientRects().length"), 1);
+    assert.equal(await evaluate("document.getElementById('refresh-notes-btn').getClientRects().length"), 0);
     assert.equal(await evaluate("document.getElementById('new-note-btn').getClientRects().length"), 1);
     assert.equal(await evaluate("document.getElementById('chat-new-btn').getClientRects().length"), 0);
     await evaluate("document.querySelector('[data-notes-tab=settings]').click()");

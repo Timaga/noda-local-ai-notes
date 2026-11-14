@@ -75,8 +75,9 @@ async function run() {
     await evaluate("new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))");
     fs.writeFileSync(path.join(out, name), (await win.webContents.capturePage()).toPNG());
   };
-  await check("opening immediately offers an editable body and hides redundant controls", async () => {
-    await evaluate(`(async()=>{await selectNote(${JSON.stringify(titles[0])});check(!inlineEditor.inputElement.readOnly&&!inlineEditor.inputElement.hidden,'not editable');
+  await check("opening shows formatted preview and source editing remains one click away", async () => {
+    await evaluate(`(async()=>{await selectNote(${JSON.stringify(titles[0])});check(inlineEditor.inputElement.hidden&&!noteViewContent.hidden,'preview missing');
+      document.getElementById('note-preview-toggle').click();check(!inlineEditor.inputElement.readOnly&&!inlineEditor.inputElement.hidden,'not editable');
       check(!document.getElementById('edit-note-btn')&&!document.getElementById('copy-note-btn'),'redundant actions');
       check(notesStatusCard.hidden&&getComputedStyle(document.getElementById('projects-breadcrumb')).display==='none','technical chrome visible');
       check(!document.querySelector('.note-actions-menu').open,'trash exposed');check(__projects.patches.length===0,'opening wrote a file');})()`);
@@ -124,6 +125,8 @@ async function run() {
     await evaluate(`(async()=>{await wait(()=>innerWidth===860);document.getElementById('workspace-project-toggle').click();
       check(document.getElementById('notes-projects-panel').getBoundingClientRect().width>150,'drawer missing');
       document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape'}));check(!document.body.classList.contains('projects-drawer-open'),'drawer not closed');
+      check(!noteViewContent.hidden&&noteViewContent.clientWidth>250&&noteViewContent.clientHeight>150,'default preview unusable');
+      document.getElementById('note-preview-toggle').click();
       check(inlineEditor.inputElement.clientWidth>250&&inlineEditor.inputElement.clientHeight>150,'editor unusable');
       check(document.documentElement.scrollWidth<=innerWidth+1,'horizontal overflow');})()`);
     await capture("04-notes-compact.png");

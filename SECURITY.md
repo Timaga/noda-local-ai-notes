@@ -2,7 +2,7 @@
 
 See [known dependency advisories](docs/security-known-issues.md) for the current audit scope and release restrictions.
 
-Noda is a local Windows beta. Local storage and local inference do not make it a security sandbox, and the app does not encrypt Markdown projects or chat history.
+Noda is a local Windows application. Local storage and local inference do not make it a security sandbox, and the app does not encrypt Markdown projects or chat history.
 
 ## Report a vulnerability privately
 
@@ -16,7 +16,7 @@ No response-time guarantee or bug-bounty program is currently stated by this pro
 
 ## Supported versions
 
-Security fixes target the latest maintained beta source. Older binaries and experimental imported models may require an upgrade or a different model profile. Check the current release notes before using an older build with an existing project.
+Security fixes target the latest maintained source and release. Older binaries and experimental imported models may require an upgrade or a different model profile. Check the current release notes before using an older build with an existing project.
 
 ## Useful boundaries
 
@@ -30,6 +30,6 @@ Security fixes target the latest maintained beta source. Older binaries and expe
 
 Dependency advisory triage is a release gate. Review both source dependencies and the runtime components included in the final artifact. For each known advisory, record the affected version, reachable behavior, mitigation and remaining risk. Resolve relevant high or critical findings before public binary distribution; private testing and passing application tests do not replace this review.
 
-The [release checklist](docs/releases/1.0.2-beta.17.md) also requires clean-install, update and recovery checks. A source upload does not certify the distributable.
+The [release checklist](docs/RELEASING.md) also requires clean-install, update and recovery checks. A source upload does not certify the distributable.
 
 For ordinary bugs, use the repository's bug-report form after removing private information.

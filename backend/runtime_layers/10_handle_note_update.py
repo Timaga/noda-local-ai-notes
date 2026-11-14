@@ -254,33 +254,11 @@ def start_file_watcher():
         logger.error("Failed to start file watcher on %s: %s", display_notes_dir, e)
         return None
 
-_training_schedule_started = False
 _notes_observer = None
-
-
-def _schedule_training_if_enabled():
-    global _training_schedule_started
-    if _training_schedule_started or TRAINING_SCHEDULE_MINUTES <= 0:
-        return
-    if not TrainingPipeline or not PipelineConfig:
-        return
-    _training_schedule_started = True
-    runner = _get_training_runner()
-
-    def _loop():
-        while True:
-            try:
-                runner.start_run(blocking=True, reason="scheduled")
-            except Exception as exc:
-                print(f"[WARNING] Плановый запуск пайплайна завершился ошибкой: {exc}")
-            time.sleep(max(TRAINING_SCHEDULE_MINUTES, 1) * 60)
-
-    threading.Thread(target=_loop, daemon=True).start()
 
 
 def _activate_project_background():
     global _notes_observer
-    _schedule_training_if_enabled()
     _notes_observer = start_file_watcher()
 
 

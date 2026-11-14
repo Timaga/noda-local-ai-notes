@@ -321,7 +321,6 @@
         <section class="chat-dashboard" aria-label="Чат по заметкам" data-en-aria-label="Notes chat">
           <aside class="chat-history-panel" aria-label="История чатов" data-en-aria-label="Chat history">
             <div class="chat-history-summary">
-              <span id="chat-qdrant-state" data-en="Qdrant: waiting">Qdrant: ожидание</span>
               <span id="chat-count" data-en="0 chats">0 чатов</span>
               <button type="button" id="chat-new-btn" class="notes-primary-btn chat-new-btn" disabled>
                 <span class="ui-icon" data-ui-icon="plus" aria-hidden="true"></span>
@@ -343,7 +342,7 @@
             <header class="chat-conversation-header">
               <div>
                 <h2 id="chat-title" data-en="New chat">Новый чат</h2>
-                <p id="chat-subtitle" data-en="Answers from notes • Source: Qdrant • 0 notes in the library">Ответы по заметкам • Источник: Qdrant • 0 заметок в базе</p>
+                <p id="chat-subtitle" hidden></p>
                 <button type="button" id="chat-semantic-setup" class="secondary-btn" data-en="Set up semantic search…" hidden>Настроить смысловой поиск…</button>
               </div>
               <button type="button" id="chat-menu-btn" class="chat-icon-btn ui-icon-button" data-ui-icon="trash" aria-label="Удалить чат" data-en-aria-label="Delete chat" title="Удалить чат" data-en-title="Delete chat"></button>
@@ -371,14 +370,6 @@
            choosing a validated notes directory, and controlling startup prompts. -->
       <section class="notes-tab-panel" id="notes-tab-settings" data-notes-panel="settings" hidden>
         <section class="settings-dashboard" aria-label="Настройки приложения" data-en-aria-label="App settings">
-          <div class="settings-summary-bar">
-            <span id="settings-runtime-state" class="settings-state-pill">
-              <span aria-hidden="true"></span>
-              <span data-en="Checking the runtime">Проверяем среду запуска</span>
-            </span>
-            <span class="settings-summary-label" data-en="Startup settings">Основные параметры запуска</span>
-          </div>
-
           <!-- Who: Tim Buglaev -->
           <!-- When: 2026-07-10 -->
           <!-- The default theme keeps its saved key for existing profiles. -->
@@ -598,7 +589,7 @@
             </div>
           </section>
 
-          <section class="settings-section" aria-labelledby="settings-semantic-heading">
+          <section id="settings-semantic-section" class="settings-section" aria-labelledby="settings-semantic-heading" hidden>
             <div class="settings-section-icon" aria-hidden="true"><svg class="settings-section-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg></div>
             <div class="settings-section-body">
               <h2 id="settings-semantic-heading" data-en="Semantic search">Смысловой поиск</h2>
@@ -742,6 +733,7 @@
   <script src="notes_editor_session.js"></script>
   <script src="notes_editor_commands.js"></script>
   <script src="notes_inline_editor.js"></script>
+  <script src="notes_related.js"></script>
   <script src="notes_project_picker.js"></script>
   <script src="notes_workspace.js"></script>
   <script src="notes_metadata_editor.js"></script>

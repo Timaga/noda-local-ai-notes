@@ -1,8 +1,28 @@
 """Manual Markdown persistence must work independently of semantic indexing."""
 
 from types import SimpleNamespace
+import sys
 
 import pytest
+
+
+def test_semantic_loader_uses_local_data_without_model_supplied_code(app_client, monkeypatch):
+    import app as runtime
+
+    calls = []
+    model = SimpleNamespace(get_sentence_embedding_dimension=lambda: 3)
+
+    def constructor(model_id, **options):
+        calls.append((model_id, options))
+        return model
+
+    monkeypatch.delenv("NODA_SEMANTIC_SEARCH_ENABLED", raising=False)
+    monkeypatch.setitem(sys.modules, "sentence_transformers", SimpleNamespace(SentenceTransformer=constructor))
+    monkeypatch.setattr(runtime, "_embedding_model", None)
+    monkeypatch.setattr(runtime, "_embedding_model_id", lambda: "synthetic-search-model")
+    monkeypatch.setattr(runtime, "_record_embedding_dim", lambda _value: None)
+    assert runtime._load_embedding_model() is model
+    assert calls == [("synthetic-search-model", {"local_files_only": True, "trust_remote_code": False})]
 
 
 @pytest.mark.parametrize(

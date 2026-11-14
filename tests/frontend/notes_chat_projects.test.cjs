@@ -266,7 +266,8 @@ test("metadata notifications retain drafts; selected conversations survive proje
   assert.equal(f.get("title").textContent, "First A chat"); assert.equal(f.get("input").value, "Unsent A draft");
   f.window.notesChatController.activate(); assert.equal(f.doc.activeElement, f.get("input"));
   f.window.notesChatController.setNotesState({ notes: [{ title: "A note" }], qdrant: { available: true } });
-  assert.equal(f.get("qdrant-state").textContent, "Qdrant активен");
+  assert.equal(f.get("subtitle").textContent, "");
+  assert.equal(f.get("subtitle").hidden, true);
   await f.get("menu-btn").fire("click"); assert.equal(f.get("messages").textContent.includes("First A chat"), false);
 });
 
@@ -456,7 +457,8 @@ test("search availability and an empty project show actionable, distinct states"
   assert.match(f.get("messages").textContent, /Add a note to start searching/);
   f.window.fetch = async () => new Response(JSON.stringify({ code: "qdrant_unavailable" }), { status: 503 });
   await f.send("Can I search yet?");
-  assert.match(f.get("subtitle").textContent, /Note search is unavailable/);
+  assert.equal(f.get("subtitle").textContent, "Search unavailable");
+  assert.equal(f.get("subtitle").hidden, false);
   assert.doesNotMatch(f.get("subtitle").textContent, /cache/i);
   assert.equal(f.get("messages").querySelectorAll(".chat-retry-btn").length, 1);
 });
@@ -467,19 +469,19 @@ test("healthy Qdrant does not enable chat when semantic search was skipped", asy
   f.window.notesChatController.setNotesState(state("disabled"));
   assert.match(f.get("subtitle").textContent, /Set up semantic search.*restart/);
   assert.match(f.get("messages").textContent, /search by text on the Notes tab/);
-  assert.equal(f.get("qdrant-state").textContent, "Text search only");
-  assert.equal(f.get("qdrant-state").classList.contains("active"), false);
+  assert.equal(f.get("subtitle").hidden, false);
   assert.equal(f.get("input").disabled, true);
   await f.send("Do not start a model");
   assert.equal(f.calls.length, 0);
 
   f.window.notesChatController.setNotesState(state("unavailable"));
   assert.match(f.get("subtitle").textContent, /could not load/);
-  assert.equal(f.get("qdrant-state").classList.contains("active"), false);
+  assert.equal(f.get("subtitle").hidden, false);
   assert.equal(f.get("input").disabled, true);
   f.window.notesChatController.setNotesState(state("ready"));
   assert.equal(f.get("input").disabled, false);
-  assert.equal(f.get("qdrant-state").classList.contains("active"), true);
+  assert.equal(f.get("subtitle").hidden, true);
+  assert.equal(f.get("subtitle").textContent, "");
   await f.send("Search now");
   assert.equal(f.calls.filter(call => call.url).length, 1);
 });

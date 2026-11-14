@@ -48,6 +48,24 @@ powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File scripts/
 
 The destination must be empty. Do not use the repository root or an existing project folder as the output directory.
 
+## Check the Windows installer lifecycle
+
+After installing frontend dependencies and building Setup once (to populate the
+verified NSIS tool cache), run the opt-in native check with a new absolute output
+directory outside the repository:
+
+```powershell
+powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File tests/windows_installer_lifecycle.smoke.ps1 -OutputDirectory C:/Temp/noda-installer-check
+```
+
+The check builds a tiny synthetic payload with the production NSIS include and a
+unique application ID. It verifies fresh install, upgrade, recovery from an old
+uninstaller returning exit 2, locked-file rejection, reparse-point rejection and
+uninstall while retaining external notes. It never installs over Noda or opens
+personal projects. Its outputs stay in the selected folder. A failure retains
+diagnostics; inspect and remove only that fixture's installation if necessary.
+This check does not replace validation of the exact release binary on a clean PC.
+
 ## Repository boundaries
 
 - `frontend/`: Electron main/preload code and the HTML, CSS and JavaScript interface.

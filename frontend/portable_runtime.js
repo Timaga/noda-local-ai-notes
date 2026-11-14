@@ -162,7 +162,7 @@ async function setupPortableRuntime(runtime, {
   } catch (error) {
     if (error.code !== "ENOENT") throw error;
   }
-  let includeEmbedding = Boolean(forceEmbedding) || savedChoice === "yes";
+  let includeEmbedding = Boolean(forceEmbedding) || savedChoice !== "no";
   let installVcRuntime = false;
   signal?.throwIfAborted();
   const ready = await isPortableRuntimeReady(runtime, includeEmbedding);

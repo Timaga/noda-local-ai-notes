@@ -59,7 +59,6 @@
   const saveButton = document.getElementById("settings-save");
   const cancelButton = document.getElementById("settings-cancel");
   const status = document.getElementById("settings-status");
-  const runtimeState = document.getElementById("settings-runtime-state");
   // Who: Tim Buglaev
   // When: 2026-07-10
   // What: Bind only the two shipped theme radios and use Graphite whenever
@@ -171,20 +170,6 @@
     badge.className = `settings-badge${accent ? " accent" : ""}`;
     badge.textContent = text;
     modelBadges.appendChild(badge);
-  }
-
-  function renderRuntime() {
-    const runtime = snapshot?.runtime || {};
-    const turboquantReady = runtime.provider === "vllm_local" && Boolean(runtime.turboquant?.enabled);
-    runtimeState.classList.toggle("warn", !turboquantReady);
-    const label = runtimeState.querySelector("span:last-child");
-    if (label) {
-      label.textContent = turboquantReady
-        ? t("TurboQuant готов", "TurboQuant ready")
-        : runtime.provider === "local"
-          ? t("Локальная GGUF-модель", "Local GGUF model")
-          : t("TurboQuant выключен", "TurboQuant off");
-    }
   }
 
   // Who: Tim Buglaev
@@ -319,7 +304,6 @@
     renderTheme(settings);
     preferences.render(settings);
     renderTurboQuant();
-    renderRuntime();
     savedFields = JSON.stringify(settingsFields());
     preferences.updateRestart(settings);
   }

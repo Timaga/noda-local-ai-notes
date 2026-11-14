@@ -41,7 +41,7 @@ The fresh official PyPI package-level scan queried all 109 locked distributions 
 - **DiskCache 5.6.3:** [GHSA-w8v5-vhqr-4h9v](https://github.com/advisories/GHSA-w8v5-vhqr-4h9v) has no published patched version. llama-cpp-python requires it. No application cache construction was found, but its presence remains a dependency risk; do not load attacker-writable cache contents.
 - **PyTorch PT2 loading:** version 2.13.0 addresses the separate TorchScript advisory. It does not establish a fix for [GHSA-33x2-ppm4-v46v](https://github.com/advisories/GHSA-33x2-ppm4-v46v), whose reviewed range/fix information is incomplete. Source review still found PT2 pickle-loading behavior. Noda has no direct PT2 loader call, but no global claim of safe untrusted model loading is made.
 
-A zero GitHub alert count would not resolve these separate findings. No exceptions are accepted on the owner's behalf. Legacy training permits remote model code and is not a safe loader for arbitrary checkpoints. Package-level scans also do not individually audit every vendored/native component; pip's vendored libraries have separate provenance in the legal inventory.
+A zero GitHub alert count would not resolve these separate findings. No exceptions are accepted on the owner's behalf. In 1.0.2, legacy fine-tuning is disabled and its model-loading/export implementation is removed. The standard packaged workflow uses pinned search data, local-only semantic loading with remote model code explicitly disabled, and the supported GGUF import path. It does not invoke a PT2 loader or construct a DiskCache cache. These are reachability mitigations for the supported profile, not upstream patches or approval of arbitrary developer checkpoints/caches. Package-level scans also do not individually audit every vendored/native component; pip's vendored libraries have separate provenance in the legal inventory.
 
 ## Verification and release boundaries
 
@@ -49,6 +49,6 @@ Validation uses a fresh external Windows/Python 3.13 environment installed from 
 
 The beta.16 tag and installer retain their original dependencies. Updating source does not retroactively patch a downloaded installation; use a separately versioned, verified Setup to update the application.
 
-Separate open findings include Electron IPC/document validation, experimental training/export, optional diagnostic previews and developer-model rights; see [COMPLIANCE.md](COMPLIANCE.md). Clean-machine installation, real-model inference, recovery, native fuzzing and independent legal/regulatory review remain separate checks. Report vulnerabilities using [SECURITY.md](../SECURITY.md).
+Version 1.0.2 adds registered-main-document IPC validation and navigation/popup controls, verified in unit tests and real Electron; fine-tuning and fake exports are disabled/removed. Optional developer diagnostic previews and developer-model rights remain outside the supported portable profile; see [COMPLIANCE.md](COMPLIANCE.md). Exact-binary clean-machine installation, broad real-model evaluation, interruption recovery, native fuzzing and independent legal/regulatory review remain separate checks. Report vulnerabilities using [SECURITY.md](../SECURITY.md).
 
 Scans transmit public package coordinates only. Source code, private notes and credentials are not sent to external analyzers.

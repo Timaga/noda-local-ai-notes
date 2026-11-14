@@ -44,6 +44,14 @@ async function run() {
     try { await body(); checks.push({ name, status: "pass" }); }
     catch (error) { checks.push({ name, status: "fail", error: String(error.stack || error) }); }
   }
+  await check("opening defaults to preview and explicitly switching to editing preserves the source", async () => {
+    await evaluate(`(()=>{const toggle=document.getElementById('note-preview-toggle'),preview=document.getElementById('note-view-content');
+      check(editor.inputElement.hidden&&!preview.hidden&&toggle.getAttribute('aria-pressed')==='true','default preview missing');
+      check(preview.textContent==='original'&&fixture.writes.length===0,'preview changed source');
+      check(toggle.title==='Редактировать','preview action not labeled');toggle.click();
+      check(!editor.inputElement.hidden&&preview.hidden&&editor.inputElement.value==='original','editing unavailable');
+      check(toggle.getAttribute('aria-pressed')==='false','editing mode not reflected');return true})()`);
+  });
   await check("disabled autosave exposes manual save and blur does not publish", async () => {
     await evaluate(`(async()=>{const input=editor.inputElement;input.value='manual text';input.dispatchEvent(new Event('input'));input.dispatchEvent(new Event('blur'));
       check(fixture.writes.length===0,'blur bypassed autosave setting');check(!document.getElementById('note-save-manual').hidden,'manual action missing');

@@ -122,13 +122,6 @@ except ImportError:
     print("WARNING: model_manager не удалось импортировать")
 
 try:
-    from training_pipeline import PipelineConfig, PipelineResult, TrainingPipeline
-except Exception:
-    PipelineConfig = None
-    PipelineResult = None
-    TrainingPipeline = None
-
-try:
     from watchdog.observers import Observer
     from watchdog.events import FileSystemEventHandler, PatternMatchingEventHandler
 except ImportError:

@@ -3,6 +3,7 @@
   "use strict";
   const catalogs = {
   "es": {
+    "Could not load connected notes.": "No se pudieron cargar las notas relacionadas.",
     "Support email": "Correo de soporte",
     "Copy email": "Copiar correo",
     "Email copied.": "Correo copiado.",
@@ -1069,6 +1070,7 @@
     "Tags written in the note text are kept.": "Se conservan las etiquetas escritas en el texto de la nota."
   },
   "fr": {
+    "Could not load connected notes.": "Impossible de charger les notes liées.",
     "Support email": "Adresse e-mail de l’assistance",
     "Copy email": "Copier l’adresse",
     "Email copied.": "Adresse copiée.",
@@ -2135,6 +2137,7 @@
     "Tags written in the note text are kept.": "Les étiquettes écrites dans le texte de la note sont conservées."
   },
   "de": {
+    "Could not load connected notes.": "Verknüpfte Notizen konnten nicht geladen werden.",
     "Support email": "Support-E-Mail",
     "Copy email": "E-Mail-Adresse kopieren",
     "Email copied.": "E-Mail-Adresse kopiert.",
@@ -3201,6 +3204,7 @@
     "Tags written in the note text are kept.": "Im Notiztext enthaltene Tags bleiben erhalten."
   },
   "pt": {
+    "Could not load connected notes.": "Não foi possível carregar as notas relacionadas.",
     "Support email": "E-mail de suporte",
     "Copy email": "Copiar e-mail",
     "Email copied.": "E-mail copiado.",
@@ -4267,6 +4271,7 @@
     "Tags written in the note text are kept.": "As tags escritas no texto da nota são mantidas."
   },
   "it": {
+    "Could not load connected notes.": "Impossibile caricare le note collegate.",
     "Support email": "Email di assistenza",
     "Copy email": "Copia indirizzo",
     "Email copied.": "Indirizzo copiato.",
@@ -5333,6 +5338,7 @@
     "Tags written in the note text are kept.": "I tag scritti nel testo della nota vengono conservati."
   },
   "zh": {
+    "Could not load connected notes.": "无法加载关联笔记。",
     "Support email": "支持邮箱",
     "Copy email": "复制邮箱地址",
     "Email copied.": "邮箱地址已复制。",
@@ -6399,6 +6405,7 @@
     "Tags written in the note text are kept.": "笔记正文中的标签将保留。"
   },
   "ja": {
+    "Could not load connected notes.": "関連するノートを読み込めませんでした。",
     "Support email": "サポート窓口のメールアドレス",
     "Copy email": "メールアドレスをコピー",
     "Email copied.": "メールアドレスをコピーしました。",
@@ -7465,6 +7472,7 @@
     "Tags written in the note text are kept.": "ノート本文に書かれたタグはそのまま残ります。"
   },
   "ko": {
+    "Could not load connected notes.": "연결된 노트를 불러오지 못했습니다.",
     "Support email": "지원 이메일",
     "Copy email": "이메일 주소 복사",
     "Email copied.": "이메일 주소를 복사했습니다.",

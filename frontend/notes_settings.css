@@ -752,3 +752,4 @@
 .settings-editor-preferences > .settings-section-body > .settings-checkbox-row { margin-top: 18px; }
 #settings-language-restart { margin-top: 12px; min-height: 44px; }
 @media (max-width: 700px) { .settings-preferences-grid { grid-template-columns: minmax(0, 1fr); } }
+.settings-section[hidden] { display: none; }

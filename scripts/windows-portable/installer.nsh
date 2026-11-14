@@ -24,15 +24,23 @@
   !macroend
 !endif
 
+!define NODA_INSTALLER_REPAIR "${__FILEDIR__}\installer-repair.nsh"
 !macro customHeader
   !ifndef BUILD_UNINSTALLER
+    LangString NodaUninstallerRepairFailed ${LANG_ENGLISH} "Noda could not prepare the previous installation for an update. Check folder permissions and try again."
+    !include "${NODA_INSTALLER_REPAIR}"
     AutoCloseWindow true
     LangString NodaInstallFolder ${LANG_ENGLISH} "Choose a new or empty folder for Noda, or keep the current Noda installation folder."
 
     Function .onInstSuccess
+      StrCpy $NodaInstallCompleted "1"
       ${IfNot} ${Silent}
         ${StdUtils.ExecShellAsUser} $0 "$INSTDIR\${APP_EXECUTABLE_FILENAME}" "open" ""
       ${EndIf}
+    FunctionEnd
+
+    Function .onGUIEnd
+      Call NodaRestoreUninstaller
     FunctionEnd
 
     Function .onVerifyInstDir
@@ -126,5 +134,6 @@
     ${AndIf} $R8 != $INSTDIR
       !insertmacro nodaCheckAppFile $R8
     ${EndIf}
+    Call NodaRefreshUninstaller
   !endif
 !macroend

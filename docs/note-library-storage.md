@@ -8,7 +8,12 @@ Creating, editing and restoring notes also works without the semantic search mod
 
 ## Editing and save behavior
 
-An open note is immediately editable. Formatting controls insert Markdown; the eye button opens the rendered preview. The filename, tags and supported properties at the beginning of the file are preserved.
+Notes open in formatted preview by default, including existing Obsidian Markdown.
+The eye button switches to source editing; its tooltip names the next action.
+Formatting controls insert Markdown while editing. Refreshing the same open note
+preserves the selected mode; opening another note starts in preview again.
+Local drafts are shown in preview and retained when switching modes.
+The filename, tags and supported properties at the beginning of the file are preserved.
 
 By default, text is saved after a one-second pause and when leaving the field. Settings can change the delay from 0.5 to 10 seconds, disable autosave, or adjust font size and interface density. Manual mode provides a Save button and Ctrl + S. Local drafts continue to be retained. The editor footer shows save status; Ctrl + S saves or retries after a failure.
 
@@ -23,6 +28,23 @@ The open note's **… → Move to trash** action moves the file into `.noda-tras
 A full project backup must include `.noda-trash` if restoration history is needed. The separate note-copy export intentionally excludes trash and other runtime data; see the [user guide](USER_GUIDE.md#data-and-backups).
 
 ## Search and metadata
+
+### Connected notes
+
+The editor and Markdown preview show a **Connected notes** section below the body.
+It uses the same saved connections as Graph, including links pointing back to the
+current note. It resolves canonical filenames, displays note titles and hides the
+section when no saved connections exist. Shared tags alone do not create a link.
+Changes appear automatically; no model or semantic index is needed for this list.
+
+Click a title, or focus it and press Enter, to open that note in the same project.
+With autosave disabled, navigation retains the current draft without publishing it.
+Unresolved links are not presented as available notes. A loading failure is shown
+explicitly and retried during automatic library refresh.
+
+In Notes chat, source buttons below an answer open the cited notes. The optional
+excerpts disclose the retrieved source text. An answer without retrieved sources
+does not invent source buttons or related notes.
 
 Library search includes titles, tags and the full text of the active project's notes. Semantic retrieval in chat uses a separate index. If index updating is not confirmed, the interface shows a warning.
 

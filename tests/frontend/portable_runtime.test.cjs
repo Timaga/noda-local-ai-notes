@@ -45,7 +45,7 @@ test("port selection avoids an existing listener and never stops it", async () =
   }
 });
 
-test("first launch provisions text search without requesting an embedding model", async t => {
+test("first launch installs semantic search and retains it on subsequent launches", async t => {
   const base = fs.mkdtempSync(path.join(os.tmpdir(), "noda-fresh-runtime-"));
   t.after(() => fs.rmSync(base, { recursive: true, force: true }));
   const runtime = portablePaths(base, base);
@@ -56,10 +56,25 @@ test("first launch provisions text search without requesting an embedding model"
   const optIn = await setupPortableRuntime(runtime, { provision, forceEmbedding: true });
   const next = await setupPortableRuntime(runtime, { provision });
 
-  assert.deepEqual(embeddingAttempts, [false, true, true]);
-  assert.equal(fresh.NODA_SEMANTIC_SEARCH_ENABLED, "0");
+  assert.deepEqual(embeddingAttempts, [true, true, true]);
+  assert.equal(fresh.NODA_SEMANTIC_SEARCH_ENABLED, "1");
   assert.equal(optIn.NODA_SEMANTIC_SEARCH_ENABLED, "1");
   assert.equal(next.NODA_SEMANTIC_SEARCH_ENABLED, "1");
+});
+
+test("an explicit text-only choice is preserved until semantic search is requested", async t => {
+  const base = fs.mkdtempSync(path.join(os.tmpdir(), "noda-text-only-runtime-"));
+  t.after(() => fs.rmSync(base, { recursive: true, force: true }));
+  const runtime = portablePaths(base, base), attempts = [];
+  fs.mkdirSync(runtime.root, { recursive: true });
+  saveEmbeddingChoice(runtime, false);
+  const provision = async (_, { includeEmbedding }) => attempts.push(includeEmbedding);
+  const textOnly = await setupPortableRuntime(runtime, { provision });
+  const enabled = await setupPortableRuntime(runtime, { provision, forceEmbedding: true });
+  assert.equal(textOnly.NODA_SEMANTIC_SEARCH_ENABLED, "0");
+  assert.equal(enabled.NODA_SEMANTIC_SEARCH_ENABLED, "1");
+  assert.deepEqual(attempts, [false, true]);
+  assert.equal(fs.readFileSync(runtime.setupChoice, "utf8").trim(), "yes");
 });
 
 test("an unavailable optional embedding model can fall back and stays off on relaunch", async t => {
