@@ -1,7 +1,7 @@
 {
   "name": "noda",
   "productName": "Noda",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Noda local AI notes desktop app by buglAI",
   "main": "main.js",
   "author": "buglAI",

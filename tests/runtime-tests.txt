@@ -1,5 +1,6 @@
 tests/test_manual_notes_without_embeddings.py
 tests/test_training_disabled.py
+tests/test_note_queue_archive_retry.py
 tests/test_fixture_vault_paths.py
 tests/test_note_library_management.py
 tests/test_note_metadata_refresh.py
