@@ -18,6 +18,12 @@ Press **Ctrl + Shift + Space** to open quick capture. Enter sends the source to 
 
 The queue stores the submitted source before model processing. Its progress updates automatically. Expand an entry to inspect the source and stage results. Eligible waiting or completed entries can be removed; an executing entry is protected from deletion. Removing a completed queue entry does not delete its saved note.
 
+If another note is edited, added or moved to trash during processing, Noda retries
+against a fresh archive within the queue's existing attempt limit. It does not
+publish links from the outdated snapshot or restore a deleted note. If the archive
+keeps changing until that limit is reached, the exact source is saved as an
+unprocessed note and remains available for a manual retry.
+
 In the library, notes open in formatted Markdown preview. The eye button switches to source editing; its tooltip describes the next action. Formatting controls work while editing, and switching modes keeps the draft. Opening a different note starts in preview again. Use the title/tag control to change metadata; use the compact actions menu to move a note to the project's trash.
 
 Saved **Connected notes** and backlinks appear below the note body. Open a connection by mouse or keyboard. Empty connection lists stay hidden; automatic refresh keeps the list in the active project's context.

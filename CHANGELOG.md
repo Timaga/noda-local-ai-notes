@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.3 — 2026-11-18
+
+- Retry note generation within the existing queue attempt limit when its archive
+  snapshot changes during processing. Rebuild decisions from a fresh snapshot,
+  preserve the exact source and same job identity, and never restore deleted notes
+  or publish stale links. Other permanent generation failures retain their behavior.
+
 ## 1.0.2 — 2026-11-14
 
 - Install the semantic-search model during first preparation by default; reuse verified cached files on subsequent launches and retain explicit text-only choices.

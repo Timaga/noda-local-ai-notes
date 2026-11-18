@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#557875" stroke-width="1.5"/></marker>
+    <style>
+      text{font-family:Arial,sans-serif;fill:#153b43} .title{font-size:36px;font-weight:700} .sub{font-size:20px;fill:#60787c} .head{font-size:25px;font-weight:700} .body{font-size:22px} .label{font-size:19px;font-weight:700;fill:#376e69} .flow{fill:none;stroke:#557875;stroke-width:2.5;marker-end:url(#arrow)} .card{fill:#fff;stroke:#b7ccca;stroke-width:1.5} .band{fill:#e0f4ed} .warn{fill:#fff1d8}
+    </style>
+  </defs>
+  <rect width="1800" height="1000" fill="#f7faf9"/>
+  <text x="60" y="83" class="title">Noda · Safe retries when the note archive changes</text>
+  <text x="60" y="124" class="sub">18 November 2026 · Queue and source recovery · Existing interface controls retained</text>
+
+  <rect class="card" x="60" y="210" width="360" height="180" rx="16"/>
+  <path class="band" d="M76 210H404Q420 210 420 226V268H60V226Q60 210 76 210"/>
+  <text x="83" y="248" class="head">1. Accept source</text>
+  <text x="83" y="306" class="body">Store the exact submitted text</text>
+  <text x="83" y="339" class="body">in the durable project queue.</text>
+  <text x="83" y="372" class="body">Keep one job and request ID.</text>
+
+  <rect class="card" x="500" y="210" width="360" height="180" rx="16"/>
+  <path class="band" d="M516 210H844Q860 210 860 226V268H500V226Q500 210 516 210"/>
+  <text x="523" y="248" class="head">2. Generate metadata</text>
+  <text x="523" y="306" class="body">Title → tags → links</text>
+  <text x="523" y="339" class="body">Use a complete archive snapshot.</text>
+  <text x="523" y="372" class="body">Preserve the original source.</text>
+
+  <rect class="card" x="940" y="210" width="360" height="180" rx="16"/>
+  <path class="band" d="M956 210H1284Q1300 210 1300 226V268H940V226Q940 210 956 210"/>
+  <text x="963" y="248" class="head">3. Validate snapshot</text>
+  <text x="963" y="306" class="body">Compare archive inventory</text>
+  <text x="963" y="339" class="body">and complete file hashes.</text>
+  <text x="963" y="372" class="body">Reject stale decisions.</text>
+
+  <rect class="card" x="1380" y="210" width="360" height="180" rx="16"/>
+  <path class="band" d="M1396 210H1724Q1740 210 1740 226V268H1380V226Q1380 210 1396 210"/>
+  <text x="1403" y="248" class="head">4. Publish one note</text>
+  <text x="1403" y="306" class="body">Commit the complete result.</text>
+  <text x="1403" y="339" class="body">Keep deletions and author edits.</text>
+  <text x="1403" y="372" class="body">Update the index after saving.</text>
+
+  <path class="flow" d="M420 300H497"/>
+  <path class="flow" d="M860 300H937"/>
+  <path class="flow" d="M1300 300H1377"/>
+  <text x="1310" y="190" class="label">Archive matches</text>
+
+  <path class="flow" d="M1120 390V537"/>
+  <text x="1143" y="455" class="label">Changed / temporarily unavailable</text>
+
+  <rect class="card" x="940" y="540" width="360" height="210" rx="16"/>
+  <path class="warn" d="M956 540H1284Q1300 540 1300 556V598H940V556Q940 540 956 540"/>
+  <text x="963" y="578" class="head">Retry the same job</text>
+  <text x="963" y="636" class="body">Requeue after bounded backoff.</text>
+  <text x="963" y="669" class="body">Read a fresh archive next time.</text>
+  <text x="963" y="702" class="body">At most 3 total attempts.</text>
+  <text x="963" y="735" class="body">Do not publish stale links.</text>
+  <path class="flow" d="M940 645H680V393"/>
+  <text x="522" y="684" class="label">Attempt budget remains</text>
+
+  <rect class="card" x="1380" y="540" width="360" height="210" rx="16"/>
+  <path fill="#e8effa" d="M1396 540H1724Q1740 540 1740 556V598H1380V556Q1380 540 1396 540"/>
+  <text x="1403" y="578" class="head">Preserve source</text>
+  <text x="1403" y="636" class="body">Save one unprocessed note.</text>
+  <text x="1403" y="669" class="body">Keep the exact original text.</text>
+  <text x="1403" y="702" class="body">Manual retry stays available.</text>
+  <text x="1403" y="735" class="body">No indefinite automatic retries.</text>
+  <path class="flow" d="M1300 645H1377"/>
+  <text x="1310" y="519" class="label">Limit reached</text>
+
+  <rect x="60" y="820" width="1680" height="120" rx="16" fill="#edf3f2" stroke="#d1dfdd"/>
+  <text x="85" y="859" class="head">Existing unprocessed notes</text>
+  <text x="85" y="895" class="body">Manual retry updates the same file and job; it does not duplicate the note or restore deleted archive notes.</text>
+  <text x="85" y="927" class="sub">Progress reflects each attempt. The change adds no model, account, external service or queue migration.</text>
+</svg>

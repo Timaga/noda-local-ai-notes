@@ -1,6 +1,6 @@
 # GitHub repository setup
 
-The repository is [Timaga/noda-local-ai-notes](https://github.com/Timaga/noda-local-ai-notes). The owner has authorized the stable 1.0.2 release and public availability after verification, with **Timaga as the only writer**. Live visibility and release status are recorded on GitHub.
+The repository is [Timaga/noda-local-ai-notes](https://github.com/Timaga/noda-local-ai-notes). The owner has authorized the stable 1.0.3 fix release, retaining public availability and **Timaga as the only writer**. Live visibility and release status are recorded on GitHub.
 
 ## Name and About
 
@@ -52,8 +52,8 @@ These are 20 factual lowercase topics. GitHub allows up to 20 topics, each no lo
 
 ## Windows installer release
 
-- Tag: **`v1.0.2`**.
-- Title: **`Noda 1.0.2`**.
+- Tag: **`v1.0.3`**.
+- Title: **`Noda 1.0.3`**.
 - Type: **stable release**, not a prerelease.
 - Downloads: versioned Setup assets on [GitHub Releases](https://github.com/Timaga/noda-local-ai-notes/releases).
 - Notes: installation/update steps, changes, actual verification and remaining limitations.

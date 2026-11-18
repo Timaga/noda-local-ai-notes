@@ -18,12 +18,14 @@ try:
         NoteGenerationError,
         TemporaryModelError,
     )
+    from backend.note_processing_failures import NoteSystemError
 except ImportError:
     from note_publication import PublicationContext, verify_publication_storage
     from note_generation_contract import (
         NoteGenerationError,
         TemporaryModelError,
     )
+    from note_processing_failures import NoteSystemError
 
 
 class NoteGenerationQueue:
@@ -403,6 +405,10 @@ class NoteGenerationQueue:
                 and (
                     not isinstance(exc, NoteGenerationError)
                     or isinstance(exc, TemporaryModelError)
+                    or (
+                        isinstance(exc, NoteSystemError)
+                        and exc.failure_code == "archive_unavailable_or_changed"
+                    )
                 )
             ):
                 record_failure(self.store, job_id, "generation_failed", exc)

@@ -2,7 +2,7 @@
 
 Noda's Windows application is distributed through **GitHub Releases**. Each version has a Git tag, short release notes and a versioned `Noda-Setup-<version>-x64.exe`. GitHub Packages is for package registries and is not used for this desktop installer.
 
-Version **1.0.2** is the stable source version; [release notes](releases/1.0.2.md) record its scope and verification limits. GitHub Releases records actual publication status. Historical beta tags and assets are retained.
+Version **1.0.3** is the stable source version; [release notes](releases/1.0.3.md) record its scope and verification limits. GitHub Releases records actual publication status. Historical stable and beta tags and assets are retained.
 
 ## Prepare another version
 
@@ -19,7 +19,7 @@ README links to the existing Releases page until a versioned asset exists. Verif
 
 The owner has authorized public availability with sole-owner write access. Before changing visibility, verify no unintended collaborators, invitations or write deploy keys, read-only workflow permissions and disabled workflow PR approval. Additional branch/tag rules are optional under the owner's current decision. Recheck access after changing visibility. A public repository permits reading and forks; it does not grant write access to visitors. No workflow automatically publishes a release on every source push.
 
-Before a public binary launch, resolve the applicable security and installation gates in [the release notes](releases/1.0.2.md) and [known dependency issues](security-known-issues.md). An unresolved high-risk finding needs a concrete mitigation or explicit owner risk acceptance; changing the version label does not resolve it.
+Before a public binary launch, resolve the applicable security and installation gates in [the release notes](releases/1.0.3.md) and [known dependency issues](security-known-issues.md). An unresolved high-risk finding needs a concrete mitigation or explicit owner risk acceptance; changing the version label does not resolve it.
 
 ## Installing and updating
 
